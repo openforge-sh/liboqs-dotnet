@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>OpenForge.Cryptography.LibOqs Samples </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="OpenForge.Cryptography.LibOqs Samples ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/openforge-sh/liboqs-dotnet/blob/main/samples/README.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="openforgecryptographyliboqs-samples">OpenForge.Cryptography.LibOqs Samples</h1>
+
+<p>This directory contains practical examples for using OpenForge.Cryptography.LibOqs in real-world applications. The samples focus on clear, straightforward implementations without over-engineering.</p>
+<h2 id="sample-categories">Sample Categories</h2>
+<h3 id="basics-basics">Basics (<code>basics/</code>)</h3>
+<p>Start here! Essential examples covering fundamental library usage:</p>
+<ul>
+<li><strong>Basic KEM Usage</strong> - Key encapsulation and shared secrets</li>
+<li><strong>Basic Signatures</strong> - Digital signing and verification</li>
+<li><strong>Algorithm Discovery</strong> - Finding available algorithms</li>
+<li><strong>Error Handling</strong> - Proper exception handling</li>
+<li><strong>Memory &amp; Performance</strong> - Efficient usage patterns</li>
+</ul>
+<h3 id="common-scenarios-common-scenarios">Common Scenarios (<code>common-scenarios/</code>)</h3>
+<p>Practical examples for real-world applications:</p>
+<ul>
+<li><strong>File Encryption</strong> - Secure AES-GCM encryption with ML-KEM key exchange</li>
+<li><strong>Document Signing</strong> - Digital signatures for authenticity and tamper detection</li>
+<li><strong>API Security</strong> - Authenticate REST API calls with timestamps</li>
+<li><strong>Database Fields</strong> - Encrypt sensitive database columns with post-quantum security</li>
+</ul>
+<h3 id="advanced-advanced">Advanced (<code>advanced/</code>)</h3>
+<p>Complex scenarios for experienced developers:</p>
+<ul>
+<li><strong>Algorithm Selection</strong> - Choose the right algorithms for your needs</li>
+<li><strong>Benchmarking</strong> - Performance measurement and analysis</li>
+<li><strong>Cross-Platform</strong> - Deploy across different operating systems</li>
+<li><strong>Interoperability</strong> - Work with other cryptographic libraries</li>
+<li><strong>Migration Strategies</strong> - Transition from classical to post-quantum</li>
+<li><strong>Advanced Signatures</strong> - Multi-document signing and batch verification</li>
+</ul>
+<h3 id="testing-testing">Testing (<code>testing/</code>)</h3>
+<p>Validation and testing examples:</p>
+<ul>
+<li><strong>Algorithm Consistency</strong> - Verify implementations match specifications</li>
+<li><strong>Functional Correctness</strong> - Ensure cryptographic operations work properly</li>
+<li><strong>Edge Cases</strong> - Handle error conditions and invalid inputs</li>
+<li><strong>Performance Validation</strong> - Check for reasonable performance</li>
+</ul>
+<h2 id="quick-start">Quick Start</h2>
+<ol>
+<li><strong>New to post-quantum crypto?</strong> Start with <code>basics/</code></li>
+<li><strong>Need practical examples?</strong> Check <code>common-scenarios/</code></li>
+<li><strong>Planning migration?</strong> Review <code>advanced/</code></li>
+<li><strong>Want to validate?</strong> Use <code>testing/</code></li>
+</ol>
+<h2 id="running-examples">Running Examples</h2>
+<p>Each directory is a complete .NET console application:</p>
+<pre><code class="lang-bash">cd samples/basics/
+dotnet run                    # Run all examples
+
+dotnet run kem               # Run specific example
+dotnet run --help            # Show available options
+</code></pre>
+<h2 id="design-philosophy">Design Philosophy</h2>
+<p>These samples prioritize:</p>
+<ul>
+<li><strong>Clarity over cleverness</strong> - Easy to understand implementations</li>
+<li><strong>Practical usage</strong> - Real problems developers face</li>
+<li><strong>Security best practices</strong> - Proper key management and error handling</li>
+<li><strong>Minimal dependencies</strong> - Focus on the crypto library, not frameworks</li>
+</ul>
+<h2 id="whats-different">What's Different</h2>
+<p>Unlike typical crypto examples that focus on academic concepts, these samples show:</p>
+<ul>
+<li>How to choose algorithms for different use cases</li>
+<li>Real error handling and validation</li>
+<li>Performance considerations and trade-offs</li>
+<li>Integration with existing systems</li>
+<li>Migration planning and strategy</li>
+</ul>
+<h2 id="key-concepts-covered">Key Concepts Covered</h2>
+<h3 id="key-encapsulation-mechanisms-kem">Key Encapsulation Mechanisms (KEM)</h3>
+<ul>
+<li>ML-KEM-512, ML-KEM-768, ML-KEM-1024</li>
+<li>Encapsulation and decapsulation</li>
+<li>Hybrid encryption patterns</li>
+<li>Key size and performance trade-offs</li>
+</ul>
+<h3 id="digital-signatures">Digital Signatures</h3>
+<ul>
+<li>ML-DSA-44, ML-DSA-65, ML-DSA-87</li>
+<li>Message signing and verification</li>
+<li>Document authenticity</li>
+<li>API authentication patterns</li>
+</ul>
+<h3 id="security-considerations">Security Considerations</h3>
+<ul>
+<li>Algorithm selection criteria</li>
+<li>Key management best practices</li>
+<li>Error handling and validation</li>
+<li>Performance vs security trade-offs</li>
+<li>Secure memory management and key disposal</li>
+<li>AES-GCM authenticated encryption patterns</li>
+</ul>
+<h2 id="next-steps">Next Steps</h2>
+<ul>
+<li>Check <a href="https://csrc.nist.gov/projects/pqc">NIST Post-Quantum Standards</a></li>
+<li>Explore <a href="advanced/README.html#5-migration-strategies-migration">Migration Planning</a></li>
+<li>Visit <a href="https://openquantumsafe.org/">Open Quantum Safe</a> for more resources</li>
+</ul>
+<h2 id="recent-improvements">Recent Improvements</h2>
+<ul>
+<li><strong>Enhanced Security</strong>: Replaced XOR encryption with proper AES-GCM authenticated encryption</li>
+<li><strong>Better API Usage</strong>: Updated to use only public API methods throughout all samples</li>
+<li><strong>Resource Management</strong>: Added proper <code>using</code> statements for automatic disposal</li>
+<li><strong>Error Handling</strong>: Improved exception handling with specific types and better messages</li>
+<li><strong>Documentation</strong>: Enhanced comments and explanations for cryptographic concepts</li>
+</ul>
+<h2 id="implementation-notes">Implementation Notes</h2>
+<p>All samples use:</p>
+<ul>
+<li><strong>.NET 9+</strong> for modern C# features</li>
+<li><strong>Clean exception handling</strong> with specific exception types</li>
+<li><strong>Proper resource disposal</strong> with using statements for secure cleanup</li>
+<li><strong>Authenticated encryption</strong> with AES-GCM for hybrid crypto scenarios</li>
+<li><strong>Clear documentation</strong> explaining security considerations and best practices</li>
+<li><strong>Performance awareness</strong> noting algorithm trade-offs and optimization tips</li>
+<li><strong>Production patterns</strong> demonstrating real-world usage scenarios</li>
+</ul>
+<p>These examples demonstrate production-ready patterns while remaining educational and approachable.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/samples/README.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

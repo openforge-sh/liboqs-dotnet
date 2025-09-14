@@ -1,0 +1,2932 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  commentId: T:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  id: SignatureAlgorithms
+  parent: OpenForge.Cryptography.LibOqs.Core
+  children:
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.All
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_128_balanced
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_128_fast
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_128_small
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_192_balanced
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_192_fast
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_192_small
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_256_balanced
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_256_fast
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_256_small
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_128_balanced
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_128_fast
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_128_small
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_192_balanced
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_192_fast
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_192_small
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_256_balanced
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_256_fast
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_256_small
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Deprecated
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Dilithium2
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Dilithium3
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Dilithium5
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Falcon_1024
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Falcon_1024_padded
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Falcon_512
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Falcon_512_padded
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.MAYO_1
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.MAYO_2
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.MAYO_3
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.MAYO_5
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.ML_DSA_44
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.ML_DSA_65
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.ML_DSA_87
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.NISTStandardized
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_III_Circumzenithal
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_III_Classic
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_III_Compressed
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_I_Circumzenithal
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_I_Classic
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_I_Compressed
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_V_Circumzenithal
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_V_Classic
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_V_Compressed
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_24_5_4
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_24_5_4_SHAKE
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_24_5_4_SHAKE_esk
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_24_5_4_esk
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_24_5_5
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_25_8_3
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_29_6_5
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_37_17_2
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_37_8_4
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_49_11_3
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_56_25_2
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_60_10_4
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_128f_robust
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_128f_simple
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_128s_robust
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_128s_simple
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_192f_robust
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_192f_simple
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_192s_robust
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_192s_simple
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_256f_robust
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_256f_simple
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_256s_robust
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_256s_simple
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128f_robust
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128f_simple
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128s_robust
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128s_simple
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_192f_robust
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_192f_simple
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_192s_robust
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_192s_simple
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_256f_robust
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_256f_simple
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_256s_robust
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_256s_simple
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_III
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_III_pkc
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_III_pkc_skc
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Ip
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Ip_pkc
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Ip_pkc_skc
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Is
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Is_pkc
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Is_pkc_skc
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_V
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_V_pkc
+  - OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_V_pkc_skc
+  langs:
+  - csharp
+  - vb
+  name: SignatureAlgorithms
+  nameWithType: SignatureAlgorithms
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  type: Class
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SignatureAlgorithms
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 97
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Digital signature algorithm identifiers.
+  example: []
+  syntax:
+    content: public static class SignatureAlgorithms
+    content.vb: Public Module SignatureAlgorithms
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Dilithium2
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Dilithium2
+  id: Dilithium2
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: Dilithium2
+  nameWithType: SignatureAlgorithms.Dilithium2
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Dilithium2
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Dilithium2
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 99
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string Dilithium2 = "Dilithium2"
+    return:
+      type: System.String
+    content.vb: Public Const Dilithium2 As String = "Dilithium2"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Dilithium3
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Dilithium3
+  id: Dilithium3
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: Dilithium3
+  nameWithType: SignatureAlgorithms.Dilithium3
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Dilithium3
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Dilithium3
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 100
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string Dilithium3 = "Dilithium3"
+    return:
+      type: System.String
+    content.vb: Public Const Dilithium3 As String = "Dilithium3"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Dilithium5
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Dilithium5
+  id: Dilithium5
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: Dilithium5
+  nameWithType: SignatureAlgorithms.Dilithium5
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Dilithium5
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Dilithium5
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 101
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string Dilithium5 = "Dilithium5"
+    return:
+      type: System.String
+    content.vb: Public Const Dilithium5 As String = "Dilithium5"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.ML_DSA_44
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.ML_DSA_44
+  id: ML_DSA_44
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: ML_DSA_44
+  nameWithType: SignatureAlgorithms.ML_DSA_44
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.ML_DSA_44
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: ML_DSA_44
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 102
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string ML_DSA_44 = "ML-DSA-44"
+    return:
+      type: System.String
+    content.vb: Public Const ML_DSA_44 As String = "ML-DSA-44"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.ML_DSA_65
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.ML_DSA_65
+  id: ML_DSA_65
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: ML_DSA_65
+  nameWithType: SignatureAlgorithms.ML_DSA_65
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.ML_DSA_65
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: ML_DSA_65
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 103
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string ML_DSA_65 = "ML-DSA-65"
+    return:
+      type: System.String
+    content.vb: Public Const ML_DSA_65 As String = "ML-DSA-65"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.ML_DSA_87
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.ML_DSA_87
+  id: ML_DSA_87
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: ML_DSA_87
+  nameWithType: SignatureAlgorithms.ML_DSA_87
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.ML_DSA_87
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: ML_DSA_87
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 104
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string ML_DSA_87 = "ML-DSA-87"
+    return:
+      type: System.String
+    content.vb: Public Const ML_DSA_87 As String = "ML-DSA-87"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Falcon_512
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Falcon_512
+  id: Falcon_512
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: Falcon_512
+  nameWithType: SignatureAlgorithms.Falcon_512
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Falcon_512
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Falcon_512
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 105
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string Falcon_512 = "Falcon-512"
+    return:
+      type: System.String
+    content.vb: Public Const Falcon_512 As String = "Falcon-512"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Falcon_1024
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Falcon_1024
+  id: Falcon_1024
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: Falcon_1024
+  nameWithType: SignatureAlgorithms.Falcon_1024
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Falcon_1024
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Falcon_1024
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 106
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string Falcon_1024 = "Falcon-1024"
+    return:
+      type: System.String
+    content.vb: Public Const Falcon_1024 As String = "Falcon-1024"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_128f_simple
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_128f_simple
+  id: SPHINCS_PLUS_SHA2_128f_simple
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHA2_128f_simple
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHA2_128f_simple
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_128f_simple
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHA2_128f_simple
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 107
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHA2_128f_simple = "SPHINCS+-SHA2-128f-simple"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHA2_128f_simple As String = "SPHINCS+-SHA2-128f-simple"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_128f_robust
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_128f_robust
+  id: SPHINCS_PLUS_SHA2_128f_robust
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHA2_128f_robust
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHA2_128f_robust
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_128f_robust
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHA2_128f_robust
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 108
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHA2_128f_robust = "SPHINCS+-SHA2-128f-robust"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHA2_128f_robust As String = "SPHINCS+-SHA2-128f-robust"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_128s_simple
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_128s_simple
+  id: SPHINCS_PLUS_SHA2_128s_simple
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHA2_128s_simple
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHA2_128s_simple
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_128s_simple
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHA2_128s_simple
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 109
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHA2_128s_simple = "SPHINCS+-SHA2-128s-simple"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHA2_128s_simple As String = "SPHINCS+-SHA2-128s-simple"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_128s_robust
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_128s_robust
+  id: SPHINCS_PLUS_SHA2_128s_robust
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHA2_128s_robust
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHA2_128s_robust
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_128s_robust
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHA2_128s_robust
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 110
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHA2_128s_robust = "SPHINCS+-SHA2-128s-robust"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHA2_128s_robust As String = "SPHINCS+-SHA2-128s-robust"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_192f_simple
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_192f_simple
+  id: SPHINCS_PLUS_SHA2_192f_simple
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHA2_192f_simple
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHA2_192f_simple
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_192f_simple
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHA2_192f_simple
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 111
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHA2_192f_simple = "SPHINCS+-SHA2-192f-simple"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHA2_192f_simple As String = "SPHINCS+-SHA2-192f-simple"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_192f_robust
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_192f_robust
+  id: SPHINCS_PLUS_SHA2_192f_robust
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHA2_192f_robust
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHA2_192f_robust
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_192f_robust
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHA2_192f_robust
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 112
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHA2_192f_robust = "SPHINCS+-SHA2-192f-robust"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHA2_192f_robust As String = "SPHINCS+-SHA2-192f-robust"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_192s_simple
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_192s_simple
+  id: SPHINCS_PLUS_SHA2_192s_simple
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHA2_192s_simple
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHA2_192s_simple
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_192s_simple
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHA2_192s_simple
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 113
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHA2_192s_simple = "SPHINCS+-SHA2-192s-simple"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHA2_192s_simple As String = "SPHINCS+-SHA2-192s-simple"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_192s_robust
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_192s_robust
+  id: SPHINCS_PLUS_SHA2_192s_robust
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHA2_192s_robust
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHA2_192s_robust
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_192s_robust
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHA2_192s_robust
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 114
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHA2_192s_robust = "SPHINCS+-SHA2-192s-robust"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHA2_192s_robust As String = "SPHINCS+-SHA2-192s-robust"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_256f_simple
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_256f_simple
+  id: SPHINCS_PLUS_SHA2_256f_simple
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHA2_256f_simple
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHA2_256f_simple
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_256f_simple
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHA2_256f_simple
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 115
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHA2_256f_simple = "SPHINCS+-SHA2-256f-simple"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHA2_256f_simple As String = "SPHINCS+-SHA2-256f-simple"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_256f_robust
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_256f_robust
+  id: SPHINCS_PLUS_SHA2_256f_robust
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHA2_256f_robust
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHA2_256f_robust
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_256f_robust
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHA2_256f_robust
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 116
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHA2_256f_robust = "SPHINCS+-SHA2-256f-robust"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHA2_256f_robust As String = "SPHINCS+-SHA2-256f-robust"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_256s_simple
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_256s_simple
+  id: SPHINCS_PLUS_SHA2_256s_simple
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHA2_256s_simple
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHA2_256s_simple
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_256s_simple
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHA2_256s_simple
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 117
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHA2_256s_simple = "SPHINCS+-SHA2-256s-simple"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHA2_256s_simple As String = "SPHINCS+-SHA2-256s-simple"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_256s_robust
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_256s_robust
+  id: SPHINCS_PLUS_SHA2_256s_robust
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHA2_256s_robust
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHA2_256s_robust
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHA2_256s_robust
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHA2_256s_robust
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 118
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHA2_256s_robust = "SPHINCS+-SHA2-256s-robust"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHA2_256s_robust As String = "SPHINCS+-SHA2-256s-robust"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128f_simple
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128f_simple
+  id: SPHINCS_PLUS_SHAKE_128f_simple
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHAKE_128f_simple
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128f_simple
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128f_simple
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHAKE_128f_simple
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 120
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHAKE_128f_simple = "SPHINCS+-SHAKE-128f-simple"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHAKE_128f_simple As String = "SPHINCS+-SHAKE-128f-simple"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128f_robust
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128f_robust
+  id: SPHINCS_PLUS_SHAKE_128f_robust
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHAKE_128f_robust
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128f_robust
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128f_robust
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHAKE_128f_robust
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 121
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHAKE_128f_robust = "SPHINCS+-SHAKE-128f-robust"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHAKE_128f_robust As String = "SPHINCS+-SHAKE-128f-robust"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128s_simple
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128s_simple
+  id: SPHINCS_PLUS_SHAKE_128s_simple
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHAKE_128s_simple
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128s_simple
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128s_simple
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHAKE_128s_simple
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 122
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHAKE_128s_simple = "SPHINCS+-SHAKE-128s-simple"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHAKE_128s_simple As String = "SPHINCS+-SHAKE-128s-simple"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128s_robust
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128s_robust
+  id: SPHINCS_PLUS_SHAKE_128s_robust
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHAKE_128s_robust
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128s_robust
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128s_robust
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHAKE_128s_robust
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 123
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHAKE_128s_robust = "SPHINCS+-SHAKE-128s-robust"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHAKE_128s_robust As String = "SPHINCS+-SHAKE-128s-robust"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_192f_simple
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_192f_simple
+  id: SPHINCS_PLUS_SHAKE_192f_simple
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHAKE_192f_simple
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHAKE_192f_simple
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_192f_simple
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHAKE_192f_simple
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 124
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHAKE_192f_simple = "SPHINCS+-SHAKE-192f-simple"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHAKE_192f_simple As String = "SPHINCS+-SHAKE-192f-simple"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_192f_robust
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_192f_robust
+  id: SPHINCS_PLUS_SHAKE_192f_robust
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHAKE_192f_robust
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHAKE_192f_robust
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_192f_robust
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHAKE_192f_robust
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 125
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHAKE_192f_robust = "SPHINCS+-SHAKE-192f-robust"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHAKE_192f_robust As String = "SPHINCS+-SHAKE-192f-robust"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_192s_simple
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_192s_simple
+  id: SPHINCS_PLUS_SHAKE_192s_simple
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHAKE_192s_simple
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHAKE_192s_simple
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_192s_simple
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHAKE_192s_simple
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 126
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHAKE_192s_simple = "SPHINCS+-SHAKE-192s-simple"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHAKE_192s_simple As String = "SPHINCS+-SHAKE-192s-simple"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_192s_robust
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_192s_robust
+  id: SPHINCS_PLUS_SHAKE_192s_robust
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHAKE_192s_robust
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHAKE_192s_robust
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_192s_robust
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHAKE_192s_robust
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 127
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHAKE_192s_robust = "SPHINCS+-SHAKE-192s-robust"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHAKE_192s_robust As String = "SPHINCS+-SHAKE-192s-robust"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_256f_simple
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_256f_simple
+  id: SPHINCS_PLUS_SHAKE_256f_simple
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHAKE_256f_simple
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHAKE_256f_simple
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_256f_simple
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHAKE_256f_simple
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 128
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHAKE_256f_simple = "SPHINCS+-SHAKE-256f-simple"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHAKE_256f_simple As String = "SPHINCS+-SHAKE-256f-simple"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_256f_robust
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_256f_robust
+  id: SPHINCS_PLUS_SHAKE_256f_robust
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHAKE_256f_robust
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHAKE_256f_robust
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_256f_robust
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHAKE_256f_robust
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 129
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHAKE_256f_robust = "SPHINCS+-SHAKE-256f-robust"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHAKE_256f_robust As String = "SPHINCS+-SHAKE-256f-robust"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_256s_simple
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_256s_simple
+  id: SPHINCS_PLUS_SHAKE_256s_simple
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHAKE_256s_simple
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHAKE_256s_simple
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_256s_simple
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHAKE_256s_simple
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 130
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHAKE_256s_simple = "SPHINCS+-SHAKE-256s-simple"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHAKE_256s_simple As String = "SPHINCS+-SHAKE-256s-simple"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_256s_robust
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_256s_robust
+  id: SPHINCS_PLUS_SHAKE_256s_robust
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SPHINCS_PLUS_SHAKE_256s_robust
+  nameWithType: SignatureAlgorithms.SPHINCS_PLUS_SHAKE_256s_robust
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SPHINCS_PLUS_SHAKE_256s_robust
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SPHINCS_PLUS_SHAKE_256s_robust
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 131
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SPHINCS_PLUS_SHAKE_256s_robust = "SPHINCS+-SHAKE-256s-robust"
+    return:
+      type: System.String
+    content.vb: Public Const SPHINCS_PLUS_SHAKE_256s_robust As String = "SPHINCS+-SHAKE-256s-robust"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_128_balanced
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_128_balanced
+  id: CROSS_rsdp_128_balanced
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: CROSS_rsdp_128_balanced
+  nameWithType: SignatureAlgorithms.CROSS_rsdp_128_balanced
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_128_balanced
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: CROSS_rsdp_128_balanced
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 133
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string CROSS_rsdp_128_balanced = "CROSS-rsdp-128-balanced"
+    return:
+      type: System.String
+    content.vb: Public Const CROSS_rsdp_128_balanced As String = "CROSS-rsdp-128-balanced"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_128_fast
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_128_fast
+  id: CROSS_rsdp_128_fast
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: CROSS_rsdp_128_fast
+  nameWithType: SignatureAlgorithms.CROSS_rsdp_128_fast
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_128_fast
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: CROSS_rsdp_128_fast
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 134
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string CROSS_rsdp_128_fast = "CROSS-rsdp-128-fast"
+    return:
+      type: System.String
+    content.vb: Public Const CROSS_rsdp_128_fast As String = "CROSS-rsdp-128-fast"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_128_small
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_128_small
+  id: CROSS_rsdp_128_small
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: CROSS_rsdp_128_small
+  nameWithType: SignatureAlgorithms.CROSS_rsdp_128_small
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_128_small
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: CROSS_rsdp_128_small
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 135
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string CROSS_rsdp_128_small = "CROSS-rsdp-128-small"
+    return:
+      type: System.String
+    content.vb: Public Const CROSS_rsdp_128_small As String = "CROSS-rsdp-128-small"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_192_balanced
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_192_balanced
+  id: CROSS_rsdp_192_balanced
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: CROSS_rsdp_192_balanced
+  nameWithType: SignatureAlgorithms.CROSS_rsdp_192_balanced
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_192_balanced
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: CROSS_rsdp_192_balanced
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 136
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string CROSS_rsdp_192_balanced = "CROSS-rsdp-192-balanced"
+    return:
+      type: System.String
+    content.vb: Public Const CROSS_rsdp_192_balanced As String = "CROSS-rsdp-192-balanced"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_192_fast
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_192_fast
+  id: CROSS_rsdp_192_fast
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: CROSS_rsdp_192_fast
+  nameWithType: SignatureAlgorithms.CROSS_rsdp_192_fast
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_192_fast
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: CROSS_rsdp_192_fast
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 137
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string CROSS_rsdp_192_fast = "CROSS-rsdp-192-fast"
+    return:
+      type: System.String
+    content.vb: Public Const CROSS_rsdp_192_fast As String = "CROSS-rsdp-192-fast"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_192_small
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_192_small
+  id: CROSS_rsdp_192_small
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: CROSS_rsdp_192_small
+  nameWithType: SignatureAlgorithms.CROSS_rsdp_192_small
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_192_small
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: CROSS_rsdp_192_small
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 138
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string CROSS_rsdp_192_small = "CROSS-rsdp-192-small"
+    return:
+      type: System.String
+    content.vb: Public Const CROSS_rsdp_192_small As String = "CROSS-rsdp-192-small"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_256_balanced
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_256_balanced
+  id: CROSS_rsdp_256_balanced
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: CROSS_rsdp_256_balanced
+  nameWithType: SignatureAlgorithms.CROSS_rsdp_256_balanced
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_256_balanced
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: CROSS_rsdp_256_balanced
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 139
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string CROSS_rsdp_256_balanced = "CROSS-rsdp-256-balanced"
+    return:
+      type: System.String
+    content.vb: Public Const CROSS_rsdp_256_balanced As String = "CROSS-rsdp-256-balanced"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_256_fast
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_256_fast
+  id: CROSS_rsdp_256_fast
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: CROSS_rsdp_256_fast
+  nameWithType: SignatureAlgorithms.CROSS_rsdp_256_fast
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_256_fast
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: CROSS_rsdp_256_fast
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 140
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string CROSS_rsdp_256_fast = "CROSS-rsdp-256-fast"
+    return:
+      type: System.String
+    content.vb: Public Const CROSS_rsdp_256_fast As String = "CROSS-rsdp-256-fast"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_256_small
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_256_small
+  id: CROSS_rsdp_256_small
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: CROSS_rsdp_256_small
+  nameWithType: SignatureAlgorithms.CROSS_rsdp_256_small
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdp_256_small
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: CROSS_rsdp_256_small
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 141
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string CROSS_rsdp_256_small = "CROSS-rsdp-256-small"
+    return:
+      type: System.String
+    content.vb: Public Const CROSS_rsdp_256_small As String = "CROSS-rsdp-256-small"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_128_balanced
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_128_balanced
+  id: CROSS_rsdpg_128_balanced
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: CROSS_rsdpg_128_balanced
+  nameWithType: SignatureAlgorithms.CROSS_rsdpg_128_balanced
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_128_balanced
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: CROSS_rsdpg_128_balanced
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 142
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string CROSS_rsdpg_128_balanced = "CROSS-rsdpg-128-balanced"
+    return:
+      type: System.String
+    content.vb: Public Const CROSS_rsdpg_128_balanced As String = "CROSS-rsdpg-128-balanced"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_128_fast
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_128_fast
+  id: CROSS_rsdpg_128_fast
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: CROSS_rsdpg_128_fast
+  nameWithType: SignatureAlgorithms.CROSS_rsdpg_128_fast
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_128_fast
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: CROSS_rsdpg_128_fast
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 143
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string CROSS_rsdpg_128_fast = "CROSS-rsdpg-128-fast"
+    return:
+      type: System.String
+    content.vb: Public Const CROSS_rsdpg_128_fast As String = "CROSS-rsdpg-128-fast"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_128_small
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_128_small
+  id: CROSS_rsdpg_128_small
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: CROSS_rsdpg_128_small
+  nameWithType: SignatureAlgorithms.CROSS_rsdpg_128_small
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_128_small
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: CROSS_rsdpg_128_small
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 144
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string CROSS_rsdpg_128_small = "CROSS-rsdpg-128-small"
+    return:
+      type: System.String
+    content.vb: Public Const CROSS_rsdpg_128_small As String = "CROSS-rsdpg-128-small"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_192_balanced
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_192_balanced
+  id: CROSS_rsdpg_192_balanced
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: CROSS_rsdpg_192_balanced
+  nameWithType: SignatureAlgorithms.CROSS_rsdpg_192_balanced
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_192_balanced
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: CROSS_rsdpg_192_balanced
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 145
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string CROSS_rsdpg_192_balanced = "CROSS-rsdpg-192-balanced"
+    return:
+      type: System.String
+    content.vb: Public Const CROSS_rsdpg_192_balanced As String = "CROSS-rsdpg-192-balanced"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_192_fast
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_192_fast
+  id: CROSS_rsdpg_192_fast
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: CROSS_rsdpg_192_fast
+  nameWithType: SignatureAlgorithms.CROSS_rsdpg_192_fast
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_192_fast
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: CROSS_rsdpg_192_fast
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 146
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string CROSS_rsdpg_192_fast = "CROSS-rsdpg-192-fast"
+    return:
+      type: System.String
+    content.vb: Public Const CROSS_rsdpg_192_fast As String = "CROSS-rsdpg-192-fast"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_192_small
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_192_small
+  id: CROSS_rsdpg_192_small
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: CROSS_rsdpg_192_small
+  nameWithType: SignatureAlgorithms.CROSS_rsdpg_192_small
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_192_small
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: CROSS_rsdpg_192_small
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 147
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string CROSS_rsdpg_192_small = "CROSS-rsdpg-192-small"
+    return:
+      type: System.String
+    content.vb: Public Const CROSS_rsdpg_192_small As String = "CROSS-rsdpg-192-small"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_256_balanced
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_256_balanced
+  id: CROSS_rsdpg_256_balanced
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: CROSS_rsdpg_256_balanced
+  nameWithType: SignatureAlgorithms.CROSS_rsdpg_256_balanced
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_256_balanced
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: CROSS_rsdpg_256_balanced
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 148
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string CROSS_rsdpg_256_balanced = "CROSS-rsdpg-256-balanced"
+    return:
+      type: System.String
+    content.vb: Public Const CROSS_rsdpg_256_balanced As String = "CROSS-rsdpg-256-balanced"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_256_fast
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_256_fast
+  id: CROSS_rsdpg_256_fast
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: CROSS_rsdpg_256_fast
+  nameWithType: SignatureAlgorithms.CROSS_rsdpg_256_fast
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_256_fast
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: CROSS_rsdpg_256_fast
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 149
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string CROSS_rsdpg_256_fast = "CROSS-rsdpg-256-fast"
+    return:
+      type: System.String
+    content.vb: Public Const CROSS_rsdpg_256_fast As String = "CROSS-rsdpg-256-fast"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_256_small
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_256_small
+  id: CROSS_rsdpg_256_small
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: CROSS_rsdpg_256_small
+  nameWithType: SignatureAlgorithms.CROSS_rsdpg_256_small
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.CROSS_rsdpg_256_small
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: CROSS_rsdpg_256_small
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 150
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string CROSS_rsdpg_256_small = "CROSS-rsdpg-256-small"
+    return:
+      type: System.String
+    content.vb: Public Const CROSS_rsdpg_256_small As String = "CROSS-rsdpg-256-small"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Falcon_512_padded
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Falcon_512_padded
+  id: Falcon_512_padded
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: Falcon_512_padded
+  nameWithType: SignatureAlgorithms.Falcon_512_padded
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Falcon_512_padded
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Falcon_512_padded
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 152
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string Falcon_512_padded = "Falcon-padded-512"
+    return:
+      type: System.String
+    content.vb: Public Const Falcon_512_padded As String = "Falcon-padded-512"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Falcon_1024_padded
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Falcon_1024_padded
+  id: Falcon_1024_padded
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: Falcon_1024_padded
+  nameWithType: SignatureAlgorithms.Falcon_1024_padded
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Falcon_1024_padded
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Falcon_1024_padded
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 153
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string Falcon_1024_padded = "Falcon-padded-1024"
+    return:
+      type: System.String
+    content.vb: Public Const Falcon_1024_padded As String = "Falcon-padded-1024"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.MAYO_1
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.MAYO_1
+  id: MAYO_1
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: MAYO_1
+  nameWithType: SignatureAlgorithms.MAYO_1
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.MAYO_1
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: MAYO_1
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 155
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string MAYO_1 = "MAYO-1"
+    return:
+      type: System.String
+    content.vb: Public Const MAYO_1 As String = "MAYO-1"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.MAYO_2
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.MAYO_2
+  id: MAYO_2
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: MAYO_2
+  nameWithType: SignatureAlgorithms.MAYO_2
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.MAYO_2
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: MAYO_2
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 156
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string MAYO_2 = "MAYO-2"
+    return:
+      type: System.String
+    content.vb: Public Const MAYO_2 As String = "MAYO-2"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.MAYO_3
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.MAYO_3
+  id: MAYO_3
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: MAYO_3
+  nameWithType: SignatureAlgorithms.MAYO_3
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.MAYO_3
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: MAYO_3
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 157
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string MAYO_3 = "MAYO-3"
+    return:
+      type: System.String
+    content.vb: Public Const MAYO_3 As String = "MAYO-3"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.MAYO_5
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.MAYO_5
+  id: MAYO_5
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: MAYO_5
+  nameWithType: SignatureAlgorithms.MAYO_5
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.MAYO_5
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: MAYO_5
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 158
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string MAYO_5 = "MAYO-5"
+    return:
+      type: System.String
+    content.vb: Public Const MAYO_5 As String = "MAYO-5"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_24_5_4
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_24_5_4
+  id: SNOVA_24_5_4
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SNOVA_24_5_4
+  nameWithType: SignatureAlgorithms.SNOVA_24_5_4
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_24_5_4
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SNOVA_24_5_4
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 160
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SNOVA_24_5_4 = "SNOVA-24-5-4"
+    return:
+      type: System.String
+    content.vb: Public Const SNOVA_24_5_4 As String = "SNOVA-24-5-4"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_24_5_4_esk
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_24_5_4_esk
+  id: SNOVA_24_5_4_esk
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SNOVA_24_5_4_esk
+  nameWithType: SignatureAlgorithms.SNOVA_24_5_4_esk
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_24_5_4_esk
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SNOVA_24_5_4_esk
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 161
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SNOVA_24_5_4_esk = "SNOVA-24-5-4-esk"
+    return:
+      type: System.String
+    content.vb: Public Const SNOVA_24_5_4_esk As String = "SNOVA-24-5-4-esk"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_24_5_4_SHAKE
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_24_5_4_SHAKE
+  id: SNOVA_24_5_4_SHAKE
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SNOVA_24_5_4_SHAKE
+  nameWithType: SignatureAlgorithms.SNOVA_24_5_4_SHAKE
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_24_5_4_SHAKE
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SNOVA_24_5_4_SHAKE
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 162
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SNOVA_24_5_4_SHAKE = "SNOVA-24-5-4-SHAKE"
+    return:
+      type: System.String
+    content.vb: Public Const SNOVA_24_5_4_SHAKE As String = "SNOVA-24-5-4-SHAKE"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_24_5_4_SHAKE_esk
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_24_5_4_SHAKE_esk
+  id: SNOVA_24_5_4_SHAKE_esk
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SNOVA_24_5_4_SHAKE_esk
+  nameWithType: SignatureAlgorithms.SNOVA_24_5_4_SHAKE_esk
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_24_5_4_SHAKE_esk
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SNOVA_24_5_4_SHAKE_esk
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 163
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SNOVA_24_5_4_SHAKE_esk = "SNOVA-24-5-4-SHAKE-esk"
+    return:
+      type: System.String
+    content.vb: Public Const SNOVA_24_5_4_SHAKE_esk As String = "SNOVA-24-5-4-SHAKE-esk"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_24_5_5
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_24_5_5
+  id: SNOVA_24_5_5
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SNOVA_24_5_5
+  nameWithType: SignatureAlgorithms.SNOVA_24_5_5
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_24_5_5
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SNOVA_24_5_5
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 164
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SNOVA_24_5_5 = "SNOVA-24-5-5"
+    return:
+      type: System.String
+    content.vb: Public Const SNOVA_24_5_5 As String = "SNOVA-24-5-5"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_25_8_3
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_25_8_3
+  id: SNOVA_25_8_3
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SNOVA_25_8_3
+  nameWithType: SignatureAlgorithms.SNOVA_25_8_3
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_25_8_3
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SNOVA_25_8_3
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 165
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SNOVA_25_8_3 = "SNOVA-25-8-3"
+    return:
+      type: System.String
+    content.vb: Public Const SNOVA_25_8_3 As String = "SNOVA-25-8-3"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_29_6_5
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_29_6_5
+  id: SNOVA_29_6_5
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SNOVA_29_6_5
+  nameWithType: SignatureAlgorithms.SNOVA_29_6_5
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_29_6_5
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SNOVA_29_6_5
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 166
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SNOVA_29_6_5 = "SNOVA-29-6-5"
+    return:
+      type: System.String
+    content.vb: Public Const SNOVA_29_6_5 As String = "SNOVA-29-6-5"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_37_17_2
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_37_17_2
+  id: SNOVA_37_17_2
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SNOVA_37_17_2
+  nameWithType: SignatureAlgorithms.SNOVA_37_17_2
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_37_17_2
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SNOVA_37_17_2
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 167
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SNOVA_37_17_2 = "SNOVA-37-17-2"
+    return:
+      type: System.String
+    content.vb: Public Const SNOVA_37_17_2 As String = "SNOVA-37-17-2"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_37_8_4
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_37_8_4
+  id: SNOVA_37_8_4
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SNOVA_37_8_4
+  nameWithType: SignatureAlgorithms.SNOVA_37_8_4
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_37_8_4
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SNOVA_37_8_4
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 168
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SNOVA_37_8_4 = "SNOVA-37-8-4"
+    return:
+      type: System.String
+    content.vb: Public Const SNOVA_37_8_4 As String = "SNOVA-37-8-4"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_49_11_3
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_49_11_3
+  id: SNOVA_49_11_3
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SNOVA_49_11_3
+  nameWithType: SignatureAlgorithms.SNOVA_49_11_3
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_49_11_3
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SNOVA_49_11_3
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 169
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SNOVA_49_11_3 = "SNOVA-49-11-3"
+    return:
+      type: System.String
+    content.vb: Public Const SNOVA_49_11_3 As String = "SNOVA-49-11-3"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_56_25_2
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_56_25_2
+  id: SNOVA_56_25_2
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SNOVA_56_25_2
+  nameWithType: SignatureAlgorithms.SNOVA_56_25_2
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_56_25_2
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SNOVA_56_25_2
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 170
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SNOVA_56_25_2 = "SNOVA-56-25-2"
+    return:
+      type: System.String
+    content.vb: Public Const SNOVA_56_25_2 As String = "SNOVA-56-25-2"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_60_10_4
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_60_10_4
+  id: SNOVA_60_10_4
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: SNOVA_60_10_4
+  nameWithType: SignatureAlgorithms.SNOVA_60_10_4
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.SNOVA_60_10_4
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SNOVA_60_10_4
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 171
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string SNOVA_60_10_4 = "SNOVA-60-10-4"
+    return:
+      type: System.String
+    content.vb: Public Const SNOVA_60_10_4 As String = "SNOVA-60-10-4"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Ip
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Ip
+  id: UOV_Ip
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: UOV_Ip
+  nameWithType: SignatureAlgorithms.UOV_Ip
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Ip
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: UOV_Ip
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 173
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string UOV_Ip = "OV-Ip"
+    return:
+      type: System.String
+    content.vb: Public Const UOV_Ip As String = "OV-Ip"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Ip_pkc
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Ip_pkc
+  id: UOV_Ip_pkc
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: UOV_Ip_pkc
+  nameWithType: SignatureAlgorithms.UOV_Ip_pkc
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Ip_pkc
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: UOV_Ip_pkc
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 174
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string UOV_Ip_pkc = "OV-Ip-pkc"
+    return:
+      type: System.String
+    content.vb: Public Const UOV_Ip_pkc As String = "OV-Ip-pkc"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Ip_pkc_skc
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Ip_pkc_skc
+  id: UOV_Ip_pkc_skc
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: UOV_Ip_pkc_skc
+  nameWithType: SignatureAlgorithms.UOV_Ip_pkc_skc
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Ip_pkc_skc
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: UOV_Ip_pkc_skc
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 175
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string UOV_Ip_pkc_skc = "OV-Ip-pkc-skc"
+    return:
+      type: System.String
+    content.vb: Public Const UOV_Ip_pkc_skc As String = "OV-Ip-pkc-skc"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Is
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Is
+  id: UOV_Is
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: UOV_Is
+  nameWithType: SignatureAlgorithms.UOV_Is
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Is
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: UOV_Is
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 176
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string UOV_Is = "OV-Is"
+    return:
+      type: System.String
+    content.vb: Public Const UOV_Is As String = "OV-Is"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Is_pkc
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Is_pkc
+  id: UOV_Is_pkc
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: UOV_Is_pkc
+  nameWithType: SignatureAlgorithms.UOV_Is_pkc
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Is_pkc
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: UOV_Is_pkc
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 177
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string UOV_Is_pkc = "OV-Is-pkc"
+    return:
+      type: System.String
+    content.vb: Public Const UOV_Is_pkc As String = "OV-Is-pkc"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Is_pkc_skc
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Is_pkc_skc
+  id: UOV_Is_pkc_skc
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: UOV_Is_pkc_skc
+  nameWithType: SignatureAlgorithms.UOV_Is_pkc_skc
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_Is_pkc_skc
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: UOV_Is_pkc_skc
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 178
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string UOV_Is_pkc_skc = "OV-Is-pkc-skc"
+    return:
+      type: System.String
+    content.vb: Public Const UOV_Is_pkc_skc As String = "OV-Is-pkc-skc"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_III
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_III
+  id: UOV_III
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: UOV_III
+  nameWithType: SignatureAlgorithms.UOV_III
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_III
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: UOV_III
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 179
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string UOV_III = "OV-III"
+    return:
+      type: System.String
+    content.vb: Public Const UOV_III As String = "OV-III"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_III_pkc
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_III_pkc
+  id: UOV_III_pkc
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: UOV_III_pkc
+  nameWithType: SignatureAlgorithms.UOV_III_pkc
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_III_pkc
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: UOV_III_pkc
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 180
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string UOV_III_pkc = "OV-III-pkc"
+    return:
+      type: System.String
+    content.vb: Public Const UOV_III_pkc As String = "OV-III-pkc"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_III_pkc_skc
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_III_pkc_skc
+  id: UOV_III_pkc_skc
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: UOV_III_pkc_skc
+  nameWithType: SignatureAlgorithms.UOV_III_pkc_skc
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_III_pkc_skc
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: UOV_III_pkc_skc
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 181
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string UOV_III_pkc_skc = "OV-III-pkc-skc"
+    return:
+      type: System.String
+    content.vb: Public Const UOV_III_pkc_skc As String = "OV-III-pkc-skc"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_V
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_V
+  id: UOV_V
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: UOV_V
+  nameWithType: SignatureAlgorithms.UOV_V
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_V
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: UOV_V
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 182
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string UOV_V = "OV-V"
+    return:
+      type: System.String
+    content.vb: Public Const UOV_V As String = "OV-V"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_V_pkc
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_V_pkc
+  id: UOV_V_pkc
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: UOV_V_pkc
+  nameWithType: SignatureAlgorithms.UOV_V_pkc
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_V_pkc
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: UOV_V_pkc
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 183
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string UOV_V_pkc = "OV-V-pkc"
+    return:
+      type: System.String
+    content.vb: Public Const UOV_V_pkc As String = "OV-V-pkc"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_V_pkc_skc
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_V_pkc_skc
+  id: UOV_V_pkc_skc
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: UOV_V_pkc_skc
+  nameWithType: SignatureAlgorithms.UOV_V_pkc_skc
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.UOV_V_pkc_skc
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: UOV_V_pkc_skc
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 184
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string UOV_V_pkc_skc = "OV-V-pkc-skc"
+    return:
+      type: System.String
+    content.vb: Public Const UOV_V_pkc_skc As String = "OV-V-pkc-skc"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_I_Classic
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_I_Classic
+  id: Rainbow_I_Classic
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: Rainbow_I_Classic
+  nameWithType: SignatureAlgorithms.Rainbow_I_Classic
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_I_Classic
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Rainbow_I_Classic
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 186
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string Rainbow_I_Classic = "Rainbow-I-Classic"
+    return:
+      type: System.String
+    content.vb: Public Const Rainbow_I_Classic As String = "Rainbow-I-Classic"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_I_Circumzenithal
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_I_Circumzenithal
+  id: Rainbow_I_Circumzenithal
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: Rainbow_I_Circumzenithal
+  nameWithType: SignatureAlgorithms.Rainbow_I_Circumzenithal
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_I_Circumzenithal
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Rainbow_I_Circumzenithal
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 187
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string Rainbow_I_Circumzenithal = "Rainbow-I-Circumzenithal"
+    return:
+      type: System.String
+    content.vb: Public Const Rainbow_I_Circumzenithal As String = "Rainbow-I-Circumzenithal"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_I_Compressed
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_I_Compressed
+  id: Rainbow_I_Compressed
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: Rainbow_I_Compressed
+  nameWithType: SignatureAlgorithms.Rainbow_I_Compressed
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_I_Compressed
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Rainbow_I_Compressed
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 188
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string Rainbow_I_Compressed = "Rainbow-I-Compressed"
+    return:
+      type: System.String
+    content.vb: Public Const Rainbow_I_Compressed As String = "Rainbow-I-Compressed"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_III_Classic
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_III_Classic
+  id: Rainbow_III_Classic
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: Rainbow_III_Classic
+  nameWithType: SignatureAlgorithms.Rainbow_III_Classic
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_III_Classic
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Rainbow_III_Classic
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 189
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string Rainbow_III_Classic = "Rainbow-III-Classic"
+    return:
+      type: System.String
+    content.vb: Public Const Rainbow_III_Classic As String = "Rainbow-III-Classic"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_III_Circumzenithal
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_III_Circumzenithal
+  id: Rainbow_III_Circumzenithal
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: Rainbow_III_Circumzenithal
+  nameWithType: SignatureAlgorithms.Rainbow_III_Circumzenithal
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_III_Circumzenithal
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Rainbow_III_Circumzenithal
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 190
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string Rainbow_III_Circumzenithal = "Rainbow-III-Circumzenithal"
+    return:
+      type: System.String
+    content.vb: Public Const Rainbow_III_Circumzenithal As String = "Rainbow-III-Circumzenithal"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_III_Compressed
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_III_Compressed
+  id: Rainbow_III_Compressed
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: Rainbow_III_Compressed
+  nameWithType: SignatureAlgorithms.Rainbow_III_Compressed
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_III_Compressed
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Rainbow_III_Compressed
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 191
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string Rainbow_III_Compressed = "Rainbow-III-Compressed"
+    return:
+      type: System.String
+    content.vb: Public Const Rainbow_III_Compressed As String = "Rainbow-III-Compressed"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_V_Classic
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_V_Classic
+  id: Rainbow_V_Classic
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: Rainbow_V_Classic
+  nameWithType: SignatureAlgorithms.Rainbow_V_Classic
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_V_Classic
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Rainbow_V_Classic
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 192
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string Rainbow_V_Classic = "Rainbow-V-Classic"
+    return:
+      type: System.String
+    content.vb: Public Const Rainbow_V_Classic As String = "Rainbow-V-Classic"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_V_Circumzenithal
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_V_Circumzenithal
+  id: Rainbow_V_Circumzenithal
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: Rainbow_V_Circumzenithal
+  nameWithType: SignatureAlgorithms.Rainbow_V_Circumzenithal
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_V_Circumzenithal
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Rainbow_V_Circumzenithal
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 193
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string Rainbow_V_Circumzenithal = "Rainbow-V-Circumzenithal"
+    return:
+      type: System.String
+    content.vb: Public Const Rainbow_V_Circumzenithal As String = "Rainbow-V-Circumzenithal"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_V_Compressed
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_V_Compressed
+  id: Rainbow_V_Compressed
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: Rainbow_V_Compressed
+  nameWithType: SignatureAlgorithms.Rainbow_V_Compressed
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Rainbow_V_Compressed
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Rainbow_V_Compressed
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 194
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  syntax:
+    content: public const string Rainbow_V_Compressed = "Rainbow-V-Compressed"
+    return:
+      type: System.String
+    content.vb: Public Const Rainbow_V_Compressed As String = "Rainbow-V-Compressed"
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.All
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.All
+  id: All
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: All
+  nameWithType: SignatureAlgorithms.All
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.All
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: All
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 199
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Gets all signature algorithm identifiers.
+  example: []
+  syntax:
+    content: public static readonly string[] All
+    return:
+      type: System.String[]
+    content.vb: Public Shared ReadOnly All As String()
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.NISTStandardized
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.NISTStandardized
+  id: NISTStandardized
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: NISTStandardized
+  nameWithType: SignatureAlgorithms.NISTStandardized
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.NISTStandardized
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: NISTStandardized
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 235
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Gets NIST standardized signature algorithms (recommended for production use).
+  example: []
+  syntax:
+    content: public static readonly string[] NISTStandardized
+    return:
+      type: System.String[]
+    content.vb: Public Shared ReadOnly NISTStandardized As String()
+- uid: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Deprecated
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Deprecated
+  id: Deprecated
+  parent: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms
+  langs:
+  - csharp
+  - vb
+  name: Deprecated
+  nameWithType: SignatureAlgorithms.Deprecated
+  fullName: OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.Deprecated
+  type: Field
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Deprecated
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 242
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Gets deprecated signature algorithms (should not be used in production).
+  example: []
+  syntax:
+    content: public static readonly string[] Deprecated
+    return:
+      type: System.String[]
+    content.vb: Public Shared ReadOnly Deprecated As String()
+references:
+- uid: OpenForge.Cryptography.LibOqs.Core
+  commentId: N:OpenForge.Cryptography.LibOqs.Core
+  href: OpenForge.html
+  name: OpenForge.Cryptography.LibOqs.Core
+  nameWithType: OpenForge.Cryptography.LibOqs.Core
+  fullName: OpenForge.Cryptography.LibOqs.Core
+  spec.csharp:
+  - uid: OpenForge
+    name: OpenForge
+    href: OpenForge.html
+  - name: .
+  - uid: OpenForge.Cryptography
+    name: Cryptography
+    href: OpenForge.Cryptography.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs
+    name: LibOqs
+    href: OpenForge.Cryptography.LibOqs.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs.Core
+    name: Core
+    href: OpenForge.Cryptography.LibOqs.Core.html
+  spec.vb:
+  - uid: OpenForge
+    name: OpenForge
+    href: OpenForge.html
+  - name: .
+  - uid: OpenForge.Cryptography
+    name: Cryptography
+    href: OpenForge.Cryptography.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs
+    name: LibOqs
+    href: OpenForge.Cryptography.LibOqs.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs.Core
+    name: Core
+    href: OpenForge.Cryptography.LibOqs.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )

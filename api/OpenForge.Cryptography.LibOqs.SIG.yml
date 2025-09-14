@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenForge.Cryptography.LibOqs.SIG
+  commentId: N:OpenForge.Cryptography.LibOqs.SIG
+  id: SIG
+  parent: OpenForge.Cryptography.LibOqs
+  children:
+  - OpenForge.Cryptography.LibOqs.SIG.OqsSig
+  - OpenForge.Cryptography.LibOqs.SIG.Sig
+  - OpenForge.Cryptography.LibOqs.SIG.SigInstance
+  - OpenForge.Cryptography.LibOqs.SIG.SigKeyPair
+  langs:
+  - csharp
+  - vb
+  name: OpenForge.Cryptography.LibOqs.SIG
+  nameWithType: OpenForge.Cryptography.LibOqs.SIG
+  fullName: OpenForge.Cryptography.LibOqs.SIG
+  type: Namespace
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.SIG
+references:
+- uid: OpenForge.Cryptography.LibOqs.SIG.OqsSig
+  commentId: T:OpenForge.Cryptography.LibOqs.SIG.OqsSig
+  parent: OpenForge.Cryptography.LibOqs.SIG
+  href: OpenForge.Cryptography.LibOqs.SIG.OqsSig.html
+  name: OqsSig
+  nameWithType: OqsSig
+  fullName: OpenForge.Cryptography.LibOqs.SIG.OqsSig
+- uid: OpenForge.Cryptography.LibOqs.SIG.Sig
+  commentId: T:OpenForge.Cryptography.LibOqs.SIG.Sig
+  href: OpenForge.Cryptography.LibOqs.SIG.Sig.html
+  name: Sig
+  nameWithType: Sig
+  fullName: OpenForge.Cryptography.LibOqs.SIG.Sig
+- uid: OpenForge.Cryptography.LibOqs.SIG.SigInstance
+  commentId: T:OpenForge.Cryptography.LibOqs.SIG.SigInstance
+  href: OpenForge.Cryptography.LibOqs.SIG.SigInstance.html
+  name: SigInstance
+  nameWithType: SigInstance
+  fullName: OpenForge.Cryptography.LibOqs.SIG.SigInstance
+- uid: OpenForge.Cryptography.LibOqs.SIG.SigKeyPair
+  commentId: T:OpenForge.Cryptography.LibOqs.SIG.SigKeyPair
+  parent: OpenForge.Cryptography.LibOqs.SIG
+  href: OpenForge.Cryptography.LibOqs.SIG.SigKeyPair.html
+  name: SigKeyPair
+  nameWithType: SigKeyPair
+  fullName: OpenForge.Cryptography.LibOqs.SIG.SigKeyPair
+- uid: OpenForge.Cryptography.LibOqs.SIG
+  commentId: N:OpenForge.Cryptography.LibOqs.SIG
+  href: OpenForge.html
+  name: OpenForge.Cryptography.LibOqs.SIG
+  nameWithType: OpenForge.Cryptography.LibOqs.SIG
+  fullName: OpenForge.Cryptography.LibOqs.SIG
+  spec.csharp:
+  - uid: OpenForge
+    name: OpenForge
+    href: OpenForge.html
+  - name: .
+  - uid: OpenForge.Cryptography
+    name: Cryptography
+    href: OpenForge.Cryptography.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs
+    name: LibOqs
+    href: OpenForge.Cryptography.LibOqs.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs.SIG
+    name: SIG
+    href: OpenForge.Cryptography.LibOqs.SIG.html
+  spec.vb:
+  - uid: OpenForge
+    name: OpenForge
+    href: OpenForge.html
+  - name: .
+  - uid: OpenForge.Cryptography
+    name: Cryptography
+    href: OpenForge.Cryptography.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs
+    name: LibOqs
+    href: OpenForge.Cryptography.LibOqs.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs.SIG
+    name: SIG
+    href: OpenForge.Cryptography.LibOqs.SIG.html

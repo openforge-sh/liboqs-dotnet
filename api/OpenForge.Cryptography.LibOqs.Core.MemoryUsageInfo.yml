@@ -1,0 +1,550 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo
+  commentId: T:OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo
+  id: MemoryUsageInfo
+  parent: OpenForge.Cryptography.LibOqs.Core
+  children:
+  - OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.EstimatedPeakUsage
+  - OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.IsLargeKeyAlgorithm
+  - OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.RecommendMemoryPressureHints
+  - OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.UsageDescription
+  langs:
+  - csharp
+  - vb
+  name: MemoryUsageInfo
+  nameWithType: MemoryUsageInfo
+  fullName: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo
+  type: Struct
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: MemoryUsageInfo
+    path: src/Core/OqsCore.cs
+    startLine: 484
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: >-
+    Provides information about memory usage characteristics for cryptographic algorithms.
+
+    This helps applications make informed decisions about memory management and optimization.
+  example: []
+  syntax:
+    content: 'public readonly record struct MemoryUsageInfo : IEquatable<MemoryUsageInfo>'
+    content.vb: Public Structure MemoryUsageInfo Implements IEquatable(Of MemoryUsageInfo)
+  implements:
+  - System.IEquatable{OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.EstimatedPeakUsage
+  commentId: P:OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.EstimatedPeakUsage
+  id: EstimatedPeakUsage
+  parent: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo
+  langs:
+  - csharp
+  - vb
+  name: EstimatedPeakUsage
+  nameWithType: MemoryUsageInfo.EstimatedPeakUsage
+  fullName: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.EstimatedPeakUsage
+  type: Property
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: EstimatedPeakUsage
+    path: src/Core/OqsCore.cs
+    startLine: 490
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: >-
+    Estimated peak memory usage in bytes during cryptographic operations.
+
+    This includes temporary allocations and key material.
+  example: []
+  syntax:
+    content: public long EstimatedPeakUsage { get; init; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property EstimatedPeakUsage As Long
+  overload: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.EstimatedPeakUsage*
+- uid: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.RecommendMemoryPressureHints
+  commentId: P:OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.RecommendMemoryPressureHints
+  id: RecommendMemoryPressureHints
+  parent: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo
+  langs:
+  - csharp
+  - vb
+  name: RecommendMemoryPressureHints
+  nameWithType: MemoryUsageInfo.RecommendMemoryPressureHints
+  fullName: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.RecommendMemoryPressureHints
+  type: Property
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: RecommendMemoryPressureHints
+    path: src/Core/OqsCore.cs
+    startLine: 496
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: >-
+    Whether memory pressure hints are recommended for this algorithm.
+
+    True for algorithms with large memory footprints that may benefit from GC hints.
+  example: []
+  syntax:
+    content: public bool RecommendMemoryPressureHints { get; init; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property RecommendMemoryPressureHints As Boolean
+  overload: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.RecommendMemoryPressureHints*
+- uid: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.IsLargeKeyAlgorithm
+  commentId: P:OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.IsLargeKeyAlgorithm
+  id: IsLargeKeyAlgorithm
+  parent: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo
+  langs:
+  - csharp
+  - vb
+  name: IsLargeKeyAlgorithm
+  nameWithType: MemoryUsageInfo.IsLargeKeyAlgorithm
+  fullName: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.IsLargeKeyAlgorithm
+  type: Property
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: IsLargeKeyAlgorithm
+    path: src/Core/OqsCore.cs
+    startLine: 501
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Whether this algorithm uses large keys (&gt;1MB) that may impact memory usage.
+  example: []
+  syntax:
+    content: public bool IsLargeKeyAlgorithm { get; init; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsLargeKeyAlgorithm As Boolean
+  overload: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.IsLargeKeyAlgorithm*
+- uid: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.UsageDescription
+  commentId: P:OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.UsageDescription
+  id: UsageDescription
+  parent: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo
+  langs:
+  - csharp
+  - vb
+  name: UsageDescription
+  nameWithType: MemoryUsageInfo.UsageDescription
+  fullName: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.UsageDescription
+  type: Property
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: UsageDescription
+    path: src/Core/OqsCore.cs
+    startLine: 506
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Gets a human-readable description of the memory usage characteristics.
+  example: []
+  syntax:
+    content: public string UsageDescription { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property UsageDescription As String
+  overload: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.UsageDescription*
+references:
+- uid: OpenForge.Cryptography.LibOqs.Core
+  commentId: N:OpenForge.Cryptography.LibOqs.Core
+  href: OpenForge.html
+  name: OpenForge.Cryptography.LibOqs.Core
+  nameWithType: OpenForge.Cryptography.LibOqs.Core
+  fullName: OpenForge.Cryptography.LibOqs.Core
+  spec.csharp:
+  - uid: OpenForge
+    name: OpenForge
+    href: OpenForge.html
+  - name: .
+  - uid: OpenForge.Cryptography
+    name: Cryptography
+    href: OpenForge.Cryptography.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs
+    name: LibOqs
+    href: OpenForge.Cryptography.LibOqs.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs.Core
+    name: Core
+    href: OpenForge.Cryptography.LibOqs.Core.html
+  spec.vb:
+  - uid: OpenForge
+    name: OpenForge
+    href: OpenForge.html
+  - name: .
+  - uid: OpenForge.Cryptography
+    name: Cryptography
+    href: OpenForge.Cryptography.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs
+    name: LibOqs
+    href: OpenForge.Cryptography.LibOqs.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs.Core
+    name: Core
+    href: OpenForge.Cryptography.LibOqs.Core.html
+- uid: System.IEquatable{OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo}
+  commentId: T:System.IEquatable{OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<MemoryUsageInfo>
+  nameWithType: IEquatable<MemoryUsageInfo>
+  fullName: System.IEquatable<OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo>
+  nameWithType.vb: IEquatable(Of MemoryUsageInfo)
+  fullName.vb: System.IEquatable(Of OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo)
+  name.vb: IEquatable(Of MemoryUsageInfo)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo
+    name: MemoryUsageInfo
+    href: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo
+    name: MemoryUsageInfo
+    href: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.html
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.EstimatedPeakUsage*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.EstimatedPeakUsage
+  href: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.html#OpenForge_Cryptography_LibOqs_Core_MemoryUsageInfo_EstimatedPeakUsage
+  name: EstimatedPeakUsage
+  nameWithType: MemoryUsageInfo.EstimatedPeakUsage
+  fullName: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.EstimatedPeakUsage
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.RecommendMemoryPressureHints*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.RecommendMemoryPressureHints
+  href: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.html#OpenForge_Cryptography_LibOqs_Core_MemoryUsageInfo_RecommendMemoryPressureHints
+  name: RecommendMemoryPressureHints
+  nameWithType: MemoryUsageInfo.RecommendMemoryPressureHints
+  fullName: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.RecommendMemoryPressureHints
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.IsLargeKeyAlgorithm*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.IsLargeKeyAlgorithm
+  href: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.html#OpenForge_Cryptography_LibOqs_Core_MemoryUsageInfo_IsLargeKeyAlgorithm
+  name: IsLargeKeyAlgorithm
+  nameWithType: MemoryUsageInfo.IsLargeKeyAlgorithm
+  fullName: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.IsLargeKeyAlgorithm
+- uid: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.UsageDescription*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.UsageDescription
+  href: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.html#OpenForge_Cryptography_LibOqs_Core_MemoryUsageInfo_UsageDescription
+  name: UsageDescription
+  nameWithType: MemoryUsageInfo.UsageDescription
+  fullName: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.UsageDescription
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

@@ -1,0 +1,743 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenForge.Cryptography.LibOqs.Core.SecureByteArray
+  commentId: T:OpenForge.Cryptography.LibOqs.Core.SecureByteArray
+  id: SecureByteArray
+  parent: OpenForge.Cryptography.LibOqs.Core
+  children:
+  - OpenForge.Cryptography.LibOqs.Core.SecureByteArray.AsSpan
+  - OpenForge.Cryptography.LibOqs.Core.SecureByteArray.CopyFrom(System.Byte[],System.Int32,System.Int32,System.Int32)
+  - OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Data
+  - OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Dispose
+  - OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Item(System.Int32)
+  - OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Length
+  - OpenForge.Cryptography.LibOqs.Core.SecureByteArray.ToArray
+  langs:
+  - csharp
+  - vb
+  name: SecureByteArray
+  nameWithType: SecureByteArray
+  fullName: OpenForge.Cryptography.LibOqs.Core.SecureByteArray
+  type: Class
+  source:
+    remote:
+      path: src/Core/SecureMemory.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SecureByteArray
+    path: src/Core/SecureMemory.cs
+    startLine: 83
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: A byte array wrapper that provides automatic secure clearing when disposed.
+  example: []
+  syntax:
+    content: 'public sealed class SecureByteArray : IDisposable'
+    content.vb: Public NotInheritable Class SecureByteArray Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Data
+  commentId: P:OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Data
+  id: Data
+  parent: OpenForge.Cryptography.LibOqs.Core.SecureByteArray
+  langs:
+  - csharp
+  - vb
+  name: Data
+  nameWithType: SecureByteArray.Data
+  fullName: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Data
+  type: Property
+  source:
+    remote:
+      path: src/Core/SecureMemory.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Data
+    path: src/Core/SecureMemory.cs
+    startLine: 92
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Gets the underlying byte array. Returns null if disposed.
+  example: []
+  syntax:
+    content: public byte[]? Data { get; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public ReadOnly Property Data As Byte()
+  overload: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Data*
+- uid: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Length
+  commentId: P:OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Length
+  id: Length
+  parent: OpenForge.Cryptography.LibOqs.Core.SecureByteArray
+  langs:
+  - csharp
+  - vb
+  name: Length
+  nameWithType: SecureByteArray.Length
+  fullName: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Length
+  type: Property
+  source:
+    remote:
+      path: src/Core/SecureMemory.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Length
+    path: src/Core/SecureMemory.cs
+    startLine: 97
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Gets the length of the array. Returns 0 if disposed.
+  example: []
+  syntax:
+    content: public int Length { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Length As Integer
+  overload: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Length*
+- uid: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Item(System.Int32)
+  commentId: P:OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Item(System.Int32)
+  id: Item(System.Int32)
+  parent: OpenForge.Cryptography.LibOqs.Core.SecureByteArray
+  langs:
+  - csharp
+  - vb
+  name: this[int]
+  nameWithType: SecureByteArray.this[int]
+  fullName: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.this[int]
+  type: Property
+  source:
+    remote:
+      path: src/Core/SecureMemory.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: this[]
+    path: src/Core/SecureMemory.cs
+    startLine: 106
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Gets or sets a byte at the specified index.
+  example: []
+  syntax:
+    content: public byte this[int index] { get; set; }
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index.
+    return:
+      type: System.Byte
+      description: The byte at the specified index.
+    content.vb: Public Default Property this[](index As Integer) As Byte
+  overload: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Item*
+  exceptions:
+  - type: System.ObjectDisposedException
+    commentId: T:System.ObjectDisposedException
+    description: Thrown if the array has been disposed.
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: Thrown if the index is out of range.
+  nameWithType.vb: SecureByteArray.this[](Integer)
+  fullName.vb: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.this[](Integer)
+  name.vb: this[](Integer)
+- uid: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.ToArray
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.SecureByteArray.ToArray
+  id: ToArray
+  parent: OpenForge.Cryptography.LibOqs.Core.SecureByteArray
+  langs:
+  - csharp
+  - vb
+  name: ToArray()
+  nameWithType: SecureByteArray.ToArray()
+  fullName: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.ToArray()
+  type: Method
+  source:
+    remote:
+      path: src/Core/SecureMemory.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: ToArray
+    path: src/Core/SecureMemory.cs
+    startLine: 137
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: >-
+    Creates a copy of the data as a regular byte array.
+
+    Note: The returned array will not be securely cleared.
+  example: []
+  syntax:
+    content: public byte[]? ToArray()
+    return:
+      type: System.Byte[]
+      description: A copy of the data, or null if disposed.
+    content.vb: Public Function ToArray() As Byte()
+  overload: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.ToArray*
+- uid: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.CopyFrom(System.Byte[],System.Int32,System.Int32,System.Int32)
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.SecureByteArray.CopyFrom(System.Byte[],System.Int32,System.Int32,System.Int32)
+  id: CopyFrom(System.Byte[],System.Int32,System.Int32,System.Int32)
+  parent: OpenForge.Cryptography.LibOqs.Core.SecureByteArray
+  langs:
+  - csharp
+  - vb
+  name: CopyFrom(byte[], int, int, int)
+  nameWithType: SecureByteArray.CopyFrom(byte[], int, int, int)
+  fullName: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.CopyFrom(byte[], int, int, int)
+  type: Method
+  source:
+    remote:
+      path: src/Core/SecureMemory.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: CopyFrom
+    path: src/Core/SecureMemory.cs
+    startLine: 150
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Copies data from a source array into this secure array.
+  example: []
+  syntax:
+    content: public void CopyFrom(byte[] source, int sourceIndex, int destinationIndex, int length)
+    parameters:
+    - id: source
+      type: System.Byte[]
+      description: The source array to copy from.
+    - id: sourceIndex
+      type: System.Int32
+      description: The starting index in the source array.
+    - id: destinationIndex
+      type: System.Int32
+      description: The starting index in this array.
+    - id: length
+      type: System.Int32
+      description: The number of bytes to copy.
+    content.vb: Public Sub CopyFrom(source As Byte(), sourceIndex As Integer, destinationIndex As Integer, length As Integer)
+  overload: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.CopyFrom*
+  nameWithType.vb: SecureByteArray.CopyFrom(Byte(), Integer, Integer, Integer)
+  fullName.vb: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.CopyFrom(Byte(), Integer, Integer, Integer)
+  name.vb: CopyFrom(Byte(), Integer, Integer, Integer)
+- uid: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.AsSpan
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.SecureByteArray.AsSpan
+  id: AsSpan
+  parent: OpenForge.Cryptography.LibOqs.Core.SecureByteArray
+  langs:
+  - csharp
+  - vb
+  name: AsSpan()
+  nameWithType: SecureByteArray.AsSpan()
+  fullName: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.AsSpan()
+  type: Method
+  source:
+    remote:
+      path: src/Core/SecureMemory.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: AsSpan
+    path: src/Core/SecureMemory.cs
+    startLine: 163
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Gets a span representing the data.
+  example: []
+  syntax:
+    content: public Span<byte> AsSpan()
+    return:
+      type: System.Span{System.Byte}
+      description: A span of the underlying data, or empty if disposed.
+    content.vb: Public Function AsSpan() As Span(Of Byte)
+  overload: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.AsSpan*
+- uid: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Dispose
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Dispose
+  id: Dispose
+  parent: OpenForge.Cryptography.LibOqs.Core.SecureByteArray
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: SecureByteArray.Dispose()
+  fullName: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Dispose()
+  type: Method
+  source:
+    remote:
+      path: src/Core/SecureMemory.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Dispose
+    path: src/Core/SecureMemory.cs
+    startLine: 176
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Securely clears the array and disposes of resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: OpenForge.Cryptography.LibOqs.Core
+  commentId: N:OpenForge.Cryptography.LibOqs.Core
+  href: OpenForge.html
+  name: OpenForge.Cryptography.LibOqs.Core
+  nameWithType: OpenForge.Cryptography.LibOqs.Core
+  fullName: OpenForge.Cryptography.LibOqs.Core
+  spec.csharp:
+  - uid: OpenForge
+    name: OpenForge
+    href: OpenForge.html
+  - name: .
+  - uid: OpenForge.Cryptography
+    name: Cryptography
+    href: OpenForge.Cryptography.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs
+    name: LibOqs
+    href: OpenForge.Cryptography.LibOqs.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs.Core
+    name: Core
+    href: OpenForge.Cryptography.LibOqs.Core.html
+  spec.vb:
+  - uid: OpenForge
+    name: OpenForge
+    href: OpenForge.html
+  - name: .
+  - uid: OpenForge.Cryptography
+    name: Cryptography
+    href: OpenForge.Cryptography.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs
+    name: LibOqs
+    href: OpenForge.Cryptography.LibOqs.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs.Core
+    name: Core
+    href: OpenForge.Cryptography.LibOqs.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Data*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Data
+  href: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.html#OpenForge_Cryptography_LibOqs_Core_SecureByteArray_Data
+  name: Data
+  nameWithType: SecureByteArray.Data
+  fullName: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Data
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Length*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Length
+  href: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.html#OpenForge_Cryptography_LibOqs_Core_SecureByteArray_Length
+  name: Length
+  nameWithType: SecureByteArray.Length
+  fullName: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Length
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.ObjectDisposedException
+  commentId: T:System.ObjectDisposedException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.objectdisposedexception
+  name: ObjectDisposedException
+  nameWithType: ObjectDisposedException
+  fullName: System.ObjectDisposedException
+- uid: System.ArgumentOutOfRangeException
+  commentId: T:System.ArgumentOutOfRangeException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception
+  name: ArgumentOutOfRangeException
+  nameWithType: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
+- uid: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Item*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Item
+  href: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.html#OpenForge_Cryptography_LibOqs_Core_SecureByteArray_Item_System_Int32_
+  name: this
+  nameWithType: SecureByteArray.this
+  fullName: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.this
+  nameWithType.vb: SecureByteArray.this[]
+  fullName.vb: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.this[]
+  name.vb: this[]
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.ToArray*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.SecureByteArray.ToArray
+  href: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.html#OpenForge_Cryptography_LibOqs_Core_SecureByteArray_ToArray
+  name: ToArray
+  nameWithType: SecureByteArray.ToArray
+  fullName: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.ToArray
+- uid: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.CopyFrom*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.SecureByteArray.CopyFrom
+  href: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.html#OpenForge_Cryptography_LibOqs_Core_SecureByteArray_CopyFrom_System_Byte___System_Int32_System_Int32_System_Int32_
+  name: CopyFrom
+  nameWithType: SecureByteArray.CopyFrom
+  fullName: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.CopyFrom
+- uid: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.AsSpan*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.SecureByteArray.AsSpan
+  href: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.html#OpenForge_Cryptography_LibOqs_Core_SecureByteArray_AsSpan
+  name: AsSpan
+  nameWithType: SecureByteArray.AsSpan
+  fullName: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.AsSpan
+- uid: System.Span{System.Byte}
+  commentId: T:System.Span{System.Byte}
+  parent: System
+  definition: System.Span`1
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<byte>
+  nameWithType: Span<byte>
+  fullName: System.Span<byte>
+  nameWithType.vb: Span(Of Byte)
+  fullName.vb: System.Span(Of Byte)
+  name.vb: Span(Of Byte)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: System.Span`1
+  commentId: T:System.Span`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Dispose*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Dispose
+  href: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.html#OpenForge_Cryptography_LibOqs_Core_SecureByteArray_Dispose
+  name: Dispose
+  nameWithType: SecureByteArray.Dispose
+  fullName: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

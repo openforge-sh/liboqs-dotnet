@@ -1,0 +1,93 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenForge.Cryptography.LibOqs.KEM
+  commentId: N:OpenForge.Cryptography.LibOqs.KEM
+  id: KEM
+  parent: OpenForge.Cryptography.LibOqs
+  children:
+  - OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult
+  - OpenForge.Cryptography.LibOqs.KEM.Kem
+  - OpenForge.Cryptography.LibOqs.KEM.KemInstance
+  - OpenForge.Cryptography.LibOqs.KEM.KeyPair
+  - OpenForge.Cryptography.LibOqs.KEM.OqsKem
+  langs:
+  - csharp
+  - vb
+  name: OpenForge.Cryptography.LibOqs.KEM
+  nameWithType: OpenForge.Cryptography.LibOqs.KEM
+  fullName: OpenForge.Cryptography.LibOqs.KEM
+  type: Namespace
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.KEM
+references:
+- uid: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult
+  commentId: T:OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult
+  parent: OpenForge.Cryptography.LibOqs.KEM
+  href: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.html
+  name: EncapsulationResult
+  nameWithType: EncapsulationResult
+  fullName: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult
+- uid: OpenForge.Cryptography.LibOqs.KEM.Kem
+  commentId: T:OpenForge.Cryptography.LibOqs.KEM.Kem
+  href: OpenForge.Cryptography.LibOqs.KEM.Kem.html
+  name: Kem
+  nameWithType: Kem
+  fullName: OpenForge.Cryptography.LibOqs.KEM.Kem
+- uid: OpenForge.Cryptography.LibOqs.KEM.KemInstance
+  commentId: T:OpenForge.Cryptography.LibOqs.KEM.KemInstance
+  href: OpenForge.Cryptography.LibOqs.KEM.KemInstance.html
+  name: KemInstance
+  nameWithType: KemInstance
+  fullName: OpenForge.Cryptography.LibOqs.KEM.KemInstance
+- uid: OpenForge.Cryptography.LibOqs.KEM.KeyPair
+  commentId: T:OpenForge.Cryptography.LibOqs.KEM.KeyPair
+  parent: OpenForge.Cryptography.LibOqs.KEM
+  href: OpenForge.Cryptography.LibOqs.KEM.KeyPair.html
+  name: KeyPair
+  nameWithType: KeyPair
+  fullName: OpenForge.Cryptography.LibOqs.KEM.KeyPair
+- uid: OpenForge.Cryptography.LibOqs.KEM.OqsKem
+  commentId: T:OpenForge.Cryptography.LibOqs.KEM.OqsKem
+  parent: OpenForge.Cryptography.LibOqs.KEM
+  href: OpenForge.Cryptography.LibOqs.KEM.OqsKem.html
+  name: OqsKem
+  nameWithType: OqsKem
+  fullName: OpenForge.Cryptography.LibOqs.KEM.OqsKem
+- uid: OpenForge.Cryptography.LibOqs.KEM
+  commentId: N:OpenForge.Cryptography.LibOqs.KEM
+  href: OpenForge.html
+  name: OpenForge.Cryptography.LibOqs.KEM
+  nameWithType: OpenForge.Cryptography.LibOqs.KEM
+  fullName: OpenForge.Cryptography.LibOqs.KEM
+  spec.csharp:
+  - uid: OpenForge
+    name: OpenForge
+    href: OpenForge.html
+  - name: .
+  - uid: OpenForge.Cryptography
+    name: Cryptography
+    href: OpenForge.Cryptography.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs
+    name: LibOqs
+    href: OpenForge.Cryptography.LibOqs.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs.KEM
+    name: KEM
+    href: OpenForge.Cryptography.LibOqs.KEM.html
+  spec.vb:
+  - uid: OpenForge
+    name: OpenForge
+    href: OpenForge.html
+  - name: .
+  - uid: OpenForge.Cryptography
+    name: Cryptography
+    href: OpenForge.Cryptography.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs
+    name: LibOqs
+    href: OpenForge.Cryptography.LibOqs.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs.KEM
+    name: KEM
+    href: OpenForge.Cryptography.LibOqs.KEM.html

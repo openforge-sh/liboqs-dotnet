@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <IsPackable>false</IsPackable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="OpenForge.Cryptography.LibOqs.Core.Tests" />
+    <InternalsVisibleTo Include="OpenForge.Cryptography.LibOqs.Tests.Common" />
+    <InternalsVisibleTo Include="OpenForge.Cryptography.LibOqs" />
+    <InternalsVisibleTo Include="OpenForge.Cryptography.LibOqs.KEM" />
+    <InternalsVisibleTo Include="OpenForge.Cryptography.LibOqs.SIG" />
+  </ItemGroup>
+
+</Project>

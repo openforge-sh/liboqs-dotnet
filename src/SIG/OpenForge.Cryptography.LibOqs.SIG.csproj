@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <IsPackable>true</IsPackable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <!-- Package-specific metadata -->
+    <PackageId>OpenForge.Cryptography.LibOqs.SIG</PackageId>
+    <Title>OpenForge LibOqs SIG - Post-Quantum Digital Signatures</Title>
+    <Description>Post-quantum digital signature algorithms from liboqs. Includes NIST standardized ML-DSA (Dilithium), plus Falcon, SPHINCS+, CROSS, MAYO, SNOVA, and UOV algorithms. Provides quantum-resistant digital signatures for authentication and data integrity.</Description>
+    <PackageTags>cryptography;post-quantum;pqc;quantum-safe;quantum-resistant;liboqs;signature;digital-signature;ml-dsa;dilithium;dilithium2;dilithium3;dilithium5;falcon;sphincs;sphincs-plus;cross;mayo;snova;uov;nist;fips;authentication;signing;crypto;security</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="OpenForge.Cryptography.LibOqs.Tests" />
+    <InternalsVisibleTo Include="OpenForge.Cryptography.LibOqs.SIG.Tests" />
+    <InternalsVisibleTo Include="OpenForge.Cryptography.LibOqs.Core.Tests" />
+    <ProjectReference Include="../Core/OpenForge.Cryptography.LibOqs.Core.csproj" />
+    <ProjectReference Include="../Native.Sig/OpenForge.Cryptography.LibOqs.Native.Sig.csproj" />
+  </ItemGroup>
+
+</Project>

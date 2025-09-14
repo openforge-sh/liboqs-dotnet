@@ -1,0 +1,909 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenForge.Cryptography.LibOqs.KEM.KemInstance
+  commentId: T:OpenForge.Cryptography.LibOqs.KEM.KemInstance
+  id: KemInstance
+  parent: OpenForge.Cryptography.LibOqs.KEM
+  children:
+  - OpenForge.Cryptography.LibOqs.KEM.KemInstance.AlgorithmName
+  - OpenForge.Cryptography.LibOqs.KEM.KemInstance.Decapsulate(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  - OpenForge.Cryptography.LibOqs.KEM.KemInstance.Dispose
+  - OpenForge.Cryptography.LibOqs.KEM.KemInstance.Encapsulate(System.ReadOnlySpan{System.Byte})
+  - OpenForge.Cryptography.LibOqs.KEM.KemInstance.EncapsulateDeterministic(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  - OpenForge.Cryptography.LibOqs.KEM.KemInstance.Finalize
+  - OpenForge.Cryptography.LibOqs.KEM.KemInstance.GenerateDeterministicKeyPair(System.ReadOnlySpan{System.Byte})
+  - OpenForge.Cryptography.LibOqs.KEM.KemInstance.GenerateKeyPair
+  - OpenForge.Cryptography.LibOqs.KEM.KemInstance.GetAlgorithmInfo
+  langs:
+  - csharp
+  - vb
+  name: KemInstance
+  nameWithType: KemInstance
+  fullName: OpenForge.Cryptography.LibOqs.KEM.KemInstance
+  type: Class
+  source:
+    remote:
+      path: src/KEM/KemProvider.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: KemInstance
+    path: src/KEM/KemProvider.cs
+    startLine: 110
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.KEM
+  namespace: OpenForge.Cryptography.LibOqs.KEM
+  summary: >-
+    Represents a Key Encapsulation Mechanism (KEM) instance for performing cryptographic operations.
+
+    This class provides methods for key generation, encapsulation, and decapsulation.
+  example: []
+  syntax:
+    content: 'public sealed class KemInstance : IDisposable'
+    content.vb: Public NotInheritable Class KemInstance Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenForge.Cryptography.LibOqs.KEM.KemInstance.AlgorithmName
+  commentId: P:OpenForge.Cryptography.LibOqs.KEM.KemInstance.AlgorithmName
+  id: AlgorithmName
+  parent: OpenForge.Cryptography.LibOqs.KEM.KemInstance
+  langs:
+  - csharp
+  - vb
+  name: AlgorithmName
+  nameWithType: KemInstance.AlgorithmName
+  fullName: OpenForge.Cryptography.LibOqs.KEM.KemInstance.AlgorithmName
+  type: Property
+  source:
+    remote:
+      path: src/KEM/KemProvider.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: AlgorithmName
+    path: src/KEM/KemProvider.cs
+    startLine: 126
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.KEM
+  namespace: OpenForge.Cryptography.LibOqs.KEM
+  summary: Gets the name of the KEM algorithm used by this instance.
+  example: []
+  syntax:
+    content: public string AlgorithmName { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: The algorithm identifier string.
+    content.vb: Public ReadOnly Property AlgorithmName As String
+  overload: OpenForge.Cryptography.LibOqs.KEM.KemInstance.AlgorithmName*
+- uid: OpenForge.Cryptography.LibOqs.KEM.KemInstance.GetAlgorithmInfo
+  commentId: M:OpenForge.Cryptography.LibOqs.KEM.KemInstance.GetAlgorithmInfo
+  id: GetAlgorithmInfo
+  parent: OpenForge.Cryptography.LibOqs.KEM.KemInstance
+  langs:
+  - csharp
+  - vb
+  name: GetAlgorithmInfo()
+  nameWithType: KemInstance.GetAlgorithmInfo()
+  fullName: OpenForge.Cryptography.LibOqs.KEM.KemInstance.GetAlgorithmInfo()
+  type: Method
+  source:
+    remote:
+      path: src/KEM/KemProvider.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: GetAlgorithmInfo
+    path: src/KEM/KemProvider.cs
+    startLine: 133
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.KEM
+  namespace: OpenForge.Cryptography.LibOqs.KEM
+  summary: Gets detailed information about the KEM algorithm including key sizes and security parameters.
+  example: []
+  syntax:
+    content: public OqsKem GetAlgorithmInfo()
+    return:
+      type: OpenForge.Cryptography.LibOqs.KEM.OqsKem
+      description: An OqsKem structure containing algorithm details.
+    content.vb: Public Function GetAlgorithmInfo() As OqsKem
+  overload: OpenForge.Cryptography.LibOqs.KEM.KemInstance.GetAlgorithmInfo*
+  exceptions:
+  - type: System.ObjectDisposedException
+    commentId: T:System.ObjectDisposedException
+    description: Thrown if the instance has been disposed.
+- uid: OpenForge.Cryptography.LibOqs.KEM.KemInstance.GenerateKeyPair
+  commentId: M:OpenForge.Cryptography.LibOqs.KEM.KemInstance.GenerateKeyPair
+  id: GenerateKeyPair
+  parent: OpenForge.Cryptography.LibOqs.KEM.KemInstance
+  langs:
+  - csharp
+  - vb
+  name: GenerateKeyPair()
+  nameWithType: KemInstance.GenerateKeyPair()
+  fullName: OpenForge.Cryptography.LibOqs.KEM.KemInstance.GenerateKeyPair()
+  type: Method
+  source:
+    remote:
+      path: src/KEM/KemProvider.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: GenerateKeyPair
+    path: src/KEM/KemProvider.cs
+    startLine: 146
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.KEM
+  namespace: OpenForge.Cryptography.LibOqs.KEM
+  summary: >-
+    Generates a new cryptographic key pair using secure random number generation.
+
+    The returned KeyPair should be disposed to securely clear the secret key.
+  example: []
+  syntax:
+    content: public KeyPair GenerateKeyPair()
+    return:
+      type: OpenForge.Cryptography.LibOqs.KEM.KeyPair
+      description: A KeyPair containing the public and secret keys.
+    content.vb: Public Function GenerateKeyPair() As KeyPair
+  overload: OpenForge.Cryptography.LibOqs.KEM.KemInstance.GenerateKeyPair*
+  exceptions:
+  - type: System.ObjectDisposedException
+    commentId: T:System.ObjectDisposedException
+    description: Thrown if the instance has been disposed.
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown if key pair generation fails.
+- uid: OpenForge.Cryptography.LibOqs.KEM.KemInstance.GenerateDeterministicKeyPair(System.ReadOnlySpan{System.Byte})
+  commentId: M:OpenForge.Cryptography.LibOqs.KEM.KemInstance.GenerateDeterministicKeyPair(System.ReadOnlySpan{System.Byte})
+  id: GenerateDeterministicKeyPair(System.ReadOnlySpan{System.Byte})
+  parent: OpenForge.Cryptography.LibOqs.KEM.KemInstance
+  langs:
+  - csharp
+  - vb
+  name: GenerateDeterministicKeyPair(ReadOnlySpan<byte>)
+  nameWithType: KemInstance.GenerateDeterministicKeyPair(ReadOnlySpan<byte>)
+  fullName: OpenForge.Cryptography.LibOqs.KEM.KemInstance.GenerateDeterministicKeyPair(System.ReadOnlySpan<byte>)
+  type: Method
+  source:
+    remote:
+      path: src/KEM/KemProvider.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: GenerateDeterministicKeyPair
+    path: src/KEM/KemProvider.cs
+    startLine: 172
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.KEM
+  namespace: OpenForge.Cryptography.LibOqs.KEM
+  summary: >-
+    Generates a deterministic keypair using the provided seed.
+
+    This is primarily useful for testing and reproducible cryptographic operations.
+  example: []
+  syntax:
+    content: public KeyPair GenerateDeterministicKeyPair(ReadOnlySpan<byte> seed)
+    parameters:
+    - id: seed
+      type: System.ReadOnlySpan{System.Byte}
+      description: The 48-byte seed for deterministic key generation.
+    return:
+      type: OpenForge.Cryptography.LibOqs.KEM.KeyPair
+      description: A keypair generated deterministically from the seed.
+    content.vb: Public Function GenerateDeterministicKeyPair(seed As ReadOnlySpan(Of Byte)) As KeyPair
+  overload: OpenForge.Cryptography.LibOqs.KEM.KemInstance.GenerateDeterministicKeyPair*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if seed is not exactly 48 bytes.
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown if key generation fails.
+  nameWithType.vb: KemInstance.GenerateDeterministicKeyPair(ReadOnlySpan(Of Byte))
+  fullName.vb: OpenForge.Cryptography.LibOqs.KEM.KemInstance.GenerateDeterministicKeyPair(System.ReadOnlySpan(Of Byte))
+  name.vb: GenerateDeterministicKeyPair(ReadOnlySpan(Of Byte))
+- uid: OpenForge.Cryptography.LibOqs.KEM.KemInstance.Encapsulate(System.ReadOnlySpan{System.Byte})
+  commentId: M:OpenForge.Cryptography.LibOqs.KEM.KemInstance.Encapsulate(System.ReadOnlySpan{System.Byte})
+  id: Encapsulate(System.ReadOnlySpan{System.Byte})
+  parent: OpenForge.Cryptography.LibOqs.KEM.KemInstance
+  langs:
+  - csharp
+  - vb
+  name: Encapsulate(ReadOnlySpan<byte>)
+  nameWithType: KemInstance.Encapsulate(ReadOnlySpan<byte>)
+  fullName: OpenForge.Cryptography.LibOqs.KEM.KemInstance.Encapsulate(System.ReadOnlySpan<byte>)
+  type: Method
+  source:
+    remote:
+      path: src/KEM/KemProvider.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Encapsulate
+    path: src/KEM/KemProvider.cs
+    startLine: 202
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.KEM
+  namespace: OpenForge.Cryptography.LibOqs.KEM
+  summary: >-
+    Encapsulates a shared secret using the recipient's public key.
+
+    This generates a ciphertext and a shared secret that can be used for symmetric encryption.
+  example: []
+  syntax:
+    content: public EncapsulationResult Encapsulate(ReadOnlySpan<byte> publicKey)
+    parameters:
+    - id: publicKey
+      type: System.ReadOnlySpan{System.Byte}
+      description: The recipient's public key for encapsulation.
+    return:
+      type: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult
+      description: An EncapsulationResult containing the ciphertext and shared secret.
+    content.vb: Public Function Encapsulate(publicKey As ReadOnlySpan(Of Byte)) As EncapsulationResult
+  overload: OpenForge.Cryptography.LibOqs.KEM.KemInstance.Encapsulate*
+  exceptions:
+  - type: System.ObjectDisposedException
+    commentId: T:System.ObjectDisposedException
+    description: Thrown if the instance has been disposed.
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if the public key has an invalid length.
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown if encapsulation fails.
+  nameWithType.vb: KemInstance.Encapsulate(ReadOnlySpan(Of Byte))
+  fullName.vb: OpenForge.Cryptography.LibOqs.KEM.KemInstance.Encapsulate(System.ReadOnlySpan(Of Byte))
+  name.vb: Encapsulate(ReadOnlySpan(Of Byte))
+- uid: OpenForge.Cryptography.LibOqs.KEM.KemInstance.EncapsulateDeterministic(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  commentId: M:OpenForge.Cryptography.LibOqs.KEM.KemInstance.EncapsulateDeterministic(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  id: EncapsulateDeterministic(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  parent: OpenForge.Cryptography.LibOqs.KEM.KemInstance
+  langs:
+  - csharp
+  - vb
+  name: EncapsulateDeterministic(ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType: KemInstance.EncapsulateDeterministic(ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  fullName: OpenForge.Cryptography.LibOqs.KEM.KemInstance.EncapsulateDeterministic(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  type: Method
+  source:
+    remote:
+      path: src/KEM/KemProvider.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: EncapsulateDeterministic
+    path: src/KEM/KemProvider.cs
+    startLine: 232
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.KEM
+  namespace: OpenForge.Cryptography.LibOqs.KEM
+  summary: >-
+    Performs deterministic encapsulation using the provided seed.
+
+    This is primarily useful for testing and reproducible cryptographic operations.
+  example: []
+  syntax:
+    content: public EncapsulationResult EncapsulateDeterministic(ReadOnlySpan<byte> publicKey, ReadOnlySpan<byte> seed)
+    parameters:
+    - id: publicKey
+      type: System.ReadOnlySpan{System.Byte}
+      description: The public key to encapsulate against.
+    - id: seed
+      type: System.ReadOnlySpan{System.Byte}
+      description: The 48-byte seed for deterministic encapsulation.
+    return:
+      type: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult
+      description: The encapsulation result containing ciphertext and shared secret.
+    content.vb: Public Function EncapsulateDeterministic(publicKey As ReadOnlySpan(Of Byte), seed As ReadOnlySpan(Of Byte)) As EncapsulationResult
+  overload: OpenForge.Cryptography.LibOqs.KEM.KemInstance.EncapsulateDeterministic*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if parameters have invalid lengths.
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown if encapsulation fails.
+  nameWithType.vb: KemInstance.EncapsulateDeterministic(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName.vb: OpenForge.Cryptography.LibOqs.KEM.KemInstance.EncapsulateDeterministic(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  name.vb: EncapsulateDeterministic(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: OpenForge.Cryptography.LibOqs.KEM.KemInstance.Decapsulate(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  commentId: M:OpenForge.Cryptography.LibOqs.KEM.KemInstance.Decapsulate(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  id: Decapsulate(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  parent: OpenForge.Cryptography.LibOqs.KEM.KemInstance
+  langs:
+  - csharp
+  - vb
+  name: Decapsulate(ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType: KemInstance.Decapsulate(ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  fullName: OpenForge.Cryptography.LibOqs.KEM.KemInstance.Decapsulate(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  type: Method
+  source:
+    remote:
+      path: src/KEM/KemProvider.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Decapsulate
+    path: src/KEM/KemProvider.cs
+    startLine: 265
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.KEM
+  namespace: OpenForge.Cryptography.LibOqs.KEM
+  summary: >-
+    Decapsulates a shared secret from the ciphertext using the recipient's secret key.
+
+    This recovers the same shared secret that was generated during encapsulation.
+  example: []
+  syntax:
+    content: public byte[] Decapsulate(ReadOnlySpan<byte> ciphertext, ReadOnlySpan<byte> secretKey)
+    parameters:
+    - id: ciphertext
+      type: System.ReadOnlySpan{System.Byte}
+      description: The ciphertext produced by encapsulation.
+    - id: secretKey
+      type: System.ReadOnlySpan{System.Byte}
+      description: The recipient's secret key for decapsulation.
+    return:
+      type: System.Byte[]
+      description: The recovered shared secret that matches the one from encapsulation.
+    content.vb: Public Function Decapsulate(ciphertext As ReadOnlySpan(Of Byte), secretKey As ReadOnlySpan(Of Byte)) As Byte()
+  overload: OpenForge.Cryptography.LibOqs.KEM.KemInstance.Decapsulate*
+  exceptions:
+  - type: System.ObjectDisposedException
+    commentId: T:System.ObjectDisposedException
+    description: Thrown if the instance has been disposed.
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if parameters have invalid lengths.
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown if decapsulation fails.
+  nameWithType.vb: KemInstance.Decapsulate(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName.vb: OpenForge.Cryptography.LibOqs.KEM.KemInstance.Decapsulate(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  name.vb: Decapsulate(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: OpenForge.Cryptography.LibOqs.KEM.KemInstance.Dispose
+  commentId: M:OpenForge.Cryptography.LibOqs.KEM.KemInstance.Dispose
+  id: Dispose
+  parent: OpenForge.Cryptography.LibOqs.KEM.KemInstance
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: KemInstance.Dispose()
+  fullName: OpenForge.Cryptography.LibOqs.KEM.KemInstance.Dispose()
+  type: Method
+  source:
+    remote:
+      path: src/KEM/KemProvider.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Dispose
+    path: src/KEM/KemProvider.cs
+    startLine: 290
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.KEM
+  namespace: OpenForge.Cryptography.LibOqs.KEM
+  summary: >-
+    Disposes the KEM instance and releases all associated native resources.
+
+    After disposal, this instance cannot be used for further operations.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: OpenForge.Cryptography.LibOqs.KEM.KemInstance.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: OpenForge.Cryptography.LibOqs.KEM.KemInstance.Finalize
+  commentId: M:OpenForge.Cryptography.LibOqs.KEM.KemInstance.Finalize
+  id: Finalize
+  parent: OpenForge.Cryptography.LibOqs.KEM.KemInstance
+  langs:
+  - csharp
+  - vb
+  name: ~KemInstance()
+  nameWithType: KemInstance.~KemInstance()
+  fullName: OpenForge.Cryptography.LibOqs.KEM.KemInstance.~KemInstance()
+  type: Method
+  source:
+    remote:
+      path: src/KEM/KemProvider.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Finalize
+    path: src/KEM/KemProvider.cs
+    startLine: 314
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.KEM
+  namespace: OpenForge.Cryptography.LibOqs.KEM
+  summary: Finalizer that ensures native resources are cleaned up if Dispose was not called.
+  example: []
+  syntax:
+    content: protected ~KemInstance()
+    content.vb: 'Protected '
+  overload: OpenForge.Cryptography.LibOqs.KEM.KemInstance.Finalize*
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+references:
+- uid: OpenForge.Cryptography.LibOqs.KEM
+  commentId: N:OpenForge.Cryptography.LibOqs.KEM
+  href: OpenForge.html
+  name: OpenForge.Cryptography.LibOqs.KEM
+  nameWithType: OpenForge.Cryptography.LibOqs.KEM
+  fullName: OpenForge.Cryptography.LibOqs.KEM
+  spec.csharp:
+  - uid: OpenForge
+    name: OpenForge
+    href: OpenForge.html
+  - name: .
+  - uid: OpenForge.Cryptography
+    name: Cryptography
+    href: OpenForge.Cryptography.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs
+    name: LibOqs
+    href: OpenForge.Cryptography.LibOqs.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs.KEM
+    name: KEM
+    href: OpenForge.Cryptography.LibOqs.KEM.html
+  spec.vb:
+  - uid: OpenForge
+    name: OpenForge
+    href: OpenForge.html
+  - name: .
+  - uid: OpenForge.Cryptography
+    name: Cryptography
+    href: OpenForge.Cryptography.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs
+    name: LibOqs
+    href: OpenForge.Cryptography.LibOqs.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs.KEM
+    name: KEM
+    href: OpenForge.Cryptography.LibOqs.KEM.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenForge.Cryptography.LibOqs.KEM.KemInstance.AlgorithmName*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.KEM.KemInstance.AlgorithmName
+  href: OpenForge.Cryptography.LibOqs.KEM.KemInstance.html#OpenForge_Cryptography_LibOqs_KEM_KemInstance_AlgorithmName
+  name: AlgorithmName
+  nameWithType: KemInstance.AlgorithmName
+  fullName: OpenForge.Cryptography.LibOqs.KEM.KemInstance.AlgorithmName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.ObjectDisposedException
+  commentId: T:System.ObjectDisposedException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.objectdisposedexception
+  name: ObjectDisposedException
+  nameWithType: ObjectDisposedException
+  fullName: System.ObjectDisposedException
+- uid: OpenForge.Cryptography.LibOqs.KEM.KemInstance.GetAlgorithmInfo*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.KEM.KemInstance.GetAlgorithmInfo
+  href: OpenForge.Cryptography.LibOqs.KEM.KemInstance.html#OpenForge_Cryptography_LibOqs_KEM_KemInstance_GetAlgorithmInfo
+  name: GetAlgorithmInfo
+  nameWithType: KemInstance.GetAlgorithmInfo
+  fullName: OpenForge.Cryptography.LibOqs.KEM.KemInstance.GetAlgorithmInfo
+- uid: OpenForge.Cryptography.LibOqs.KEM.OqsKem
+  commentId: T:OpenForge.Cryptography.LibOqs.KEM.OqsKem
+  parent: OpenForge.Cryptography.LibOqs.KEM
+  href: OpenForge.Cryptography.LibOqs.KEM.OqsKem.html
+  name: OqsKem
+  nameWithType: OqsKem
+  fullName: OpenForge.Cryptography.LibOqs.KEM.OqsKem
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: OpenForge.Cryptography.LibOqs.KEM.KemInstance.GenerateKeyPair*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.KEM.KemInstance.GenerateKeyPair
+  href: OpenForge.Cryptography.LibOqs.KEM.KemInstance.html#OpenForge_Cryptography_LibOqs_KEM_KemInstance_GenerateKeyPair
+  name: GenerateKeyPair
+  nameWithType: KemInstance.GenerateKeyPair
+  fullName: OpenForge.Cryptography.LibOqs.KEM.KemInstance.GenerateKeyPair
+- uid: OpenForge.Cryptography.LibOqs.KEM.KeyPair
+  commentId: T:OpenForge.Cryptography.LibOqs.KEM.KeyPair
+  parent: OpenForge.Cryptography.LibOqs.KEM
+  href: OpenForge.Cryptography.LibOqs.KEM.KeyPair.html
+  name: KeyPair
+  nameWithType: KeyPair
+  fullName: OpenForge.Cryptography.LibOqs.KEM.KeyPair
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: OpenForge.Cryptography.LibOqs.KEM.KemInstance.GenerateDeterministicKeyPair*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.KEM.KemInstance.GenerateDeterministicKeyPair
+  href: OpenForge.Cryptography.LibOqs.KEM.KemInstance.html#OpenForge_Cryptography_LibOqs_KEM_KemInstance_GenerateDeterministicKeyPair_System_ReadOnlySpan_System_Byte__
+  name: GenerateDeterministicKeyPair
+  nameWithType: KemInstance.GenerateDeterministicKeyPair
+  fullName: OpenForge.Cryptography.LibOqs.KEM.KemInstance.GenerateDeterministicKeyPair
+- uid: System.ReadOnlySpan{System.Byte}
+  commentId: T:System.ReadOnlySpan{System.Byte}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<byte>
+  nameWithType: ReadOnlySpan<byte>
+  fullName: System.ReadOnlySpan<byte>
+  nameWithType.vb: ReadOnlySpan(Of Byte)
+  fullName.vb: System.ReadOnlySpan(Of Byte)
+  name.vb: ReadOnlySpan(Of Byte)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenForge.Cryptography.LibOqs.KEM.KemInstance.Encapsulate*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.KEM.KemInstance.Encapsulate
+  href: OpenForge.Cryptography.LibOqs.KEM.KemInstance.html#OpenForge_Cryptography_LibOqs_KEM_KemInstance_Encapsulate_System_ReadOnlySpan_System_Byte__
+  name: Encapsulate
+  nameWithType: KemInstance.Encapsulate
+  fullName: OpenForge.Cryptography.LibOqs.KEM.KemInstance.Encapsulate
+- uid: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult
+  commentId: T:OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult
+  parent: OpenForge.Cryptography.LibOqs.KEM
+  href: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.html
+  name: EncapsulationResult
+  nameWithType: EncapsulationResult
+  fullName: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult
+- uid: OpenForge.Cryptography.LibOqs.KEM.KemInstance.EncapsulateDeterministic*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.KEM.KemInstance.EncapsulateDeterministic
+  href: OpenForge.Cryptography.LibOqs.KEM.KemInstance.html#OpenForge_Cryptography_LibOqs_KEM_KemInstance_EncapsulateDeterministic_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  name: EncapsulateDeterministic
+  nameWithType: KemInstance.EncapsulateDeterministic
+  fullName: OpenForge.Cryptography.LibOqs.KEM.KemInstance.EncapsulateDeterministic
+- uid: OpenForge.Cryptography.LibOqs.KEM.KemInstance.Decapsulate*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.KEM.KemInstance.Decapsulate
+  href: OpenForge.Cryptography.LibOqs.KEM.KemInstance.html#OpenForge_Cryptography_LibOqs_KEM_KemInstance_Decapsulate_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  name: Decapsulate
+  nameWithType: KemInstance.Decapsulate
+  fullName: OpenForge.Cryptography.LibOqs.KEM.KemInstance.Decapsulate
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: OpenForge.Cryptography.LibOqs.KEM.KemInstance.Dispose*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.KEM.KemInstance.Dispose
+  href: OpenForge.Cryptography.LibOqs.KEM.KemInstance.html#OpenForge_Cryptography_LibOqs_KEM_KemInstance_Dispose
+  name: Dispose
+  nameWithType: KemInstance.Dispose
+  fullName: OpenForge.Cryptography.LibOqs.KEM.KemInstance.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: OpenForge.Cryptography.LibOqs.KEM.KemInstance.Finalize*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.KEM.KemInstance.Finalize
+  href: OpenForge.Cryptography.LibOqs.KEM.KemInstance.html#OpenForge_Cryptography_LibOqs_KEM_KemInstance_Finalize
+  name: ~KemInstance
+  nameWithType: KemInstance.~KemInstance
+  fullName: OpenForge.Cryptography.LibOqs.KEM.KemInstance.~KemInstance
+  spec.csharp:
+  - name: "~"
+  - uid: OpenForge.Cryptography.LibOqs.KEM.KemInstance.Finalize*
+    name: KemInstance
+    href: OpenForge.Cryptography.LibOqs.KEM.KemInstance.html#OpenForge_Cryptography_LibOqs_KEM_KemInstance_Finalize

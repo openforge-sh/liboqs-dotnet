@@ -1,0 +1,1627 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore
+  commentId: T:OpenForge.Cryptography.LibOqs.Core.OqsCore
+  id: OqsCore
+  parent: OpenForge.Cryptography.LibOqs.Core
+  children:
+  - OpenForge.Cryptography.LibOqs.Core.OqsCore.AllocateMemory(System.UIntPtr)
+  - OpenForge.Cryptography.LibOqs.Core.OqsCore.Calloc(System.UIntPtr,System.UIntPtr)
+  - OpenForge.Cryptography.LibOqs.Core.OqsCore.CleanseMemory(System.IntPtr,System.UIntPtr)
+  - OpenForge.Cryptography.LibOqs.Core.OqsCore.CreateSecureByteArray(System.Int32)
+  - OpenForge.Cryptography.LibOqs.Core.OqsCore.CreateSecureByteArray(System.ReadOnlySpan{System.Byte})
+  - OpenForge.Cryptography.LibOqs.Core.OqsCore.FreeMemory(System.IntPtr,System.UIntPtr)
+  - OpenForge.Cryptography.LibOqs.Core.OqsCore.GenerateRandomBytes(System.Int32)
+  - OpenForge.Cryptography.LibOqs.Core.OqsCore.GenerateRandomBytes(System.Span{System.Byte})
+  - OpenForge.Cryptography.LibOqs.Core.OqsCore.GetMemoryUsageInfo(System.String)
+  - OpenForge.Cryptography.LibOqs.Core.OqsCore.GetVersion
+  - OpenForge.Cryptography.LibOqs.Core.OqsCore.HasCpuExtension(OpenForge.Cryptography.LibOqs.Core.OqsCpUext)
+  - OpenForge.Cryptography.LibOqs.Core.OqsCore.HintMemoryPressure(System.Int64,System.Boolean)
+  - OpenForge.Cryptography.LibOqs.Core.OqsCore.Initialize
+  - OpenForge.Cryptography.LibOqs.Core.OqsCore.InsecureFreeMemory(System.IntPtr)
+  - OpenForge.Cryptography.LibOqs.Core.OqsCore.Malloc(System.UIntPtr)
+  - OpenForge.Cryptography.LibOqs.Core.OqsCore.RemoveMemoryPressure(System.Int64)
+  - OpenForge.Cryptography.LibOqs.Core.OqsCore.SecureCompare(System.IntPtr,System.IntPtr,System.UIntPtr)
+  - OpenForge.Cryptography.LibOqs.Core.OqsCore.SwitchRandomAlgorithm(System.String)
+  - OpenForge.Cryptography.LibOqs.Core.OqsCore.ThreadStop
+  langs:
+  - csharp
+  - vb
+  name: OqsCore
+  nameWithType: OqsCore
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore
+  type: Class
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: OqsCore
+    path: src/Core/OqsCore.cs
+    startLine: 11
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: >-
+    Provides a managed C# wrapper for the liboqs native library, offering a safe and convenient interface
+
+    for post-quantum cryptographic operations. This static class includes methods for initializing and cleaning up
+
+    the library, managing memory securely, generating random data, and accessing CPU features.
+  example: []
+  syntax:
+    content: public static class OqsCore
+    content.vb: Public Module OqsCore
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.Initialize
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.OqsCore.Initialize
+  id: Initialize
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCore
+  langs:
+  - csharp
+  - vb
+  name: Initialize()
+  nameWithType: OqsCore.Initialize()
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.Initialize()
+  type: Method
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Initialize
+    path: src/Core/OqsCore.cs
+    startLine: 24
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Initializes the LibOQS library. This method is thread-safe and should be called before using any other LibOQS functionality.
+  example: []
+  syntax:
+    content: public static void Initialize()
+    content.vb: Public Shared Sub Initialize()
+  overload: OpenForge.Cryptography.LibOqs.Core.OqsCore.Initialize*
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.GetVersion
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.OqsCore.GetVersion
+  id: GetVersion
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCore
+  langs:
+  - csharp
+  - vb
+  name: GetVersion()
+  nameWithType: OqsCore.GetVersion()
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.GetVersion()
+  type: Method
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: GetVersion
+    path: src/Core/OqsCore.cs
+    startLine: 63
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Gets the version string of the liboqs library.
+  example: []
+  syntax:
+    content: public static string GetVersion()
+    return:
+      type: System.String
+      description: The version string of liboqs.
+    content.vb: Public Shared Function GetVersion() As String
+  overload: OpenForge.Cryptography.LibOqs.Core.OqsCore.GetVersion*
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.ThreadStop
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.OqsCore.ThreadStop
+  id: ThreadStop
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCore
+  langs:
+  - csharp
+  - vb
+  name: ThreadStop()
+  nameWithType: OqsCore.ThreadStop()
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.ThreadStop()
+  type: Method
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: ThreadStop
+    path: src/Core/OqsCore.cs
+    startLine: 73
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: >-
+    Stops and cleans up resources for the current thread.
+
+    This should be called when a thread that has used liboqs is about to terminate.
+  example: []
+  syntax:
+    content: public static void ThreadStop()
+    content.vb: Public Shared Sub ThreadStop()
+  overload: OpenForge.Cryptography.LibOqs.Core.OqsCore.ThreadStop*
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.AllocateMemory(System.UIntPtr)
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.OqsCore.AllocateMemory(System.UIntPtr)
+  id: AllocateMemory(System.UIntPtr)
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCore
+  langs:
+  - csharp
+  - vb
+  name: AllocateMemory(nuint)
+  nameWithType: OqsCore.AllocateMemory(nuint)
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.AllocateMemory(nuint)
+  type: Method
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: AllocateMemory
+    path: src/Core/OqsCore.cs
+    startLine: 87
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: >-
+    Allocates memory using LibOQS's memory allocator.
+
+    Memory allocated with this method should be freed with <xref href="OpenForge.Cryptography.LibOqs.Core.OqsCore.FreeMemory(System.IntPtr%2cSystem.UIntPtr)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static nint AllocateMemory(nuint size)
+    parameters:
+    - id: size
+      type: System.UIntPtr
+      description: The size in bytes to allocate.
+    return:
+      type: System.IntPtr
+      description: A pointer to the allocated memory.
+    content.vb: Public Shared Function AllocateMemory(size As UIntPtr) As IntPtr
+  overload: OpenForge.Cryptography.LibOqs.Core.OqsCore.AllocateMemory*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if size is zero or exceeds the maximum allowed size (1GB).
+  - type: System.OutOfMemoryException
+    commentId: T:System.OutOfMemoryException
+    description: Thrown if allocation fails.
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown if LibOQS has not been initialized.
+  nameWithType.vb: OqsCore.AllocateMemory(UIntPtr)
+  fullName.vb: OpenForge.Cryptography.LibOqs.Core.OqsCore.AllocateMemory(System.UIntPtr)
+  name.vb: AllocateMemory(UIntPtr)
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.FreeMemory(System.IntPtr,System.UIntPtr)
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.OqsCore.FreeMemory(System.IntPtr,System.UIntPtr)
+  id: FreeMemory(System.IntPtr,System.UIntPtr)
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCore
+  langs:
+  - csharp
+  - vb
+  name: FreeMemory(nint, nuint)
+  nameWithType: OqsCore.FreeMemory(nint, nuint)
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.FreeMemory(nint, nuint)
+  type: Method
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: FreeMemory
+    path: src/Core/OqsCore.cs
+    startLine: 114
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: >-
+    Frees memory allocated by <xref href="OpenForge.Cryptography.LibOqs.Core.OqsCore.AllocateMemory(System.UIntPtr)" data-throw-if-not-resolved="false"></xref> using secure free (clears memory first).
+
+    This is the recommended method for freeing memory in cryptographic applications.
+  example: []
+  syntax:
+    content: public static void FreeMemory(nint memPtr, nuint size)
+    parameters:
+    - id: memPtr
+      type: System.IntPtr
+      description: Pointer to the memory to free. Safe to pass IntPtr.Zero.
+    - id: size
+      type: System.UIntPtr
+      description: The size in bytes of the memory block.
+    content.vb: Public Shared Sub FreeMemory(memPtr As IntPtr, size As UIntPtr)
+  overload: OpenForge.Cryptography.LibOqs.Core.OqsCore.FreeMemory*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown if LibOQS has not been initialized.
+  nameWithType.vb: OqsCore.FreeMemory(IntPtr, UIntPtr)
+  fullName.vb: OpenForge.Cryptography.LibOqs.Core.OqsCore.FreeMemory(System.IntPtr, System.UIntPtr)
+  name.vb: FreeMemory(IntPtr, UIntPtr)
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.CleanseMemory(System.IntPtr,System.UIntPtr)
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.OqsCore.CleanseMemory(System.IntPtr,System.UIntPtr)
+  id: CleanseMemory(System.IntPtr,System.UIntPtr)
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCore
+  langs:
+  - csharp
+  - vb
+  name: CleanseMemory(nint, nuint)
+  nameWithType: OqsCore.CleanseMemory(nint, nuint)
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.CleanseMemory(nint, nuint)
+  type: Method
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: CleanseMemory
+    path: src/Core/OqsCore.cs
+    startLine: 130
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: >-
+    Securely clears memory by overwriting it with zeros.
+
+    This operation cannot be optimized away by the compiler, making it suitable for clearing sensitive data.
+  example: []
+  syntax:
+    content: public static void CleanseMemory(nint memPtr, nuint size)
+    parameters:
+    - id: memPtr
+      type: System.IntPtr
+      description: Pointer to the memory to cleanse. Safe to pass IntPtr.Zero.
+    - id: size
+      type: System.UIntPtr
+      description: The size in bytes of the memory to cleanse.
+    content.vb: Public Shared Sub CleanseMemory(memPtr As IntPtr, size As UIntPtr)
+  overload: OpenForge.Cryptography.LibOqs.Core.OqsCore.CleanseMemory*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown if LibOQS has not been initialized.
+  nameWithType.vb: OqsCore.CleanseMemory(IntPtr, UIntPtr)
+  fullName.vb: OpenForge.Cryptography.LibOqs.Core.OqsCore.CleanseMemory(System.IntPtr, System.UIntPtr)
+  name.vb: CleanseMemory(IntPtr, UIntPtr)
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.GenerateRandomBytes(System.Span{System.Byte})
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.OqsCore.GenerateRandomBytes(System.Span{System.Byte})
+  id: GenerateRandomBytes(System.Span{System.Byte})
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCore
+  langs:
+  - csharp
+  - vb
+  name: GenerateRandomBytes(Span<byte>)
+  nameWithType: OqsCore.GenerateRandomBytes(Span<byte>)
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.GenerateRandomBytes(System.Span<byte>)
+  type: Method
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: GenerateRandomBytes
+    path: src/Core/OqsCore.cs
+    startLine: 145
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Fills the provided buffer with cryptographically secure random bytes using LibOQS's random number generator.
+  example: []
+  syntax:
+    content: public static void GenerateRandomBytes(Span<byte> buffer)
+    parameters:
+    - id: buffer
+      type: System.Span{System.Byte}
+      description: The buffer to fill with random bytes. Empty buffers are safely ignored.
+    content.vb: Public Shared Sub GenerateRandomBytes(buffer As Span(Of Byte))
+  overload: OpenForge.Cryptography.LibOqs.Core.OqsCore.GenerateRandomBytes*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown if LibOQS has not been initialized.
+  nameWithType.vb: OqsCore.GenerateRandomBytes(Span(Of Byte))
+  fullName.vb: OpenForge.Cryptography.LibOqs.Core.OqsCore.GenerateRandomBytes(System.Span(Of Byte))
+  name.vb: GenerateRandomBytes(Span(Of Byte))
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.GenerateRandomBytes(System.Int32)
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.OqsCore.GenerateRandomBytes(System.Int32)
+  id: GenerateRandomBytes(System.Int32)
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCore
+  langs:
+  - csharp
+  - vb
+  name: GenerateRandomBytes(int)
+  nameWithType: OqsCore.GenerateRandomBytes(int)
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.GenerateRandomBytes(int)
+  type: Method
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: GenerateRandomBytes
+    path: src/Core/OqsCore.cs
+    startLine: 165
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: >-
+    Generates a new byte array filled with cryptographically secure random bytes.
+
+    Includes basic entropy validation for buffers between 4 and 1024 bytes.
+  example: []
+  syntax:
+    content: public static byte[] GenerateRandomBytes(int length)
+    parameters:
+    - id: length
+      type: System.Int32
+      description: The number of random bytes to generate. Maximum 1MB.
+    return:
+      type: System.Byte[]
+      description: A new byte array containing cryptographically secure random bytes.
+    content.vb: Public Shared Function GenerateRandomBytes(length As Integer) As Byte()
+  overload: OpenForge.Cryptography.LibOqs.Core.OqsCore.GenerateRandomBytes*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if length is negative or exceeds 1MB.
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown if LibOQS has not been initialized or if entropy validation fails.
+  nameWithType.vb: OqsCore.GenerateRandomBytes(Integer)
+  fullName.vb: OpenForge.Cryptography.LibOqs.Core.OqsCore.GenerateRandomBytes(Integer)
+  name.vb: GenerateRandomBytes(Integer)
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.SwitchRandomAlgorithm(System.String)
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.OqsCore.SwitchRandomAlgorithm(System.String)
+  id: SwitchRandomAlgorithm(System.String)
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCore
+  langs:
+  - csharp
+  - vb
+  name: SwitchRandomAlgorithm(string)
+  nameWithType: OqsCore.SwitchRandomAlgorithm(string)
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.SwitchRandomAlgorithm(string)
+  type: Method
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SwitchRandomAlgorithm
+    path: src/Core/OqsCore.cs
+    startLine: 191
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: >-
+    Switches the random number generator algorithm used by LibOQS.
+
+    Common algorithms include "OpenSSL", "NIST-DRBG", and system-specific options.
+  example: []
+  syntax:
+    content: public static void SwitchRandomAlgorithm(string algorithmName)
+    parameters:
+    - id: algorithmName
+      type: System.String
+      description: The name of the random algorithm to switch to.
+    content.vb: Public Shared Sub SwitchRandomAlgorithm(algorithmName As String)
+  overload: OpenForge.Cryptography.LibOqs.Core.OqsCore.SwitchRandomAlgorithm*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if the algorithm name is null, empty, whitespace, or not supported.
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown if LibOQS has not been initialized.
+  nameWithType.vb: OqsCore.SwitchRandomAlgorithm(String)
+  fullName.vb: OpenForge.Cryptography.LibOqs.Core.OqsCore.SwitchRandomAlgorithm(String)
+  name.vb: SwitchRandomAlgorithm(String)
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.HasCpuExtension(OpenForge.Cryptography.LibOqs.Core.OqsCpUext)
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.OqsCore.HasCpuExtension(OpenForge.Cryptography.LibOqs.Core.OqsCpUext)
+  id: HasCpuExtension(OpenForge.Cryptography.LibOqs.Core.OqsCpUext)
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCore
+  langs:
+  - csharp
+  - vb
+  name: HasCpuExtension(OqsCpUext)
+  nameWithType: OqsCore.HasCpuExtension(OqsCpUext)
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.HasCpuExtension(OpenForge.Cryptography.LibOqs.Core.OqsCpUext)
+  type: Method
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: HasCpuExtension
+    path: src/Core/OqsCore.cs
+    startLine: 207
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Checks whether the current CPU supports a specific extension that can accelerate cryptographic operations.
+  example: []
+  syntax:
+    content: public static bool HasCpuExtension(OqsCpUext extension)
+    parameters:
+    - id: extension
+      type: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+      description: The CPU extension to check for.
+    return:
+      type: System.Boolean
+      description: True if the CPU extension is available, false otherwise.
+    content.vb: Public Shared Function HasCpuExtension(extension As OqsCpUext) As Boolean
+  overload: OpenForge.Cryptography.LibOqs.Core.OqsCore.HasCpuExtension*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown if LibOQS has not been initialized.
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.Malloc(System.UIntPtr)
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.OqsCore.Malloc(System.UIntPtr)
+  id: Malloc(System.UIntPtr)
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCore
+  langs:
+  - csharp
+  - vb
+  name: Malloc(nuint)
+  nameWithType: OqsCore.Malloc(nuint)
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.Malloc(nuint)
+  type: Method
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Malloc
+    path: src/Core/OqsCore.cs
+    startLine: 221
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: >-
+    Allocates memory using the system's malloc function.
+
+    Use this for temporary allocations when you need standard malloc behavior.
+  example: []
+  syntax:
+    content: public static nint Malloc(nuint size)
+    parameters:
+    - id: size
+      type: System.UIntPtr
+      description: The size in bytes to allocate.
+    return:
+      type: System.IntPtr
+      description: A pointer to the allocated memory.
+    content.vb: Public Shared Function Malloc(size As UIntPtr) As IntPtr
+  overload: OpenForge.Cryptography.LibOqs.Core.OqsCore.Malloc*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if size is zero or too large.
+  - type: System.OutOfMemoryException
+    commentId: T:System.OutOfMemoryException
+    description: Thrown if allocation fails.
+  nameWithType.vb: OqsCore.Malloc(UIntPtr)
+  fullName.vb: OpenForge.Cryptography.LibOqs.Core.OqsCore.Malloc(System.UIntPtr)
+  name.vb: Malloc(UIntPtr)
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.Calloc(System.UIntPtr,System.UIntPtr)
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.OqsCore.Calloc(System.UIntPtr,System.UIntPtr)
+  id: Calloc(System.UIntPtr,System.UIntPtr)
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCore
+  langs:
+  - csharp
+  - vb
+  name: Calloc(nuint, nuint)
+  nameWithType: OqsCore.Calloc(nuint, nuint)
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.Calloc(nuint, nuint)
+  type: Method
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Calloc
+    path: src/Core/OqsCore.cs
+    startLine: 250
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: >-
+    Allocates zero-initialized memory using the system's calloc function.
+
+    Use this when you need memory initialized to zero.
+  example: []
+  syntax:
+    content: public static nint Calloc(nuint numElements, nuint elementSize)
+    parameters:
+    - id: numElements
+      type: System.UIntPtr
+      description: The number of elements to allocate.
+    - id: elementSize
+      type: System.UIntPtr
+      description: The size of each element in bytes.
+    return:
+      type: System.IntPtr
+      description: A pointer to the allocated and zero-initialized memory.
+    content.vb: Public Shared Function Calloc(numElements As UIntPtr, elementSize As UIntPtr) As IntPtr
+  overload: OpenForge.Cryptography.LibOqs.Core.OqsCore.Calloc*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if parameters are invalid.
+  - type: System.OutOfMemoryException
+    commentId: T:System.OutOfMemoryException
+    description: Thrown if allocation fails.
+  nameWithType.vb: OqsCore.Calloc(UIntPtr, UIntPtr)
+  fullName.vb: OpenForge.Cryptography.LibOqs.Core.OqsCore.Calloc(System.UIntPtr, System.UIntPtr)
+  name.vb: Calloc(UIntPtr, UIntPtr)
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.SecureCompare(System.IntPtr,System.IntPtr,System.UIntPtr)
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.OqsCore.SecureCompare(System.IntPtr,System.IntPtr,System.UIntPtr)
+  id: SecureCompare(System.IntPtr,System.IntPtr,System.UIntPtr)
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCore
+  langs:
+  - csharp
+  - vb
+  name: SecureCompare(nint, nint, nuint)
+  nameWithType: OqsCore.SecureCompare(nint, nint, nuint)
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.SecureCompare(nint, nint, nuint)
+  type: Method
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SecureCompare
+    path: src/Core/OqsCore.cs
+    startLine: 280
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: >-
+    Performs a secure comparison of two memory blocks in constant time.
+
+    This prevents timing attacks when comparing sensitive data like cryptographic secrets.
+  example: []
+  syntax:
+    content: public static int SecureCompare(nint a, nint b, nuint length)
+    parameters:
+    - id: a
+      type: System.IntPtr
+      description: Pointer to the first memory block.
+    - id: b
+      type: System.IntPtr
+      description: Pointer to the second memory block.
+    - id: length
+      type: System.UIntPtr
+      description: The length in bytes to compare.
+    return:
+      type: System.Int32
+      description: 0 if the memory blocks are equal, non-zero otherwise.
+    content.vb: Public Shared Function SecureCompare(a As IntPtr, b As IntPtr, length As UIntPtr) As Integer
+  overload: OpenForge.Cryptography.LibOqs.Core.OqsCore.SecureCompare*
+  nameWithType.vb: OqsCore.SecureCompare(IntPtr, IntPtr, UIntPtr)
+  fullName.vb: OpenForge.Cryptography.LibOqs.Core.OqsCore.SecureCompare(System.IntPtr, System.IntPtr, System.UIntPtr)
+  name.vb: SecureCompare(IntPtr, IntPtr, UIntPtr)
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.InsecureFreeMemory(System.IntPtr)
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.OqsCore.InsecureFreeMemory(System.IntPtr)
+  id: InsecureFreeMemory(System.IntPtr)
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCore
+  langs:
+  - csharp
+  - vb
+  name: InsecureFreeMemory(nint)
+  nameWithType: OqsCore.InsecureFreeMemory(nint)
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.InsecureFreeMemory(nint)
+  type: Method
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: InsecureFreeMemory
+    path: src/Core/OqsCore.cs
+    startLine: 306
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: >-
+    Frees memory without secure clearing. Use only for non-sensitive data.
+
+    For sensitive data, use <xref href="OpenForge.Cryptography.LibOqs.Core.OqsCore.FreeMemory(System.IntPtr%2cSystem.UIntPtr)" data-throw-if-not-resolved="false"></xref> instead (which uses secure clearing).
+  example: []
+  syntax:
+    content: public static void InsecureFreeMemory(nint memPtr)
+    parameters:
+    - id: memPtr
+      type: System.IntPtr
+      description: Pointer to the memory to free. Safe to pass IntPtr.Zero.
+    content.vb: Public Shared Sub InsecureFreeMemory(memPtr As IntPtr)
+  overload: OpenForge.Cryptography.LibOqs.Core.OqsCore.InsecureFreeMemory*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown if LibOQS has not been initialized.
+  nameWithType.vb: OqsCore.InsecureFreeMemory(IntPtr)
+  fullName.vb: OpenForge.Cryptography.LibOqs.Core.OqsCore.InsecureFreeMemory(System.IntPtr)
+  name.vb: InsecureFreeMemory(IntPtr)
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.CreateSecureByteArray(System.Int32)
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.OqsCore.CreateSecureByteArray(System.Int32)
+  id: CreateSecureByteArray(System.Int32)
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCore
+  langs:
+  - csharp
+  - vb
+  name: CreateSecureByteArray(int)
+  nameWithType: OqsCore.CreateSecureByteArray(int)
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.CreateSecureByteArray(int)
+  type: Method
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: CreateSecureByteArray
+    path: src/Core/OqsCore.cs
+    startLine: 322
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: >-
+    Creates a secure byte array that automatically clears its contents when disposed.
+
+    This is ideal for storing sensitive cryptographic material.
+  example: []
+  syntax:
+    content: public static SecureByteArray CreateSecureByteArray(int length)
+    parameters:
+    - id: length
+      type: System.Int32
+      description: The length of the array to create. Maximum 1MB.
+    return:
+      type: OpenForge.Cryptography.LibOqs.Core.SecureByteArray
+      description: A SecureByteArray instance that will securely clear its contents on disposal.
+    content.vb: Public Shared Function CreateSecureByteArray(length As Integer) As SecureByteArray
+  overload: OpenForge.Cryptography.LibOqs.Core.OqsCore.CreateSecureByteArray*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if length is negative or exceeds 1MB.
+  nameWithType.vb: OqsCore.CreateSecureByteArray(Integer)
+  fullName.vb: OpenForge.Cryptography.LibOqs.Core.OqsCore.CreateSecureByteArray(Integer)
+  name.vb: CreateSecureByteArray(Integer)
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.CreateSecureByteArray(System.ReadOnlySpan{System.Byte})
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.OqsCore.CreateSecureByteArray(System.ReadOnlySpan{System.Byte})
+  id: CreateSecureByteArray(System.ReadOnlySpan{System.Byte})
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCore
+  langs:
+  - csharp
+  - vb
+  name: CreateSecureByteArray(ReadOnlySpan<byte>)
+  nameWithType: OqsCore.CreateSecureByteArray(ReadOnlySpan<byte>)
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.CreateSecureByteArray(System.ReadOnlySpan<byte>)
+  type: Method
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: CreateSecureByteArray
+    path: src/Core/OqsCore.cs
+    startLine: 335
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: >-
+    Creates a secure byte array from existing data, which will be securely cleared when disposed.
+
+    The input data is defensively copied to prevent external modification.
+  example: []
+  syntax:
+    content: public static SecureByteArray CreateSecureByteArray(ReadOnlySpan<byte> data)
+    parameters:
+    - id: data
+      type: System.ReadOnlySpan{System.Byte}
+      description: The data to copy into the secure array.
+    return:
+      type: OpenForge.Cryptography.LibOqs.Core.SecureByteArray
+      description: A SecureByteArray instance containing a copy of the data.
+    content.vb: Public Shared Function CreateSecureByteArray(data As ReadOnlySpan(Of Byte)) As SecureByteArray
+  overload: OpenForge.Cryptography.LibOqs.Core.OqsCore.CreateSecureByteArray*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if data length exceeds 1MB.
+  nameWithType.vb: OqsCore.CreateSecureByteArray(ReadOnlySpan(Of Byte))
+  fullName.vb: OpenForge.Cryptography.LibOqs.Core.OqsCore.CreateSecureByteArray(System.ReadOnlySpan(Of Byte))
+  name.vb: CreateSecureByteArray(ReadOnlySpan(Of Byte))
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.HintMemoryPressure(System.Int64,System.Boolean)
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.OqsCore.HintMemoryPressure(System.Int64,System.Boolean)
+  id: HintMemoryPressure(System.Int64,System.Boolean)
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCore
+  langs:
+  - csharp
+  - vb
+  name: HintMemoryPressure(long, bool)
+  nameWithType: OqsCore.HintMemoryPressure(long, bool)
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.HintMemoryPressure(long, bool)
+  type: Method
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: HintMemoryPressure
+    path: src/Core/OqsCore.cs
+    startLine: 364
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: >-
+    Provides a hint about memory pressure after completing large cryptographic operations.
+
+    This can help optimize garbage collection and memory usage in memory-constrained scenarios.
+  remarks: >-
+    This method is useful when:
+
+    - Working with large-key algorithms (Classic McEliece, some NTRU variants)
+
+    - Processing operations in batches
+
+    - Running in memory-constrained environments (containers, IoT devices)
+
+    - Experiencing memory pressure or frequent GC pauses
+
+
+    Call this after completing cryptographic operations that allocated significant memory.
+  example: []
+  syntax:
+    content: public static void HintMemoryPressure(long bytesAllocated, bool forceGarbageCollection = false)
+    parameters:
+    - id: bytesAllocated
+      type: System.Int64
+      description: The approximate number of bytes that were allocated for the operation.
+    - id: forceGarbageCollection
+      type: System.Boolean
+      description: Whether to immediately trigger garbage collection. Use sparingly in performance-critical code.
+    content.vb: Public Shared Sub HintMemoryPressure(bytesAllocated As Long, forceGarbageCollection As Boolean = False)
+  overload: OpenForge.Cryptography.LibOqs.Core.OqsCore.HintMemoryPressure*
+  nameWithType.vb: OqsCore.HintMemoryPressure(Long, Boolean)
+  fullName.vb: OpenForge.Cryptography.LibOqs.Core.OqsCore.HintMemoryPressure(Long, Boolean)
+  name.vb: HintMemoryPressure(Long, Boolean)
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.RemoveMemoryPressure(System.Int64)
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.OqsCore.RemoveMemoryPressure(System.Int64)
+  id: RemoveMemoryPressure(System.Int64)
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCore
+  langs:
+  - csharp
+  - vb
+  name: RemoveMemoryPressure(long)
+  nameWithType: OqsCore.RemoveMemoryPressure(long)
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.RemoveMemoryPressure(long)
+  type: Method
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: RemoveMemoryPressure
+    path: src/Core/OqsCore.cs
+    startLine: 390
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: >-
+    Removes memory pressure hint after memory has been freed.
+
+    Call this to inform the GC that previously allocated cryptographic memory has been released.
+  remarks: >-
+    This should typically be called automatically by disposal methods, but can be used
+
+    manually when implementing custom memory management scenarios.
+  example: []
+  syntax:
+    content: public static void RemoveMemoryPressure(long bytesFreed)
+    parameters:
+    - id: bytesFreed
+      type: System.Int64
+      description: The number of bytes that were freed.
+    content.vb: Public Shared Sub RemoveMemoryPressure(bytesFreed As Long)
+  overload: OpenForge.Cryptography.LibOqs.Core.OqsCore.RemoveMemoryPressure*
+  nameWithType.vb: OqsCore.RemoveMemoryPressure(Long)
+  fullName.vb: OpenForge.Cryptography.LibOqs.Core.OqsCore.RemoveMemoryPressure(Long)
+  name.vb: RemoveMemoryPressure(Long)
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.GetMemoryUsageInfo(System.String)
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.OqsCore.GetMemoryUsageInfo(System.String)
+  id: GetMemoryUsageInfo(System.String)
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCore
+  langs:
+  - csharp
+  - vb
+  name: GetMemoryUsageInfo(string)
+  nameWithType: OqsCore.GetMemoryUsageInfo(string)
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.GetMemoryUsageInfo(string)
+  type: Method
+  source:
+    remote:
+      path: src/Core/OqsCore.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: GetMemoryUsageInfo
+    path: src/Core/OqsCore.cs
+    startLine: 412
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: >-
+    Gets memory usage recommendations for the specified algorithm.
+
+    This helps applications understand memory requirements and plan accordingly.
+  example: []
+  syntax:
+    content: public static MemoryUsageInfo? GetMemoryUsageInfo(string algorithmName)
+    parameters:
+    - id: algorithmName
+      type: System.String
+      description: The algorithm name to get memory information for.
+    return:
+      type: System.Nullable{OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo}
+      description: A structure containing memory usage estimates, or null if the algorithm is unknown.
+    content.vb: Public Shared Function GetMemoryUsageInfo(algorithmName As String) As MemoryUsageInfo?
+  overload: OpenForge.Cryptography.LibOqs.Core.OqsCore.GetMemoryUsageInfo*
+  nameWithType.vb: OqsCore.GetMemoryUsageInfo(String)
+  fullName.vb: OpenForge.Cryptography.LibOqs.Core.OqsCore.GetMemoryUsageInfo(String)
+  name.vb: GetMemoryUsageInfo(String)
+references:
+- uid: OpenForge.Cryptography.LibOqs.Core
+  commentId: N:OpenForge.Cryptography.LibOqs.Core
+  href: OpenForge.html
+  name: OpenForge.Cryptography.LibOqs.Core
+  nameWithType: OpenForge.Cryptography.LibOqs.Core
+  fullName: OpenForge.Cryptography.LibOqs.Core
+  spec.csharp:
+  - uid: OpenForge
+    name: OpenForge
+    href: OpenForge.html
+  - name: .
+  - uid: OpenForge.Cryptography
+    name: Cryptography
+    href: OpenForge.Cryptography.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs
+    name: LibOqs
+    href: OpenForge.Cryptography.LibOqs.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs.Core
+    name: Core
+    href: OpenForge.Cryptography.LibOqs.Core.html
+  spec.vb:
+  - uid: OpenForge
+    name: OpenForge
+    href: OpenForge.html
+  - name: .
+  - uid: OpenForge.Cryptography
+    name: Cryptography
+    href: OpenForge.Cryptography.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs
+    name: LibOqs
+    href: OpenForge.Cryptography.LibOqs.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs.Core
+    name: Core
+    href: OpenForge.Cryptography.LibOqs.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.Initialize*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.OqsCore.Initialize
+  href: OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_Initialize
+  name: Initialize
+  nameWithType: OqsCore.Initialize
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.Initialize
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.GetVersion*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.OqsCore.GetVersion
+  href: OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_GetVersion
+  name: GetVersion
+  nameWithType: OqsCore.GetVersion
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.GetVersion
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.ThreadStop*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.OqsCore.ThreadStop
+  href: OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_ThreadStop
+  name: ThreadStop
+  nameWithType: OqsCore.ThreadStop
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.ThreadStop
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.FreeMemory(System.IntPtr,System.UIntPtr)
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.OqsCore.FreeMemory(System.IntPtr,System.UIntPtr)
+  isExternal: true
+  href: OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_FreeMemory_System_IntPtr_System_UIntPtr_
+  name: FreeMemory(nint, nuint)
+  nameWithType: OqsCore.FreeMemory(nint, nuint)
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.FreeMemory(nint, nuint)
+  nameWithType.vb: OqsCore.FreeMemory(IntPtr, UIntPtr)
+  fullName.vb: OpenForge.Cryptography.LibOqs.Core.OqsCore.FreeMemory(System.IntPtr, System.UIntPtr)
+  name.vb: FreeMemory(IntPtr, UIntPtr)
+  spec.csharp:
+  - uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.FreeMemory(System.IntPtr,System.UIntPtr)
+    name: FreeMemory
+    href: OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_FreeMemory_System_IntPtr_System_UIntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: nint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: ','
+  - name: " "
+  - uid: System.UIntPtr
+    name: nuint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  - name: )
+  spec.vb:
+  - uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.FreeMemory(System.IntPtr,System.UIntPtr)
+    name: FreeMemory
+    href: OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_FreeMemory_System_IntPtr_System_UIntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: IntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: ','
+  - name: " "
+  - uid: System.UIntPtr
+    name: UIntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  - name: )
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: System.OutOfMemoryException
+  commentId: T:System.OutOfMemoryException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.outofmemoryexception
+  name: OutOfMemoryException
+  nameWithType: OutOfMemoryException
+  fullName: System.OutOfMemoryException
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.AllocateMemory*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.OqsCore.AllocateMemory
+  href: OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_AllocateMemory_System_UIntPtr_
+  name: AllocateMemory
+  nameWithType: OqsCore.AllocateMemory
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.AllocateMemory
+- uid: System.UIntPtr
+  commentId: T:System.UIntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  name: nuint
+  nameWithType: nuint
+  fullName: nuint
+  nameWithType.vb: UIntPtr
+  fullName.vb: System.UIntPtr
+  name.vb: UIntPtr
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.intptr
+  name: nint
+  nameWithType: nint
+  fullName: nint
+  nameWithType.vb: IntPtr
+  fullName.vb: System.IntPtr
+  name.vb: IntPtr
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.AllocateMemory(System.UIntPtr)
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.OqsCore.AllocateMemory(System.UIntPtr)
+  isExternal: true
+  href: OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_AllocateMemory_System_UIntPtr_
+  name: AllocateMemory(nuint)
+  nameWithType: OqsCore.AllocateMemory(nuint)
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.AllocateMemory(nuint)
+  nameWithType.vb: OqsCore.AllocateMemory(UIntPtr)
+  fullName.vb: OpenForge.Cryptography.LibOqs.Core.OqsCore.AllocateMemory(System.UIntPtr)
+  name.vb: AllocateMemory(UIntPtr)
+  spec.csharp:
+  - uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.AllocateMemory(System.UIntPtr)
+    name: AllocateMemory
+    href: OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_AllocateMemory_System_UIntPtr_
+  - name: (
+  - uid: System.UIntPtr
+    name: nuint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  - name: )
+  spec.vb:
+  - uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.AllocateMemory(System.UIntPtr)
+    name: AllocateMemory
+    href: OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_AllocateMemory_System_UIntPtr_
+  - name: (
+  - uid: System.UIntPtr
+    name: UIntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  - name: )
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.FreeMemory*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.OqsCore.FreeMemory
+  href: OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_FreeMemory_System_IntPtr_System_UIntPtr_
+  name: FreeMemory
+  nameWithType: OqsCore.FreeMemory
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.FreeMemory
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.CleanseMemory*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.OqsCore.CleanseMemory
+  href: OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_CleanseMemory_System_IntPtr_System_UIntPtr_
+  name: CleanseMemory
+  nameWithType: OqsCore.CleanseMemory
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.CleanseMemory
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.GenerateRandomBytes*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.OqsCore.GenerateRandomBytes
+  href: OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_GenerateRandomBytes_System_Span_System_Byte__
+  name: GenerateRandomBytes
+  nameWithType: OqsCore.GenerateRandomBytes
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.GenerateRandomBytes
+- uid: System.Span{System.Byte}
+  commentId: T:System.Span{System.Byte}
+  parent: System
+  definition: System.Span`1
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<byte>
+  nameWithType: Span<byte>
+  fullName: System.Span<byte>
+  nameWithType.vb: Span(Of Byte)
+  fullName.vb: System.Span(Of Byte)
+  name.vb: Span(Of Byte)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: System.Span`1
+  commentId: T:System.Span`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.SwitchRandomAlgorithm*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.OqsCore.SwitchRandomAlgorithm
+  href: OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_SwitchRandomAlgorithm_System_String_
+  name: SwitchRandomAlgorithm
+  nameWithType: OqsCore.SwitchRandomAlgorithm
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.SwitchRandomAlgorithm
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.HasCpuExtension*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.OqsCore.HasCpuExtension
+  href: OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_HasCpuExtension_OpenForge_Cryptography_LibOqs_Core_OqsCpUext_
+  name: HasCpuExtension
+  nameWithType: OqsCore.HasCpuExtension
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.HasCpuExtension
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  commentId: T:OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  parent: OpenForge.Cryptography.LibOqs.Core
+  href: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.html
+  name: OqsCpUext
+  nameWithType: OqsCpUext
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.Malloc*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.OqsCore.Malloc
+  href: OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_Malloc_System_UIntPtr_
+  name: Malloc
+  nameWithType: OqsCore.Malloc
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.Malloc
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.Calloc*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.OqsCore.Calloc
+  href: OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_Calloc_System_UIntPtr_System_UIntPtr_
+  name: Calloc
+  nameWithType: OqsCore.Calloc
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.Calloc
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.SecureCompare*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.OqsCore.SecureCompare
+  href: OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_SecureCompare_System_IntPtr_System_IntPtr_System_UIntPtr_
+  name: SecureCompare
+  nameWithType: OqsCore.SecureCompare
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.SecureCompare
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.InsecureFreeMemory*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.OqsCore.InsecureFreeMemory
+  href: OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_InsecureFreeMemory_System_IntPtr_
+  name: InsecureFreeMemory
+  nameWithType: OqsCore.InsecureFreeMemory
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.InsecureFreeMemory
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.CreateSecureByteArray*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.OqsCore.CreateSecureByteArray
+  href: OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_CreateSecureByteArray_System_Int32_
+  name: CreateSecureByteArray
+  nameWithType: OqsCore.CreateSecureByteArray
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.CreateSecureByteArray
+- uid: OpenForge.Cryptography.LibOqs.Core.SecureByteArray
+  commentId: T:OpenForge.Cryptography.LibOqs.Core.SecureByteArray
+  parent: OpenForge.Cryptography.LibOqs.Core
+  href: OpenForge.Cryptography.LibOqs.Core.SecureByteArray.html
+  name: SecureByteArray
+  nameWithType: SecureByteArray
+  fullName: OpenForge.Cryptography.LibOqs.Core.SecureByteArray
+- uid: System.ReadOnlySpan{System.Byte}
+  commentId: T:System.ReadOnlySpan{System.Byte}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<byte>
+  nameWithType: ReadOnlySpan<byte>
+  fullName: System.ReadOnlySpan<byte>
+  nameWithType.vb: ReadOnlySpan(Of Byte)
+  fullName.vb: System.ReadOnlySpan(Of Byte)
+  name.vb: ReadOnlySpan(Of Byte)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.HintMemoryPressure*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.OqsCore.HintMemoryPressure
+  href: OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_HintMemoryPressure_System_Int64_System_Boolean_
+  name: HintMemoryPressure
+  nameWithType: OqsCore.HintMemoryPressure
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.HintMemoryPressure
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.RemoveMemoryPressure*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.OqsCore.RemoveMemoryPressure
+  href: OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_RemoveMemoryPressure_System_Int64_
+  name: RemoveMemoryPressure
+  nameWithType: OqsCore.RemoveMemoryPressure
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.RemoveMemoryPressure
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCore.GetMemoryUsageInfo*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.OqsCore.GetMemoryUsageInfo
+  href: OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_GetMemoryUsageInfo_System_String_
+  name: GetMemoryUsageInfo
+  nameWithType: OqsCore.GetMemoryUsageInfo
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCore.GetMemoryUsageInfo
+- uid: System.Nullable{OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo}
+  commentId: T:System.Nullable{OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo}
+  parent: System
+  definition: System.Nullable`1
+  href: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.html
+  name: MemoryUsageInfo?
+  nameWithType: MemoryUsageInfo?
+  fullName: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo?
+  spec.csharp:
+  - uid: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo
+    name: MemoryUsageInfo
+    href: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.html
+  - name: '?'
+  spec.vb:
+  - uid: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo
+    name: MemoryUsageInfo
+    href: OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.html
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

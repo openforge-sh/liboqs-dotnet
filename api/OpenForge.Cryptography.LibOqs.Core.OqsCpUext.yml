@@ -1,0 +1,598 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  commentId: T:OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  id: OqsCpUext
+  parent: OpenForge.Cryptography.LibOqs.Core
+  children:
+  - OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_ADX
+  - OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_AES
+  - OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_ARM_AES
+  - OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_ARM_NEON
+  - OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_ARM_SHA2
+  - OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_ARM_SHA3
+  - OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_AVX
+  - OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_AVX2
+  - OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_AVX512
+  - OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_BMI1
+  - OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_BMI2
+  - OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_INIT
+  - OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_PCLMULQDQ
+  - OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_POPCNT
+  - OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_SSE
+  - OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_SSE2
+  - OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_SSE3
+  - OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_VPCLMULQDQ
+  langs:
+  - csharp
+  - vb
+  name: OqsCpUext
+  nameWithType: OqsCpUext
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  type: Enum
+  source:
+    remote:
+      path: src/Core/LibOqsNative.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: OqsCpUext
+    path: src/Core/LibOqsNative.cs
+    startLine: 92
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Specifies CPU extensions that can be used to accelerate cryptographic operations.
+  example: []
+  syntax:
+    content: public enum OqsCpUext
+    content.vb: Public Enum OqsCpUext
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_INIT
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_INIT
+  id: OQS_CPU_EXT_INIT
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  langs:
+  - csharp
+  - vb
+  name: OQS_CPU_EXT_INIT
+  nameWithType: OqsCpUext.OQS_CPU_EXT_INIT
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_INIT
+  type: Field
+  source:
+    remote:
+      path: src/Core/LibOqsNative.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: OQS_CPU_EXT_INIT
+    path: src/Core/LibOqsNative.cs
+    startLine: 97
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Marker for initialization.
+  example: []
+  syntax:
+    content: OQS_CPU_EXT_INIT = 0
+    return:
+      type: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_ADX
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_ADX
+  id: OQS_CPU_EXT_ADX
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  langs:
+  - csharp
+  - vb
+  name: OQS_CPU_EXT_ADX
+  nameWithType: OqsCpUext.OQS_CPU_EXT_ADX
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_ADX
+  type: Field
+  source:
+    remote:
+      path: src/Core/LibOqsNative.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: OQS_CPU_EXT_ADX
+    path: src/Core/LibOqsNative.cs
+    startLine: 101
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Multi-Precision Add-Carry Instruction Extensions.
+  example: []
+  syntax:
+    content: OQS_CPU_EXT_ADX = 1
+    return:
+      type: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_AES
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_AES
+  id: OQS_CPU_EXT_AES
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  langs:
+  - csharp
+  - vb
+  name: OQS_CPU_EXT_AES
+  nameWithType: OqsCpUext.OQS_CPU_EXT_AES
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_AES
+  type: Field
+  source:
+    remote:
+      path: src/Core/LibOqsNative.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: OQS_CPU_EXT_AES
+    path: src/Core/LibOqsNative.cs
+    startLine: 105
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Advanced Encryption Standard New Instructions.
+  example: []
+  syntax:
+    content: OQS_CPU_EXT_AES = 2
+    return:
+      type: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_AVX
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_AVX
+  id: OQS_CPU_EXT_AVX
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  langs:
+  - csharp
+  - vb
+  name: OQS_CPU_EXT_AVX
+  nameWithType: OqsCpUext.OQS_CPU_EXT_AVX
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_AVX
+  type: Field
+  source:
+    remote:
+      path: src/Core/LibOqsNative.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: OQS_CPU_EXT_AVX
+    path: src/Core/LibOqsNative.cs
+    startLine: 109
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Advanced Vector Extensions.
+  example: []
+  syntax:
+    content: OQS_CPU_EXT_AVX = 3
+    return:
+      type: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_AVX2
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_AVX2
+  id: OQS_CPU_EXT_AVX2
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  langs:
+  - csharp
+  - vb
+  name: OQS_CPU_EXT_AVX2
+  nameWithType: OqsCpUext.OQS_CPU_EXT_AVX2
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_AVX2
+  type: Field
+  source:
+    remote:
+      path: src/Core/LibOqsNative.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: OQS_CPU_EXT_AVX2
+    path: src/Core/LibOqsNative.cs
+    startLine: 113
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Advanced Vector Extensions 2.
+  example: []
+  syntax:
+    content: OQS_CPU_EXT_AVX2 = 4
+    return:
+      type: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_AVX512
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_AVX512
+  id: OQS_CPU_EXT_AVX512
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  langs:
+  - csharp
+  - vb
+  name: OQS_CPU_EXT_AVX512
+  nameWithType: OqsCpUext.OQS_CPU_EXT_AVX512
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_AVX512
+  type: Field
+  source:
+    remote:
+      path: src/Core/LibOqsNative.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: OQS_CPU_EXT_AVX512
+    path: src/Core/LibOqsNative.cs
+    startLine: 117
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Advanced Vector Extensions 512.
+  example: []
+  syntax:
+    content: OQS_CPU_EXT_AVX512 = 5
+    return:
+      type: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_BMI1
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_BMI1
+  id: OQS_CPU_EXT_BMI1
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  langs:
+  - csharp
+  - vb
+  name: OQS_CPU_EXT_BMI1
+  nameWithType: OqsCpUext.OQS_CPU_EXT_BMI1
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_BMI1
+  type: Field
+  source:
+    remote:
+      path: src/Core/LibOqsNative.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: OQS_CPU_EXT_BMI1
+    path: src/Core/LibOqsNative.cs
+    startLine: 121
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Bit Manipulation Instruction Set 1.
+  example: []
+  syntax:
+    content: OQS_CPU_EXT_BMI1 = 6
+    return:
+      type: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_BMI2
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_BMI2
+  id: OQS_CPU_EXT_BMI2
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  langs:
+  - csharp
+  - vb
+  name: OQS_CPU_EXT_BMI2
+  nameWithType: OqsCpUext.OQS_CPU_EXT_BMI2
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_BMI2
+  type: Field
+  source:
+    remote:
+      path: src/Core/LibOqsNative.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: OQS_CPU_EXT_BMI2
+    path: src/Core/LibOqsNative.cs
+    startLine: 125
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Bit Manipulation Instruction Set 2.
+  example: []
+  syntax:
+    content: OQS_CPU_EXT_BMI2 = 7
+    return:
+      type: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_PCLMULQDQ
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_PCLMULQDQ
+  id: OQS_CPU_EXT_PCLMULQDQ
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  langs:
+  - csharp
+  - vb
+  name: OQS_CPU_EXT_PCLMULQDQ
+  nameWithType: OqsCpUext.OQS_CPU_EXT_PCLMULQDQ
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_PCLMULQDQ
+  type: Field
+  source:
+    remote:
+      path: src/Core/LibOqsNative.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: OQS_CPU_EXT_PCLMULQDQ
+    path: src/Core/LibOqsNative.cs
+    startLine: 129
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Carry-Less Multiplication instruction.
+  example: []
+  syntax:
+    content: OQS_CPU_EXT_PCLMULQDQ = 8
+    return:
+      type: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_VPCLMULQDQ
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_VPCLMULQDQ
+  id: OQS_CPU_EXT_VPCLMULQDQ
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  langs:
+  - csharp
+  - vb
+  name: OQS_CPU_EXT_VPCLMULQDQ
+  nameWithType: OqsCpUext.OQS_CPU_EXT_VPCLMULQDQ
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_VPCLMULQDQ
+  type: Field
+  source:
+    remote:
+      path: src/Core/LibOqsNative.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: OQS_CPU_EXT_VPCLMULQDQ
+    path: src/Core/LibOqsNative.cs
+    startLine: 133
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Vector Carry-Less Multiplication instruction.
+  example: []
+  syntax:
+    content: OQS_CPU_EXT_VPCLMULQDQ = 9
+    return:
+      type: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_POPCNT
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_POPCNT
+  id: OQS_CPU_EXT_POPCNT
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  langs:
+  - csharp
+  - vb
+  name: OQS_CPU_EXT_POPCNT
+  nameWithType: OqsCpUext.OQS_CPU_EXT_POPCNT
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_POPCNT
+  type: Field
+  source:
+    remote:
+      path: src/Core/LibOqsNative.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: OQS_CPU_EXT_POPCNT
+    path: src/Core/LibOqsNative.cs
+    startLine: 137
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Population Count instruction.
+  example: []
+  syntax:
+    content: OQS_CPU_EXT_POPCNT = 10
+    return:
+      type: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_SSE
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_SSE
+  id: OQS_CPU_EXT_SSE
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  langs:
+  - csharp
+  - vb
+  name: OQS_CPU_EXT_SSE
+  nameWithType: OqsCpUext.OQS_CPU_EXT_SSE
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_SSE
+  type: Field
+  source:
+    remote:
+      path: src/Core/LibOqsNative.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: OQS_CPU_EXT_SSE
+    path: src/Core/LibOqsNative.cs
+    startLine: 141
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Streaming SIMD Extensions.
+  example: []
+  syntax:
+    content: OQS_CPU_EXT_SSE = 11
+    return:
+      type: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_SSE2
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_SSE2
+  id: OQS_CPU_EXT_SSE2
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  langs:
+  - csharp
+  - vb
+  name: OQS_CPU_EXT_SSE2
+  nameWithType: OqsCpUext.OQS_CPU_EXT_SSE2
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_SSE2
+  type: Field
+  source:
+    remote:
+      path: src/Core/LibOqsNative.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: OQS_CPU_EXT_SSE2
+    path: src/Core/LibOqsNative.cs
+    startLine: 145
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Streaming SIMD Extensions 2.
+  example: []
+  syntax:
+    content: OQS_CPU_EXT_SSE2 = 12
+    return:
+      type: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_SSE3
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_SSE3
+  id: OQS_CPU_EXT_SSE3
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  langs:
+  - csharp
+  - vb
+  name: OQS_CPU_EXT_SSE3
+  nameWithType: OqsCpUext.OQS_CPU_EXT_SSE3
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_SSE3
+  type: Field
+  source:
+    remote:
+      path: src/Core/LibOqsNative.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: OQS_CPU_EXT_SSE3
+    path: src/Core/LibOqsNative.cs
+    startLine: 149
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Streaming SIMD Extensions 3.
+  example: []
+  syntax:
+    content: OQS_CPU_EXT_SSE3 = 13
+    return:
+      type: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_ARM_AES
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_ARM_AES
+  id: OQS_CPU_EXT_ARM_AES
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  langs:
+  - csharp
+  - vb
+  name: OQS_CPU_EXT_ARM_AES
+  nameWithType: OqsCpUext.OQS_CPU_EXT_ARM_AES
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_ARM_AES
+  type: Field
+  source:
+    remote:
+      path: src/Core/LibOqsNative.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: OQS_CPU_EXT_ARM_AES
+    path: src/Core/LibOqsNative.cs
+    startLine: 153
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: ARM AES instructions.
+  example: []
+  syntax:
+    content: OQS_CPU_EXT_ARM_AES = 14
+    return:
+      type: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_ARM_SHA2
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_ARM_SHA2
+  id: OQS_CPU_EXT_ARM_SHA2
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  langs:
+  - csharp
+  - vb
+  name: OQS_CPU_EXT_ARM_SHA2
+  nameWithType: OqsCpUext.OQS_CPU_EXT_ARM_SHA2
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_ARM_SHA2
+  type: Field
+  source:
+    remote:
+      path: src/Core/LibOqsNative.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: OQS_CPU_EXT_ARM_SHA2
+    path: src/Core/LibOqsNative.cs
+    startLine: 157
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: ARM SHA2 instructions.
+  example: []
+  syntax:
+    content: OQS_CPU_EXT_ARM_SHA2 = 15
+    return:
+      type: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_ARM_SHA3
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_ARM_SHA3
+  id: OQS_CPU_EXT_ARM_SHA3
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  langs:
+  - csharp
+  - vb
+  name: OQS_CPU_EXT_ARM_SHA3
+  nameWithType: OqsCpUext.OQS_CPU_EXT_ARM_SHA3
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_ARM_SHA3
+  type: Field
+  source:
+    remote:
+      path: src/Core/LibOqsNative.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: OQS_CPU_EXT_ARM_SHA3
+    path: src/Core/LibOqsNative.cs
+    startLine: 161
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: ARM SHA3 instructions.
+  example: []
+  syntax:
+    content: OQS_CPU_EXT_ARM_SHA3 = 16
+    return:
+      type: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_ARM_NEON
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_ARM_NEON
+  id: OQS_CPU_EXT_ARM_NEON
+  parent: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  langs:
+  - csharp
+  - vb
+  name: OQS_CPU_EXT_ARM_NEON
+  nameWithType: OqsCpUext.OQS_CPU_EXT_ARM_NEON
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_ARM_NEON
+  type: Field
+  source:
+    remote:
+      path: src/Core/LibOqsNative.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: OQS_CPU_EXT_ARM_NEON
+    path: src/Core/LibOqsNative.cs
+    startLine: 165
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: ARM NEON advanced SIMD.
+  example: []
+  syntax:
+    content: OQS_CPU_EXT_ARM_NEON = 17
+    return:
+      type: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+references:
+- uid: OpenForge.Cryptography.LibOqs.Core
+  commentId: N:OpenForge.Cryptography.LibOqs.Core
+  href: OpenForge.html
+  name: OpenForge.Cryptography.LibOqs.Core
+  nameWithType: OpenForge.Cryptography.LibOqs.Core
+  fullName: OpenForge.Cryptography.LibOqs.Core
+  spec.csharp:
+  - uid: OpenForge
+    name: OpenForge
+    href: OpenForge.html
+  - name: .
+  - uid: OpenForge.Cryptography
+    name: Cryptography
+    href: OpenForge.Cryptography.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs
+    name: LibOqs
+    href: OpenForge.Cryptography.LibOqs.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs.Core
+    name: Core
+    href: OpenForge.Cryptography.LibOqs.Core.html
+  spec.vb:
+  - uid: OpenForge
+    name: OpenForge
+    href: OpenForge.html
+  - name: .
+  - uid: OpenForge.Cryptography
+    name: Cryptography
+    href: OpenForge.Cryptography.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs
+    name: LibOqs
+    href: OpenForge.Cryptography.LibOqs.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs.Core
+    name: Core
+    href: OpenForge.Cryptography.LibOqs.Core.html
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  commentId: T:OpenForge.Cryptography.LibOqs.Core.OqsCpUext
+  parent: OpenForge.Cryptography.LibOqs.Core
+  href: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.html
+  name: OqsCpUext
+  nameWithType: OqsCpUext
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCpUext

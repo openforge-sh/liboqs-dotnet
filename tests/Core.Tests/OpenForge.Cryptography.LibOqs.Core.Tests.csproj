@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <RootNamespace>OpenForge.Cryptography.LibOqs.Core.Tests</RootNamespace>
+    <AssemblyName>OpenForge.Cryptography.LibOqs.Core.Tests</AssemblyName>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../src/Full/OpenForge.Cryptography.LibOqs.csproj" />
+    <ProjectReference Include="../../src/Native.Full/OpenForge.Cryptography.LibOqs.Native.Full.csproj" />
+    <ProjectReference Include="../Common/OpenForge.Cryptography.LibOqs.Tests.Common.csproj" />
+  </ItemGroup>
+
+</Project>

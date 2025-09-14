@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SigInstance </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SigInstance ">
+      
+      <meta name="description" content="Represents a digital signature instance for performing cryptographic signing and verification operations. This class provides methods for key generation, message signing, and signature verification.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/openforge-sh/liboqs-dotnet/new/main/apiSpec/new?filename=OpenForge_Cryptography_LibOqs_SIG_SigInstance.md&amp;value=---%0Auid%3A%20OpenForge.Cryptography.LibOqs.SIG.SigInstance%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OpenForge.Cryptography.LibOqs.SIG.SigInstance">
+
+
+
+  <h1 id="OpenForge_Cryptography_LibOqs_SIG_SigInstance" data-uid="OpenForge.Cryptography.LibOqs.SIG.SigInstance" class="text-break">
+Class SigInstance  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigProvider.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OpenForge.html">OpenForge</a>.<a class="xref" href="OpenForge.Cryptography.html">Cryptography</a>.<a class="xref" href="OpenForge.Cryptography.LibOqs.html">LibOqs</a>.<a class="xref" href="OpenForge.Cryptography.LibOqs.SIG.html">SIG</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OpenForge.Cryptography.LibOqs.SIG.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a digital signature instance for performing cryptographic signing and verification operations.
+This class provides methods for key generation, message signing, and signature verification.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class SigInstance : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">SigInstance</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="OpenForge_Cryptography_LibOqs_SIG_SigInstance_AlgorithmName_" data-uid="OpenForge.Cryptography.LibOqs.SIG.SigInstance.AlgorithmName*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_SIG_SigInstance_AlgorithmName" data-uid="OpenForge.Cryptography.LibOqs.SIG.SigInstance.AlgorithmName">
+  AlgorithmName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigProvider.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the name of the digital signature algorithm used by this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AlgorithmName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The algorithm identifier string.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OpenForge_Cryptography_LibOqs_SIG_SigInstance_Dispose_" data-uid="OpenForge.Cryptography.LibOqs.SIG.SigInstance.Dispose*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_SIG_SigInstance_Dispose" data-uid="OpenForge.Cryptography.LibOqs.SIG.SigInstance.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigProvider.cs/#L331"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disposes the signature instance and releases all associated native resources.
+After disposal, this instance cannot be used for further operations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_SIG_SigInstance_Finalize_" data-uid="OpenForge.Cryptography.LibOqs.SIG.SigInstance.Finalize*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_SIG_SigInstance_Finalize" data-uid="OpenForge.Cryptography.LibOqs.SIG.SigInstance.Finalize">
+  ~SigInstance()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigProvider.cs/#L355"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finalizer that ensures native resources are cleaned up if Dispose was not called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ~SigInstance()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_SIG_SigInstance_GenerateKeyPair_" data-uid="OpenForge.Cryptography.LibOqs.SIG.SigInstance.GenerateKeyPair*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_SIG_SigInstance_GenerateKeyPair" data-uid="OpenForge.Cryptography.LibOqs.SIG.SigInstance.GenerateKeyPair">
+  GenerateKeyPair()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigProvider.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generates a new cryptographic key pair using secure random number generation.
+The returned SigKeyPair should be disposed to securely clear the secret key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SigKeyPair GenerateKeyPair()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OpenForge.Cryptography.LibOqs.SIG.SigKeyPair.html">SigKeyPair</a></dt>
+    <dd><p>A SigKeyPair containing the public and secret keys.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>Thrown if the instance has been disposed.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if key pair generation fails.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_SIG_SigInstance_GetAlgorithmInfo_" data-uid="OpenForge.Cryptography.LibOqs.SIG.SigInstance.GetAlgorithmInfo*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_SIG_SigInstance_GetAlgorithmInfo" data-uid="OpenForge.Cryptography.LibOqs.SIG.SigInstance.GetAlgorithmInfo">
+  GetAlgorithmInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigProvider.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets detailed information about the signature algorithm including key sizes and security parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OqsSig GetAlgorithmInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OpenForge.Cryptography.LibOqs.SIG.OqsSig.html">OqsSig</a></dt>
+    <dd><p>An OqsSig structure containing algorithm details.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>Thrown if the instance has been disposed.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_SIG_SigInstance_Sign_" data-uid="OpenForge.Cryptography.LibOqs.SIG.SigInstance.Sign*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_SIG_SigInstance_Sign_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="OpenForge.Cryptography.LibOqs.SIG.SigInstance.Sign(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})">
+  Sign(ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigProvider.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Signs a message using the provided secret key, creating a digital signature.
+The signature can be verified using the corresponding public key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] Sign(ReadOnlySpan&lt;byte&gt; message, ReadOnlySpan&lt;byte&gt; secretKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The message to sign.</p>
+</dd>
+    <dt><code>secretKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The secret key for signing.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>The digital signature bytes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>Thrown if the instance has been disposed.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if the secret key has an invalid length.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if signing fails.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_SIG_SigInstance_SignWithContext_" data-uid="OpenForge.Cryptography.LibOqs.SIG.SigInstance.SignWithContext*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_SIG_SigInstance_SignWithContext_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="OpenForge.Cryptography.LibOqs.SIG.SigInstance.SignWithContext(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})">
+  SignWithContext(ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigProvider.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Signs a message with a context string using the signature algorithm.
+This provides domain separation for signatures in different contexts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] SignWithContext(ReadOnlySpan&lt;byte&gt; message, ReadOnlySpan&lt;byte&gt; contextString, ReadOnlySpan&lt;byte&gt; secretKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The message to sign.</p>
+</dd>
+    <dt><code>contextString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The context string for domain separation.</p>
+</dd>
+    <dt><code>secretKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The secret key for signing.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>The signature bytes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>Thrown if the algorithm doesn't support context strings.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if signing fails.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_SIG_SigInstance_SupportsContextString_" data-uid="OpenForge.Cryptography.LibOqs.SIG.SigInstance.SupportsContextString*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_SIG_SigInstance_SupportsContextString" data-uid="OpenForge.Cryptography.LibOqs.SIG.SigInstance.SupportsContextString">
+  SupportsContextString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigProvider.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether this signature algorithm supports context strings for domain separation.
+Context strings allow the same keys to be used safely in different contexts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SupportsContextString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the algorithm supports context strings, false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>Thrown if the instance has been disposed.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_SIG_SigInstance_Verify_" data-uid="OpenForge.Cryptography.LibOqs.SIG.SigInstance.Verify*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_SIG_SigInstance_Verify_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="OpenForge.Cryptography.LibOqs.SIG.SigInstance.Verify(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})">
+  Verify(ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigProvider.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies a digital signature against the original message using the signer's public key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Verify(ReadOnlySpan&lt;byte&gt; message, ReadOnlySpan&lt;byte&gt; signature, ReadOnlySpan&lt;byte&gt; publicKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The original message that was signed.</p>
+</dd>
+    <dt><code>signature</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The signature to verify.</p>
+</dd>
+    <dt><code>publicKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The public key for verification.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the signature is valid for the message and public key, false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>Thrown if the instance has been disposed.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if the public key has an invalid length.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_SIG_SigInstance_VerifyWithContext_" data-uid="OpenForge.Cryptography.LibOqs.SIG.SigInstance.VerifyWithContext*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_SIG_SigInstance_VerifyWithContext_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="OpenForge.Cryptography.LibOqs.SIG.SigInstance.VerifyWithContext(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})">
+  VerifyWithContext(ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigProvider.cs/#L307"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies a signature with a context string using the signature algorithm.
+This provides domain separation for signatures in different contexts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool VerifyWithContext(ReadOnlySpan&lt;byte&gt; message, ReadOnlySpan&lt;byte&gt; signature, ReadOnlySpan&lt;byte&gt; contextString, ReadOnlySpan&lt;byte&gt; publicKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The original message that was signed.</p>
+</dd>
+    <dt><code>signature</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The signature to verify.</p>
+</dd>
+    <dt><code>contextString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The context string used during signing.</p>
+</dd>
+    <dt><code>publicKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The public key for verification.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the signature is valid, false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>Thrown if the algorithm doesn't support context strings.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigProvider.cs/#L111" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

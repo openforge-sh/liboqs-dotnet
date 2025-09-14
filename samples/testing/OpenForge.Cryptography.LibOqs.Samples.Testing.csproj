@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>OpenForge.Cryptography.LibOqs.Samples.Testing</RootNamespace>
+    <AssemblyName>OpenForge.Cryptography.LibOqs.Samples.Testing</AssemblyName>
+    <PackageId>OpenForge.Cryptography.LibOqs.Samples.Testing</PackageId>
+    <IsPackable>false</IsPackable>
+    <NoWarn>$(NoWarn);CA1303</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../src/Full/OpenForge.Cryptography.LibOqs.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <IsPackable>true</IsPackable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <!-- Package-specific metadata -->
+    <PackageId>OpenForge.Cryptography.LibOqs</PackageId>
+    <Title>OpenForge LibOqs - Complete Post-Quantum Cryptography Suite</Title>
+    <Description>Complete post-quantum cryptography suite from liboqs. Includes all key encapsulation mechanisms (ML-KEM/Kyber, BIKE, FrodoKEM, etc.) and digital signatures (ML-DSA/Dilithium, Falcon, SPHINCS+, etc.). NIST standardized algorithms for production use. Full quantum-resistant cryptography toolkit.</Description>
+    <PackageTags>cryptography;post-quantum;pqc;quantum-safe;quantum-resistant;liboqs;kem;signature;key-encapsulation;digital-signature;ml-kem;ml-dsa;kyber;dilithium;falcon;sphincs;bike;frodokem;hqc;ntru;cross;mayo;snova;uov;classic-mceliece;saber;nist;fips;key-exchange;authentication;crypto;security</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Core/OpenForge.Cryptography.LibOqs.Core.csproj" />
+    <ProjectReference Include="../KEM/OpenForge.Cryptography.LibOqs.KEM.csproj" />
+    <ProjectReference Include="../SIG/OpenForge.Cryptography.LibOqs.SIG.csproj" />
+    <ProjectReference Include="../Native.Full/OpenForge.Cryptography.LibOqs.Native.Full.csproj" />
+  </ItemGroup>
+
+</Project>

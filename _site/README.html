@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>OpenForge.Cryptography.LibOqs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="OpenForge.Cryptography.LibOqs ">
+      
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/openforge-sh/liboqs-dotnet/blob/main/README.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="openforgecryptographyliboqs">OpenForge.Cryptography.LibOqs</h1>
+
+<p><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
+<a href="https://dotnet.microsoft.com/download"><img src="https://img.shields.io/badge/.NET-8.0-512BD4" alt=".NET 8.0"></a>
+<a href="https://dotnet.microsoft.com/download"><img src="https://img.shields.io/badge/.NET-9.0-512BD4" alt=".NET 9.0"></a></p>
+<p>A comprehensive .NET wrapper for the <a href="https://openquantumsafe.org/">liboqs</a> quantum-safe cryptography library, providing post-quantum cryptographic algorithms for key encapsulation (KEM) and digital signatures. This library offers production-ready implementations of NIST-standardized post-quantum algorithms to protect against both classical and quantum computing threats.</p>
+<h2 id="-key-features">🎯 Key Features</h2>
+<ul>
+<li><strong>NIST-Standardized Algorithms</strong>: Full support for ML-KEM (Kyber) and ML-DSA (Dilithium)</li>
+<li><strong>Comprehensive Algorithm Support</strong>: Over 50 quantum-safe algorithms including BIKE, Classic McEliece, HQC, Falcon, SPHINCS+, and more</li>
+<li><strong>Modular Architecture</strong>: Choose only the components you need to minimize dependencies</li>
+<li><strong>Cross-Platform</strong>: Native binaries for Windows, Linux (including musl), and macOS on x64 and ARM64 architectures</li>
+<li><strong>Automatic Memory Safety</strong>: Secure memory handling with automatic cleanup - no manual memory management required</li>
+<li><strong>High Performance</strong>: Optimized native implementations via liboqs</li>
+<li><strong>Type-Safe API</strong>: Strongly typed interfaces with comprehensive XML documentation</li>
+</ul>
+<h2 id="-package-structure">📦 Package Structure</h2>
+<p>The library follows a modular design, allowing you to install only what you need:</p>
+<h3 id="core-package">Core Package</h3>
+<ul>
+<li><strong><code>OpenForge.Cryptography.LibOqs.Core</code></strong>: Shared P/Invoke definitions, common structures, and base functionality</li>
+</ul>
+<h3 id="functional-packages">Functional Packages</h3>
+<p>Choose based on your cryptographic needs:</p>
+<ul>
+<li><strong><code>OpenForge.Cryptography.LibOqs</code></strong>: Complete package with all algorithms (KEM + Signatures)</li>
+<li><strong><code>OpenForge.Cryptography.LibOqs.KEM</code></strong>: Key Encapsulation Mechanisms only</li>
+<li><strong><code>OpenForge.Cryptography.LibOqs.SIG</code></strong>: Digital Signatures only</li>
+</ul>
+<h3 id="native-binary-packages">Native Binary Packages</h3>
+<p>Automatically included as dependencies:</p>
+<ul>
+<li><strong><code>OpenForge.Cryptography.LibOqs.Native.Full</code></strong>: Complete native binaries (all algorithms)</li>
+<li><strong><code>OpenForge.Cryptography.LibOqs.Native.KEM</code></strong>: KEM-only native binaries (smaller size)</li>
+<li><strong><code>OpenForge.Cryptography.LibOqs.Native.Sig</code></strong>: Signature-only native binaries</li>
+</ul>
+<h2 id="-installation">🚀 Installation</h2>
+<p>Install the package that matches your requirements:</p>
+<pre><code class="lang-bash"># For all quantum-safe algorithms
+dotnet add package OpenForge.Cryptography.LibOqs
+
+# For key exchange only (smaller footprint)
+dotnet add package OpenForge.Cryptography.LibOqs.KEM
+
+# For digital signatures only
+dotnet add package OpenForge.Cryptography.LibOqs.SIG
+</code></pre>
+<h2 id="-requirements">📋 Requirements</h2>
+<ul>
+<li><strong>.NET Runtime</strong>: .NET 8.0 or .NET 9.0</li>
+<li><strong>Operating Systems</strong>:
+<ul>
+<li>Windows 10+ (x64, ARM64)</li>
+<li>Linux (x64, ARM64)</li>
+<li>Linux with musl libc (Alpine Linux, x64, ARM64)</li>
+<li>macOS 11+ (ARM64/Apple Silicon)</li>
+</ul>
+</li>
+<li><strong>Memory</strong>: Varies by algorithm (typically 1–100 MB for operations)</li>
+</ul>
+<h2 id="-usage-examples">💻 Usage Examples</h2>
+<blockquote>
+<p><strong>🔒 Memory Safety Note</strong>: All examples use automatic memory management. Secret keys, shared secrets, and signatures are automatically cleared from memory when objects are disposed. No manual cleanup is required.</p>
+</blockquote>
+<h3 id="key-encapsulation-kem---quantum-safe-key-exchange">Key Encapsulation (KEM) - Quantum-Safe Key Exchange</h3>
+<pre><code class="lang-csharp">using OpenForge.Cryptography.LibOqs.KEM;
+
+// Initialize LibOQS before use
+OpenForge.Cryptography.LibOqs.Core.OqsCore.Initialize();
+
+// Use NIST-standardized ML-KEM (formerly Kyber)
+using var kem = new Kem(&quot;ML-KEM-768&quot;);
+
+// Generate key pair for the receiver
+var (publicKey, secretKey) = kem.GenerateKeyPair();
+
+// Sender: Encapsulate a shared secret using receiver's public key
+var (ciphertext, sharedSecretSender) = kem.Encapsulate(publicKey);
+
+// Receiver: Decapsulate to retrieve the same shared secret
+var sharedSecretReceiver = kem.Decapsulate(ciphertext, secretKey);
+
+// Both parties now have the same shared secret for symmetric encryption
+Console.WriteLine($&quot;Secrets match: {sharedSecretSender.SequenceEqual(sharedSecretReceiver)}&quot;);
+</code></pre>
+<h3 id="digital-signatures---quantum-safe-authentication">Digital Signatures - Quantum-Safe Authentication</h3>
+<pre><code class="lang-csharp">using OpenForge.Cryptography.LibOqs.SIG;
+using System.Text;
+
+// Initialize LibOQS before use
+OpenForge.Cryptography.LibOqs.Core.OqsCore.Initialize();
+
+// Use NIST-standardized ML-DSA (formerly Dilithium)
+using var sig = new Sig(&quot;ML-DSA-65&quot;);
+
+// Generate signing key pair
+var (publicKey, secretKey) = sig.GenerateKeyPair();
+
+// Sign a message
+var message = Encoding.UTF8.GetBytes(&quot;Authenticate this message&quot;);
+var signature = sig.Sign(message, secretKey);
+
+// Verify the signature
+bool isValid = sig.Verify(message, signature, publicKey);
+Console.WriteLine($&quot;Signature valid: {isValid}&quot;);
+
+// Attempting to verify a tampered message will fail
+message[0] ^= 0xFF; // Tamper with the message
+bool isTampered = sig.Verify(message, signature, publicKey);
+Console.WriteLine($&quot;Tampered message detected: {!isTampered}&quot;);
+</code></pre>
+<h3 id="hybrid-cryptography-example">Hybrid Cryptography Example</h3>
+<pre><code class="lang-csharp">using OpenForge.Cryptography.LibOqs.KEM;
+using OpenForge.Cryptography.LibOqs.Core;
+using System.Security.Cryptography;
+
+// Combine post-quantum KEM with classical AES for hybrid security
+public static class HybridCrypto
+{
+    static HybridCrypto()
+    {
+        OqsCore.Initialize();
+    }
+    
+    public static byte[] HybridEncrypt(byte[] data, byte[] kemPublicKey)
+    {
+        using var kem = new Kem(&quot;ML-KEM-768&quot;);
+        
+        // Generate post-quantum shared secret
+        var (ciphertext, sharedSecret) = kem.Encapsulate(kemPublicKey);
+        
+        // Derive AES key from shared secret
+        using var aes = Aes.Create();
+        aes.Key = sharedSecret[..32]; // Use first 256 bits for AES-256
+        aes.GenerateIV();
+        
+        // Encrypt data with AES
+        using var encryptor = aes.CreateEncryptor();
+        var encrypted = encryptor.TransformFinalBlock(data, 0, data.Length);
+        
+        // Return KEM ciphertext + AES IV + encrypted data
+        return ciphertext.Concat(aes.IV).Concat(encrypted).ToArray();
+    }
+}
+</code></pre>
+<h2 id="-supported-algorithms">🔒 Supported Algorithms</h2>
+<h3 id="nist-standardized-recommended-for-production">NIST-Standardized (Recommended for Production)</h3>
+<h4 id="key-encapsulation">Key Encapsulation</h4>
+<ul>
+<li><strong>ML-KEM</strong> (FIPS 203): ML-KEM-512, ML-KEM-768, ML-KEM-1024
+<ul>
+<li>Formerly known as CRYSTALS-Kyber</li>
+<li>Security levels 1, 3, and 5</li>
+</ul>
+</li>
+</ul>
+<h4 id="digital-signatures">Digital Signatures</h4>
+<ul>
+<li><strong>ML-DSA</strong> (FIPS 204): ML-DSA-44, ML-DSA-65, ML-DSA-87
+<ul>
+<li>Formerly known as CRYSTALS-Dilithium</li>
+<li>Security levels 2, 3, and 5</li>
+</ul>
+</li>
+</ul>
+<h3 id="additional-algorithms">Additional Algorithms</h3>
+<h4 id="key-encapsulation-1">Key Encapsulation</h4>
+<ul>
+<li><strong>BIKE</strong>: Round 5 candidate with small key sizes</li>
+<li><strong>Classic McEliece</strong>: Conservative choice based on coding theory</li>
+<li><strong>HQC</strong>: Hamming Quasi-Cyclic based</li>
+<li><strong>FrodoKEM</strong>: Learning With Errors based</li>
+<li><strong>NTRU &amp; NTRU Prime</strong>: Lattice-based with long history</li>
+<li><strong>Saber</strong>: Learning With Errors-based (LightSaber, Saber, FireSaber variants)</li>
+</ul>
+<h4 id="digital-signatures-1">Digital Signatures</h4>
+<ul>
+<li><strong>Falcon</strong>: NIST alternate with very small signatures (including padded variants)</li>
+<li><strong>SPHINCS+</strong>: Hash-based signatures with SHA2 and SHAKE variants</li>
+<li><strong>CROSS</strong>: Code-based signatures with multiple parameter sets</li>
+<li><strong>MAYO</strong>: Oil-and-vinegar based signatures</li>
+<li><strong>SNOVA</strong>: Multivariate signatures with various configurations</li>
+<li><strong>UOV</strong>: Unbalanced Oil and Vinegar signatures</li>
+</ul>
+<h4 id="stateful-signatures-special-use">Stateful Signatures (Special Use)</h4>
+<ul>
+<li><strong>LMS</strong>: Leighton-Micali Signatures (RFC 8554)</li>
+<li><strong>XMSS</strong>: eXtended Merkle Signature Scheme (RFC 8391)</li>
+<li><strong>XMSS-MT</strong>: Multi-tree variant of XMSS</li>
+</ul>
+<p><em>Note: Stateful signatures are available through the Core library's algorithm constants but require special handling for state management.</em></p>
+<h2 id="-architecture">🏗️ Architecture</h2>
+<p>The library is designed with modularity and safety in mind:</p>
+<ol>
+<li><strong>Native Layer</strong>: Platform-specific liboqs binaries with automatic runtime detection</li>
+<li><strong>P/Invoke Layer</strong>: Low-level bindings in Core package with secure native library loading</li>
+<li><strong>Provider Layer</strong>: Internal factories (<code>KemProvider</code>, <code>SigProvider</code>) managing native instances</li>
+<li><strong>Managed Wrapper</strong>: Type-safe, disposable C# classes (<code>Kem</code>, <code>Sig</code>) for end users</li>
+<li><strong>Algorithm Constants</strong>: Strongly typed algorithm identifiers with deprecation warnings</li>
+<li><strong>Security Utilities</strong>: Constant-time operations, secure memory management, and validation</li>
+</ol>
+<h3 id="key-design-features">Key Design Features</h3>
+<ul>
+<li><strong>Zero Memory Management</strong>: All cryptographic operations automatically handle secure memory allocation and cleanup</li>
+<li><strong>Automatic Initialization</strong>: Native library resolver automatically handles platform-specific binaries</li>
+<li><strong>Secure by Default</strong>: All sensitive key material is automatically cleared from memory when disposed</li>
+<li><strong>Thread Safety</strong>: Core initialization and library loading are thread-safe</li>
+<li><strong>Defensive Programming</strong>: Comprehensive input validation and error handling</li>
+</ul>
+<h3 id="memory-management-philosophy">Memory Management Philosophy</h3>
+<p>This library follows a <strong>&quot;secure by default&quot;</strong> approach to memory management:</p>
+<ul>
+<li><strong>No manual cleanup required</strong>: All <code>Kem</code>, <code>Sig</code>, <code>KeyPair</code>, and result objects automatically clear sensitive data</li>
+<li><strong>RAII pattern</strong>: Use <code>using</code> statements or <code>Dispose()</code> to ensure cleanup (automatic via finalizers if forgotten)</li>
+<li><strong>Memory pressure optimization</strong>: Built-in hints for garbage collection when working with large-key algorithms</li>
+<li><strong>Expert APIs available</strong>: Advanced users can access <code>OqsCore</code> methods for custom memory management scenarios</li>
+<li><strong>Performance optimized</strong>: Memory operations are optimized but safety is never compromised</li>
+</ul>
+<h3 id="memory-pressure-management">Memory Pressure Management</h3>
+<p>For applications with specific memory constraints or when working with large-key algorithms:</p>
+<pre><code class="lang-csharp">// Check memory requirements before choosing an algorithm
+var memoryInfo = OqsCore.GetMemoryUsageInfo(&quot;Classic-McEliece-8192128&quot;);
+Console.WriteLine($&quot;Peak usage: {memoryInfo?.UsageDescription}&quot;);
+
+// For batch operations or memory-constrained environments
+if (memoryInfo?.RecommendMemoryPressureHints == true)
+{
+    // Hint to GC after large operations
+    OqsCore.HintMemoryPressure(memoryInfo.Value.EstimatedPeakUsage);
+}
+</code></pre>
+<h2 id="-testing">🧪 Testing</h2>
+<p>The library includes comprehensive test coverage using:</p>
+<ul>
+<li><strong>xUnit</strong> for the testing framework</li>
+<li><strong>FluentAssertions</strong> for readable test assertions</li>
+<li><strong>NSubstitute</strong> for mocking</li>
+<li><strong>Coverlet</strong> for code coverage</li>
+</ul>
+<p>Run tests with:</p>
+<pre><code class="lang-bash">dotnet test
+</code></pre>
+<h2 id="-documentation">📖 Documentation</h2>
+<p>Full API documentation is generated from XML comments using DocFX. View the documentation:</p>
+<pre><code class="lang-bash"># Build documentation
+./build-docs.sh
+
+# Serve documentation locally
+./serve-docs.sh
+</code></pre>
+<h2 id="-security-considerations">🛡️ Security Considerations</h2>
+<ol>
+<li><strong>Algorithm Selection</strong>: Use NIST-standardized algorithms (ML-KEM, ML-DSA) for production</li>
+<li><strong>Key Storage</strong>: Store secret keys securely, never in plain text</li>
+<li><strong>Stateful Signatures</strong>: Require careful state management to prevent reuse</li>
+<li><strong>Hybrid Approach</strong>: Consider combining with classical algorithms during transition</li>
+<li><strong>Side Channels</strong>: Native implementations include countermeasures but assess your threat model</li>
+<li><strong>Deprecated Algorithms</strong>: The library includes deprecated algorithms that should not be used in production:
+<ul>
+<li><strong>Rainbow</strong>: Cryptographically broken - avoid entirely</li>
+<li><strong>SIDH/SIKE</strong>: Cryptographically broken - avoid entirely</li>
+<li>Use <code>AlgorithmConstants.IsDeprecated()</code> to check algorithm status programmatically</li>
+</ul>
+</li>
+</ol>
+<h2 id="-contributing">🤝 Contributing</h2>
+<p>Contributions are welcome! Please ensure:</p>
+<ul>
+<li>All tests pass</li>
+<li>Code follows existing style conventions</li>
+<li>XML documentation is added for public APIs</li>
+<li>Security implications are considered</li>
+</ul>
+<h2 id="-license">📄 License</h2>
+<p>This project is licensed under the MIT License—see the LICENSE file for details.</p>
+<h2 id="-acknowledgments">🙏 Acknowledgments</h2>
+<ul>
+<li><a href="https://openquantumsafe.org/">Open Quantum Safe</a> project for liboqs</li>
+<li>NIST Post-Quantum Cryptography Standardization process</li>
+<li>The cryptographic research community</li>
+</ul>
+<h2 id="-disclaimer">⚠️ Disclaimer</h2>
+<p>While this library implements cryptographic algorithms believed to be quantum-resistant, the field of post-quantum cryptography is evolving. Always consult with cryptographic experts for production deployments and stay updated with NIST recommendations.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/README.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

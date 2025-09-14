@@ -1,0 +1,580 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult
+  commentId: T:OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult
+  id: EncapsulationResult
+  parent: OpenForge.Cryptography.LibOqs.KEM
+  children:
+  - OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.#ctor(System.Byte[],System.Byte[])
+  - OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.Ciphertext
+  - OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.Dispose
+  - OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.SharedSecret
+  langs:
+  - csharp
+  - vb
+  name: EncapsulationResult
+  nameWithType: EncapsulationResult
+  fullName: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult
+  type: Struct
+  source:
+    remote:
+      path: src/KEM/KemProvider.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: EncapsulationResult
+    path: src/KEM/KemProvider.cs
+    startLine: 350
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.KEM
+  namespace: OpenForge.Cryptography.LibOqs.KEM
+  summary: >-
+    Represents the result of a KEM encapsulation operation, containing both the ciphertext and shared secret.
+
+    The shared secret is securely cleared when the EncapsulationResult is disposed.
+  example: []
+  syntax:
+    content: 'public readonly record struct EncapsulationResult : IDisposable, IEquatable<EncapsulationResult>'
+    content.vb: Public Structure EncapsulationResult Implements IDisposable, IEquatable(Of EncapsulationResult)
+  implements:
+  - System.IDisposable
+  - System.IEquatable{OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.#ctor(System.Byte[],System.Byte[])
+  commentId: M:OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.#ctor(System.Byte[],System.Byte[])
+  id: '#ctor(System.Byte[],System.Byte[])'
+  parent: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult
+  langs:
+  - csharp
+  - vb
+  name: EncapsulationResult(byte[], byte[])
+  nameWithType: EncapsulationResult.EncapsulationResult(byte[], byte[])
+  fullName: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.EncapsulationResult(byte[], byte[])
+  type: Constructor
+  source:
+    remote:
+      path: src/KEM/KemProvider.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: .ctor
+    path: src/KEM/KemProvider.cs
+    startLine: 350
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.KEM
+  namespace: OpenForge.Cryptography.LibOqs.KEM
+  summary: >-
+    Represents the result of a KEM encapsulation operation, containing both the ciphertext and shared secret.
+
+    The shared secret is securely cleared when the EncapsulationResult is disposed.
+  example: []
+  syntax:
+    content: public EncapsulationResult(byte[] Ciphertext, byte[] SharedSecret)
+    parameters:
+    - id: Ciphertext
+      type: System.Byte[]
+      description: The ciphertext that will be sent to the recipient for decapsulation.
+    - id: SharedSecret
+      type: System.Byte[]
+      description: The shared secret that should be used for symmetric encryption operations.
+    content.vb: Public Sub New(Ciphertext As Byte(), SharedSecret As Byte())
+  overload: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.#ctor*
+  nameWithType.vb: EncapsulationResult.New(Byte(), Byte())
+  fullName.vb: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.New(Byte(), Byte())
+  name.vb: New(Byte(), Byte())
+- uid: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.Ciphertext
+  commentId: P:OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.Ciphertext
+  id: Ciphertext
+  parent: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult
+  langs:
+  - csharp
+  - vb
+  name: Ciphertext
+  nameWithType: EncapsulationResult.Ciphertext
+  fullName: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.Ciphertext
+  type: Property
+  source:
+    remote:
+      path: src/KEM/KemProvider.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Ciphertext
+    path: src/KEM/KemProvider.cs
+    startLine: 351
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.KEM
+  namespace: OpenForge.Cryptography.LibOqs.KEM
+  summary: The ciphertext that will be sent to the recipient for decapsulation.
+  example: []
+  syntax:
+    content: public byte[] Ciphertext { get; init; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public Property Ciphertext As Byte()
+  overload: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.Ciphertext*
+- uid: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.SharedSecret
+  commentId: P:OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.SharedSecret
+  id: SharedSecret
+  parent: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult
+  langs:
+  - csharp
+  - vb
+  name: SharedSecret
+  nameWithType: EncapsulationResult.SharedSecret
+  fullName: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.SharedSecret
+  type: Property
+  source:
+    remote:
+      path: src/KEM/KemProvider.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: SharedSecret
+    path: src/KEM/KemProvider.cs
+    startLine: 351
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.KEM
+  namespace: OpenForge.Cryptography.LibOqs.KEM
+  summary: The shared secret that should be used for symmetric encryption operations.
+  example: []
+  syntax:
+    content: public byte[] SharedSecret { get; init; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public Property SharedSecret As Byte()
+  overload: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.SharedSecret*
+- uid: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.Dispose
+  commentId: M:OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.Dispose
+  id: Dispose
+  parent: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: EncapsulationResult.Dispose()
+  fullName: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.Dispose()
+  type: Method
+  source:
+    remote:
+      path: src/KEM/KemProvider.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: Dispose
+    path: src/KEM/KemProvider.cs
+    startLine: 357
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.KEM
+  namespace: OpenForge.Cryptography.LibOqs.KEM
+  summary: >-
+    Securely clears the shared secret from memory to prevent information leakage.
+
+    The ciphertext does not need secure clearing as it is not sensitive.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: OpenForge.Cryptography.LibOqs.KEM
+  commentId: N:OpenForge.Cryptography.LibOqs.KEM
+  href: OpenForge.html
+  name: OpenForge.Cryptography.LibOqs.KEM
+  nameWithType: OpenForge.Cryptography.LibOqs.KEM
+  fullName: OpenForge.Cryptography.LibOqs.KEM
+  spec.csharp:
+  - uid: OpenForge
+    name: OpenForge
+    href: OpenForge.html
+  - name: .
+  - uid: OpenForge.Cryptography
+    name: Cryptography
+    href: OpenForge.Cryptography.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs
+    name: LibOqs
+    href: OpenForge.Cryptography.LibOqs.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs.KEM
+    name: KEM
+    href: OpenForge.Cryptography.LibOqs.KEM.html
+  spec.vb:
+  - uid: OpenForge
+    name: OpenForge
+    href: OpenForge.html
+  - name: .
+  - uid: OpenForge.Cryptography
+    name: Cryptography
+    href: OpenForge.Cryptography.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs
+    name: LibOqs
+    href: OpenForge.Cryptography.LibOqs.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs.KEM
+    name: KEM
+    href: OpenForge.Cryptography.LibOqs.KEM.html
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.IEquatable{OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult}
+  commentId: T:System.IEquatable{OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<EncapsulationResult>
+  nameWithType: IEquatable<EncapsulationResult>
+  fullName: System.IEquatable<OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult>
+  nameWithType.vb: IEquatable(Of EncapsulationResult)
+  fullName.vb: System.IEquatable(Of OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult)
+  name.vb: IEquatable(Of EncapsulationResult)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult
+    name: EncapsulationResult
+    href: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult
+    name: EncapsulationResult
+    href: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.html
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.#ctor*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.#ctor
+  href: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.html#OpenForge_Cryptography_LibOqs_KEM_EncapsulationResult__ctor_System_Byte___System_Byte___
+  name: EncapsulationResult
+  nameWithType: EncapsulationResult.EncapsulationResult
+  fullName: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.EncapsulationResult
+  nameWithType.vb: EncapsulationResult.New
+  fullName.vb: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.New
+  name.vb: New
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.Ciphertext*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.Ciphertext
+  href: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.html#OpenForge_Cryptography_LibOqs_KEM_EncapsulationResult_Ciphertext
+  name: Ciphertext
+  nameWithType: EncapsulationResult.Ciphertext
+  fullName: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.Ciphertext
+- uid: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.SharedSecret*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.SharedSecret
+  href: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.html#OpenForge_Cryptography_LibOqs_KEM_EncapsulationResult_SharedSecret
+  name: SharedSecret
+  nameWithType: EncapsulationResult.SharedSecret
+  fullName: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.SharedSecret
+- uid: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.Dispose*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.Dispose
+  href: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.html#OpenForge_Cryptography_LibOqs_KEM_EncapsulationResult_Dispose
+  name: Dispose
+  nameWithType: EncapsulationResult.Dispose
+  fullName: OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

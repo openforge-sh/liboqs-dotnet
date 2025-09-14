@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <RootNamespace>OpenForge.Cryptography.LibOqs.Tests.Common</RootNamespace>
+    <AssemblyName>OpenForge.Cryptography.LibOqs.Tests.Common</AssemblyName>
+    <IsTestProject>false</IsTestProject>
+    <IsPackable>false</IsPackable>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <!-- Disable MTP for this shared library -->
+    <TestingPlatformDotnetTestSupport>false</TestingPlatformDotnetTestSupport>
+    <UseMicrosoftTestingPlatformRunner>false</UseMicrosoftTestingPlatformRunner>
+    <!-- Don't inherit test packages from Directory.Build.props -->
+    <DisableImplicitPackageReferences>true</DisableImplicitPackageReferences>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="OpenForge.Cryptography.LibOqs.Core.Tests" />
+    <InternalsVisibleTo Include="OpenForge.Cryptography.LibOqs.KEM.Tests" />
+    <InternalsVisibleTo Include="OpenForge.Cryptography.LibOqs.SIG.Tests" />
+    <InternalsVisibleTo Include="OpenForge.Cryptography.LibOqs.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../src/Core/OpenForge.Cryptography.LibOqs.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Only include xunit.v3 for the collection attributes -->
+    <PackageReference Include="xunit.v3.core" Version="3.0.1" />
+  </ItemGroup>
+</Project>

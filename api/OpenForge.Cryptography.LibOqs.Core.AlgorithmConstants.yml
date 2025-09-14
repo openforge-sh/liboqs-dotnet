@@ -1,0 +1,514 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants
+  commentId: T:OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants
+  id: AlgorithmConstants
+  parent: OpenForge.Cryptography.LibOqs.Core
+  children:
+  - OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.CheckForDeprecationWarning(System.String,System.String)
+  - OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.DeprecationWarningsEnabled
+  - OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.IsDeprecated(System.String)
+  - OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.IsNISTStandardized(System.String)
+  langs:
+  - csharp
+  - vb
+  name: AlgorithmConstants
+  nameWithType: AlgorithmConstants
+  fullName: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants
+  type: Class
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: AlgorithmConstants
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 330
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: >-
+    Provides constants for all liboqs algorithm identifiers.
+
+    This eliminates the need to use magic strings when working with cryptographic algorithms.
+  example: []
+  syntax:
+    content: public static class AlgorithmConstants
+    content.vb: Public Module AlgorithmConstants
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.DeprecationWarningsEnabled
+  commentId: P:OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.DeprecationWarningsEnabled
+  id: DeprecationWarningsEnabled
+  parent: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants
+  langs:
+  - csharp
+  - vb
+  name: DeprecationWarningsEnabled
+  nameWithType: AlgorithmConstants.DeprecationWarningsEnabled
+  fullName: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.DeprecationWarningsEnabled
+  type: Property
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: DeprecationWarningsEnabled
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 335
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Gets or sets whether deprecation warnings should be shown for deprecated algorithms.
+  example: []
+  syntax:
+    content: public static bool DeprecationWarningsEnabled { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Property DeprecationWarningsEnabled As Boolean
+  overload: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.DeprecationWarningsEnabled*
+- uid: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.IsNISTStandardized(System.String)
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.IsNISTStandardized(System.String)
+  id: IsNISTStandardized(System.String)
+  parent: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants
+  langs:
+  - csharp
+  - vb
+  name: IsNISTStandardized(string)
+  nameWithType: AlgorithmConstants.IsNISTStandardized(string)
+  fullName: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.IsNISTStandardized(string)
+  type: Method
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: IsNISTStandardized
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 342
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Determines if an algorithm is NIST standardized.
+  example: []
+  syntax:
+    content: public static bool IsNISTStandardized(string algorithmName)
+    parameters:
+    - id: algorithmName
+      type: System.String
+      description: The algorithm name to check.
+    return:
+      type: System.Boolean
+      description: True if the algorithm is NIST standardized, false otherwise.
+    content.vb: Public Shared Function IsNISTStandardized(algorithmName As String) As Boolean
+  overload: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.IsNISTStandardized*
+  nameWithType.vb: AlgorithmConstants.IsNISTStandardized(String)
+  fullName.vb: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.IsNISTStandardized(String)
+  name.vb: IsNISTStandardized(String)
+- uid: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.IsDeprecated(System.String)
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.IsDeprecated(System.String)
+  id: IsDeprecated(System.String)
+  parent: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants
+  langs:
+  - csharp
+  - vb
+  name: IsDeprecated(string)
+  nameWithType: AlgorithmConstants.IsDeprecated(string)
+  fullName: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.IsDeprecated(string)
+  type: Method
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: IsDeprecated
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 355
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Determines if an algorithm is deprecated and should not be used.
+  example: []
+  syntax:
+    content: public static bool IsDeprecated(string algorithmName)
+    parameters:
+    - id: algorithmName
+      type: System.String
+      description: The algorithm name to check.
+    return:
+      type: System.Boolean
+      description: True if the algorithm is deprecated, false otherwise.
+    content.vb: Public Shared Function IsDeprecated(algorithmName As String) As Boolean
+  overload: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.IsDeprecated*
+  nameWithType.vb: AlgorithmConstants.IsDeprecated(String)
+  fullName.vb: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.IsDeprecated(String)
+  name.vb: IsDeprecated(String)
+- uid: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.CheckForDeprecationWarning(System.String,System.String)
+  commentId: M:OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.CheckForDeprecationWarning(System.String,System.String)
+  id: CheckForDeprecationWarning(System.String,System.String)
+  parent: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants
+  langs:
+  - csharp
+  - vb
+  name: CheckForDeprecationWarning(string, string)
+  nameWithType: AlgorithmConstants.CheckForDeprecationWarning(string, string)
+  fullName: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.CheckForDeprecationWarning(string, string)
+  type: Method
+  source:
+    remote:
+      path: src/Core/AlgorithmConstants.cs
+      branch: main
+      repo: https://github.com/openforge-sh/liboqs-dotnet.git
+    id: CheckForDeprecationWarning
+    path: src/Core/AlgorithmConstants.cs
+    startLine: 368
+  assemblies:
+  - OpenForge.Cryptography.LibOqs.Core
+  namespace: OpenForge.Cryptography.LibOqs.Core
+  summary: Checks if an algorithm is deprecated and issues a warning if deprecation warnings are enabled.
+  example: []
+  syntax:
+    content: public static void CheckForDeprecationWarning(string algorithmName, string context)
+    parameters:
+    - id: algorithmName
+      type: System.String
+      description: The algorithm name to check.
+    - id: context
+      type: System.String
+      description: The context where the algorithm is being used.
+    content.vb: Public Shared Sub CheckForDeprecationWarning(algorithmName As String, context As String)
+  overload: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.CheckForDeprecationWarning*
+  nameWithType.vb: AlgorithmConstants.CheckForDeprecationWarning(String, String)
+  fullName.vb: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.CheckForDeprecationWarning(String, String)
+  name.vb: CheckForDeprecationWarning(String, String)
+references:
+- uid: OpenForge.Cryptography.LibOqs.Core
+  commentId: N:OpenForge.Cryptography.LibOqs.Core
+  href: OpenForge.html
+  name: OpenForge.Cryptography.LibOqs.Core
+  nameWithType: OpenForge.Cryptography.LibOqs.Core
+  fullName: OpenForge.Cryptography.LibOqs.Core
+  spec.csharp:
+  - uid: OpenForge
+    name: OpenForge
+    href: OpenForge.html
+  - name: .
+  - uid: OpenForge.Cryptography
+    name: Cryptography
+    href: OpenForge.Cryptography.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs
+    name: LibOqs
+    href: OpenForge.Cryptography.LibOqs.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs.Core
+    name: Core
+    href: OpenForge.Cryptography.LibOqs.Core.html
+  spec.vb:
+  - uid: OpenForge
+    name: OpenForge
+    href: OpenForge.html
+  - name: .
+  - uid: OpenForge.Cryptography
+    name: Cryptography
+    href: OpenForge.Cryptography.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs
+    name: LibOqs
+    href: OpenForge.Cryptography.LibOqs.html
+  - name: .
+  - uid: OpenForge.Cryptography.LibOqs.Core
+    name: Core
+    href: OpenForge.Cryptography.LibOqs.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.DeprecationWarningsEnabled*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.DeprecationWarningsEnabled
+  href: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.html#OpenForge_Cryptography_LibOqs_Core_AlgorithmConstants_DeprecationWarningsEnabled
+  name: DeprecationWarningsEnabled
+  nameWithType: AlgorithmConstants.DeprecationWarningsEnabled
+  fullName: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.DeprecationWarningsEnabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.IsNISTStandardized*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.IsNISTStandardized
+  href: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.html#OpenForge_Cryptography_LibOqs_Core_AlgorithmConstants_IsNISTStandardized_System_String_
+  name: IsNISTStandardized
+  nameWithType: AlgorithmConstants.IsNISTStandardized
+  fullName: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.IsNISTStandardized
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.IsDeprecated*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.IsDeprecated
+  href: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.html#OpenForge_Cryptography_LibOqs_Core_AlgorithmConstants_IsDeprecated_System_String_
+  name: IsDeprecated
+  nameWithType: AlgorithmConstants.IsDeprecated
+  fullName: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.IsDeprecated
+- uid: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.CheckForDeprecationWarning*
+  commentId: Overload:OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.CheckForDeprecationWarning
+  href: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.html#OpenForge_Cryptography_LibOqs_Core_AlgorithmConstants_CheckForDeprecationWarning_System_String_System_String_
+  name: CheckForDeprecationWarning
+  nameWithType: AlgorithmConstants.CheckForDeprecationWarning
+  fullName: OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.CheckForDeprecationWarning

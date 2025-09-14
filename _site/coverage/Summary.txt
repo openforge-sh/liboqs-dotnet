@@ -1,0 +1,46 @@
+Summary
+  Generated on: 9/14/2025 - 11:53:07 PM
+  Parser: MultiReport (8x Cobertura)
+  Assemblies: 3
+  Classes: 21
+  Files: 11
+  Line coverage: 94.5%
+  Covered lines: 1007
+  Uncovered lines: 58
+  Coverable lines: 1065
+  Total lines: 2998
+  Branch coverage: 78.1% (300 of 384)
+  Covered branches: 300
+  Total branches: 384
+  Method coverage: 97.8% (179 of 183)
+  Full method coverage: 87.9% (161 of 183)
+  Covered methods: 179
+  Fully covered methods: 161
+  Total methods: 183
+
+OpenForge.Cryptography.LibOqs.Core                                 93.1%
+  OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants              80%
+  OpenForge.Cryptography.LibOqs.Core.CryptographyValidation        61.5%
+  OpenForge.Cryptography.LibOqs.Core.KemAlgorithms                  100%
+  OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo                100%
+  OpenForge.Cryptography.LibOqs.Core.OqsCore                         94%
+  OpenForge.Cryptography.LibOqs.Core.SecureByteArray               95.3%
+  OpenForge.Cryptography.LibOqs.Core.SecureMemory                   100%
+  OpenForge.Cryptography.LibOqs.Core.SecurityUtilities             96.3%
+  OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms            100%
+  OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms    100%
+
+OpenForge.Cryptography.LibOqs.KEM                                    97%
+  OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult             100%
+  OpenForge.Cryptography.LibOqs.KEM.Kem                             100%
+  OpenForge.Cryptography.LibOqs.KEM.KemInstance                      93%
+  OpenForge.Cryptography.LibOqs.KEM.KemProvider                     100%
+  OpenForge.Cryptography.LibOqs.KEM.KeyPair                         100%
+  OpenForge.Cryptography.LibOqs.KEM.OqsKem                          100%
+
+OpenForge.Cryptography.LibOqs.SIG                                  95.3%
+  OpenForge.Cryptography.LibOqs.SIG.OqsSig                          100%
+  OpenForge.Cryptography.LibOqs.SIG.Sig                             100%
+  OpenForge.Cryptography.LibOqs.SIG.SigInstance                    90.3%
+  OpenForge.Cryptography.LibOqs.SIG.SigKeyPair                      100%
+  OpenForge.Cryptography.LibOqs.SIG.SigProvider                     100%
