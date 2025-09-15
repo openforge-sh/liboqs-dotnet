@@ -199,7 +199,7 @@ jobs:
     runs-on: [self-hosted, "${{ matrix.platform }}"]
     needs: prepare-libraries
     strategy:
-      max-parallel: 2
+      max-parallel: 1
       fail-fast: false
       matrix:
         platform:

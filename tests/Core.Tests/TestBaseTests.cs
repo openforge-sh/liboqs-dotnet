@@ -218,6 +218,12 @@ public sealed class TestBaseTests
             var act = () => testBase.Log(null!);
             act.Should().NotThrow();
         }
+
+        public void Dispose()
+        {
+            _testOutputHelper.Dispose();
+            _stringWriter.Dispose();
+        }
     }
 
     public sealed class DisposalTests : IDisposable
