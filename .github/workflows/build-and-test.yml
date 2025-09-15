@@ -17,7 +17,7 @@ jobs:
     name: Build Native Libraries
     runs-on: [self-hosted, cross-compile]
     outputs:
-      artifact-name: ${{ steps.upload.outputs.artifact-name }}
+      artifact-name: native-libraries-${{ github.run_id }}
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -74,7 +74,11 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: native-libraries-${{ github.run_id }}
-        path: runtimes-*/**/*
+        path: |
+          runtimes-full/
+          runtimes-kem/
+          runtimes-sig/
+          runtimes-sig-stfl/
         retention-days: 1
         if-no-files-found: error
 
@@ -108,6 +112,8 @@ jobs:
         dotnet-version: |
           8.0.x
           9.0.x
+      env:
+        DOTNET_INSTALL_DIR: ${{ runner.temp }}/.dotnet
 
     - name: Restore dependencies
       run: dotnet restore
