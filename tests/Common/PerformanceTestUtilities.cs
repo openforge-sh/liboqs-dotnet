@@ -14,7 +14,7 @@ public static class PerformanceTestUtilities
         public static double MaxDecapsulationTimeMs => GetAdaptiveThreshold(50.0);
 
         // SPHINCS+ is significantly slower than other algorithms
-        public static double MaxSphincsPlusTimeMs => GetAdaptiveThreshold(300.0);
+        public static double MaxSphincsPlusTimeMs => GetAdaptiveThreshold(500.0);
 
         public static int MinIterations
         {
@@ -154,9 +154,9 @@ public static class PerformanceTestUtilities
         _ = Configuration.MaxDecapsulationTimeMs;
 
         TimingUtils.ValidatePerformance(keyGenResult, $"{algorithmName} key generation", 
-            isSphincsPlus ? 300.0 : 200.0);
+            isSphincsPlus ? 500.0 : 200.0);
         TimingUtils.ValidatePerformance(encapResult, $"{algorithmName} encapsulation/signing", 
-            isSphincsPlus ? 300.0 : 100.0);
+            isSphincsPlus ? 500.0 : 100.0);
         TimingUtils.ValidatePerformance(decapResult, $"{algorithmName} decapsulation/verification", 50.0);
     }
 

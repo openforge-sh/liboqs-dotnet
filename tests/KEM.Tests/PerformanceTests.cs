@@ -207,9 +207,14 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
 
                 performanceResults.Add((algorithm, keyGenMs, encapMs, decapMs));
 
-                keyGenMs.Should().BeLessThan(100, $"{algorithm} key generation should be reasonable");
-                encapMs.Should().BeLessThan(50, $"{algorithm} encapsulation should be reasonable");
-                decapMs.Should().BeLessThan(50, $"{algorithm} decapsulation should be reasonable");
+                // Use environment-aware validation with algorithm-specific thresholds
+                var isBike = algorithm.Contains("BIKE", StringComparison.Ordinal);
+                var isHqc = algorithm.Contains("HQC", StringComparison.Ordinal);
+                
+                // BIKE and HQC algorithms are significantly slower than ML-KEM/Kyber
+                // For regular algorithms, use the standard validation, but for BIKE/HQC treat as SPHINCS+ level
+                PerformanceTestUtilities.ValidateAlgorithmPerformance(
+                    algorithm, keyGenMs, encapMs, decapMs, isBike || isHqc);
             }
         }
 

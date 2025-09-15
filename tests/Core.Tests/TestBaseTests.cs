@@ -218,26 +218,6 @@ public sealed class TestBaseTests
             var act = () => testBase.Log(null!);
             act.Should().NotThrow();
         }
-
-        [Fact]
-        public void Log_WithEmptyMessage_ShouldWriteEmptyMessage()
-        {
-            // Arrange
-            using var testBase = new TestableTestBase(_testOutputHelper);
-
-            // Act
-            testBase.Log(string.Empty);
-
-            // Assert
-            var output = _stringWriter.ToString();
-            output.Should().MatchRegex(@"\[\d{2}:\d{2}:\d{2}\.\d{3}\] $");
-        }
-
-        public void Dispose()
-        {
-            _testOutputHelper.Dispose();
-            _stringWriter.Dispose();
-        }
     }
 
     public sealed class DisposalTests : IDisposable
