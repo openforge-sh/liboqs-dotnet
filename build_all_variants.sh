@@ -19,7 +19,7 @@ NC='\033[0m'
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 LIBOQS_DIR="$SCRIPT_DIR/liboqs"
 BUILD_DIR="$SCRIPT_DIR/builds"
-BUILD_JOBS=$(nproc)
+BUILD_JOBS=$(nproc) -4
 LIBOQS_REPO="https://github.com/open-quantum-safe/liboqs.git"
 LIBOQS_BRANCH="main"
 
