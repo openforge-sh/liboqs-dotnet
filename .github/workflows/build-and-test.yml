@@ -30,10 +30,36 @@ jobs:
         rm -rf runtimes-* builds/ liboqs/ CoverageReport/ TestResults/
         find . -name "*.cobertura.xml" -delete 2>/dev/null || true
 
+    - name: Get LibOQS latest commit hash
+      id: liboqs-hash
+      run: |
+        # Get the latest commit hash from the LibOQS repository
+        LIBOQS_REPO="https://github.com/open-quantum-safe/liboqs.git"
+        LIBOQS_BRANCH="main"
+        LIBOQS_HASH=$(git ls-remote $LIBOQS_REPO refs/heads/$LIBOQS_BRANCH | cut -f1)
+        echo "hash=$LIBOQS_HASH" >> $GITHUB_OUTPUT
+        echo "LibOQS latest commit: $LIBOQS_HASH"
+
+    - name: Cache native libraries
+      id: cache-libs
+      uses: actions/cache@v4
+      with:
+        path: |
+          runtimes-full/
+          runtimes-kem/
+          runtimes-sig/
+          runtimes-sig-stfl/
+        key: native-libs-${{ steps.liboqs-hash.outputs.hash }}-${{ hashFiles('build_all_variants.sh') }}
+        restore-keys: |
+          native-libs-${{ steps.liboqs-hash.outputs.hash }}-
+          native-libs-
+
     - name: Build all native libraries
+      if: steps.cache-libs.outputs.cache-hit != 'true'
       run: |
         set -euo pipefail
-        echo "Starting multi-platform native library build..."
+        echo "Cache miss - building native libraries from source..."
+        echo "LibOQS commit: ${{ steps.liboqs-hash.outputs.hash }}"
         chmod +x ./build_all_variants.sh
 
         if ! ./build_all_variants.sh; then
@@ -49,6 +75,14 @@ jobs:
           echo "::error::No libraries were built"
           exit 1
         fi
+
+    - name: Cache hit notification
+      if: steps.cache-libs.outputs.cache-hit == 'true'
+      run: |
+        echo "✅ Cache hit! Using cached native libraries"
+        echo "LibOQS commit: ${{ steps.liboqs-hash.outputs.hash }}"
+        library_count=$(find runtimes-* -name "*.so" -o -name "*.dll" -o -name "*.dylib" | wc -l)
+        echo "$library_count cached libraries restored"
 
     - name: Verify library completeness
       run: |
@@ -209,7 +243,7 @@ jobs:
         $ErrorActionPreference = "Stop"
         Write-Host "Running tests for ${{ matrix.platform }} (.NET 8)..."
         try {
-          dotnet test --no-build --configuration Release --framework net8.0
+          dotnet test --no-build --configuration Release --framework net8.0 --logger trx --results-directory TestResults
         } catch {
           Write-Error "Tests failed for ${{ matrix.platform }} (.NET 8)"
           exit 1
@@ -220,11 +254,23 @@ jobs:
         $ErrorActionPreference = "Stop"
         Write-Host "Running tests for ${{ matrix.platform }} (.NET 9)..."
         try {
-          dotnet test --no-build --configuration Release --framework net9.0
+          dotnet test --no-build --configuration Release --framework net9.0 --logger trx --results-directory TestResults
         } catch {
           Write-Error "Tests failed for ${{ matrix.platform }} (.NET 9)"
           exit 1
         }
+
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-results-${{ matrix.platform }}-${{ github.run_id }}
+        path: |
+          TestResults/
+          **/TestResults/
+          tests/**/bin/**/TestResults/
+        retention-days: 5
+        if-no-files-found: warn
 
   # GitHub-hosted macOS builds and tests
   test-macos:
@@ -271,7 +317,7 @@ jobs:
       run: |
         set -euo pipefail
         echo "Running tests for osx-arm64 (.NET 8)..."
-        if ! dotnet test --no-build --configuration Release --framework net8.0; then
+        if ! dotnet test --no-build --configuration Release --framework net8.0 --logger trx --results-directory TestResults; then
           echo "::error::Tests failed for osx-arm64 (.NET 8)"
           exit 1
         fi
@@ -280,10 +326,22 @@ jobs:
       run: |
         set -euo pipefail
         echo "Running tests for osx-arm64 (.NET 9)..."
-        if ! dotnet test --no-build --configuration Release --framework net9.0; then
+        if ! dotnet test --no-build --configuration Release --framework net9.0 --logger trx --results-directory TestResults; then
           echo "::error::Tests failed for osx-arm64 (.NET 9)"
           exit 1
         fi
+
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-results-osx-arm64-${{ github.run_id }}
+        path: |
+          TestResults/
+          **/TestResults/
+          tests/**/bin/**/TestResults/
+        retention-days: 5
+        if-no-files-found: warn
 
   # Package and publish to NuGet
   publish-nuget:
