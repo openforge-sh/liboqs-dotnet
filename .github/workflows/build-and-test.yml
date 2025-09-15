@@ -48,7 +48,7 @@ jobs:
           runtimes-full/
           runtimes-kem/
           runtimes-sig/
-          runtimes-sig-stfl/
+#          runtimes-sig-stfl/
         key: native-libs-${{ steps.liboqs-hash.outputs.hash }}-${{ hashFiles('build_all_variants.sh') }}
         restore-keys: |
           native-libs-${{ steps.liboqs-hash.outputs.hash }}-
@@ -112,7 +112,7 @@ jobs:
           runtimes-full/
           runtimes-kem/
           runtimes-sig/
-          runtimes-sig-stfl/
+#          runtimes-sig-stfl/
         retention-days: 1
         if-no-files-found: error
 
@@ -306,37 +306,39 @@ jobs:
 
     - name: Build solution (.NET 8)
       run: |
-        set -euo pipefail
-        if ! dotnet build --no-restore --configuration Release --framework net8.0; then
-          echo "::error::Build failed for ${{ matrix.platform }} (.NET 8)"
-          exit 1
-        fi
+        $ErrorActionPreference = "Stop"
+        try {
+          dotnet build --no-restore --configuration Release --framework net8.0
+        } catch {
+          Write-Error "Build failed for ${{ matrix.platform }} (.NET 8)"
+        }
 
     - name: Build solution (.NET 9)
       run: |
-        set -euo pipefail
-        if ! dotnet build --no-restore --configuration Release --framework net9.0; then
-          echo "::error::Build failed for ${{ matrix.platform }} (.NET 9)"
-          exit 1
-        fi
+        $ErrorActionPreference = "Stop"
+        try {
+          dotnet build --no-restore --configuration Release --framework net9.0
+        } catch {
+          Write-Error "Build failed for ${{ matrix.platform }} (.NET 8)"
+        }
 
     - name: Run tests (.NET 8)
       run: |
-        set -euo pipefail
-        echo "Running tests for ${{ matrix.platform }} (.NET 8)..."
-        if ! dotnet test --no-build --configuration Release --framework net8.0 -- --coverage --coverage-output-format cobertura --coverage-output coverage.cobertura.xml; then
-          echo "::error::Tests failed for ${{ matrix.platform }} (.NET 8)"
-          exit 1
-        fi
+        $ErrorActionPreference = "Stop"
+        try {
+          dotnet test --no-build --configuration Release --framework net8.0 --logger trx --results-directory TestResults -- --coverage --coverage-output-format cobertura --coverage-output coverage.cobertura.xml
+        } catch {
+          Write-Error "Build failed for ${{ matrix.platform }} (.NET 9)"
+        }
 
     - name: Run tests (.NET 9)
       run: |
-        set -euo pipefail
-        echo "Running tests for ${{ matrix.platform }} (.NET 9)..."
-        if ! dotnet test --no-build --configuration Release --framework net9.0 -- --coverage --coverage-output-format cobertura --coverage-output coverage.cobertura.xml; then
-          echo "::error::Tests failed for ${{ matrix.platform }} (.NET 9)"
-          exit 1
-        fi
+        $ErrorActionPreference = "Stop"
+        try {
+          dotnet test --no-build --configuration Release --framework net9.0 --logger trx --results-directory TestResults -- --coverage --coverage-output-format cobertura --coverage-output coverage.cobertura.xml
+        } catch {
+          Write-Error "Build failed for ${{ matrix.platform }} (.NET 9)"
+        }
 
     - name: Upload coverage reports
       uses: actions/upload-artifact@v4
@@ -520,71 +522,71 @@ jobs:
         echo "Documentation deployed to docs branch"
 
   # Package and publish to NuGet
-  publish-nuget:
-    name: Publish to NuGet
-    runs-on: ubuntu-latest
-    needs: [prepare-libraries, test-linux-x64, test-linux-arm64, test-windows, test-macos]
-    if: success() && github.event_name == 'push' && github.ref == 'refs/heads/main'
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
+  # publish-nuget:
+  #   name: Publish to NuGet
+  #   runs-on: ubuntu-latest
+  #   needs: [prepare-libraries, test-linux-x64, test-linux-arm64, test-windows, test-macos]
+  #   if: success() && github.event_name == 'push' && github.ref == 'refs/heads/main'
+  #   steps:
+  #   - name: Checkout repository
+  #     uses: actions/checkout@v4
+  #     with:
+  #       fetch-depth: 0
 
-    - name: Download native libraries
-      uses: actions/download-artifact@v4
-      with:
-        name: ${{ needs.prepare-libraries.outputs.artifact-name }}
-        path: ./
+  #   - name: Download native libraries
+  #     uses: actions/download-artifact@v4
+  #     with:
+  #       name: ${{ needs.prepare-libraries.outputs.artifact-name }}
+  #       path: ./
 
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: |
-          8.0.x
-          9.0.x
+  #   - name: Setup .NET
+  #     uses: actions/setup-dotnet@v4
+  #     with:
+  #       dotnet-version: |
+  #         8.0.x
+  #         9.0.x
 
-    - name: Restore dependencies
-      run: dotnet restore
+  #   - name: Restore dependencies
+  #     run: dotnet restore
 
-    - name: Build solution for packaging
-      run: |
-        dotnet build --no-restore --configuration Release
+  #   - name: Build solution for packaging
+  #     run: |
+  #       dotnet build --no-restore --configuration Release
 
-    - name: Create NuGet packages
-      run: |
-        echo "Creating NuGet packages..."
-        dotnet pack --no-build --configuration Release --output ./packages \
-          -p:IncludeSymbols=true \
-          -p:SymbolPackageFormat=snupkg
+  #   - name: Create NuGet packages
+  #     run: |
+  #       echo "Creating NuGet packages..."
+  #       dotnet pack --no-build --configuration Release --output ./packages \
+  #         -p:IncludeSymbols=true \
+  #         -p:SymbolPackageFormat=snupkg
 
-    - name: Verify package contents
-      run: |
-        echo "Package contents:"
-        ls -la ./packages/
+  #   - name: Verify package contents
+  #     run: |
+  #       echo "Package contents:"
+  #       ls -la ./packages/
 
-        echo "Verifying native libraries are included..."
-        for package in ./packages/*.nupkg; do
-          echo "Contents of $package:"
-          unzip -l "$package" | grep -E '\.(so|dll|dylib)$' || echo "No native libraries found in $package"
-        done
+  #       echo "Verifying native libraries are included..."
+  #       for package in ./packages/*.nupkg; do
+  #         echo "Contents of $package:"
+  #         unzip -l "$package" | grep -E '\.(so|dll|dylib)$' || echo "No native libraries found in $package"
+  #       done
 
-    # - name: Publish to NuGet
-    #   run: |
-    #     echo "Publishing packages to NuGet..."
-    #     for package in ./packages/*.nupkg; do
-    #       echo "Publishing $package..."
-    #       dotnet nuget push "$package" \
-    #         --api-key ${{ secrets.NUGET_API_KEY }} \
-    #         --source https://api.nuget.org/v3/index.json \
-    #         --skip-duplicate
-    #     done
+  #   - name: Publish to NuGet
+  #     run: |
+  #       echo "Publishing packages to NuGet..."
+  #       for package in ./packages/*.nupkg; do
+  #         echo "Publishing $package..."
+  #         dotnet nuget push "$package" \
+  #           --api-key ${{ secrets.NUGET_API_KEY }} \
+  #           --source https://api.nuget.org/v3/index.json \
+  #           --skip-duplicate
+  #       done
 
-    #     echo "✅ Successfully published to NuGet!"
+  #       echo "✅ Successfully published to NuGet!"
 
-    # - name: Upload packages as artifacts
-    #   uses: actions/upload-artifact@v4
-    #   with:
-    #     name: nuget-packages-${{ github.run_id }}
-    #     path: ./packages/*.nupkg
-    #     retention-days: 30
+  #   - name: Upload packages as artifacts
+  #     uses: actions/upload-artifact@v4
+  #     with:
+  #       name: nuget-packages-${{ github.run_id }}
+  #       path: ./packages/*.nupkg
+  #       retention-days: 30
