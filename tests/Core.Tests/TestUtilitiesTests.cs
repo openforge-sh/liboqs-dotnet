@@ -559,7 +559,7 @@ public sealed class TestUtilitiesTests
 
             // Assert
             result.Should().BeFalse();
-            sw.Elapsed.Should().BeGreaterOrEqualTo(timeout);
+            sw.Elapsed.Should().BeGreaterThanOrEqualTo(timeout);
         }
 
         [Fact]

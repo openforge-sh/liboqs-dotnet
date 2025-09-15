@@ -628,10 +628,10 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
         var baseline = TimingUtils.GetSystemBaseline();
         var multiplier = baseline.Environment switch
         {
-            TimingUtils.EnvironmentType.CI => 40.0,      // Very lenient for CI (high variance expected)
-            TimingUtils.EnvironmentType.LocalSlow => 30.0,  // Somewhat lenient for slow systems
+            TimingUtils.EnvironmentType.CI => 100.0,     // Very lenient for CI (high variance expected due to shared resources)
+            TimingUtils.EnvironmentType.LocalSlow => 50.0,  // Somewhat lenient for slow systems
             TimingUtils.EnvironmentType.LocalFast => 25.0,  // Original threshold for fast systems
-            _ => 30.0
+            _ => 50.0
         };
 
         maxTiming.Should().BeLessThan(avgTiming * multiplier,

@@ -333,8 +333,8 @@ public sealed class SecurityTests(LibOqsTestFixture fixture)
                 kem.CiphertextLength.Should().BeGreaterThan(0, $"{algorithm} should have non-zero ciphertext length");
                 kem.SharedSecretLength.Should().BeGreaterThan(0, $"{algorithm} should have non-zero shared secret length");
 
-                kem.ClaimedNistLevel.Should().BeGreaterOrEqualTo(1, $"{algorithm} should claim at least NIST level 1 security");
-                kem.ClaimedNistLevel.Should().BeLessOrEqualTo(5, $"{algorithm} should not claim impossible security levels");
+                kem.ClaimedNistLevel.Should().BeGreaterThanOrEqualTo(1, $"{algorithm} should claim at least NIST level 1 security");
+                kem.ClaimedNistLevel.Should().BeLessThanOrEqualTo(5, $"{algorithm} should not claim impossible security levels");
             }
         }
 
@@ -348,8 +348,8 @@ public sealed class SecurityTests(LibOqsTestFixture fixture)
                 sig.SecretKeyLength.Should().BeGreaterThan(0, $"{algorithm} should have non-zero secret key length");
                 sig.SignatureLength.Should().BeGreaterThan(0, $"{algorithm} should have non-zero signature length");
 
-                sig.ClaimedNistLevel.Should().BeGreaterOrEqualTo(1, $"{algorithm} should claim at least NIST level 1 security");
-                sig.ClaimedNistLevel.Should().BeLessOrEqualTo(5, $"{algorithm} should not claim impossible security levels");
+                sig.ClaimedNistLevel.Should().BeGreaterThanOrEqualTo(1, $"{algorithm} should claim at least NIST level 1 security");
+                sig.ClaimedNistLevel.Should().BeLessThanOrEqualTo(5, $"{algorithm} should not claim impossible security levels");
             }
         }
     }

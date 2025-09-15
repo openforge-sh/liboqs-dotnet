@@ -172,7 +172,7 @@ jobs:
       run: |
         set -euo pipefail
         echo "Running tests for ${{ matrix.platform }} (.NET 8)..."
-        if ! dotnet test --no-build --configuration Release --framework net8.0; then
+        if ! dotnet test --no-build --configuration Release --framework net8.0 -- --coverage --coverage-output-format cobertura --coverage-output coverage.cobertura.xml; then
           echo "::error::Tests failed for ${{ matrix.platform }} (.NET 8)"
           exit 1
         fi
@@ -181,10 +181,19 @@ jobs:
       run: |
         set -euo pipefail
         echo "Running tests for ${{ matrix.platform }} (.NET 9)..."
-        if ! dotnet test --no-build --configuration Release --framework net9.0; then
+        if ! dotnet test --no-build --configuration Release --framework net9.0 -- --coverage --coverage-output-format cobertura --coverage-output coverage.cobertura.xml; then
           echo "::error::Tests failed for ${{ matrix.platform }} (.NET 9)"
           exit 1
         fi
+
+    - name: Upload coverage reports
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: coverage-${{ matrix.platform }}-${{ github.run_id }}
+        path: tests/**/bin/**/TestResults/coverage.cobertura.xml
+        retention-days: 1
+        if-no-files-found: warn
 
   # GitHub-hosted Windows builds and tests
   test-windows:
@@ -243,7 +252,7 @@ jobs:
         $ErrorActionPreference = "Stop"
         Write-Host "Running tests for ${{ matrix.platform }} (.NET 8)..."
         try {
-          dotnet test --no-build --configuration Release --framework net8.0 --logger trx --results-directory TestResults
+          dotnet test --no-build --configuration Release --framework net8.0 --logger trx --results-directory TestResults -- --coverage --coverage-output-format cobertura --coverage-output coverage.cobertura.xml
         } catch {
           Write-Error "Tests failed for ${{ matrix.platform }} (.NET 8)"
           exit 1
@@ -254,7 +263,7 @@ jobs:
         $ErrorActionPreference = "Stop"
         Write-Host "Running tests for ${{ matrix.platform }} (.NET 9)..."
         try {
-          dotnet test --no-build --configuration Release --framework net9.0 --logger trx --results-directory TestResults
+          dotnet test --no-build --configuration Release --framework net9.0 --logger trx --results-directory TestResults -- --coverage --coverage-output-format cobertura --coverage-output coverage.cobertura.xml
         } catch {
           Write-Error "Tests failed for ${{ matrix.platform }} (.NET 9)"
           exit 1
@@ -270,6 +279,15 @@ jobs:
           **/TestResults/
           tests/**/bin/**/TestResults/
         retention-days: 5
+        if-no-files-found: warn
+
+    - name: Upload coverage reports
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: coverage-${{ matrix.platform }}-${{ github.run_id }}
+        path: tests/**/bin/**/TestResults/coverage.cobertura.xml
+        retention-days: 1
         if-no-files-found: warn
 
   # GitHub-hosted macOS builds and tests
@@ -317,7 +335,7 @@ jobs:
       run: |
         set -euo pipefail
         echo "Running tests for osx-arm64 (.NET 8)..."
-        if ! dotnet test --no-build --configuration Release --framework net8.0 --logger trx --results-directory TestResults; then
+        if ! dotnet test --no-build --configuration Release --framework net8.0 --logger trx --results-directory TestResults -- --coverage --coverage-output-format cobertura --coverage-output coverage.cobertura.xml; then
           echo "::error::Tests failed for osx-arm64 (.NET 8)"
           exit 1
         fi
@@ -326,7 +344,7 @@ jobs:
       run: |
         set -euo pipefail
         echo "Running tests for osx-arm64 (.NET 9)..."
-        if ! dotnet test --no-build --configuration Release --framework net9.0 --logger trx --results-directory TestResults; then
+        if ! dotnet test --no-build --configuration Release --framework net9.0 --logger trx --results-directory TestResults -- --coverage --coverage-output-format cobertura --coverage-output coverage.cobertura.xml; then
           echo "::error::Tests failed for osx-arm64 (.NET 9)"
           exit 1
         fi
@@ -342,6 +360,107 @@ jobs:
           tests/**/bin/**/TestResults/
         retention-days: 5
         if-no-files-found: warn
+
+    - name: Upload coverage reports
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: coverage-osx-arm64-${{ github.run_id }}
+        path: tests/**/bin/**/TestResults/coverage.cobertura.xml
+        retention-days: 1
+        if-no-files-found: warn
+
+  # Generate and publish documentation with coverage
+  publish-docs:
+    name: Publish Documentation
+    runs-on: ubuntu-latest
+    needs: [prepare-libraries, test-linux, test-windows, test-macos]
+    if: success()
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Download native libraries
+      uses: actions/download-artifact@v4
+      with:
+        name: ${{ needs.prepare-libraries.outputs.artifact-name }}
+        path: ./
+
+    - name: Download all coverage reports
+      uses: actions/download-artifact@v4
+      with:
+        pattern: coverage-*
+        path: ./coverage-artifacts
+        merge-multiple: true
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: |
+          8.0.x
+          9.0.x
+
+    - name: List coverage files
+      run: |
+        echo "Coverage files found:"
+        find ./coverage-artifacts -name "coverage.cobertura.xml" -type f || echo "No coverage files found"
+
+    - name: Generate coverage report
+      uses: danielpalme/ReportGenerator-GitHub-Action@5.4.13
+      with:
+        reports: './coverage-artifacts/**/coverage.cobertura.xml'
+        targetdir: './CoverageReport'
+        reporttypes: 'Html;Cobertura;TextSummary'
+        assemblyfilters: '+OpenForge.Cryptography.LibOqs*;-*.Tests'
+        classfilters: '-*Native*;-*.Tests.*'
+        filefilters: '-**/tests/**;-**/obj/**'
+        verbosity: 'Info'
+        title: 'OpenForge Cryptography LibOqs Coverage Report'
+        tag: '${{ github.run_number }}_${{ github.run_id }}'
+
+    - name: Prepare coverage for DocFX
+      run: |
+        echo "Preparing coverage report for DocFX..."
+        mkdir coverage
+        cp -r CoverageReport/* coverage/
+        echo "Coverage report prepared successfully"
+
+    - name: Setup DocFX
+      run: |
+        echo "Installing DocFX..."
+        dotnet tool install -g docfx
+        echo "DocFX installed successfully"
+
+    - name: Build documentation
+      run: |
+        echo "Building documentation with DocFX..."
+        docfx build docfx.json
+        echo "Documentation built successfully"
+
+    - name: Deploy to docs branch
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      run: |
+        echo "Deploying to docs branch..."
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git checkout docs
+        
+        # Remove all files except _site
+        find . -maxdepth 1 ! -name '_site' ! -name '.git' -exec rm -rf {} + 2>/dev/null || true
+        
+        # Move _site contents to root
+        mv _site docs
+        rmdir _site
+        
+        # Add and commit
+        git add .
+        git commit -m "Update documentation and coverage report - ${{ github.sha }}" || echo "No changes to commit"
+        
+        # Push to docs branch
+        git push origin docs --force
+        echo "Documentation deployed to docs branch"
 
   # Package and publish to NuGet
   publish-nuget:

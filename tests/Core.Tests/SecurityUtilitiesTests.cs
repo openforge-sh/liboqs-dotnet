@@ -1629,7 +1629,7 @@ public sealed class TestUtilityValidationTests(LibOqsTestFixture fixture)
         var manualMeasurement = sw.ElapsedMilliseconds;
         
         // Assert - Timing should be approximately correct (allow some variance)
-        manualMeasurement.Should().BeGreaterOrEqualTo(expectedDelay - 2)
+        manualMeasurement.Should().BeGreaterThanOrEqualTo(expectedDelay - 2)
             .And.BeLessThan(expectedDelay + 50); // Allow more variance for system timing
     }
     
@@ -1683,7 +1683,7 @@ public sealed class TestUtilityValidationTests(LibOqsTestFixture fixture)
             actual.Should().Equal(expected);
             Assert.Fail("Expected assertion failure");
         }
-        catch (FluentAssertions.Execution.AssertionFailedException ex)
+        catch (Exception ex) when (ex.GetType().Name.Contains("AssertionFailed", StringComparison.Ordinal) || ex.Message.Contains("differs at index", StringComparison.Ordinal))
         {
             // Verify FluentAssertions gives us detailed comparison info
             ex.Message.Should().Contain("differs at index");

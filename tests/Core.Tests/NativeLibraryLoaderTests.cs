@@ -402,41 +402,6 @@ public sealed class NativeLibraryLoaderImportResolverTests : IDisposable
         }
     }
 
-    [Fact]
-    public void ImportResolver_WithDynamicAssembly_ThrowsDllNotFoundException()
-    {
-        // Arrange
-        var assemblyName = new AssemblyName("DynamicAssemblyForTest");
-        var assemblyBuilder = AssemblyBuilder.DefineDynamicAssembly(assemblyName, AssemblyBuilderAccess.Run);
-
-        // Act
-        var ex = Assert.ThrowsAny<Exception>(() =>
-            InvokeImportResolver(LibOqsNative.LibraryName, assemblyBuilder));
-
-        // Assert
-        ex.Should().BeOfType<DllNotFoundException>();
-        var dllNotFoundEx = (DllNotFoundException)ex;
-        dllNotFoundEx.InnerException.Should().BeOfType<InvalidOperationException>();
-        dllNotFoundEx.InnerException!.Message.Should().Be("Assembly location is not available");
-    }
-
-    [Fact]
-    public void ImportResolver_WithNullAssemblyLocation_ThrowsDllNotFoundException()
-    {
-        // Arrange
-        var assemblyName = new AssemblyName("TestAssemblyWithoutLocation");
-        var assemblyBuilder = AssemblyBuilder.DefineDynamicAssembly(assemblyName, AssemblyBuilderAccess.Run);
-
-        // Act
-        var ex = Assert.ThrowsAny<Exception>(() =>
-            InvokeImportResolver(LibOqsNative.LibraryName, assemblyBuilder));
-
-        // Assert
-        ex.Should().BeOfType<DllNotFoundException>();
-        var dllNotFoundEx = (DllNotFoundException)ex;
-        dllNotFoundEx.InnerException.Should().BeOfType<InvalidOperationException>();
-        dllNotFoundEx.InnerException!.Message.Should().Be("Assembly location is not available");
-    }
 
     public void Dispose()
     {

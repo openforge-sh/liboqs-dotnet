@@ -7,7 +7,8 @@ namespace OpenForge.Cryptography.LibOqs.Core;
 /// <summary>
 /// Handles the platform-specific loading of the native liboqs library.
 /// This class determines the correct binary to load based on the operating system and CPU architecture,
-/// resolving it from the NuGet package's runtime-specific folders.
+/// resolving it from NuGet package runtime-specific folders. Supports modular package design by searching
+/// across all registered assemblies (Core, KEM, SIG, Full) to locate the appropriate native library variant.
 /// </summary>
 internal static class NativeLibraryLoader
 {
@@ -56,58 +57,102 @@ internal static class NativeLibraryLoader
         {
             var rid = GetRuntimeIdentifier();
             var libraryFileName = GetLibraryFileName();
+            var searchedPaths = new List<string>();
 
-            // Get assembly location safely
-            var assemblyLocation = assembly.Location;
-            if (string.IsNullOrEmpty(assemblyLocation))
-                throw new InvalidOperationException("Assembly location is not available");
+            // Try to load from multiple locations in order of preference
+            // 1. First try the requesting assembly's directory
+            var libraryHandle = TryLoadFromAssemblyDirectory(assembly, rid, libraryFileName, searchedPaths);
+            if (libraryHandle != IntPtr.Zero)
+                return libraryHandle;
 
-            var assemblyDirectory = Path.GetDirectoryName(assemblyLocation);
-            if (string.IsNullOrEmpty(assemblyDirectory))
-                throw new InvalidOperationException("Unable to determine assembly directory");
-
-            // Validate paths to prevent directory traversal
-            var validatedAssemblyDir = Path.GetFullPath(assemblyDirectory);
-
-            // Try to load from the runtimes folder first (NuGet package structure)
-            var runtimePath = Path.Combine(validatedAssemblyDir, "runtimes", rid, "native", libraryFileName);
-            var validatedRuntimePath = Path.GetFullPath(runtimePath);
-            
-            // Security check: ensure the path is still within expected directories
-            if (validatedRuntimePath.StartsWith(validatedAssemblyDir, StringComparison.OrdinalIgnoreCase) && File.Exists(validatedRuntimePath))
+            // 2. Try all registered assemblies' directories (for modular package design)
+            // This handles the case where Core doesn't have the native library but KEM/SIG/Full do
+            lock (_lock)
             {
-                ValidateLibraryFile(validatedRuntimePath);
-                return NativeLibrary.Load(validatedRuntimePath);
+                var otherAssemblies = _registeredAssemblies.Where(a => a != assembly);
+                foreach (var registeredAssembly in otherAssemblies)
+                {
+                    libraryHandle = TryLoadFromAssemblyDirectory(registeredAssembly, rid, libraryFileName, searchedPaths);
+                    if (libraryHandle != IntPtr.Zero)
+                        return libraryHandle;
+                }
             }
 
-            // Try loading from the same directory as the assembly
-            var localPath = Path.Combine(validatedAssemblyDir, libraryFileName);
-            var validatedLocalPath = Path.GetFullPath(localPath);
-            
-            if (validatedLocalPath.StartsWith(validatedAssemblyDir, StringComparison.OrdinalIgnoreCase) && File.Exists(validatedLocalPath))
-            {
-                ValidateLibraryFile(validatedLocalPath);
-                return NativeLibrary.Load(validatedLocalPath);
-            }
-
-            // Fallback to standard resolution
+            // 3. Fallback to standard resolution
             if (NativeLibrary.TryLoad(libraryFileName, assembly, searchPath, out var handle))
             {
                 return handle;
             }
 
             throw new DllNotFoundException($"Could not load native library '{libraryFileName}' for runtime '{rid}'. " +
-                                         $"Searched paths: {validatedRuntimePath}, {validatedLocalPath}");
+                                         $"Searched paths: {string.Join(", ", searchedPaths)}");
         }
         catch (InvalidOperationException ex) when (ex.Message.Contains("invalid library file", StringComparison.Ordinal) || ex.Message.Contains("is empty", StringComparison.Ordinal))
         {
             // Re-throw InvalidOperationException for invalid file scenarios without wrapping
             throw;
         }
-        catch (Exception ex) when (!(ex is DllNotFoundException))
+        catch (Exception ex) when (ex is not DllNotFoundException)
         {
             throw new DllNotFoundException($"Failed to resolve native library '{libraryName}': {ex.Message}", ex);
         }
+    }
+
+    private static IntPtr TryLoadFromAssemblyDirectory(Assembly assembly, string rid, string libraryFileName, List<string> searchedPaths)
+    {
+        var assemblyLocation = assembly.Location;
+        if (string.IsNullOrEmpty(assemblyLocation))
+            return IntPtr.Zero;
+
+        var assemblyDirectory = Path.GetDirectoryName(assemblyLocation);
+        if (string.IsNullOrEmpty(assemblyDirectory))
+            return IntPtr.Zero;
+
+        // Validate paths to prevent directory traversal
+        var validatedAssemblyDir = Path.GetFullPath(assemblyDirectory);
+
+        // Try to load from the runtimes folder first (NuGet package structure)
+        var runtimePath = Path.Combine(validatedAssemblyDir, "runtimes", rid, "native", libraryFileName);
+        var validatedRuntimePath = Path.GetFullPath(runtimePath);
+        searchedPaths.Add(validatedRuntimePath);
+        
+        // Security check: ensure the path is still within expected directories
+        if (validatedRuntimePath.StartsWith(validatedAssemblyDir, StringComparison.OrdinalIgnoreCase) && File.Exists(validatedRuntimePath))
+        {
+            try
+            {
+                ValidateLibraryFile(validatedRuntimePath);
+                return NativeLibrary.Load(validatedRuntimePath);
+            }
+            #pragma warning disable CA1031 // Do not catch general exception types
+            catch
+            {
+                // Continue searching if this specific file fails to load - we want to try all possible locations
+                // before giving up, so we intentionally catch all exceptions here
+            }
+        }
+
+        // Try loading from the same directory as the assembly
+        var localPath = Path.Combine(validatedAssemblyDir, libraryFileName);
+        var validatedLocalPath = Path.GetFullPath(localPath);
+        searchedPaths.Add(validatedLocalPath);
+        
+        if (validatedLocalPath.StartsWith(validatedAssemblyDir, StringComparison.OrdinalIgnoreCase) && File.Exists(validatedLocalPath))
+        {
+            try
+            {
+                ValidateLibraryFile(validatedLocalPath);
+                return NativeLibrary.Load(validatedLocalPath);
+            }
+            catch
+            {
+                // Continue searching if this specific file fails to load - we want to try all possible locations
+                // before giving up, so we intentionally catch all exceptions here
+            }
+            #pragma warning restore CA1031 // Do not catch general exception types
+        }
+
+        return IntPtr.Zero;
     }
 
     /// <summary>

@@ -48,7 +48,8 @@
       {
         "files": [
           "images/**",
-          "favicon.ico"
+          "favicon.ico",
+          "coverage/**"
         ]
       }
     ],

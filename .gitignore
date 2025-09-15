@@ -498,4 +498,7 @@ runtimes-*/*/native/*
 final/
 final-ci/
 builds/
-!_site/**/*
+_site/
+api/
+!api/index.md
+!api/toc.yml
