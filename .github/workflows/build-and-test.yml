@@ -152,8 +152,6 @@ jobs:
     runs-on: ${{ matrix.os }}
     needs: prepare-libraries
     strategy:
-      max-parallel: 1
-      fail-fast: false
       matrix:
         include:
           - platform: win-x64
