@@ -144,7 +144,7 @@ public sealed class Kem : IDisposable
     /// <returns>An array of algorithm identifier strings for supported KEM algorithms.</returns>
     public static string[] GetSupportedAlgorithms()
     {
-        return KemProvider.GetSupportedAlgorithms().ToArray();
+        return [.. KemProvider.GetSupportedAlgorithms()];
     }
 
     /// <summary>

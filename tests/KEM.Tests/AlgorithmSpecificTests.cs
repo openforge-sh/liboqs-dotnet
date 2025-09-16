@@ -162,47 +162,54 @@ public sealed class AlgorithmSpecificTests(LibOqsTestFixture fixture)
     [Fact]
     public void AllSupportedAlgorithms_ShouldPerformCompleteKemFlow()
     {
-        var algorithms = Kem.GetSupportedAlgorithms();
-        algorithms.Should().NotBeEmpty("Should have at least one supported algorithm");
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
+        {
+            var algorithms = Kem.GetSupportedAlgorithms();
+            algorithms.Should().NotBeEmpty("Should have at least one supported algorithm");
 
-        // Filter out BIKE algorithms on Windows and macOS as they are not supported
-        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows) || RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-        {
-            algorithms = [.. algorithms.Where(a => !a.Contains("BIKE", StringComparison.OrdinalIgnoreCase))];
-            
-            // On Windows and macOS, test algorithms in smaller batches for better error isolation
-            const int batchSize = 5;
-            for (var i = 0; i < algorithms.Length; i += batchSize)
+            // Filter out BIKE algorithms on Windows and macOS as they are not supported
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows) || RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
             {
-                var batch = algorithms.Skip(i).Take(batchSize).ToArray();
-                TestAlgorithmBatch(batch);
+                algorithms = [.. algorithms.Where(a => !a.Contains("BIKE", StringComparison.OrdinalIgnoreCase))];
+                
+                // On Windows and macOS, test algorithms in smaller batches for better error isolation
+                const int batchSize = 5;
+                for (var i = 0; i < algorithms.Length; i += batchSize)
+                {
+                    var batch = algorithms.Skip(i).Take(batchSize).ToArray();
+                    TestAlgorithmBatch(batch);
+                }
             }
-        }
-        else
-        {
-            // On Linux platforms, test all algorithms at once
-            TestAlgorithmBatch(algorithms);
-        }
+            else
+            {
+                // On Linux platforms, test all algorithms at once
+                TestAlgorithmBatch(algorithms);
+            }
+        });
     }
 
     private static void TestAlgorithmBatch(string[] algorithms)
     {
         foreach (var algorithm in algorithms)
         {
-            using var kem = new Kem(algorithm);
+            // Use larger stack for algorithms that need it (Classic McEliece, HQC)
+            TestExecutionHelpers.ConditionallyExecuteWithLargeStack(algorithm, () =>
+            {
+                using var kem = new Kem(algorithm);
 
-            var (publicKey, secretKey) = kem.GenerateKeyPair();
-            publicKey.Length.Should().Be(kem.PublicKeyLength, $"{algorithm} public key should match expected length");
-            secretKey.Length.Should().Be(kem.SecretKeyLength, $"{algorithm} secret key should match expected length");
+                var (publicKey, secretKey) = kem.GenerateKeyPair();
+                publicKey.Length.Should().Be(kem.PublicKeyLength, $"{algorithm} public key should match expected length");
+                secretKey.Length.Should().Be(kem.SecretKeyLength, $"{algorithm} secret key should match expected length");
 
-            // Encapsulate
-            var (ciphertext, sharedSecret) = kem.Encapsulate(publicKey);
-            ciphertext.Length.Should().Be(kem.CiphertextLength, $"{algorithm} ciphertext should match expected length");
-            sharedSecret.Length.Should().Be(kem.SharedSecretLength, $"{algorithm} shared secret should match expected length");
+                // Encapsulate
+                var (ciphertext, sharedSecret) = kem.Encapsulate(publicKey);
+                ciphertext.Length.Should().Be(kem.CiphertextLength, $"{algorithm} ciphertext should match expected length");
+                sharedSecret.Length.Should().Be(kem.SharedSecretLength, $"{algorithm} shared secret should match expected length");
 
-            // Decapsulate
-            var recoveredSecret = kem.Decapsulate(ciphertext, secretKey);
-            recoveredSecret.Should().BeEquivalentTo(sharedSecret, $"{algorithm} should recover the same shared secret");
+                // Decapsulate
+                var recoveredSecret = kem.Decapsulate(ciphertext, secretKey);
+                recoveredSecret.Should().BeEquivalentTo(sharedSecret, $"{algorithm} should recover the same shared secret");
+            });
         }
     }
 

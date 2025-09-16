@@ -89,7 +89,7 @@ public sealed class AlgorithmSpecificTests(LibOqsTestFixture fixture)
         sig.IsEufCma.Should().BeTrue($"{algorithm} should provide EUF-CMA security");
     }
 
-    [PlatformSpecificTheory("LINUX")]
+    [Theory]
     [InlineData(SignatureAlgorithms.SPHINCS_PLUS_SHA2_128f_simple, 1)]
     [InlineData(SignatureAlgorithms.SPHINCS_PLUS_SHA2_128s_simple, 1)]
     [InlineData(SignatureAlgorithms.SPHINCS_PLUS_SHA2_192f_simple, 3)]
@@ -101,12 +101,15 @@ public sealed class AlgorithmSpecificTests(LibOqsTestFixture fixture)
         if (!Sig.IsAlgorithmSupported(algorithm))
             return;
 
-        using var sig = new Sig(algorithm);
-        sig.ClaimedNistLevel.Should().Be(expectedNistLevel);
-        sig.IsEufCma.Should().BeTrue($"{algorithm} should provide EUF-CMA security");
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
+        {
+            using var sig = new Sig(algorithm);
+            sig.ClaimedNistLevel.Should().Be(expectedNistLevel);
+            sig.IsEufCma.Should().BeTrue($"{algorithm} should provide EUF-CMA security");
+        });
     }
 
-    [PlatformSpecificTheory("LINUX")]
+    [Theory]
     [InlineData(SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128f_simple, 1)]
     [InlineData(SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128s_simple, 1)]
     [InlineData(SignatureAlgorithms.SPHINCS_PLUS_SHAKE_192f_simple, 3)]
@@ -118,9 +121,12 @@ public sealed class AlgorithmSpecificTests(LibOqsTestFixture fixture)
         if (!Sig.IsAlgorithmSupported(algorithm))
             return;
 
-        using var sig = new Sig(algorithm);
-        sig.ClaimedNistLevel.Should().Be(expectedNistLevel);
-        sig.IsEufCma.Should().BeTrue($"{algorithm} should provide EUF-CMA security");
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
+        {
+            using var sig = new Sig(algorithm);
+            sig.ClaimedNistLevel.Should().Be(expectedNistLevel);
+            sig.IsEufCma.Should().BeTrue($"{algorithm} should provide EUF-CMA security");
+        });
     }
 
     [Theory]
@@ -140,33 +146,39 @@ public sealed class AlgorithmSpecificTests(LibOqsTestFixture fixture)
     [Fact]
     public void AllSupportedAlgorithms_ShouldHaveValidProperties()
     {
-        var algorithms = Sig.GetSupportedAlgorithms();
-        algorithms.Should().NotBeEmpty();
-
-        foreach (var algorithm in algorithms.Take(10))
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
         {
-            using var sig = new Sig(algorithm);
+            var algorithms = Sig.GetSupportedAlgorithms();
+            algorithms.Should().NotBeEmpty();
 
-            sig.AlgorithmName.Should().Be(algorithm);
-            sig.PublicKeyLength.Should().BeGreaterThan(0,
-                $"{algorithm} should have positive public key length");
-            sig.SecretKeyLength.Should().BeGreaterThan(0,
-                $"{algorithm} should have positive secret key length");
-            sig.SignatureLength.Should().BeGreaterThan(0,
-                $"{algorithm} should have positive signature length");
-            sig.ClaimedNistLevel.Should().BeInRange(1, 5,
-                $"{algorithm} should have valid NIST level");
+            foreach (var algorithm in algorithms.Take(10))
+            {
+                TestExecutionHelpers.ConditionallyExecuteWithLargeStack(algorithm, () =>
+                {
+                    using var sig = new Sig(algorithm);
 
-            sig.PublicKeyLength.Should().BeGreaterThanOrEqualTo(32,
-                $"{algorithm} public key should be at least 32 bytes");
-            sig.SecretKeyLength.Should().BeGreaterThanOrEqualTo(32,
-                $"{algorithm} secret key should be at least 32 bytes");
-            sig.SignatureLength.Should().BeGreaterThanOrEqualTo(32,
-                $"{algorithm} signature should be at least 32 bytes");
+                    sig.AlgorithmName.Should().Be(algorithm);
+                    sig.PublicKeyLength.Should().BeGreaterThan(0,
+                        $"{algorithm} should have positive public key length");
+                    sig.SecretKeyLength.Should().BeGreaterThan(0,
+                        $"{algorithm} should have positive secret key length");
+                    sig.SignatureLength.Should().BeGreaterThan(0,
+                        $"{algorithm} should have positive signature length");
+                    sig.ClaimedNistLevel.Should().BeInRange(1, 5,
+                        $"{algorithm} should have valid NIST level");
 
-            sig.IsEufCma.Should().BeTrue(
-                $"{algorithm} should provide EUF-CMA security");
-        }
+                    sig.PublicKeyLength.Should().BeGreaterThanOrEqualTo(32,
+                        $"{algorithm} public key should be at least 32 bytes");
+                    sig.SecretKeyLength.Should().BeGreaterThanOrEqualTo(32,
+                        $"{algorithm} secret key should be at least 32 bytes");
+                    sig.SignatureLength.Should().BeGreaterThanOrEqualTo(32,
+                        $"{algorithm} signature should be at least 32 bytes");
+
+                    sig.IsEufCma.Should().BeTrue(
+                        $"{algorithm} should provide EUF-CMA security");
+                });
+            }
+        });
     }
 
     [Fact]

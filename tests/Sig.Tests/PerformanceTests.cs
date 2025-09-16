@@ -1,5 +1,4 @@
 using System.Diagnostics;
-using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using FluentAssertions;
 using OpenForge.Cryptography.LibOqs.Core;
@@ -62,29 +61,24 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
     [Fact]
     public void Signing_Performance_ShouldBeReasonable()
     {
-        var algorithms = Sig.GetSupportedAlgorithms();
-        algorithms.Should().NotBeEmpty();
-
-        // Test a subset of algorithms
-        var candidateAlgorithms = new[]
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
         {
-            SignatureAlgorithms.ML_DSA_44,
-            SignatureAlgorithms.Dilithium2,
-            SignatureAlgorithms.Falcon_512,
-            SignatureAlgorithms.SPHINCS_PLUS_SHA2_128s_simple
-        };
+            var algorithms = Sig.GetSupportedAlgorithms();
+            algorithms.Should().NotBeEmpty();
 
-        // Temporarily exclude SPHINCS+ on Windows and macOS due to stack overflow issues
-        var testAlgorithms = candidateAlgorithms
-            .Where(a => {
-                if ((RuntimeInformation.IsOSPlatform(OSPlatform.Windows) || RuntimeInformation.IsOSPlatform(OSPlatform.OSX)) 
-                    && a.Contains("SPHINCS", StringComparison.OrdinalIgnoreCase))
-                {
-                    return false;
-                }
-                return Sig.IsAlgorithmSupported(a);
-            })
-            .ToArray();
+            // Test a subset of algorithms
+            var candidateAlgorithms = new[]
+            {
+                SignatureAlgorithms.ML_DSA_44,
+                SignatureAlgorithms.Dilithium2,
+                SignatureAlgorithms.Falcon_512,
+                SignatureAlgorithms.SPHINCS_PLUS_SHA2_128s_simple
+            };
+
+            // All platforms can now test SPHINCS+ with larger stack
+            var testAlgorithms = candidateAlgorithms
+                .Where(Sig.IsAlgorithmSupported)
+                .ToArray();
 
         testAlgorithms.Should().NotBeEmpty("At least one test algorithm should be supported");
 
@@ -120,7 +114,8 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
                     PerformanceMultiplier = TimingUtils.GetSystemBaseline().PerformanceMultiplier
                 },
                 $"{algorithm} signing", threshold);
-        }
+            }
+        });
     }
 
     [Fact]
@@ -187,20 +182,17 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
     [Fact]
     public void FullSignatureCycle_Performance_Comparison()
     {
-        // Compare performance across different algorithm families
-        var algorithmFamilies = new Dictionary<string, string[]>
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
         {
-            ["ML-DSA"] = [SignatureAlgorithms.ML_DSA_44, SignatureAlgorithms.ML_DSA_65, SignatureAlgorithms.ML_DSA_87],
-            ["Dilithium"] = [SignatureAlgorithms.Dilithium2, SignatureAlgorithms.Dilithium3, SignatureAlgorithms.Dilithium5],
-            ["Falcon"] = [SignatureAlgorithms.Falcon_512, SignatureAlgorithms.Falcon_1024],
-            ["MAYO"] = [SignatureAlgorithms.MAYO_1, SignatureAlgorithms.MAYO_3, SignatureAlgorithms.MAYO_5]
-        };
-
-        // Temporarily exclude SPHINCS+ on Windows and macOS due to stack overflow issues
-        if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows) && !RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-        {
-            algorithmFamilies["SPHINCS+"] = [SignatureAlgorithms.SPHINCS_PLUS_SHA2_128s_simple, SignatureAlgorithms.SPHINCS_PLUS_SHA2_192s_simple];
-        }
+            // Compare performance across different algorithm families
+            var algorithmFamilies = new Dictionary<string, string[]>
+            {
+                ["ML-DSA"] = [SignatureAlgorithms.ML_DSA_44, SignatureAlgorithms.ML_DSA_65, SignatureAlgorithms.ML_DSA_87],
+                ["Dilithium"] = [SignatureAlgorithms.Dilithium2, SignatureAlgorithms.Dilithium3, SignatureAlgorithms.Dilithium5],
+                ["Falcon"] = [SignatureAlgorithms.Falcon_512, SignatureAlgorithms.Falcon_1024],
+                ["MAYO"] = [SignatureAlgorithms.MAYO_1, SignatureAlgorithms.MAYO_3, SignatureAlgorithms.MAYO_5],
+                ["SPHINCS+"] = [SignatureAlgorithms.SPHINCS_PLUS_SHA2_128s_simple, SignatureAlgorithms.SPHINCS_PLUS_SHA2_192s_simple]
+            };
 
         var performanceResults = new List<(string algorithm, double keyGenMs, double signMs, double verifyMs)>();
 
@@ -263,8 +255,9 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
             }
         }
 
-        // Verify we tested at least one algorithm
-        performanceResults.Should().NotBeEmpty("At least one algorithm should be tested");
+            // Verify we tested at least one algorithm
+            performanceResults.Should().NotBeEmpty("At least one algorithm should be tested");
+        });
     }
 
     [Fact]
@@ -395,13 +388,16 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
 
         Parallel.For(0, totalOperations, parallelOptions, i =>
         {
-            using var sig = new Sig(algorithm);
-            var (publicKey, secretKey) = sig.GenerateKeyPair();
-            var message = new byte[256];
-            RandomNumberGenerator.Fill(message);
-            var signature = sig.Sign(message, secretKey);
-            var isValid = sig.Verify(message, signature, publicKey);
-            isValid.Should().BeTrue();
+            TestExecutionHelpers.ConditionallyExecuteWithLargeStack(algorithm, () =>
+            {
+                using var sig = new Sig(algorithm);
+                var (publicKey, secretKey) = sig.GenerateKeyPair();
+                var message = new byte[256];
+                RandomNumberGenerator.Fill(message);
+                var signature = sig.Sign(message, secretKey);
+                var isValid = sig.Verify(message, signature, publicKey);
+                isValid.Should().BeTrue();
+            });
         });
 
         parallelStopwatch.Stop();
@@ -710,13 +706,16 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
 
         Parallel.For(0, totalOperations, parallelOptions, i =>
         {
-            using var sig = new Sig(algorithm);
-            var (publicKey, secretKey) = sig.GenerateKeyPair();
-            var message = new byte[256];
-            RandomNumberGenerator.Fill(message);
-            var signature = sig.Sign(message, secretKey);
-            var isValid = sig.Verify(message, signature, publicKey);
-            isValid.Should().BeTrue();
+            TestExecutionHelpers.ConditionallyExecuteWithLargeStack(algorithm, () =>
+            {
+                using var sig = new Sig(algorithm);
+                var (publicKey, secretKey) = sig.GenerateKeyPair();
+                var message = new byte[256];
+                RandomNumberGenerator.Fill(message);
+                var signature = sig.Sign(message, secretKey);
+                var isValid = sig.Verify(message, signature, publicKey);
+                isValid.Should().BeTrue();
+            });
         });
 
         sw.Stop();

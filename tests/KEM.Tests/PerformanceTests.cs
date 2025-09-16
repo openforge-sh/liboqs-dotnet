@@ -155,13 +155,15 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
     [Fact]
     public void FullKemCycle_Performance_Comparison()
     {
-        // Compare performance across different algorithm families
-        var algorithmFamilies = new Dictionary<string, string[]>
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
         {
-            ["ML-KEM"] = [KemAlgorithms.ML_KEM_512, KemAlgorithms.ML_KEM_768, KemAlgorithms.ML_KEM_1024],
-            ["Kyber"] = [KemAlgorithms.Kyber512, KemAlgorithms.Kyber768, KemAlgorithms.Kyber1024],
-            ["HQC"] = [KemAlgorithms.HQC_128, KemAlgorithms.HQC_192, KemAlgorithms.HQC_256]
-        };
+            // Compare performance across different algorithm families
+            var algorithmFamilies = new Dictionary<string, string[]>
+            {
+                ["ML-KEM"] = [KemAlgorithms.ML_KEM_512, KemAlgorithms.ML_KEM_768, KemAlgorithms.ML_KEM_1024],
+                ["Kyber"] = [KemAlgorithms.Kyber512, KemAlgorithms.Kyber768, KemAlgorithms.Kyber1024],
+                ["HQC"] = [KemAlgorithms.HQC_128, KemAlgorithms.HQC_192, KemAlgorithms.HQC_256]
+            };
 
         // Add BIKE algorithms only on Linux (disabled on Windows and macOS)
         if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows) && !RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
@@ -229,7 +231,8 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
             }
         }
 
-        performanceResults.Should().NotBeEmpty("At least one algorithm should be tested");
+            performanceResults.Should().NotBeEmpty("At least one algorithm should be tested");
+        });
     }
 
     [Fact]
@@ -353,11 +356,14 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
 
         Parallel.For(0, totalOperations, parallelOptions, i =>
         {
-            using var kem = new Kem(algorithm);
-            var (publicKey, secretKey) = kem.GenerateKeyPair();
-            var (ciphertext, sharedSecret) = kem.Encapsulate(publicKey);
-            var recovered = kem.Decapsulate(ciphertext, secretKey);
-            recovered.Should().BeEquivalentTo(sharedSecret);
+            TestExecutionHelpers.ConditionallyExecuteWithLargeStack(algorithm, () =>
+            {
+                using var kem = new Kem(algorithm);
+                var (publicKey, secretKey) = kem.GenerateKeyPair();
+                var (ciphertext, sharedSecret) = kem.Encapsulate(publicKey);
+                var recovered = kem.Decapsulate(ciphertext, secretKey);
+                recovered.Should().BeEquivalentTo(sharedSecret);
+            });
         });
 
         parallelStopwatch.Stop();
@@ -522,11 +528,14 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
 
         Parallel.For(0, totalOperations, parallelOptions, i =>
         {
-            using var kem = new Kem(algorithm);
-            var (publicKey, secretKey) = kem.GenerateKeyPair();
-            var (ciphertext, sharedSecret) = kem.Encapsulate(publicKey);
-            var recovered = kem.Decapsulate(ciphertext, secretKey);
-            recovered.Should().BeEquivalentTo(sharedSecret);
+            TestExecutionHelpers.ConditionallyExecuteWithLargeStack(algorithm, () =>
+            {
+                using var kem = new Kem(algorithm);
+                var (publicKey, secretKey) = kem.GenerateKeyPair();
+                var (ciphertext, sharedSecret) = kem.Encapsulate(publicKey);
+                var recovered = kem.Decapsulate(ciphertext, secretKey);
+                recovered.Should().BeEquivalentTo(sharedSecret);
+            });
         });
 
         sw.Stop();

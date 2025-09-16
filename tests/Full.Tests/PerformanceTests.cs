@@ -18,13 +18,15 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
     [Fact]
     public void HybridCryptographyWorkflow_Performance_ShouldBeReasonable()
     {
-        TestIsolationUtilities.ExecutePerformanceTest(() =>
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
         {
-        var kemAlgorithm = GetSupportedKemAlgorithm();
-        var sigAlgorithm = GetSupportedSignatureAlgorithm();
+            TestIsolationUtilities.ExecutePerformanceTest(() =>
+            {
+                var kemAlgorithm = GetSupportedKemAlgorithm();
+                var sigAlgorithm = GetSupportedSignatureAlgorithm();
 
-        using var kem = new Kem(kemAlgorithm);
-        using var sig = new Sig(sigAlgorithm);
+                using var kem = new Kem(kemAlgorithm);
+                using var sig = new Sig(sigAlgorithm);
 
         var (kemPub, kemSec) = kem.GenerateKeyPair();
         var (sigPub, sigSec) = sig.GenerateKeyPair();
@@ -71,16 +73,19 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
                 UsePercentile = false,
                 Environment = TimingUtils.GetSystemBaseline().Environment,
                 PerformanceMultiplier = TimingUtils.GetSystemBaseline().PerformanceMultiplier
-            },
-            "Hybrid workflow", 200.0);
+                },
+                "Hybrid workflow", 200.0);
+            });
         });
     }
 
     [Fact]
     public void MultiRecipientEncryption_Performance_ShouldScaleReasonably()
     {
-        var kemAlgorithm = GetSupportedKemAlgorithm();
-        var sigAlgorithm = GetSupportedSignatureAlgorithm();
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
+        {
+            var kemAlgorithm = GetSupportedKemAlgorithm();
+            var sigAlgorithm = GetSupportedSignatureAlgorithm();
 
         const int recipientCount = 10;
         var recipients = new List<(Kem kem, byte[] publicKey, byte[] secretKey)>();
@@ -99,59 +104,60 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
         var message = new byte[2048];
         RandomNumberGenerator.Fill(message);
 
-        try
-        {
-            var stopwatch = Stopwatch.StartNew();
-
-            // Sign message once
-            var signature = senderSig.Sign(message, senderSec);
-
-            var encryptedForRecipients = new List<(byte[] ciphertext, byte[] encryptedData)>();
-            foreach (var (_, publicKey, _) in recipients)
+            try
             {
-                var (ciphertext, sharedSecret) = senderKem.Encapsulate(publicKey);
-                var encryptedData = EncryptWithAes(message, sharedSecret);
-                encryptedForRecipients.Add((ciphertext, encryptedData));
+                var stopwatch = Stopwatch.StartNew();
+
+                // Sign message once
+                var signature = senderSig.Sign(message, senderSec);
+
+                var encryptedForRecipients = new List<(byte[] ciphertext, byte[] encryptedData)>();
+                foreach (var (_, publicKey, _) in recipients)
+                {
+                    var (ciphertext, sharedSecret) = senderKem.Encapsulate(publicKey);
+                    var encryptedData = EncryptWithAes(message, sharedSecret);
+                    encryptedForRecipients.Add((ciphertext, encryptedData));
+                }
+
+                stopwatch.Stop();
+                var encryptionTimeMs = stopwatch.ElapsedMilliseconds;
+
+                stopwatch.Restart();
+                for (int i = 0; i < recipientCount; i++)
+                {
+                    var (kem, _, secretKey) = recipients[i];
+                    var (ciphertext, encryptedData) = encryptedForRecipients[i];
+
+                    var sharedSecret = kem.Decapsulate(ciphertext, secretKey);
+                    var decryptedMessage = DecryptWithAes(encryptedData, sharedSecret);
+                    var isValid = senderSig.Verify(decryptedMessage, signature, senderPub);
+
+                    decryptedMessage.Should().BeEquivalentTo(message);
+                    isValid.Should().BeTrue();
+                }
+                stopwatch.Stop();
+                var decryptionTimeMs = stopwatch.ElapsedMilliseconds;
+
+                var avgEncryptionPerRecipient = encryptionTimeMs / (double)recipientCount;
+                var avgDecryptionPerRecipient = decryptionTimeMs / (double)recipientCount;
+
+                var baseline = TimingUtils.GetSystemBaseline();
+                var encryptThreshold = 100.0 * baseline.PerformanceMultiplier;
+                var decryptThreshold = 75.0 * baseline.PerformanceMultiplier;
+
+                avgEncryptionPerRecipient.Should().BeLessThan(encryptThreshold,
+                    $"Encryption per recipient should be reasonable (was {avgEncryptionPerRecipient:F1}ms, max {encryptThreshold:F1}ms, env: {baseline.Environment})");
+                avgDecryptionPerRecipient.Should().BeLessThan(decryptThreshold,
+                    $"Decryption per recipient should be reasonable (was {avgDecryptionPerRecipient:F1}ms, max {decryptThreshold:F1}ms, env: {baseline.Environment})");
             }
-
-            stopwatch.Stop();
-            var encryptionTimeMs = stopwatch.ElapsedMilliseconds;
-
-            stopwatch.Restart();
-            for (int i = 0; i < recipientCount; i++)
+            finally
             {
-                var (kem, _, secretKey) = recipients[i];
-                var (ciphertext, encryptedData) = encryptedForRecipients[i];
-
-                var sharedSecret = kem.Decapsulate(ciphertext, secretKey);
-                var decryptedMessage = DecryptWithAes(encryptedData, sharedSecret);
-                var isValid = senderSig.Verify(decryptedMessage, signature, senderPub);
-
-                decryptedMessage.Should().BeEquivalentTo(message);
-                isValid.Should().BeTrue();
+                foreach (var (kem, _, _) in recipients)
+                {
+                    kem.Dispose();
+                }
             }
-            stopwatch.Stop();
-            var decryptionTimeMs = stopwatch.ElapsedMilliseconds;
-
-            var avgEncryptionPerRecipient = encryptionTimeMs / (double)recipientCount;
-            var avgDecryptionPerRecipient = decryptionTimeMs / (double)recipientCount;
-
-            var baseline = TimingUtils.GetSystemBaseline();
-            var encryptThreshold = 100.0 * baseline.PerformanceMultiplier;
-            var decryptThreshold = 75.0 * baseline.PerformanceMultiplier;
-            
-            avgEncryptionPerRecipient.Should().BeLessThan(encryptThreshold,
-                $"Encryption per recipient should be reasonable (was {avgEncryptionPerRecipient:F1}ms, max {encryptThreshold:F1}ms, env: {baseline.Environment})");
-            avgDecryptionPerRecipient.Should().BeLessThan(decryptThreshold,
-                $"Decryption per recipient should be reasonable (was {avgDecryptionPerRecipient:F1}ms, max {decryptThreshold:F1}ms, env: {baseline.Environment})");
-        }
-        finally
-        {
-            foreach (var (kem, _, _) in recipients)
-            {
-                kem.Dispose();
-            }
-        }
+        });
     }
 
     [Fact]
@@ -373,28 +379,31 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
 
         Parallel.For(0, totalOperations, parallelOptions, i =>
         {
-            using var kem = new Kem(kemAlgorithm);
-            using var sig = new Sig(sigAlgorithm);
+            TestExecutionHelpers.ExecuteWithLargeStack(() =>
+            {
+                using var kem = new Kem(kemAlgorithm);
+                using var sig = new Sig(sigAlgorithm);
 
-            var (kemPublicKey, kemSecretKey) = kem.GenerateKeyPair();
-            var (sigPublicKey, sigSecretKey) = sig.GenerateKeyPair();
+                var (kemPublicKey, kemSecretKey) = kem.GenerateKeyPair();
+                var (sigPublicKey, sigSecretKey) = sig.GenerateKeyPair();
 
-            var message = new byte[512];
-            RandomNumberGenerator.Fill(message);
+                var message = new byte[512];
+                RandomNumberGenerator.Fill(message);
 
-            var signature = sig.Sign(message, sigSecretKey);
+                var signature = sig.Sign(message, sigSecretKey);
 
-            var (ciphertext, sharedSecret) = kem.Encapsulate(kemPublicKey);
+                var (ciphertext, sharedSecret) = kem.Encapsulate(kemPublicKey);
 
-            var encryptedData = EncryptWithAes(message, sharedSecret);
-            var recoveredSecret = kem.Decapsulate(ciphertext, kemSecretKey);
-            var decryptedData = DecryptWithAes(encryptedData, recoveredSecret);
+                var encryptedData = EncryptWithAes(message, sharedSecret);
+                var recoveredSecret = kem.Decapsulate(ciphertext, kemSecretKey);
+                var decryptedData = DecryptWithAes(encryptedData, recoveredSecret);
 
-            var isSignatureValid = sig.Verify(decryptedData, signature, sigPublicKey);
+                var isSignatureValid = sig.Verify(decryptedData, signature, sigPublicKey);
 
-            recoveredSecret.Should().BeEquivalentTo(sharedSecret);
-            decryptedData.Should().BeEquivalentTo(message);
-            isSignatureValid.Should().BeTrue();
+                recoveredSecret.Should().BeEquivalentTo(sharedSecret);
+                decryptedData.Should().BeEquivalentTo(message);
+                isSignatureValid.Should().BeTrue();
+            });
         });
 
         sw.Stop();
