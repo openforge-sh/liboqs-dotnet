@@ -71,8 +71,8 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
             KemAlgorithms.BIKE_L1
         };
 
-        // Filter out BIKE algorithms on Windows as they are not supported
-        var testAlgorithms = RuntimeInformation.IsOSPlatform(OSPlatform.Windows)
+        // Filter out BIKE algorithms on Windows and macOS as they are not supported
+        var testAlgorithms = (RuntimeInformation.IsOSPlatform(OSPlatform.Windows) || RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
             ? candidateAlgorithms.Where(a => !a.Contains("BIKE", StringComparison.OrdinalIgnoreCase)).Where(Kem.IsAlgorithmSupported).ToArray()
             : candidateAlgorithms.Where(Kem.IsAlgorithmSupported).ToArray();
 
@@ -163,8 +163,8 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
             ["HQC"] = [KemAlgorithms.HQC_128, KemAlgorithms.HQC_192, KemAlgorithms.HQC_256]
         };
 
-        // Add BIKE algorithms only on non-Windows platforms
-        if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+        // Add BIKE algorithms only on Linux (disabled on Windows and macOS)
+        if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows) && !RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
         {
             algorithmFamilies["BIKE"] = [KemAlgorithms.BIKE_L1, KemAlgorithms.BIKE_L3, KemAlgorithms.BIKE_L5];
         }

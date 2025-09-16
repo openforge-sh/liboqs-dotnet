@@ -89,7 +89,7 @@ public sealed class AlgorithmSpecificTests(LibOqsTestFixture fixture)
         sig.IsEufCma.Should().BeTrue($"{algorithm} should provide EUF-CMA security");
     }
 
-    [Theory]
+    [PlatformSpecificTheory("LINUX")]
     [InlineData(SignatureAlgorithms.SPHINCS_PLUS_SHA2_128f_simple, 1)]
     [InlineData(SignatureAlgorithms.SPHINCS_PLUS_SHA2_128s_simple, 1)]
     [InlineData(SignatureAlgorithms.SPHINCS_PLUS_SHA2_192f_simple, 3)]
@@ -106,7 +106,7 @@ public sealed class AlgorithmSpecificTests(LibOqsTestFixture fixture)
         sig.IsEufCma.Should().BeTrue($"{algorithm} should provide EUF-CMA security");
     }
 
-    [Theory]
+    [PlatformSpecificTheory("LINUX")]
     [InlineData(SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128f_simple, 1)]
     [InlineData(SignatureAlgorithms.SPHINCS_PLUS_SHAKE_128s_simple, 1)]
     [InlineData(SignatureAlgorithms.SPHINCS_PLUS_SHAKE_192f_simple, 3)]

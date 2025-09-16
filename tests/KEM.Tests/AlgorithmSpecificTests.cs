@@ -75,7 +75,7 @@ public sealed class AlgorithmSpecificTests(LibOqsTestFixture fixture)
         kem.IsIndCca.Should().BeTrue($"{algorithm} should provide IND-CCA security");
     }
 
-    [PlatformSpecificTheory("LINUX", "OSX")]
+    [PlatformSpecificTheory("LINUX")]
     [InlineData(KemAlgorithms.BIKE_L1, 1)]
     [InlineData(KemAlgorithms.BIKE_L3, 3)]
     [InlineData(KemAlgorithms.BIKE_L5, 5)]

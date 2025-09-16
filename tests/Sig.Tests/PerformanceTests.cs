@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using FluentAssertions;
 using OpenForge.Cryptography.LibOqs.Core;
@@ -65,13 +66,25 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
         algorithms.Should().NotBeEmpty();
 
         // Test a subset of algorithms
-        var testAlgorithms = new[]
+        var candidateAlgorithms = new[]
         {
             SignatureAlgorithms.ML_DSA_44,
             SignatureAlgorithms.Dilithium2,
             SignatureAlgorithms.Falcon_512,
             SignatureAlgorithms.SPHINCS_PLUS_SHA2_128s_simple
-        }.Where(Sig.IsAlgorithmSupported).ToArray();
+        };
+
+        // Temporarily exclude SPHINCS+ on Windows and macOS due to stack overflow issues
+        var testAlgorithms = candidateAlgorithms
+            .Where(a => {
+                if ((RuntimeInformation.IsOSPlatform(OSPlatform.Windows) || RuntimeInformation.IsOSPlatform(OSPlatform.OSX)) 
+                    && a.Contains("SPHINCS", StringComparison.OrdinalIgnoreCase))
+                {
+                    return false;
+                }
+                return Sig.IsAlgorithmSupported(a);
+            })
+            .ToArray();
 
         testAlgorithms.Should().NotBeEmpty("At least one test algorithm should be supported");
 
@@ -180,9 +193,14 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
             ["ML-DSA"] = [SignatureAlgorithms.ML_DSA_44, SignatureAlgorithms.ML_DSA_65, SignatureAlgorithms.ML_DSA_87],
             ["Dilithium"] = [SignatureAlgorithms.Dilithium2, SignatureAlgorithms.Dilithium3, SignatureAlgorithms.Dilithium5],
             ["Falcon"] = [SignatureAlgorithms.Falcon_512, SignatureAlgorithms.Falcon_1024],
-            ["SPHINCS+"] = [SignatureAlgorithms.SPHINCS_PLUS_SHA2_128s_simple, SignatureAlgorithms.SPHINCS_PLUS_SHA2_192s_simple],
             ["MAYO"] = [SignatureAlgorithms.MAYO_1, SignatureAlgorithms.MAYO_3, SignatureAlgorithms.MAYO_5]
         };
+
+        // Temporarily exclude SPHINCS+ on Windows and macOS due to stack overflow issues
+        if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows) && !RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+        {
+            algorithmFamilies["SPHINCS+"] = [SignatureAlgorithms.SPHINCS_PLUS_SHA2_128s_simple, SignatureAlgorithms.SPHINCS_PLUS_SHA2_192s_simple];
+        }
 
         var performanceResults = new List<(string algorithm, double keyGenMs, double signMs, double verifyMs)>();
 

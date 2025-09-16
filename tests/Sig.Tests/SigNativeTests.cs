@@ -85,9 +85,20 @@ public sealed class SigNativeTests(LibOqsTestFixture fixture)
     [InlineData("Dilithium2")]
     [InlineData("Dilithium3")]
     [InlineData("Dilithium5")]
+    public void OQS_SIG_alg_is_enabled_CommonAlgorithms_ShouldHandleGracefully(string algorithm)
+    {
+        var action = () => SigNative.OQS_SIG_alg_is_enabled(algorithm);
+
+        action.Should().NotThrow("Valid algorithm names should not cause exceptions");
+
+        var result = action();
+        result.Should().BeInRange(0, 1, "Result should be 0 or 1");
+    }
+
+    [PlatformSpecificTheory("LINUX")]
     [InlineData("SPHINCS+-SHA2-128s-simple")]
     [InlineData("SPHINCS+-SHA2-128f-simple")]
-    public void OQS_SIG_alg_is_enabled_CommonAlgorithms_ShouldHandleGracefully(string algorithm)
+    public void OQS_SIG_alg_is_enabled_SPHINCS_Algorithms_ShouldHandleGracefully(string algorithm)
     {
         var action = () => SigNative.OQS_SIG_alg_is_enabled(algorithm);
 

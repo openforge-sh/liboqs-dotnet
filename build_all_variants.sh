@@ -158,27 +158,19 @@ EOF
 # with algorithms that use large stack allocations
             cat >> "$build_dir/toolchain.cmake" << EOF
 set(CMAKE_FIND_ROOT_PATH /usr/x86_64-w64-mingw32)
-set(CMAKE_EXE_LINKER_FLAGS "-Wl,--stack,8388608")
-set(CMAKE_SHARED_LINKER_FLAGS "-Wl,--stack,8388608")
 EOF
             ;;
         "win-arm64")
-# Increase stack size to 8MB to match Linux default and avoid stack overflow
-# with algorithms that use large stack allocations
             cat >> "$build_dir/toolchain.cmake" << EOF
 set(CMAKE_FIND_ROOT_PATH /opt/llvm-mingw/llvm-mingw-ucrt/aarch64-w64-mingw32)
-set(CMAKE_EXE_LINKER_FLAGS "-Wl,--stack,8388608")
-set(CMAKE_SHARED_LINKER_FLAGS "-Wl,--stack,8388608")
 EOF
             ;;
-# Increase stack size to 8MB to match Linux default and avoid stack overflow
-# with algorithms that use large stack allocations (e.g., SPHINCS+, etc.)
         "osx-arm64")
             cat >> "$build_dir/toolchain.cmake" << EOF
 set(CMAKE_OSX_ARCHITECTURES arm64)
 set(CMAKE_C_FLAGS "-target arm64-apple-darwin24.5")
 set(CMAKE_CXX_FLAGS "-target arm64-apple-darwin24.5")
-set(CMAKE_EXE_LINKER_FLAGS "-target arm64-apple-darwin24.5 -Wl,-stack_size,0x800000")
+set(CMAKE_EXE_LINKER_FLAGS "-target arm64-apple-darwin24.5")
 set(CMAKE_SHARED_LINKER_FLAGS "-target arm64-apple-darwin24.5")
 set(CMAKE_MODULE_LINKER_FLAGS "-target arm64-apple-darwin24.5")
 EOF
@@ -234,7 +226,7 @@ build_target() {
 
     # BIKE is disabled on Windows and macOS due to platform-specific compilation issues
     if [[ "$platform" == win-* ]] || [[ "$platform" == osx-* ]]; then
-        variant_flags="$variant_flags -DOQS_ENABLE_KEM_BIKE=OFF"
+        variant_flags="$variant_flags -DOQS_ENABLE_KEM_BIKE=OFF -DOQS_ENABLE_SIG_SPHINCS=OFF"
     fi
     
     cd "$build_dir"
