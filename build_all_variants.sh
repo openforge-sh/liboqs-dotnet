@@ -41,9 +41,12 @@ get_variant_flags() {
     local variant=$1
     case $variant in
         "full")
-            echo "-DOQS_ENABLE_SIG_STFL_XMSS=ON \
-                  -DOQS_ENABLE_SIG_STFL_LMS=ON \
-                  -DOQS_HAZARDOUS_EXPERIMENTAL_ENABLE_SIG_STFL_KEY_SIG_GEN=ON"
+            #echo "-DOQS_ENABLE_SIG_STFL_XMSS=ON \
+            #      -DOQS_ENABLE_SIG_STFL_LMS=ON \
+            #      -DOQS_HAZARDOUS_EXPERIMENTAL_ENABLE_SIG_STFL_KEY_SIG_GEN=ON"
+            echo "-DOQS_ENABLE_SIG_STFL_XMSS=OFF \
+                  -DOQS_ENABLE_SIG_STFL_LMS=OFF \
+                  -DOQS_HAZARDOUS_EXPERIMENTAL_ENABLE_SIG_STFL_KEY_SIG_GEN=OFF"
             ;;
         "kem")
             echo "-DOQS_ENABLE_SIG_DILITHIUM=OFF \
@@ -69,27 +72,27 @@ get_variant_flags() {
                   -DOQS_ENABLE_SIG_STFL_XMSS=OFF \
                   -DOQS_ENABLE_SIG_STFL_LMS=OFF"
             ;;
-        "sig-stfl")
-            echo "-DOQS_ENABLE_KEM_BIKE=OFF \
-                  -DOQS_ENABLE_KEM_FRODOKEM=OFF \
-                  -DOQS_ENABLE_KEM_NTRUPRIME=OFF \
-                  -DOQS_ENABLE_KEM_CLASSIC_MCELIECE=OFF \
-                  -DOQS_ENABLE_KEM_HQC=OFF \
-                  -DOQS_ENABLE_KEM_KYBER=OFF \
-                  -DOQS_ENABLE_KEM_ML_KEM=OFF \
-                  -DOQS_ENABLE_SIG_DILITHIUM=OFF \
-                  -DOQS_ENABLE_SIG_ML_DSA=OFF \
-                  -DOQS_ENABLE_SIG_FALCON=OFF \
-                  -DOQS_ENABLE_SIG_SPHINCS=OFF \
-                  -DOQS_ENABLE_SIG_MAYO=OFF \
-                  -DOQS_ENABLE_SIG_CROSS=OFF \
-                  -DOQS_ENABLE_SIG_UOV=OFF \
-                  -DOQS_ENABLE_SIG_SNOVA=OFF \
-                  -DOQS_ENABLE_SIG_SLH_DSA=OFF \
-                  -DOQS_ENABLE_SIG_STFL_XMSS=ON \
-                  -DOQS_ENABLE_SIG_STFL_LMS=ON \
-                  -DOQS_HAZARDOUS_EXPERIMENTAL_ENABLE_SIG_STFL_KEY_SIG_GEN=ON"
-            ;;
+        # "sig-stfl")
+        #     echo "-DOQS_ENABLE_KEM_BIKE=OFF \
+        #           -DOQS_ENABLE_KEM_FRODOKEM=OFF \
+        #           -DOQS_ENABLE_KEM_NTRUPRIME=OFF \
+        #           -DOQS_ENABLE_KEM_CLASSIC_MCELIECE=OFF \
+        #           -DOQS_ENABLE_KEM_HQC=OFF \
+        #           -DOQS_ENABLE_KEM_KYBER=OFF \
+        #           -DOQS_ENABLE_KEM_ML_KEM=OFF \
+        #           -DOQS_ENABLE_SIG_DILITHIUM=OFF \
+        #           -DOQS_ENABLE_SIG_ML_DSA=OFF \
+        #           -DOQS_ENABLE_SIG_FALCON=OFF \
+        #           -DOQS_ENABLE_SIG_SPHINCS=OFF \
+        #           -DOQS_ENABLE_SIG_MAYO=OFF \
+        #           -DOQS_ENABLE_SIG_CROSS=OFF \
+        #           -DOQS_ENABLE_SIG_UOV=OFF \
+        #           -DOQS_ENABLE_SIG_SNOVA=OFF \
+        #           -DOQS_ENABLE_SIG_SLH_DSA=OFF \
+        #           -DOQS_ENABLE_SIG_STFL_XMSS=ON \
+        #           -DOQS_ENABLE_SIG_STFL_LMS=ON \
+        #           -DOQS_HAZARDOUS_EXPERIMENTAL_ENABLE_SIG_STFL_KEY_SIG_GEN=ON"
+        #     ;;
         *)
             log_error "Unknown variant: $variant"
             exit 1
@@ -321,7 +324,8 @@ organize_libraries() {
     log_info "Organizing libraries for .NET runtime structure..."
     
     local total_libs=0
-    for variant in full kem sig sig-stfl; do
+    #for variant in full kem sig sig-stfl; do
+    for variant in full kem sig; do
         local variant_dir="$SCRIPT_DIR/runtimes-$variant"
         if [ -d "$variant_dir" ]; then
             local lib_count=$(find "$variant_dir" -name "*.so" -o -name "*.dll" -o -name "*.dylib" | wc -l)
@@ -354,7 +358,8 @@ cleanup_build_artifacts() {
 
 build_all() {
     local platforms=("$@")
-    local variants=("full" "kem" "sig" "sig-stfl")
+    #local variants=("full" "kem" "sig" "sig-stfl")
+    local variants=("full" "kem" "sig")
     
     if [ ${#platforms[@]} -eq 0 ]; then
         platforms=("linux-x64" "linux-arm64" "linux-musl-x64" "linux-musl-arm64"
@@ -461,7 +466,8 @@ while [[ $# -gt 0 ]]; do
                 echo "  - $platform"
             done | sort
             echo ""
-            echo "Available variants: full, kem, sig, sig-stfl"
+            #echo "Available variants: full, kem, sig, sig-stfl"
+            echo "Available variants: full, kem, sig"
             exit 0
             ;;
         --setup-only)
