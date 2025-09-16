@@ -58,11 +58,6 @@ internal static class NativeLibraryLoader
             var rid = GetRuntimeIdentifier();
             var libraryFileName = GetLibraryFileName();
             var searchedPaths = new List<string>();
-            
-            // Diagnostic logging for CI/CD debugging
-            LogDiagnostic($"ImportResolver called for '{libraryName}' from assembly '{assembly.GetName().Name}'");
-            LogDiagnostic($"Platform: {RuntimeInformation.OSDescription}, Arch: {RuntimeInformation.ProcessArchitecture}");
-            LogDiagnostic($"RID: {rid}, LibraryFileName: {libraryFileName}");
 
             // Try to load from multiple locations in order of preference
             // 1. First try the requesting assembly's directory
@@ -72,7 +67,6 @@ internal static class NativeLibraryLoader
 
             // 2. Try all registered assemblies' directories (for modular package design)
             // This handles the case where Core doesn't have the native library but KEM/SIG/Full do
-            LogDiagnostic($"Trying registered assemblies (count: {_registeredAssemblies.Count})");
             lock (_lock)
             {
                 var otherAssemblies = _registeredAssemblies.Where(a => a != assembly);
@@ -81,7 +75,6 @@ internal static class NativeLibraryLoader
                     libraryHandle = TryLoadFromAssemblyDirectory(registeredAssembly, rid, libraryFileName, searchedPaths);
                     if (libraryHandle != IntPtr.Zero)
                     {
-                        LogDiagnostic($"Successfully loaded from {registeredAssembly.GetName().Name}");
                         return libraryHandle;
                     }
                 }
@@ -93,10 +86,8 @@ internal static class NativeLibraryLoader
                 return handle;
             }
 
-            var errorMessage = $"Could not load native library '{libraryFileName}' for runtime '{rid}'. " +
-                               $"Searched paths: {string.Join(", ", searchedPaths)}";
-            LogDiagnostic($"FINAL ERROR: {errorMessage}");
-            throw new DllNotFoundException(errorMessage);
+            throw new DllNotFoundException($"Could not load native library '{libraryFileName}' for runtime '{rid}'. " +
+                                        $"Searched paths: {string.Join(", ", searchedPaths)}");
         }
         catch (InvalidOperationException ex) when (ex.Message.Contains("invalid library file", StringComparison.Ordinal) || ex.Message.Contains("is empty", StringComparison.Ordinal))
         {
@@ -112,24 +103,16 @@ internal static class NativeLibraryLoader
     private static IntPtr TryLoadFromAssemblyDirectory(Assembly assembly, string rid, string libraryFileName, List<string> searchedPaths)
     {
         var assemblyLocation = assembly.Location;
-        var assemblyName = assembly.GetName().Name;
-        
-        // Diagnostic logging
-        LogDiagnostic($"TryLoadFromAssemblyDirectory - Assembly: {assemblyName}");
-        LogDiagnostic($"  Location: '{assemblyLocation}' (IsEmpty: {string.IsNullOrEmpty(assemblyLocation)})");
         
         if (string.IsNullOrEmpty(assemblyLocation))
         {
-            LogDiagnostic($"  Skipping {assemblyName} - empty location");
             return IntPtr.Zero;
         }
 
         var assemblyDirectory = Path.GetDirectoryName(assemblyLocation);
-        LogDiagnostic($"  Directory: '{assemblyDirectory}'");
         
         if (string.IsNullOrEmpty(assemblyDirectory))
         {
-            LogDiagnostic($"  Skipping {assemblyName} - empty directory");
             return IntPtr.Zero;
         }
 
@@ -405,25 +388,5 @@ internal static class NativeLibraryLoader
                 return false;
         }
         return true;
-    }
-
-    /// <summary>
-    /// Logs diagnostic information to a file for CI/CD debugging.
-    /// This is a temporary method for investigating ARM64 library loading issues.
-    /// </summary>
-    private static void LogDiagnostic(string message)
-    {
-        #pragma warning disable CA1031, CA1305
-        try
-        {
-            var logFile = Path.Combine(AppContext.BaseDirectory, "native-library-diagnostics.log");
-            var timestamp = DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss.fff");
-            File.AppendAllText(logFile, $"[{timestamp}] {message}{Environment.NewLine}");
-        }
-        catch
-        {
-            // Ignore logging errors - this is just for diagnostics
-        }
-        #pragma warning restore CA1031, CA1305
     }
 }
