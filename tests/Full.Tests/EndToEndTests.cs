@@ -11,6 +11,7 @@ using Xunit;
 [assembly: AssemblyFixture(typeof(LibOqsTestFixture))]
 namespace OpenForge.Cryptography.LibOqs.Tests;
 
+[CollectionDefinition("LibOqs Collection")]
 public sealed class EndToEndTests(LibOqsTestFixture fixture)
 {
     private readonly LibOqsTestFixture _fixture = fixture;
@@ -410,8 +411,8 @@ public sealed class EndToEndTests(LibOqsTestFixture fixture)
 
         results.Should().HaveCount(operationCount);
         results.Should().AllSatisfy(r => r.success.Should().BeTrue("All concurrent operations should succeed"));
-        
-        results.Should().AllSatisfy(r => 
+
+        results.Should().AllSatisfy(r =>
         {
             r.sharedSecret.Should().NotBeEmpty("Shared secrets should not be empty");
             r.signature.Should().NotBeEmpty("Signatures should not be empty");
@@ -576,15 +577,15 @@ public sealed class EndToEndTests(LibOqsTestFixture fixture)
         foreach (var (recipientName, ciphertext, _) in documentEncryptionKeys)
         {
             var (_, _, kemSec) = recipients.First(r => r.name == recipientName);
-            
+
             kem.Decapsulate(ciphertext, kemSec);
-            
+
             var decryptedContent = documentContent;
-            
+
             var isDocumentValid = sig.Verify(documentContent, documentSignature, senderSigPub);
-            
+
             var isAuditValid = sig.Verify(auditTrailData.ToArray(), auditTrailSignature, senderSigPub);
-            
+
             verificationResults.Add((recipientName, isDocumentValid, isAuditValid, decryptedContent));
         }
 
@@ -601,7 +602,7 @@ public sealed class EndToEndTests(LibOqsTestFixture fixture)
         {
             for (int j = i + 1; j < sharedSecrets.Count; j++)
             {
-                sharedSecrets[i].Should().NotBeEquivalentTo(sharedSecrets[j], 
+                sharedSecrets[i].Should().NotBeEquivalentTo(sharedSecrets[j],
                     "Each KEM encapsulation should produce a unique shared secret for security");
             }
         }
