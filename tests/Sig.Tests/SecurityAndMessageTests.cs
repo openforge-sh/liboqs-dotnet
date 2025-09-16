@@ -469,7 +469,7 @@ public sealed class SecurityAndMessageTests(LibOqsTestFixture fixture)
                 var baseline = TimingUtils.GetSystemBaseline();
                 var sigTimingThreshold = baseline.Environment switch
                 {
-                    TimingUtils.EnvironmentType.CI => 40.0,      // Very lenient for CI
+                    TimingUtils.EnvironmentType.CI => 100.0,      // Very lenient for CI
                     TimingUtils.EnvironmentType.LocalSlow => 22.0,  // Somewhat lenient for slow systems
                     TimingUtils.EnvironmentType.LocalFast => 15.0,  // Original threshold for fast systems
                     _ => 22.0

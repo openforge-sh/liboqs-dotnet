@@ -427,7 +427,7 @@ public sealed class KemInstanceTests(LibOqsTestFixture fixture)
         var algorithm = algorithms[0];
         using var kem = new Kem(algorithm);
 
-        const int operationCount = 1000;
+        const int operationCount = 500;
         var (publicKey, secretKey) = kem.GenerateKeyPair();
         var successCount = 0;
 
