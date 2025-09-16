@@ -5,22 +5,29 @@ namespace OpenForge.Cryptography.LibOqs.Tests.Common;
 public sealed class LibOqsTestFixture : IDisposable
 {
     private static readonly object _lock = new();
-    private static bool _initialized;
+    private static int _referenceCount;
 
     public LibOqsTestFixture()
     {
         lock (_lock)
         {
-            if (!_initialized)
+            if (_referenceCount == 0)
             {
                 OqsCore.Initialize();
-                _initialized = true;
             }
+            _referenceCount++;
         }
     }
 
     public void Dispose()
     {
-        OqsCore.Destroy();
+        lock (_lock)
+        {
+            _referenceCount--;
+            if (_referenceCount == 0)
+            {
+                OqsCore.Destroy();
+            }
+        }
     }
 }
