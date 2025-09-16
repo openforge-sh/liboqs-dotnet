@@ -20,6 +20,7 @@ public static class TestExecutionHelpers
             Exception? threadException = null;
             var thread = new Thread(() =>
             {
+                #pragma warning disable CA1031 // Do not catch general exception types
                 try
                 {
                     action();
@@ -27,7 +28,6 @@ public static class TestExecutionHelpers
                 catch (Exception ex)
                 {
                     threadException = ex;
-                    throw;
                 }
             }, stackSizeBytes);
 
@@ -66,8 +66,8 @@ public static class TestExecutionHelpers
                 catch (Exception ex)
                 {
                     threadException = ex;
-                    throw;
                 }
+                #pragma warning restore CA1031 // Do not catch general exception types
             }, stackSizeBytes);
 
             thread.Start();
