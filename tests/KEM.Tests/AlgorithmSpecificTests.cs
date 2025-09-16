@@ -124,16 +124,12 @@ public sealed class AlgorithmSpecificTests(LibOqsTestFixture fixture)
     {
         var algorithms = Kem.GetSupportedAlgorithms();
 
-        // Filter out BIKE and Classic-McEliece algorithms on Windows
-        // BIKE: Not supported on Windows
-        // Classic-McEliece: Causes stack overflow due to large stack allocations in native code
-        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+        // Filter out BIKE algorithms on Windows and macOS as they are not supported
+        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows) || RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
         {
-            algorithms = [.. algorithms.Where(a => 
-                !a.Contains("BIKE", StringComparison.OrdinalIgnoreCase) &&
-                !a.Contains("Classic-McEliece", StringComparison.OrdinalIgnoreCase))];
+            algorithms = [.. algorithms.Where(a => !a.Contains("BIKE", StringComparison.OrdinalIgnoreCase))];
             
-            // On Windows, test algorithms in smaller batches to avoid stack overflow
+            // On Windows and macOS, test algorithms in smaller batches to avoid potential stack issues
             const int batchSize = 5;
             for (var i = 0; i < algorithms.Length; i += batchSize)
             {
@@ -143,7 +139,7 @@ public sealed class AlgorithmSpecificTests(LibOqsTestFixture fixture)
         }
         else
         {
-            // On Unix platforms, test all algorithms at once
+            // On Linux, test all algorithms at once
             ValidateAlgorithmPropertiesBatch(algorithms);
         }
     }
@@ -169,17 +165,12 @@ public sealed class AlgorithmSpecificTests(LibOqsTestFixture fixture)
         var algorithms = Kem.GetSupportedAlgorithms();
         algorithms.Should().NotBeEmpty("Should have at least one supported algorithm");
 
-        // Filter out BIKE and Classic-McEliece algorithms on Windows
-        // BIKE: Not supported on Windows
-        // Classic-McEliece: Causes stack overflow due to large stack allocations in native code
-        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+        // Filter out BIKE algorithms on Windows and macOS as they are not supported
+        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows) || RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
         {
-            algorithms = [.. algorithms.Where(a => 
-                !a.Contains("BIKE", StringComparison.OrdinalIgnoreCase) &&
-                !a.Contains("Classic-McEliece", StringComparison.OrdinalIgnoreCase))];
+            algorithms = [.. algorithms.Where(a => !a.Contains("BIKE", StringComparison.OrdinalIgnoreCase))];
             
-            // On Windows, test algorithms in smaller batches to avoid stack overflow
-            // due to Windows' smaller default stack size
+            // On Windows and macOS, test algorithms in smaller batches for better error isolation
             const int batchSize = 5;
             for (var i = 0; i < algorithms.Length; i += batchSize)
             {
@@ -189,7 +180,7 @@ public sealed class AlgorithmSpecificTests(LibOqsTestFixture fixture)
         }
         else
         {
-            // On Unix platforms, test all algorithms at once
+            // On Linux platforms, test all algorithms at once
             TestAlgorithmBatch(algorithms);
         }
     }
@@ -259,10 +250,9 @@ public sealed class AlgorithmSpecificTests(LibOqsTestFixture fixture)
             "Multiple encapsulations should produce different shared secrets due to randomness");
     }
 
-    [PlatformSpecificFact("LINUX", "OSX")]
+    [Fact]
     public void ClassicMcEliece_Algorithms_ShouldHaveIndCcaSecurity()
     {
-        // Skip on Windows due to stack overflow issues with Classic-McEliece's large stack allocations
         var mcElieceAlgorithms = Kem.GetSupportedAlgorithms()
             .Where(a => a.StartsWith("Classic-McEliece", StringComparison.OrdinalIgnoreCase))
             .ToList();

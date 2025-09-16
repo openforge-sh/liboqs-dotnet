@@ -127,6 +127,11 @@ setup_liboqs() {
     cd "$SCRIPT_DIR"
 }
 
+# Note: Stack size has been increased to 8MB on Windows and macOS
+# This resolves stack overflow issues with algorithms that use large stack allocations:
+# - Classic-McEliece KEM algorithms (large key sizes)  
+# - SPHINCS+ signature algorithms (large merkle tree operations)
+# Both platforms now match Linux default stack size for consistent behavior
 setup_toolchain() {
     local platform=$1
     local build_dir=$2
@@ -166,14 +171,16 @@ set(CMAKE_EXE_LINKER_FLAGS "-Wl,--stack,8388608")
 set(CMAKE_SHARED_LINKER_FLAGS "-Wl,--stack,8388608")
 EOF
             ;;
+# Increase stack size to 8MB to match Linux default and avoid stack overflow
+# with algorithms that use large stack allocations (e.g., SPHINCS+, etc.)
         "osx-arm64")
             cat >> "$build_dir/toolchain.cmake" << EOF
 set(CMAKE_OSX_ARCHITECTURES arm64)
 set(CMAKE_C_FLAGS "-target arm64-apple-darwin24.5")
 set(CMAKE_CXX_FLAGS "-target arm64-apple-darwin24.5")
-set(CMAKE_EXE_LINKER_FLAGS "-target arm64-apple-darwin24.5")
-set(CMAKE_SHARED_LINKER_FLAGS "-target arm64-apple-darwin24.5")
-set(CMAKE_MODULE_LINKER_FLAGS "-target arm64-apple-darwin24.5")
+set(CMAKE_EXE_LINKER_FLAGS "-target arm64-apple-darwin24.5 -Wl,-stack_size,0x800000")
+set(CMAKE_SHARED_LINKER_FLAGS "-target arm64-apple-darwin24.5 -Wl,-stack_size,0x800000")
+set(CMAKE_MODULE_LINKER_FLAGS "-target arm64-apple-darwin24.5 -Wl,-stack_size,0x800000")
 EOF
             ;;
     esac
@@ -225,14 +232,9 @@ build_target() {
         variant_flags="$variant_flags -DOQS_PERMIT_UNSUPPORTED_ARCHITECTURE=ON"
     fi
 
+    # BIKE is disabled on Windows and macOS due to platform-specific compilation issues
     if [[ "$platform" == win-* ]] || [[ "$platform" == osx-* ]]; then
         variant_flags="$variant_flags -DOQS_ENABLE_KEM_BIKE=OFF"
-    fi
-
-    # Disable Classic-McEliece on Windows due to stack overflow issues
-    # These algorithms use very large stack allocations that exceed Windows' default 1MB stack size
-    if [[ "$platform" == win-* ]]; then
-        variant_flags="$variant_flags -DOQS_ENABLE_KEM_CLASSIC_MCELIECE=OFF"
     fi
     
     cd "$build_dir"
