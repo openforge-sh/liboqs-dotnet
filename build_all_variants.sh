@@ -170,7 +170,7 @@ EOF
 set(CMAKE_OSX_ARCHITECTURES arm64)
 set(CMAKE_C_FLAGS "-target arm64-apple-darwin24.5")
 set(CMAKE_CXX_FLAGS "-target arm64-apple-darwin24.5")
-set(CMAKE_EXE_LINKER_FLAGS "-target arm64-apple-darwin24.5")
+set(CMAKE_EXE_LINKER_FLAGS "-target arm64-apple-darwin24.5 -Wl,-stack_size,0x800000")
 set(CMAKE_SHARED_LINKER_FLAGS "-target arm64-apple-darwin24.5")
 set(CMAKE_MODULE_LINKER_FLAGS "-target arm64-apple-darwin24.5")
 EOF
