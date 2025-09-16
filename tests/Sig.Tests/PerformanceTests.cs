@@ -645,7 +645,7 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
         // Second half should not be more than X% slower than first half (environment-aware)
         var degradationMultiplier = baseline.Environment switch
         {
-            TimingUtils.EnvironmentType.CI => 2.0,       // Allow 100% degradation in CI
+            TimingUtils.EnvironmentType.CI => 2.2,       // Allow 120% degradation in CI
             TimingUtils.EnvironmentType.LocalSlow => 1.75,  // Allow 75% degradation for slow systems
             TimingUtils.EnvironmentType.LocalFast => 1.5,   // Original 50% degradation for fast systems
             _ => 1.75

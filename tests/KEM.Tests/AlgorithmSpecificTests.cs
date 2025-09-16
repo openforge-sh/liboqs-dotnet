@@ -124,10 +124,14 @@ public sealed class AlgorithmSpecificTests(LibOqsTestFixture fixture)
     {
         var algorithms = Kem.GetSupportedAlgorithms();
 
-        // Filter out BIKE algorithms on Windows as they are not supported
+        // Filter out BIKE and Classic-McEliece algorithms on Windows
+        // BIKE: Not supported on Windows
+        // Classic-McEliece: Causes stack overflow due to large stack allocations in native code
         if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
         {
-            algorithms = [.. algorithms.Where(a => !a.Contains("BIKE", StringComparison.OrdinalIgnoreCase))];
+            algorithms = [.. algorithms.Where(a => 
+                !a.Contains("BIKE", StringComparison.OrdinalIgnoreCase) &&
+                !a.Contains("Classic-McEliece", StringComparison.OrdinalIgnoreCase))];
             
             // On Windows, test algorithms in smaller batches to avoid stack overflow
             const int batchSize = 5;
@@ -165,10 +169,14 @@ public sealed class AlgorithmSpecificTests(LibOqsTestFixture fixture)
         var algorithms = Kem.GetSupportedAlgorithms();
         algorithms.Should().NotBeEmpty("Should have at least one supported algorithm");
 
-        // Filter out BIKE algorithms on Windows as they are not supported
+        // Filter out BIKE and Classic-McEliece algorithms on Windows
+        // BIKE: Not supported on Windows
+        // Classic-McEliece: Causes stack overflow due to large stack allocations in native code
         if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
         {
-            algorithms = [.. algorithms.Where(a => !a.Contains("BIKE", StringComparison.OrdinalIgnoreCase))];
+            algorithms = [.. algorithms.Where(a => 
+                !a.Contains("BIKE", StringComparison.OrdinalIgnoreCase) &&
+                !a.Contains("Classic-McEliece", StringComparison.OrdinalIgnoreCase))];
             
             // On Windows, test algorithms in smaller batches to avoid stack overflow
             // due to Windows' smaller default stack size
@@ -251,9 +259,10 @@ public sealed class AlgorithmSpecificTests(LibOqsTestFixture fixture)
             "Multiple encapsulations should produce different shared secrets due to randomness");
     }
 
-    [Fact]
+    [PlatformSpecificFact("LINUX", "OSX")]
     public void ClassicMcEliece_Algorithms_ShouldHaveIndCcaSecurity()
     {
+        // Skip on Windows due to stack overflow issues with Classic-McEliece's large stack allocations
         var mcElieceAlgorithms = Kem.GetSupportedAlgorithms()
             .Where(a => a.StartsWith("Classic-McEliece", StringComparison.OrdinalIgnoreCase))
             .ToList();

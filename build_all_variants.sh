@@ -146,13 +146,21 @@ set(CMAKE_EXE_LINKER_FLAGS "-static")
 EOF
             ;;
         "win-x64")
+# Increase stack size to 8MB to match Linux default and avoid stack overflow
+# with algorithms that use large stack allocations
             cat >> "$build_dir/toolchain.cmake" << EOF
 set(CMAKE_FIND_ROOT_PATH /usr/x86_64-w64-mingw32)
+set(CMAKE_EXE_LINKER_FLAGS "-Wl,--stack,8388608")
+set(CMAKE_SHARED_LINKER_FLAGS "-Wl,--stack,8388608")
 EOF
             ;;
         "win-arm64")
+# Increase stack size to 8MB to match Linux default and avoid stack overflow
+# with algorithms that use large stack allocations
             cat >> "$build_dir/toolchain.cmake" << EOF
 set(CMAKE_FIND_ROOT_PATH /opt/llvm-mingw/llvm-mingw-ucrt/aarch64-w64-mingw32)
+set(CMAKE_EXE_LINKER_FLAGS "-Wl,--stack,8388608")
+set(CMAKE_SHARED_LINKER_FLAGS "-Wl,--stack,8388608")
 EOF
             ;;
         "osx-arm64")
@@ -216,6 +224,12 @@ build_target() {
 
     if [[ "$platform" == win-* ]] || [[ "$platform" == osx-* ]]; then
         variant_flags="$variant_flags -DOQS_ENABLE_KEM_BIKE=OFF"
+    fi
+
+    # Disable Classic-McEliece on Windows due to stack overflow issues
+    # These algorithms use very large stack allocations that exceed Windows' default 1MB stack size
+    if [[ "$platform" == win-* ]]; then
+        variant_flags="$variant_flags -DOQS_ENABLE_KEM_CLASSIC_MCELIECE=OFF"
     fi
     
     cd "$build_dir"
