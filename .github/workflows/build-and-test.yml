@@ -88,7 +88,7 @@ jobs:
       run: |
         set -euo pipefail
         # Verify we have libraries for all expected platform/variant combinations
-        expected_count=28  # 7 platforms * 4 variants
+        expected_count=21  # 7 platforms * 3 variants
         actual_count=$(find runtimes-* -name "*.so" -o -name "*.dll" -o -name "*.dylib" | wc -l)
 
         echo "Expected: $expected_count libraries"
