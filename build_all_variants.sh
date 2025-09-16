@@ -158,11 +158,15 @@ EOF
 # with algorithms that use large stack allocations
             cat >> "$build_dir/toolchain.cmake" << EOF
 set(CMAKE_FIND_ROOT_PATH /usr/x86_64-w64-mingw32)
+set(CMAKE_EXE_LINKER_FLAGS "-Wl,--stack,8388608")
+set(CMAKE_SHARED_LINKER_FLAGS "-Wl,--stack,8388608")
 EOF
             ;;
         "win-arm64")
             cat >> "$build_dir/toolchain.cmake" << EOF
 set(CMAKE_FIND_ROOT_PATH /opt/llvm-mingw/llvm-mingw-ucrt/aarch64-w64-mingw32)
+set(CMAKE_EXE_LINKER_FLAGS "-Wl,--stack,8388608")
+set(CMAKE_SHARED_LINKER_FLAGS "-Wl,--stack,8388608")
 EOF
             ;;
         "osx-arm64")
