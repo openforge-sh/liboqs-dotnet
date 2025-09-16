@@ -193,6 +193,17 @@ jobs:
         retention-days: 1
         if-no-files-found: warn
 
+    - name: Upload diagnostic logs
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: diagnostics-${{ matrix.platform }}-${{ github.run_id }}
+        path: |
+          tests/**/bin/**/native-library-diagnostics.log
+          **/native-library-diagnostics.log
+        retention-days: 3
+        if-no-files-found: ignore
+
   # Self-hosted Linux ARM64 builds and tests  
   test-linux-arm64:
     name: Test ${{ matrix.platform }}
@@ -270,6 +281,17 @@ jobs:
         retention-days: 1
         if-no-files-found: warn
 
+    - name: Upload diagnostic logs
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: diagnostics-${{ matrix.platform }}-${{ github.run_id }}
+        path: |
+          tests/**/bin/**/native-library-diagnostics.log
+          **/native-library-diagnostics.log
+        retention-days: 3
+        if-no-files-found: ignore
+
   # GitHub-hosted Windows builds and tests
   test-windows:
     name: Test ${{ matrix.platform }}
@@ -340,6 +362,18 @@ jobs:
           Write-Error "Build failed for ${{ matrix.platform }} (.NET 9)"
         }
 
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-results-${{ matrix.platform }}-${{ github.run_id }}
+        path: |
+          TestResults/
+          **/TestResults/
+          tests/**/bin/**/TestResults/
+        retention-days: 1
+        if-no-files-found: warn
+
     - name: Upload coverage reports
       uses: actions/upload-artifact@v4
       if: always()
@@ -348,6 +382,17 @@ jobs:
         path: tests/**/bin/**/TestResults/coverage.cobertura.xml
         retention-days: 1
         if-no-files-found: warn
+
+    - name: Upload diagnostic logs
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: diagnostics-${{ matrix.platform }}-${{ github.run_id }}
+        path: |
+          tests/**/bin/**/TestResults/native-library-diagnostics.log
+          **/native-library-diagnostics.log
+        retention-days: 3
+        if-no-files-found: ignore
 
   # GitHub-hosted macOS builds and tests
   test-macos:
@@ -417,7 +462,7 @@ jobs:
           TestResults/
           **/TestResults/
           tests/**/bin/**/TestResults/
-        retention-days: 5
+        retention-days: 1
         if-no-files-found: warn
 
     - name: Upload coverage reports
@@ -428,6 +473,17 @@ jobs:
         path: tests/**/bin/**/TestResults/coverage.cobertura.xml
         retention-days: 1
         if-no-files-found: warn
+
+    - name: Upload diagnostic logs
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: diagnostics-osx-arm64-${{ github.run_id }}
+        path: |
+          tests/**/bin/**/native-library-diagnostics.log
+          **/native-library-diagnostics.log
+        retention-days: 3
+        if-no-files-found: ignore
 
   # Generate and publish documentation with coverage
   publish-docs:
@@ -589,4 +645,4 @@ jobs:
   #     with:
   #       name: nuget-packages-${{ github.run_id }}
   #       path: ./packages/*.nupkg
-  #       retention-days: 30
+  #       retention-days: 1
