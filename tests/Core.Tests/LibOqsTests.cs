@@ -4,9 +4,11 @@ using Xunit;
 using System.Reflection;
 using System.Collections.Concurrent;
 
+[assembly: AssemblyFixture(typeof(LibOqsTestFixture))]
 namespace OpenForge.Cryptography.LibOqs.Core.Tests;
 
 #pragma warning disable S1144
+
 [Collection("LibOqs Collection")]
 public sealed class LibOqsInitializationTests(LibOqsTestFixture fixture)
 {

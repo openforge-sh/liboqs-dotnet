@@ -3,10 +3,13 @@ using FluentAssertions;
 using OpenForge.Cryptography.LibOqs.Tests.Common;
 using Xunit;
 
+[assembly: AssemblyFixture(typeof(LibOqsTestFixture))]
 namespace OpenForge.Cryptography.LibOqs.Core.Tests;
 
-public sealed class TestAttributesTests
+public sealed class TestAttributesTests(LibOqsTestFixture fixture)
 {
+    private readonly LibOqsTestFixture _fixture = fixture;
+
     public sealed class SkipOnPlatformAttributeTests
     {
         [Fact]

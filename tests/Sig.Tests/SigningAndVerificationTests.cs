@@ -4,6 +4,7 @@ using FluentAssertions;
 using OpenForge.Cryptography.LibOqs.Tests.Common;
 using Xunit;
 
+[assembly: AssemblyFixture(typeof(LibOqsTestFixture))]
 namespace OpenForge.Cryptography.LibOqs.SIG.Tests;
 
 [Collection("LibOqs Collection")]

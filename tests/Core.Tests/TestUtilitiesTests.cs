@@ -4,10 +4,13 @@ using FluentAssertions;
 using OpenForge.Cryptography.LibOqs.Tests.Common;
 using Xunit;
 
+[assembly: AssemblyFixture(typeof(LibOqsTestFixture))]
 namespace OpenForge.Cryptography.LibOqs.Core.Tests;
 
-public sealed class TestUtilitiesTests
+public sealed class TestUtilitiesTests(LibOqsTestFixture fixture)
 {
+    private readonly LibOqsTestFixture _fixture = fixture;
+
     public sealed class RandomBytesGenerationTests
     {
         [Fact]

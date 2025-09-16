@@ -2,6 +2,7 @@ using OpenForge.Cryptography.LibOqs.Tests.Common;
 using FluentAssertions;
 using Xunit;
 
+[assembly: AssemblyFixture(typeof(LibOqsTestFixture))]
 namespace OpenForge.Cryptography.LibOqs.Core.Tests;
 
 #pragma warning disable S1144, S1215, S3776
@@ -475,8 +476,10 @@ public class SecureMemoryPinnedTests(LibOqsTestFixture fixture)
     }
 }
 
-public sealed class SecureByteArrayTests
+public sealed class SecureByteArrayTests(LibOqsTestFixture fixture)
 {
+    private readonly LibOqsTestFixture _fixture = fixture;
+
     [Fact]
     public void CreateSecureArray_WithNegativeSize_ShouldThrowArgumentOutOfRangeException()
     {

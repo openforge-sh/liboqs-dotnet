@@ -5,12 +5,16 @@ using FluentAssertions;
 using OpenForge.Cryptography.LibOqs.Core;
 using OpenForge.Cryptography.LibOqs.KEM;
 using OpenForge.Cryptography.LibOqs.SIG;
+using OpenForge.Cryptography.LibOqs.Tests.Common;
 using Xunit;
 
+[assembly: AssemblyFixture(typeof(LibOqsTestFixture))]
 namespace OpenForge.Cryptography.LibOqs.Tests;
 
-public sealed class EndToEndTests
+public sealed class EndToEndTests(LibOqsTestFixture fixture)
 {
+    private readonly LibOqsTestFixture _fixture = fixture;
+
     [Fact]
     public void SecureMessaging_EndToEndScenario_ShouldWorkCorrectly()
     {

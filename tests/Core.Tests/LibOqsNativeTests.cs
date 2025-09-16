@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 using FluentAssertions;
 using Xunit;
 
+[assembly: AssemblyFixture(typeof(LibOqsTestFixture))]
 namespace OpenForge.Cryptography.LibOqs.Core.Tests;
 
 [Collection("LibOqs Collection")]

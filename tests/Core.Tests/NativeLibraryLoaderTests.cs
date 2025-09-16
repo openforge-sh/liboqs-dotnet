@@ -7,10 +7,12 @@ using FluentAssertions;
 using OpenForge.Cryptography.LibOqs.Tests.Common;
 using Xunit;
 
+[assembly: AssemblyFixture(typeof(LibOqsTestFixture))]
 namespace OpenForge.Cryptography.LibOqs.Core.Tests;
 
-public class NativeLibraryLoaderTests
+public class NativeLibraryLoaderTests(LibOqsTestFixture fixture)
 {
+    private readonly LibOqsTestFixture _fixture = fixture;
     [Fact]
     public void Initialize_ShouldNotThrow()
     {
@@ -76,8 +78,10 @@ public class NativeLibraryLoaderTests
     }
 }
 
-public class NativeLibraryLoaderRuntimeIdentifierTests
+public class NativeLibraryLoaderRuntimeIdentifierTests(LibOqsTestFixture fixture)
 {
+    private readonly LibOqsTestFixture _fixture = fixture;
+
     [Fact]
     public void GetRuntimeIdentifier_ShouldReturnValidFormat()
     {
@@ -186,8 +190,9 @@ public class NativeLibraryLoaderRuntimeIdentifierTests
     }
 }
 
-public class NativeLibraryLoaderLibraryFileNameTests
+public class NativeLibraryLoaderLibraryFileNameTests(LibOqsTestFixture fixture)
 {
+    private readonly LibOqsTestFixture _fixture = fixture;
     [Fact]
     public void GetLibraryFileName_ShouldReturnValidFormat()
     {
@@ -231,14 +236,16 @@ public class NativeLibraryLoaderLibraryFileNameTests
 
 public sealed class NativeLibraryLoaderImportResolverTests : IDisposable
 {
+    private readonly LibOqsTestFixture _fixture;
     private readonly TestDirectory _testDir;
     private readonly Assembly _testAssembly;
     private readonly string _rid;
     private readonly string _libraryFileName;
     private readonly MethodInfo _importResolverMethod;
 
-    public NativeLibraryLoaderImportResolverTests()
+    public NativeLibraryLoaderImportResolverTests(LibOqsTestFixture fixture)
     {
+        _fixture = fixture;
         _testDir = new TestDirectory();
 
         // Copy and load a test assembly into the temp directory to control its location
@@ -447,8 +454,10 @@ public sealed class NativeLibraryLoaderImportResolverTests : IDisposable
     }
 }
 
-public class NativeLibraryLoaderLinuxMuslTests
+public class NativeLibraryLoaderLinuxMuslTests(LibOqsTestFixture fixture)
 {
+    private readonly LibOqsTestFixture _fixture = fixture;
+
     [Fact]
     public void GetRuntimeIdentifier_OnLinuxMusl_ShouldIncludeMusl()
     {
@@ -472,8 +481,10 @@ public class NativeLibraryLoaderLinuxMuslTests
     }
 }
 
-public class NativeLibraryLoaderThreadSafetyTests
+public class NativeLibraryLoaderThreadSafetyTests(LibOqsTestFixture fixture)
 {
+    private readonly LibOqsTestFixture _fixture = fixture;
+
     [Fact]
     public async Task Initialize_ConcurrentCalls_ShouldBeThreadSafe()
     {
@@ -637,8 +648,10 @@ public class NativeLibraryLoaderThreadSafetyTests
     }
 }
 
-public class NativeLibraryLoaderEdgeCasesTests
+public class NativeLibraryLoaderEdgeCasesTests(LibOqsTestFixture fixture)
 {
+    private readonly LibOqsTestFixture _fixture = fixture;
+
     [Fact]
     public void ValidateLibraryFile_WithNonExistentFile_ShouldThrow()
     {
@@ -725,14 +738,16 @@ public class NativeLibraryLoaderEdgeCasesTests
 
 public sealed class NativeLibraryLoaderImportResolverErrorTests : IDisposable
 {
+    private readonly LibOqsTestFixture _fixture;
     private readonly TestDirectory _testDir;
     private readonly Assembly _testAssembly;
     private readonly string _rid;
     private readonly string _libraryFileName;
     private readonly MethodInfo _importResolverMethod;
 
-    public NativeLibraryLoaderImportResolverErrorTests()
+    public NativeLibraryLoaderImportResolverErrorTests(LibOqsTestFixture fixture)
     {
+        _fixture = fixture;
         _testDir = new TestDirectory();
 
         // Copy and load a test assembly into the temp directory to control its location
@@ -981,8 +996,10 @@ public sealed class NativeLibraryLoaderImportResolverErrorTests : IDisposable
     }
 }
 
-public class NativeLibraryLoaderPlatformSpecificTests
+public class NativeLibraryLoaderPlatformSpecificTests(LibOqsTestFixture fixture)
 {
+    private readonly LibOqsTestFixture _fixture = fixture;
+
     [Fact]
     public void GetLibraryFileName_OnUnsupportedPlatform_ShouldThrow()
     {

@@ -2,10 +2,13 @@ using OpenForge.Cryptography.LibOqs.Tests.Common;
 using FluentAssertions;
 using Xunit;
 
+[assembly: AssemblyFixture(typeof(LibOqsTestFixture))]
 namespace OpenForge.Cryptography.LibOqs.Core.Tests;
 
-public sealed class TestExecutionHelpersTests
+public sealed class TestExecutionHelpersTests(LibOqsTestFixture fixture)
 {
+    private readonly LibOqsTestFixture _fixture = fixture;
+
     [Theory]
     [InlineData("Classic-McEliece-348864", true)]
     [InlineData("Classic-McEliece-6960119", true)]

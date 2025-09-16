@@ -1,5 +1,8 @@
+using OpenForge.Cryptography.LibOqs.Tests.Common;
 using OpenForge.Cryptography.LibOqs.Core;
+using Xunit;
 
+[assembly: AssemblyFixture(typeof(LibOqsTestFixture))]
 namespace OpenForge.Cryptography.LibOqs.Tests.Common;
 
 public sealed class LibOqsTestFixture : IDisposable

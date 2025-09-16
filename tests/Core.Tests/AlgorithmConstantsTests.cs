@@ -1,10 +1,14 @@
 using FluentAssertions;
+using OpenForge.Cryptography.LibOqs.Tests.Common;
 using Xunit;
 
+[assembly: AssemblyFixture(typeof(LibOqsTestFixture))]
 namespace OpenForge.Cryptography.LibOqs.Core.Tests;
 
-public sealed class AlgorithmConstantsTests()
+public sealed class AlgorithmConstantsTests(LibOqsTestFixture fixture)
 {
+    private readonly LibOqsTestFixture _fixture = fixture;
+
     public sealed class KemAlgorithmsTests
     {
         [Fact]
@@ -19,8 +23,8 @@ public sealed class AlgorithmConstantsTests()
                 .ToArray();
 
             // Act & Assert - All constants should be in the All array
-            constantFields.Should().AllSatisfy(constant => 
-                KemAlgorithms.All.Should().Contain(constant, 
+            constantFields.Should().AllSatisfy(constant =>
+                KemAlgorithms.All.Should().Contain(constant,
                     $"constant {constant} should be included in KemAlgorithms.All"));
         }
 
@@ -46,10 +50,10 @@ public sealed class AlgorithmConstantsTests()
             // Act & Assert
             KemAlgorithms.NISTStandardized.Should().Contain([
                 KemAlgorithms.ML_KEM_512,
-                KemAlgorithms.ML_KEM_768, 
+                KemAlgorithms.ML_KEM_768,
                 KemAlgorithms.ML_KEM_1024
             ]);
-            
+
             KemAlgorithms.NISTStandardized.Should().HaveCount(3);
         }
 

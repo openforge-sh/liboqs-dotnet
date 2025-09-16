@@ -6,6 +6,7 @@ using OpenForge.Cryptography.LibOqs.SIG;
 using OpenForge.Cryptography.LibOqs.Tests.Common;
 using Xunit;
 
+[assembly: AssemblyFixture(typeof(LibOqsTestFixture))]
 namespace OpenForge.Cryptography.LibOqs.Tests;
 
 [Collection("LibOqs Collection")]

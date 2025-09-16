@@ -5,6 +5,7 @@ using System.Text;
 using FluentAssertions;
 using Xunit;
 
+[assembly: AssemblyFixture(typeof(LibOqsTestFixture))]
 namespace OpenForge.Cryptography.LibOqs.Core.Tests;
 
 #pragma warning disable S1144, S1215, S3776
@@ -1094,8 +1095,10 @@ public class SecurityUtilitiesTests(LibOqsTestFixture fixture)
     }
     }
 
-public sealed class EntropyEdgeCaseTests
+public sealed class EntropyEdgeCaseTests(LibOqsTestFixture fixture)
 {
+    private readonly LibOqsTestFixture _fixture = fixture;
+
     [Theory]
     [InlineData(new byte[] { 0x80, 0x80, 0x80, 0x80 })] // High bit pattern
     [InlineData(new byte[] { 0x0F, 0x0F, 0x0F, 0x0F })] // Low nibble pattern
@@ -1198,8 +1201,10 @@ public sealed class EntropyEdgeCaseTests
     }
 }
 
-public sealed class MalformedHexStringTests
+public sealed class MalformedHexStringTests(LibOqsTestFixture fixture)
 {
+    private readonly LibOqsTestFixture _fixture = fixture;
+
     [Theory]
     [InlineData("\t\t")] // Tab characters
     [InlineData("\r\n")] // Carriage return and newline
@@ -1268,8 +1273,10 @@ public sealed class MalformedHexStringTests
     }
 }
 
-public sealed class ExtendedTimingAttackTests
+public sealed class ExtendedTimingAttackTests(LibOqsTestFixture fixture)
 {
+    private readonly LibOqsTestFixture _fixture = fixture;
+
     [Fact]
     public async Task ConstantTimeCopy_ShouldNotLeakCondition()
     {
@@ -1436,8 +1443,10 @@ public sealed class ExtendedTimingAttackTests
     }
 }
 
-public sealed class ParameterNameValidationTests
+public sealed class ParameterNameValidationTests(LibOqsTestFixture fixture)
 {
+    private readonly LibOqsTestFixture _fixture = fixture;
+
     [Theory]
     [InlineData("\t")] // Tab only
     [InlineData("\n")] // Newline only  
@@ -1493,8 +1502,10 @@ public sealed class ParameterNameValidationTests
     }
 }
 
-public sealed class ErrorHandlingComprehensiveTests
+public sealed class ErrorHandlingComprehensiveTests(LibOqsTestFixture fixture)
 {
+    private readonly LibOqsTestFixture _fixture = fixture;
+
     [Fact]
     public void ValidationMethods_ShouldProvideDescriptiveErrorMessages()
     {
@@ -1608,7 +1619,6 @@ public sealed class ErrorHandlingComprehensiveTests
     }
 }
 
-[Collection("LibOqs Collection")]
 public sealed class TestUtilityValidationTests(LibOqsTestFixture fixture)
 {
     private readonly LibOqsTestFixture _fixture = fixture;
