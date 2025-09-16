@@ -11,7 +11,7 @@ using Xunit;
 [assembly: AssemblyFixture(typeof(LibOqsTestFixture))]
 namespace OpenForge.Cryptography.LibOqs.Tests;
 
-[CollectionDefinition("LibOqs Collection")]
+[Collection("LibOqs Collection")]
 public sealed class EndToEndTests(LibOqsTestFixture fixture)
 {
     private readonly LibOqsTestFixture _fixture = fixture;
