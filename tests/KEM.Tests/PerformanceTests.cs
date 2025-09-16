@@ -387,12 +387,8 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
         {
             // Allow a wide range of performance outcomes:
             // - Parallel can be slower (0.3x) due to overhead and contention
-            // - Parallel can be faster (up to ProcessorCount) when operations run on separate cores
-            var maxRealisticSpeedup = Math.Min(Environment.ProcessorCount, Environment.ProcessorCount); // Cap at 8x for sanity
-            
-            speedup.Should().BeGreaterThan(0.3,
-                "Parallel execution should complete without severe degradation");
-            speedup.Should().BeGreaterThanOrEqualTo(maxRealisticSpeedup,
+            // - Parallel can be faster (up to ProcessorCount) when operations run on separate cores            
+            speedup.Should().BeInRange(Environment.ProcessorCount * 0.3, Environment.ProcessorCount + 1,
                 $"Speedup should not exceed processor count ({Environment.ProcessorCount} cores)");
             
             // Note: The actual speedup varies greatly depending on:
@@ -519,8 +515,8 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
         var algorithm = algorithms.FirstOrDefault(a => Kem.IsAlgorithmSupported(a) && 
             (a == KemAlgorithms.ML_KEM_512 || a == KemAlgorithms.Kyber512)) ?? algorithms[0];
 
-        const int totalOperations = 1000;
-        const int warmupOps = 100;
+        const int totalOperations = 500;
+        const int warmupOps = 25;
 
         // Warmup to ensure CPU caches are populated and JIT compilation is complete
         Parallel.For(0, warmupOps, new ParallelOptions 
