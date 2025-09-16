@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 using FluentAssertions;
 using OpenForge.Cryptography.LibOqs.Core;
 using OpenForge.Cryptography.LibOqs.Tests.Common;
@@ -63,12 +64,17 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
         var algorithms = Kem.GetSupportedAlgorithms();
         algorithms.Should().NotBeEmpty();
 
-        var testAlgorithms = new[]
+        var candidateAlgorithms = new[]
         {
             KemAlgorithms.ML_KEM_512,
             KemAlgorithms.Kyber512,
             KemAlgorithms.BIKE_L1
-        }.Where(Kem.IsAlgorithmSupported).ToArray();
+        };
+
+        // Filter out BIKE algorithms on Windows as they are not supported
+        var testAlgorithms = RuntimeInformation.IsOSPlatform(OSPlatform.Windows)
+            ? candidateAlgorithms.Where(a => !a.Contains("BIKE", StringComparison.OrdinalIgnoreCase)).Where(Kem.IsAlgorithmSupported).ToArray()
+            : candidateAlgorithms.Where(Kem.IsAlgorithmSupported).ToArray();
 
         testAlgorithms.Should().NotBeEmpty("At least one test algorithm should be supported");
 
@@ -154,9 +160,14 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
         {
             ["ML-KEM"] = [KemAlgorithms.ML_KEM_512, KemAlgorithms.ML_KEM_768, KemAlgorithms.ML_KEM_1024],
             ["Kyber"] = [KemAlgorithms.Kyber512, KemAlgorithms.Kyber768, KemAlgorithms.Kyber1024],
-            ["BIKE"] = [KemAlgorithms.BIKE_L1, KemAlgorithms.BIKE_L3, KemAlgorithms.BIKE_L5],
             ["HQC"] = [KemAlgorithms.HQC_128, KemAlgorithms.HQC_192, KemAlgorithms.HQC_256]
         };
+
+        // Add BIKE algorithms only on non-Windows platforms
+        if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+        {
+            algorithmFamilies["BIKE"] = [KemAlgorithms.BIKE_L1, KemAlgorithms.BIKE_L3, KemAlgorithms.BIKE_L5];
+        }
 
         var performanceResults = new List<(string algorithm, double keyGenMs, double encapMs, double decapMs)>();
 

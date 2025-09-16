@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using FluentAssertions;
 using OpenForge.Cryptography.LibOqs.Core;
 using OpenForge.Cryptography.LibOqs.Tests.Common;
@@ -74,7 +75,7 @@ public sealed class AlgorithmSpecificTests(LibOqsTestFixture fixture)
         kem.IsIndCca.Should().BeTrue($"{algorithm} should provide IND-CCA security");
     }
 
-    [Theory]
+    [PlatformSpecificTheory("LINUX", "OSX")]
     [InlineData(KemAlgorithms.BIKE_L1, 1)]
     [InlineData(KemAlgorithms.BIKE_L3, 3)]
     [InlineData(KemAlgorithms.BIKE_L5, 5)]
@@ -123,6 +124,12 @@ public sealed class AlgorithmSpecificTests(LibOqsTestFixture fixture)
     {
         var algorithms = Kem.GetSupportedAlgorithms();
 
+        // Filter out BIKE algorithms on Windows as they are not supported
+        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+        {
+            algorithms = [.. algorithms.Where(a => !a.Contains("BIKE", StringComparison.OrdinalIgnoreCase))];
+        }
+
         foreach (var algorithm in algorithms)
         {
             using var kem = new Kem(algorithm);
@@ -141,6 +148,12 @@ public sealed class AlgorithmSpecificTests(LibOqsTestFixture fixture)
     {
         var algorithms = Kem.GetSupportedAlgorithms();
         algorithms.Should().NotBeEmpty("Should have at least one supported algorithm");
+
+        // Filter out BIKE algorithms on Windows as they are not supported
+        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+        {
+            algorithms = [.. algorithms.Where(a => !a.Contains("BIKE", StringComparison.OrdinalIgnoreCase))];
+        }
 
         foreach (var algorithm in algorithms)
         {

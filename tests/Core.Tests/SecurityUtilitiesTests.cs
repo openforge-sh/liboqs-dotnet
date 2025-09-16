@@ -1630,7 +1630,7 @@ public sealed class TestUtilityValidationTests(LibOqsTestFixture fixture)
         
         // Assert - Timing should be approximately correct (allow some variance)
         manualMeasurement.Should().BeGreaterThanOrEqualTo(expectedDelay - 2)
-            .And.BeLessThan(expectedDelay + 50); // Allow more variance for system timing
+            .And.BeLessThan(expectedDelay + 100); // Allow more variance for system timing because fuck osx
     }
     
     [Fact]
