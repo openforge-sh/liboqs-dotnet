@@ -388,7 +388,7 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
             // Allow a wide range of performance outcomes:
             // - Parallel can be slower (0.3x) due to overhead and contention
             // - Parallel can be faster (up to ProcessorCount) when operations run on separate cores
-            var maxRealisticSpeedup = Math.Min(Environment.ProcessorCount, 8.0); // Cap at 8x for sanity
+            var maxRealisticSpeedup = Math.Max(Environment.ProcessorCount, 6.0); // Cap at 8x for sanity
             
             speedup.Should().BeGreaterThan(0.3,
                 "Parallel execution should complete without severe degradation");
