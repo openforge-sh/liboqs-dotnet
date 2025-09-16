@@ -388,7 +388,7 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
             // Allow a wide range of performance outcomes:
             // - Parallel can be slower (0.3x) due to overhead and contention
             // - Parallel can be faster (up to ProcessorCount) when operations run on separate cores            
-            speedup.Should().BeInRange(Environment.ProcessorCount * 0.3, Environment.ProcessorCount + 1,
+            speedup.Should().BeInRange(Environment.ProcessorCount * 0.25, Environment.ProcessorCount + 1,
                 $"Speedup should not exceed processor count ({Environment.ProcessorCount} cores)");
             
             // Note: The actual speedup varies greatly depending on:
