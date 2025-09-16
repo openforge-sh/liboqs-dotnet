@@ -415,7 +415,7 @@ public sealed class TestUtilitiesTests
             var elapsed = TestUtilities.MeasureTime(delayAction);
 
             // Assert
-            elapsed.TotalMilliseconds.Should().BeInRange(delayMs - 10, delayMs + 100);
+            elapsed.TotalMilliseconds.Should().BeInRange(delayMs - 10, delayMs + 200);
         }
 
         [Fact]

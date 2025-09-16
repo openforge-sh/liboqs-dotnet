@@ -128,8 +128,24 @@ public sealed class AlgorithmSpecificTests(LibOqsTestFixture fixture)
         if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
         {
             algorithms = [.. algorithms.Where(a => !a.Contains("BIKE", StringComparison.OrdinalIgnoreCase))];
+            
+            // On Windows, test algorithms in smaller batches to avoid stack overflow
+            const int batchSize = 5;
+            for (var i = 0; i < algorithms.Length; i += batchSize)
+            {
+                var batch = algorithms.Skip(i).Take(batchSize).ToArray();
+                ValidateAlgorithmPropertiesBatch(batch);
+            }
         }
+        else
+        {
+            // On Unix platforms, test all algorithms at once
+            ValidateAlgorithmPropertiesBatch(algorithms);
+        }
+    }
 
+    private static void ValidateAlgorithmPropertiesBatch(string[] algorithms)
+    {
         foreach (var algorithm in algorithms)
         {
             using var kem = new Kem(algorithm);
@@ -153,8 +169,25 @@ public sealed class AlgorithmSpecificTests(LibOqsTestFixture fixture)
         if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
         {
             algorithms = [.. algorithms.Where(a => !a.Contains("BIKE", StringComparison.OrdinalIgnoreCase))];
+            
+            // On Windows, test algorithms in smaller batches to avoid stack overflow
+            // due to Windows' smaller default stack size
+            const int batchSize = 5;
+            for (var i = 0; i < algorithms.Length; i += batchSize)
+            {
+                var batch = algorithms.Skip(i).Take(batchSize).ToArray();
+                TestAlgorithmBatch(batch);
+            }
         }
+        else
+        {
+            // On Unix platforms, test all algorithms at once
+            TestAlgorithmBatch(algorithms);
+        }
+    }
 
+    private static void TestAlgorithmBatch(string[] algorithms)
+    {
         foreach (var algorithm in algorithms)
         {
             using var kem = new Kem(algorithm);
