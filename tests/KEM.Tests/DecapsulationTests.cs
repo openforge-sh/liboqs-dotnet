@@ -106,24 +106,30 @@ public sealed class DecapsulationTests(LibOqsTestFixture fixture)
     [Fact]
     public void Decapsulate_WithCorruptedCiphertext_ShouldProduceDifferentSecret()
     {
-        var algorithms = Kem.GetSupportedAlgorithms();
-        algorithms.Should().NotBeEmpty();
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
+        {
+            var algorithms = Kem.GetSupportedAlgorithms();
+            algorithms.Should().NotBeEmpty();
 
-        var algorithm = algorithms[0];
-        using var kem = new Kem(algorithm);
+            var algorithm = algorithms[0];
+            TestExecutionHelpers.ConditionallyExecuteWithLargeStack(algorithm, () =>
+            {
+                using var kem = new Kem(algorithm);
 
-        var (publicKey, secretKey) = kem.GenerateKeyPair();
-        var (ciphertext, originalSecret) = kem.Encapsulate(publicKey);
+                var (publicKey, secretKey) = kem.GenerateKeyPair();
+                var (ciphertext, originalSecret) = kem.Encapsulate(publicKey);
 
-        var corruptedCiphertext = ciphertext.ToArray();
-        corruptedCiphertext[0] ^= 0x01; // Flip one bit
+                var corruptedCiphertext = ciphertext.ToArray();
+                corruptedCiphertext[0] ^= 0x01; // Flip one bit
 
-        var corruptedSecret = kem.Decapsulate(corruptedCiphertext, secretKey);
+                var corruptedSecret = kem.Decapsulate(corruptedCiphertext, secretKey);
 
-        // The corrupted ciphertext should produce a different shared secret
-        corruptedSecret.Should().NotBeEquivalentTo(originalSecret,
-            "Corrupted ciphertext should not produce the same shared secret");
-        corruptedSecret.Length.Should().Be(kem.SharedSecretLength);
+                // The corrupted ciphertext should produce a different shared secret
+                corruptedSecret.Should().NotBeEquivalentTo(originalSecret,
+                    "Corrupted ciphertext should not produce the same shared secret");
+                corruptedSecret.Length.Should().Be(kem.SharedSecretLength);
+            });
+        });
     }
 
     [Fact]
@@ -205,21 +211,27 @@ public sealed class DecapsulationTests(LibOqsTestFixture fixture)
     [Fact]
     public void Decapsulate_AllSupportedAlgorithms_ShouldWork()
     {
-        var algorithms = Kem.GetSupportedAlgorithms();
-
-        foreach (var algorithm in algorithms)
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
         {
-            using var kem = new Kem(algorithm);
-            var (publicKey, secretKey) = kem.GenerateKeyPair();
-            var (ciphertext, originalSecret) = kem.Encapsulate(publicKey);
+            var algorithms = Kem.GetSupportedAlgorithms();
 
-            var action = () => kem.Decapsulate(ciphertext, secretKey);
-            action.Should().NotThrow($"Decapsulation should work for {algorithm}");
+            foreach (var algorithm in algorithms)
+            {
+                TestExecutionHelpers.ConditionallyExecuteWithLargeStack(algorithm, () =>
+                {
+                    using var kem = new Kem(algorithm);
+                    var (publicKey, secretKey) = kem.GenerateKeyPair();
+                    var (ciphertext, originalSecret) = kem.Encapsulate(publicKey);
 
-            var recoveredSecret = kem.Decapsulate(ciphertext, secretKey);
-            recoveredSecret.Should().BeEquivalentTo(originalSecret,
-                $"{algorithm} should recover the correct shared secret");
-        }
+                    var action = () => kem.Decapsulate(ciphertext, secretKey);
+                    action.Should().NotThrow($"Decapsulation should work for {algorithm}");
+
+                    var recoveredSecret = kem.Decapsulate(ciphertext, secretKey);
+                    recoveredSecret.Should().BeEquivalentTo(originalSecret,
+                        $"{algorithm} should recover the correct shared secret");
+                });
+            }
+        });
     }
 
     [Fact]
@@ -253,34 +265,40 @@ public sealed class DecapsulationTests(LibOqsTestFixture fixture)
     [Fact]
     public void Decapsulate_RandomCorruption_ShouldNotCrash()
     {
-        var algorithms = Kem.GetSupportedAlgorithms();
-        algorithms.Should().NotBeEmpty();
-
-        var algorithm = algorithms[0];
-        using var kem = new Kem(algorithm);
-
-        var (publicKey, secretKey) = kem.GenerateKeyPair();
-        var (originalCiphertext, _) = kem.Encapsulate(publicKey);
-
-        // Use deterministic corruption for reproducibility
-        for (int attempt = 0; attempt < 10; attempt++)
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
         {
-            var corruptedCiphertext = originalCiphertext.ToArray();
+            var algorithms = Kem.GetSupportedAlgorithms();
+            algorithms.Should().NotBeEmpty();
 
-            // Deterministically corrupt some bytes based on attempt number
-            for (int i = 0; i < Math.Min(5, corruptedCiphertext.Length); i++)
+            var algorithm = algorithms[0];
+            TestExecutionHelpers.ConditionallyExecuteWithLargeStack(algorithm, () =>
             {
-                int position = (attempt * 7 + i * 3) % corruptedCiphertext.Length;
-                corruptedCiphertext[position] = (byte)((attempt * 17 + i * 13) % 256);
-            }
+                using var kem = new Kem(algorithm);
 
-            var action = () => kem.Decapsulate(corruptedCiphertext, secretKey);
-            action.Should().NotThrow($"Decapsulation should not crash with corrupted ciphertext (attempt {attempt})");
+                var (publicKey, secretKey) = kem.GenerateKeyPair();
+                var (originalCiphertext, _) = kem.Encapsulate(publicKey);
 
-            var result = kem.Decapsulate(corruptedCiphertext, secretKey);
-            result.Should().NotBeNull();
-            result.Length.Should().Be(kem.SharedSecretLength);
-        }
+                // Use deterministic corruption for reproducibility
+                for (int attempt = 0; attempt < 10; attempt++)
+                {
+                    var corruptedCiphertext = originalCiphertext.ToArray();
+
+                    // Deterministically corrupt some bytes based on attempt number
+                    for (int i = 0; i < Math.Min(5, corruptedCiphertext.Length); i++)
+                    {
+                        int position = (attempt * 7 + i * 3) % corruptedCiphertext.Length;
+                        corruptedCiphertext[position] = (byte)((attempt * 17 + i * 13) % 256);
+                    }
+
+                    var action = () => kem.Decapsulate(corruptedCiphertext, secretKey);
+                    action.Should().NotThrow($"Decapsulation should not crash with corrupted ciphertext (attempt {attempt})");
+
+                    var result = kem.Decapsulate(corruptedCiphertext, secretKey);
+                    result.Should().NotBeNull();
+                    result.Length.Should().Be(kem.SharedSecretLength);
+                }
+            });
+        });
     }
 
     [Fact]

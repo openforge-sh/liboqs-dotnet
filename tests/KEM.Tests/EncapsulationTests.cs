@@ -211,48 +211,60 @@ public sealed class EncapsulationTests(LibOqsTestFixture fixture)
     [Fact]
     public void Encapsulate_AllSupportedAlgorithms_ShouldWork()
     {
-        var algorithms = Kem.GetSupportedAlgorithms();
-
-        foreach (var algorithm in algorithms)
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
         {
-            using var kem = new Kem(algorithm);
-            var (publicKey, _) = kem.GenerateKeyPair();
+            var algorithms = Kem.GetSupportedAlgorithms();
 
-            var action = () => kem.Encapsulate(publicKey);
-            action.Should().NotThrow($"Encapsulation should work for {algorithm}");
+            foreach (var algorithm in algorithms)
+            {
+                TestExecutionHelpers.ConditionallyExecuteWithLargeStack(algorithm, () =>
+                {
+                    using var kem = new Kem(algorithm);
+                    var (publicKey, _) = kem.GenerateKeyPair();
 
-            var (ciphertext, sharedSecret) = kem.Encapsulate(publicKey);
-            ciphertext.Length.Should().Be(kem.CiphertextLength,
-                $"{algorithm} ciphertext should have correct length");
-            sharedSecret.Length.Should().Be(kem.SharedSecretLength,
-                $"{algorithm} shared secret should have correct length");
-        }
+                    var action = () => kem.Encapsulate(publicKey);
+                    action.Should().NotThrow($"Encapsulation should work for {algorithm}");
+
+                    var (ciphertext, sharedSecret) = kem.Encapsulate(publicKey);
+                    ciphertext.Length.Should().Be(kem.CiphertextLength,
+                        $"{algorithm} ciphertext should have correct length");
+                    sharedSecret.Length.Should().Be(kem.SharedSecretLength,
+                        $"{algorithm} shared secret should have correct length");
+                });
+            }
+        });
     }
 
     [Fact]
     public void Encapsulate_WithCorruptedPublicKey_ShouldStillProduce()
     {
-        var algorithms = Kem.GetSupportedAlgorithms();
-        algorithms.Should().NotBeEmpty();
-
-        var algorithm = algorithms[0];
-        using var kem = new Kem(algorithm);
-
-        var (publicKey, _) = kem.GenerateKeyPair();
-
-        var corruptedPublicKey = publicKey.ToArray();
-        for (int i = 0; i < Math.Min(10, corruptedPublicKey.Length); i++)
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
         {
-            corruptedPublicKey[i] ^= 0xFF;
-        }
+            var algorithms = Kem.GetSupportedAlgorithms();
+            algorithms.Should().NotBeEmpty();
 
-        // Encapsulation should still work (but decapsulation would fail)
-        var action = () => kem.Encapsulate(corruptedPublicKey);
-        action.Should().NotThrow("Encapsulation should work even with corrupted public key");
+            var algorithm = algorithms[0];
+            TestExecutionHelpers.ConditionallyExecuteWithLargeStack(algorithm, () =>
+            {
+                using var kem = new Kem(algorithm);
 
-        var (ciphertext, sharedSecret) = kem.Encapsulate(corruptedPublicKey);
-        ciphertext.Should().NotBeNull();
-        sharedSecret.Should().NotBeNull();
+                var (publicKey, _) = kem.GenerateKeyPair();
+
+                var corruptedPublicKey = publicKey.ToArray();
+                for (int i = 0; i < Math.Min(10, corruptedPublicKey.Length); i++)
+                {
+                    corruptedPublicKey[i] ^= 0xFF;
+                }
+
+                // Encapsulation should still work (but decapsulation would fail)
+                var action = () => kem.Encapsulate(corruptedPublicKey);
+                action.Should().NotThrow("Encapsulation should work even with corrupted public key");
+
+                var (ciphertext, sharedSecret) = kem.Encapsulate(corruptedPublicKey);
+                ciphertext.Should().NotBeNull();
+                sharedSecret.Should().NotBeNull();
+            });
+        });
     }
 
     [Fact]

@@ -239,10 +239,14 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
     [Fact]
     public void MemoryAllocation_Performance()
     {
-        var algorithms = Kem.GetSupportedAlgorithms();
-        algorithms.Should().NotBeEmpty();
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
+        {
+            var algorithms = Kem.GetSupportedAlgorithms();
+            algorithms.Should().NotBeEmpty();
 
-        var algorithm = algorithms[0];
+            var algorithm = algorithms[0];
+            TestExecutionHelpers.ConditionallyExecuteWithLargeStack(algorithm, () =>
+            {
 
         // Measure memory before operations
         #pragma warning disable S1215
@@ -275,9 +279,11 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
         var memoryUsed = memoryAfter - memoryBefore;
         var memoryPerOperation = memoryUsed / iterations;
 
-        // Memory usage should be reasonable (less than 1MB per operation on average)
-        memoryPerOperation.Should().BeLessThan(1024 * 1024,
-            "Average memory usage per KEM operation should be reasonable");
+                // Memory usage should be reasonable (less than 1MB per operation on average)
+                memoryPerOperation.Should().BeLessThan(1024 * 1024,
+                    "Average memory usage per KEM operation should be reasonable");
+            });
+        });
     }
 
     [Fact]
@@ -324,10 +330,12 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
     [Fact]
     public void ParallelPerformance_Test()
     {
-        var algorithms = Kem.GetSupportedAlgorithms();
-        algorithms.Should().NotBeEmpty();
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
+        {
+            var algorithms = Kem.GetSupportedAlgorithms();
+            algorithms.Should().NotBeEmpty();
 
-        var algorithm = algorithms[0];
+            var algorithm = algorithms[0];
 
         // Sequential performance
         var sequentialStopwatch = Stopwatch.StartNew();
@@ -391,7 +399,8 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
             // - CPU architecture (cache sizes, NUMA topology)
             // - System load and scheduling
             // - Algorithm complexity and memory access patterns
-        }
+            }
+        });
     }
 
     [Theory]
@@ -400,13 +409,17 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
     [InlineData(1000)]
     public void ScalabilityTest_DifferentLoadLevels(int operationCount)
     {
-        var algorithms = Kem.GetSupportedAlgorithms();
-        algorithms.Should().NotBeEmpty();
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
+        {
+            var algorithms = Kem.GetSupportedAlgorithms();
+            algorithms.Should().NotBeEmpty();
 
-        var algorithm = algorithms[0];
-        using var kem = new Kem(algorithm);
+            var algorithm = algorithms[0];
+            TestExecutionHelpers.ConditionallyExecuteWithLargeStack(algorithm, () =>
+            {
+                using var kem = new Kem(algorithm);
 
-        var (publicKey, secretKey) = kem.GenerateKeyPair();
+                var (publicKey, secretKey) = kem.GenerateKeyPair();
 
         var stopwatch = Stopwatch.StartNew();
         var successCount = 0;
@@ -429,8 +442,10 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
         // All operations should succeed
         successCount.Should().Be(operationCount, "All operations should complete successfully");
 
-        // Average time should remain relatively stable across load levels
-        averageMs.Should().BeLessThan(50, "Average operation time should remain reasonable under load");
+                // Average time should remain relatively stable across load levels
+                averageMs.Should().BeLessThan(50, "Average operation time should remain reasonable under load");
+            });
+        });
     }
 
     [Fact]
@@ -514,10 +529,13 @@ public sealed class PerformanceTests(LibOqsTestFixture fixture)
             CancellationToken = TestContext.Current.CancellationToken
         }, i =>
         {
-            using var kem = new Kem(algorithm);
-            var (pk, sk) = kem.GenerateKeyPair();
-            var (ct, _) = kem.Encapsulate(pk);
-            _ = kem.Decapsulate(ct, sk);
+            TestExecutionHelpers.ConditionallyExecuteWithLargeStack(algorithm, () =>
+            {
+                using var kem = new Kem(algorithm);
+                var (pk, sk) = kem.GenerateKeyPair();
+                var (ct, _) = kem.Encapsulate(pk);
+                _ = kem.Decapsulate(ct, sk);
+            });
         });
 
         var sw = Stopwatch.StartNew();
