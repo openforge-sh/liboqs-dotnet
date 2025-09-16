@@ -7,5 +7,6 @@
   "methodDisplay": "classAndMethod",
   "methodDisplayOptions": "all",
   "preEnumerateTheories": true,
-  "printMaxEnumerableLength": 0
+  "printMaxEnumerableLength": 0,
+  "stopOnFail": true
 }

@@ -57,52 +57,64 @@ public sealed class KeyPairTests(LibOqsTestFixture fixture)
     [Fact]
     public void GenerateKeyPair_ShouldNotProduceAllZeroKeys()
     {
-        var algorithms = Kem.GetSupportedAlgorithms();
-        algorithms.Should().NotBeEmpty();
-
-        foreach (var algorithm in algorithms.Take(5)) // Test first 5 for performance
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
         {
-            using var kem = new Kem(algorithm);
-            var (publicKey, secretKey) = kem.GenerateKeyPair();
+            var algorithms = Kem.GetSupportedAlgorithms();
+            algorithms.Should().NotBeEmpty();
 
-            // Keys should not be all zeros
-            publicKey.Should().NotBeEquivalentTo(new byte[publicKey.Length],
-                $"{algorithm} public key should not be all zeros");
-            secretKey.Should().NotBeEquivalentTo(new byte[secretKey.Length],
-                $"{algorithm} secret key should not be all zeros");
-        }
+            foreach (var algorithm in algorithms.Take(5)) // Test first 5 for performance
+            {
+                TestExecutionHelpers.ConditionallyExecuteWithLargeStack(algorithm, () =>
+                {
+                    using var kem = new Kem(algorithm);
+                    var (publicKey, secretKey) = kem.GenerateKeyPair();
+
+                    // Keys should not be all zeros
+                    publicKey.Should().NotBeEquivalentTo(new byte[publicKey.Length],
+                        $"{algorithm} public key should not be all zeros");
+                    secretKey.Should().NotBeEquivalentTo(new byte[secretKey.Length],
+                        $"{algorithm} secret key should not be all zeros");
+                });
+            }
+        });
     }
 
     [Fact]
     public void GenerateKeyPair_ForAllAlgorithms_ShouldProduceValidKeySizes()
     {
-        var algorithms = Kem.GetSupportedAlgorithms();
-        algorithms.Should().NotBeEmpty();
-
-        var sampleAlgorithms = algorithms.Take(10); // Sample to avoid long test runtime
-
-        foreach (var algorithm in sampleAlgorithms)
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
         {
-            using var kem = new Kem(algorithm);
-            var (publicKey, secretKey) = kem.GenerateKeyPair();
+            var algorithms = Kem.GetSupportedAlgorithms();
+            algorithms.Should().NotBeEmpty();
 
-            publicKey.Length.Should().Be(kem.PublicKeyLength,
-                $"{algorithm} public key should match expected length");
-            secretKey.Length.Should().Be(kem.SecretKeyLength,
-                $"{algorithm} secret key should match expected length");
+            var sampleAlgorithms = algorithms.Take(10); // Sample to avoid long test runtime
 
-            // Verify keys have reasonable sizes
-            publicKey.Length.Should().BeGreaterThan(0,
-                $"{algorithm} public key should have positive length");
-            secretKey.Length.Should().BeGreaterThan(0,
-                $"{algorithm} secret key should have positive length");
+            foreach (var algorithm in sampleAlgorithms)
+            {
+                TestExecutionHelpers.ConditionallyExecuteWithLargeStack(algorithm, () =>
+                {
+                    using var kem = new Kem(algorithm);
+                    var (publicKey, secretKey) = kem.GenerateKeyPair();
 
-            // Most quantum-resistant algorithms have larger keys
-            publicKey.Length.Should().BeGreaterThanOrEqualTo(32,
-                $"{algorithm} public key should be at least 32 bytes");
-            secretKey.Length.Should().BeGreaterThanOrEqualTo(32,
-                $"{algorithm} secret key should be at least 32 bytes");
-        }
+                    publicKey.Length.Should().Be(kem.PublicKeyLength,
+                        $"{algorithm} public key should match expected length");
+                    secretKey.Length.Should().Be(kem.SecretKeyLength,
+                        $"{algorithm} secret key should match expected length");
+
+                    // Verify keys have reasonable sizes
+                    publicKey.Length.Should().BeGreaterThan(0,
+                        $"{algorithm} public key should have positive length");
+                    secretKey.Length.Should().BeGreaterThan(0,
+                        $"{algorithm} secret key should have positive length");
+
+                    // Most quantum-resistant algorithms have larger keys
+                    publicKey.Length.Should().BeGreaterThanOrEqualTo(32,
+                        $"{algorithm} public key should be at least 32 bytes");
+                    secretKey.Length.Should().BeGreaterThanOrEqualTo(32,
+                        $"{algorithm} secret key should be at least 32 bytes");
+                });
+            }
+        });
     }
 
     [Fact]
@@ -112,18 +124,21 @@ public sealed class KeyPairTests(LibOqsTestFixture fixture)
         algorithms.Should().NotBeEmpty();
 
         var algorithm = algorithms[0];
-        using var kem = new Kem(algorithm);
-
-        const int iterations = 5;
-        for (int i = 0; i < iterations; i++)
+        TestExecutionHelpers.ConditionallyExecuteWithLargeStack(algorithm, () =>
         {
-            var (publicKey, secretKey) = kem.GenerateKeyPair();
+            using var kem = new Kem(algorithm);
 
-            publicKey.Length.Should().Be(kem.PublicKeyLength,
-                $"Iteration {i}: public key length should match property");
-            secretKey.Length.Should().Be(kem.SecretKeyLength,
-                $"Iteration {i}: secret key length should match property");
-        }
+            const int iterations = 5;
+            for (int i = 0; i < iterations; i++)
+            {
+                var (publicKey, secretKey) = kem.GenerateKeyPair();
+
+                publicKey.Length.Should().Be(kem.PublicKeyLength,
+                    $"Iteration {i}: public key length should match property");
+                secretKey.Length.Should().Be(kem.SecretKeyLength,
+                    $"Iteration {i}: secret key length should match property");
+            }
+        });
     }
 
     [Fact]
@@ -133,40 +148,49 @@ public sealed class KeyPairTests(LibOqsTestFixture fixture)
         algorithms.Should().NotBeEmpty();
 
         var algorithm = algorithms[0];
-        var kem = new Kem(algorithm);
+        TestExecutionHelpers.ConditionallyExecuteWithLargeStack(algorithm, () =>
+        {
+            var kem = new Kem(algorithm);
 
-        // Generate a key pair successfully first
-        var (publicKey, secretKey) = kem.GenerateKeyPair();
-        publicKey.Should().NotBeNull();
-        secretKey.Should().NotBeNull();
+            // Generate a key pair successfully first
+            var (publicKey, secretKey) = kem.GenerateKeyPair();
+            publicKey.Should().NotBeNull();
+            secretKey.Should().NotBeNull();
 
-        // Dispose the instance
-        kem.Dispose();
+            // Dispose the instance
+            kem.Dispose();
 
-        // Attempt to generate key pair with disposed instance
-        var action = () => kem.GenerateKeyPair();
-        action.Should().Throw<ObjectDisposedException>();
+            // Attempt to generate key pair with disposed instance
+            var action = () => kem.GenerateKeyPair();
+            action.Should().Throw<ObjectDisposedException>();
+        });
     }
 
     [Fact]
     public void KeyPair_ShouldWorkWithEncapsulationDecapsulation()
     {
-        var algorithms = Kem.GetSupportedAlgorithms();
-        algorithms.Should().NotBeEmpty();
-
-        foreach (var algorithm in algorithms.Take(5)) // Test first 5 for performance
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
         {
-            using var kem = new Kem(algorithm);
+            var algorithms = Kem.GetSupportedAlgorithms();
+            algorithms.Should().NotBeEmpty();
 
-            var (publicKey, secretKey) = kem.GenerateKeyPair();
+            foreach (var algorithm in algorithms.Take(5)) // Test first 5 for performance
+            {
+                TestExecutionHelpers.ConditionallyExecuteWithLargeStack(algorithm, () =>
+                {
+                    using var kem = new Kem(algorithm);
 
-            // Use the keys for encapsulation/decapsulation
-            var (ciphertext, sharedSecret) = kem.Encapsulate(publicKey);
-            var recoveredSecret = kem.Decapsulate(ciphertext, secretKey);
+                    var (publicKey, secretKey) = kem.GenerateKeyPair();
 
-            recoveredSecret.Should().BeEquivalentTo(sharedSecret,
-                $"{algorithm} should correctly recover shared secret");
-        }
+                    // Use the keys for encapsulation/decapsulation
+                    var (ciphertext, sharedSecret) = kem.Encapsulate(publicKey);
+                    var recoveredSecret = kem.Decapsulate(ciphertext, secretKey);
+
+                    recoveredSecret.Should().BeEquivalentTo(sharedSecret,
+                        $"{algorithm} should correctly recover shared secret");
+                });
+            }
+        });
     }
 
     [Fact]
@@ -176,21 +200,23 @@ public sealed class KeyPairTests(LibOqsTestFixture fixture)
         algorithms.Should().NotBeEmpty();
 
         var algorithm = algorithms[0];
-
-        byte[] publicKey;
-        byte[] secretKey;
-        using (var kem1 = new Kem(algorithm))
+        TestExecutionHelpers.ConditionallyExecuteWithLargeStack(algorithm, () =>
         {
-            (publicKey, secretKey) = kem1.GenerateKeyPair();
-        }
+            byte[] publicKey;
+            byte[] secretKey;
+            using (var kem1 = new Kem(algorithm))
+            {
+                (publicKey, secretKey) = kem1.GenerateKeyPair();
+            }
 
-        using var kem2 = new Kem(algorithm);
-        var (ciphertext, sharedSecret) = kem2.Encapsulate(publicKey);
+            using var kem2 = new Kem(algorithm);
+            var (ciphertext, sharedSecret) = kem2.Encapsulate(publicKey);
 
-        using var kem3 = new Kem(algorithm);
-        var recoveredSecret = kem3.Decapsulate(ciphertext, secretKey);
-        recoveredSecret.Should().BeEquivalentTo(sharedSecret,
-            "Keys should work across different instances of same algorithm");
+            using var kem3 = new Kem(algorithm);
+            var recoveredSecret = kem3.Decapsulate(ciphertext, secretKey);
+            recoveredSecret.Should().BeEquivalentTo(sharedSecret,
+                "Keys should work across different instances of same algorithm");
+        });
     }
 
     [Fact]
@@ -200,24 +226,27 @@ public sealed class KeyPairTests(LibOqsTestFixture fixture)
         algorithms.Should().NotBeEmpty();
 
         var algorithm = algorithms[0];
-        using var kem = new Kem(algorithm);
+        TestExecutionHelpers.ConditionallyExecuteWithLargeStack(algorithm, () =>
+        {
+            using var kem = new Kem(algorithm);
 
-        var invalidPublicKey = new byte[kem.PublicKeyLength / 2]; // Too short
-        var invalidSecretKey = new byte[kem.SecretKeyLength * 2]; // Too long
-        RandomNumberGenerator.Fill(invalidPublicKey);
-        RandomNumberGenerator.Fill(invalidSecretKey);
+            var invalidPublicKey = new byte[kem.PublicKeyLength / 2]; // Too short
+            var invalidSecretKey = new byte[kem.SecretKeyLength * 2]; // Too long
+            RandomNumberGenerator.Fill(invalidPublicKey);
+            RandomNumberGenerator.Fill(invalidSecretKey);
 
-        // Encapsulation with invalid public key should fail
-        var encapsulateAction = () => kem.Encapsulate(invalidPublicKey);
-        encapsulateAction.Should().Throw<ArgumentException>();
+            // Encapsulation with invalid public key should fail
+            var encapsulateAction = () => kem.Encapsulate(invalidPublicKey);
+            encapsulateAction.Should().Throw<ArgumentException>();
 
-        // Generate valid ciphertext for decapsulation test
-        var (validPublicKey, _) = kem.GenerateKeyPair();
-        var (ciphertext, _) = kem.Encapsulate(validPublicKey);
+            // Generate valid ciphertext for decapsulation test
+            var (validPublicKey, _) = kem.GenerateKeyPair();
+            var (ciphertext, _) = kem.Encapsulate(validPublicKey);
 
-        // Decapsulation with invalid secret key should fail
-        var decapsulateAction = () => kem.Decapsulate(ciphertext, invalidSecretKey);
-        decapsulateAction.Should().Throw<ArgumentException>();
+            // Decapsulation with invalid secret key should fail
+            var decapsulateAction = () => kem.Decapsulate(ciphertext, invalidSecretKey);
+            decapsulateAction.Should().Throw<ArgumentException>();
+        });
     }
 
     [Fact]
@@ -227,39 +256,42 @@ public sealed class KeyPairTests(LibOqsTestFixture fixture)
         algorithms.Should().NotBeEmpty();
 
         var algorithm = algorithms[0];
-        using var kem = new Kem(algorithm);
-
-        const int keyPairCount = 10;
-        var publicKeys = new List<byte[]>();
-        var secretKeys = new List<byte[]>();
-
-        for (int i = 0; i < keyPairCount; i++)
+        TestExecutionHelpers.ConditionallyExecuteWithLargeStack(algorithm, () =>
         {
-            var (publicKey, secretKey) = kem.GenerateKeyPair();
-            publicKeys.Add(publicKey);
-            secretKeys.Add(secretKey);
-        }
+            using var kem = new Kem(algorithm);
 
-        // Calculate simple entropy check - count unique bytes in first 100 bytes
-        foreach (var publicKey in publicKeys)
-        {
-            var sampleSize = Math.Min(100, publicKey.Length);
-            var uniqueBytes = publicKey.Take(sampleSize).Distinct().Count();
+            const int keyPairCount = 10;
+            var publicKeys = new List<byte[]>();
+            var secretKeys = new List<byte[]>();
 
-            // Should have high byte diversity (at least 30% unique bytes in sample)
-            uniqueBytes.Should().BeGreaterThan(sampleSize * 30 / 100,
-                "Public key should have high entropy");
-        }
+            for (int i = 0; i < keyPairCount; i++)
+            {
+                var (publicKey, secretKey) = kem.GenerateKeyPair();
+                publicKeys.Add(publicKey);
+                secretKeys.Add(secretKey);
+            }
 
-        foreach (var secretKey in secretKeys)
-        {
-            var sampleSize = Math.Min(100, secretKey.Length);
-            var uniqueBytes = secretKey.Take(sampleSize).Distinct().Count();
+            // Calculate simple entropy check - count unique bytes in first 100 bytes
+            foreach (var publicKey in publicKeys)
+            {
+                var sampleSize = Math.Min(100, publicKey.Length);
+                var uniqueBytes = publicKey.Take(sampleSize).Distinct().Count();
 
-            // Should have high byte diversity (at least 30% unique bytes in sample)
-            uniqueBytes.Should().BeGreaterThan(sampleSize * 30 / 100,
-                "Secret key should have high entropy");
-        }
+                // Should have high byte diversity (at least 30% unique bytes in sample)
+                uniqueBytes.Should().BeGreaterThan(sampleSize * 30 / 100,
+                    "Public key should have high entropy");
+            }
+
+            foreach (var secretKey in secretKeys)
+            {
+                var sampleSize = Math.Min(100, secretKey.Length);
+                var uniqueBytes = secretKey.Take(sampleSize).Distinct().Count();
+
+                // Should have high byte diversity (at least 30% unique bytes in sample)
+                uniqueBytes.Should().BeGreaterThan(sampleSize * 30 / 100,
+                    "Secret key should have high entropy");
+            }
+        });
     }
 
     [Theory]
@@ -297,41 +329,48 @@ public sealed class KeyPairTests(LibOqsTestFixture fixture)
         algorithms.Should().NotBeEmpty();
 
         var algorithm = algorithms[0];
-        using var kem = new Kem(algorithm);
-
-        const int taskCount = 5;
-        const int operationsPerTask = 10;
-        var tasks = new List<Task<List<(byte[] publicKey, byte[] secretKey)>>>();
-
-        for (int t = 0; t < taskCount; t++)
+        
+        await Task.Run(() =>
         {
-            tasks.Add(Task.Run(() =>
+            TestExecutionHelpers.ConditionallyExecuteWithLargeStack(algorithm, () =>
             {
-                var results = new List<(byte[] publicKey, byte[] secretKey)>();
-                for (int i = 0; i < operationsPerTask; i++)
+                using var kem = new Kem(algorithm);
+
+                const int taskCount = 5;
+                const int operationsPerTask = 10;
+                var tasks = new List<Task<List<(byte[] publicKey, byte[] secretKey)>>>();
+
+                for (int t = 0; t < taskCount; t++)
                 {
-                    var keyPair = kem.GenerateKeyPair();
-                    results.Add(keyPair);
+                    tasks.Add(Task.Run(() =>
+                    {
+                        var results = new List<(byte[] publicKey, byte[] secretKey)>();
+                        for (int i = 0; i < operationsPerTask; i++)
+                        {
+                            var keyPair = kem.GenerateKeyPair();
+                            results.Add(keyPair);
+                        }
+                        return results;
+                    }, TestContext.Current.CancellationToken));
                 }
-                return results;
-            }, TestContext.Current.CancellationToken));
-        }
 
-        var allResults = await Task.WhenAll(tasks);
+                var allResults = Task.WhenAll(tasks).GetAwaiter().GetResult();
 
-        var allKeyPairs = allResults.SelectMany(r => r).ToList();
-        allKeyPairs.Should().HaveCount(taskCount * operationsPerTask);
+                var allKeyPairs = allResults.SelectMany(r => r).ToList();
+                allKeyPairs.Should().HaveCount(taskCount * operationsPerTask);
 
-        foreach (var (publicKey, secretKey) in allKeyPairs)
-        {
-            publicKey.Should().NotBeNull();
-            secretKey.Should().NotBeNull();
-            publicKey.Length.Should().Be(kem.PublicKeyLength);
-            secretKey.Length.Should().Be(kem.SecretKeyLength);
-        }
+                foreach (var (publicKey, secretKey) in allKeyPairs)
+                {
+                    publicKey.Should().NotBeNull();
+                    secretKey.Should().NotBeNull();
+                    publicKey.Length.Should().Be(kem.PublicKeyLength);
+                    secretKey.Length.Should().Be(kem.SecretKeyLength);
+                }
 
-        var allPublicKeys = allKeyPairs.Select(kp => kp.publicKey).ToList();
-        allPublicKeys.Should().OnlyHaveUniqueItems();
+                var allPublicKeys = allKeyPairs.Select(kp => kp.publicKey).ToList();
+                allPublicKeys.Should().OnlyHaveUniqueItems();
+            });
+        }, TestContext.Current.CancellationToken);
     }
 
 #pragma warning restore S1144
