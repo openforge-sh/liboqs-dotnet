@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class StatefulSignatureAlgorithms </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class StatefulSignatureAlgorithms ">
+      
+      <meta name="description" content="Stateful signature algorithm identifiers. These algorithms maintain state in the secret key and can only sign a limited number of times.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/openforge-sh/liboqs-dotnet/new/main/apiSpec/new?filename=OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms.md&amp;value=---%0Auid%3A%20OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms">
+
+
+
+  <h1 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms" class="text-break">
+Class StatefulSignatureAlgorithms  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L254"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OpenForge.html">OpenForge</a>.<a class="xref" href="OpenForge.Cryptography.html">Cryptography</a>.<a class="xref" href="OpenForge.Cryptography.LibOqs.html">LibOqs</a>.<a class="xref" href="OpenForge.Cryptography.LibOqs.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OpenForge.Cryptography.LibOqs.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Stateful signature algorithm identifiers.
+These algorithms maintain state in the secret key and can only sign a limited number of times.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class StatefulSignatureAlgorithms</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">StatefulSignatureAlgorithms</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_All" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.All">
+  All
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L290"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all stateful signature algorithm identifiers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly string[] All</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_LMS_SHA256_M32_H10" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.LMS_SHA256_M32_H10">
+  LMS_SHA256_M32_H10
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L257"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string LMS_SHA256_M32_H10 = &quot;LMS_SHA256_M32_H10&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_LMS_SHA256_M32_H15" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.LMS_SHA256_M32_H15">
+  LMS_SHA256_M32_H15
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string LMS_SHA256_M32_H15 = &quot;LMS_SHA256_M32_H15&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_LMS_SHA256_M32_H20" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.LMS_SHA256_M32_H20">
+  LMS_SHA256_M32_H20
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L259"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string LMS_SHA256_M32_H20 = &quot;LMS_SHA256_M32_H20&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_LMS_SHA256_M32_H25" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.LMS_SHA256_M32_H25">
+  LMS_SHA256_M32_H25
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L260"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string LMS_SHA256_M32_H25 = &quot;LMS_SHA256_M32_H25&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_LMS_SHA256_M32_H5" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.LMS_SHA256_M32_H5">
+  LMS_SHA256_M32_H5
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L256"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string LMS_SHA256_M32_H5 = &quot;LMS_SHA256_M32_H5&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_XMSSMT_SHA2_20_2_256" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.XMSSMT_SHA2_20_2_256">
+  XMSSMT_SHA2_20_2_256
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XMSSMT_SHA2_20_2_256 = &quot;XMSSMT-SHA2_20/2_256&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_XMSSMT_SHA2_20_4_256" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.XMSSMT_SHA2_20_4_256">
+  XMSSMT_SHA2_20_4_256
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L270"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XMSSMT_SHA2_20_4_256 = &quot;XMSSMT-SHA2_20/4_256&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_XMSSMT_SHA2_40_2_256" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.XMSSMT_SHA2_40_2_256">
+  XMSSMT_SHA2_40_2_256
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XMSSMT_SHA2_40_2_256 = &quot;XMSSMT-SHA2_40/2_256&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_XMSSMT_SHA2_40_4_256" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.XMSSMT_SHA2_40_4_256">
+  XMSSMT_SHA2_40_4_256
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XMSSMT_SHA2_40_4_256 = &quot;XMSSMT-SHA2_40/4_256&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_XMSSMT_SHA2_40_8_256" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.XMSSMT_SHA2_40_8_256">
+  XMSSMT_SHA2_40_8_256
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XMSSMT_SHA2_40_8_256 = &quot;XMSSMT-SHA2_40/8_256&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_XMSSMT_SHA2_60_12_256" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.XMSSMT_SHA2_60_12_256">
+  XMSSMT_SHA2_60_12_256
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L276"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XMSSMT_SHA2_60_12_256 = &quot;XMSSMT-SHA2_60/12_256&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_XMSSMT_SHA2_60_3_256" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.XMSSMT_SHA2_60_3_256">
+  XMSSMT_SHA2_60_3_256
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L274"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XMSSMT_SHA2_60_3_256 = &quot;XMSSMT-SHA2_60/3_256&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_XMSSMT_SHA2_60_6_256" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.XMSSMT_SHA2_60_6_256">
+  XMSSMT_SHA2_60_6_256
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L275"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XMSSMT_SHA2_60_6_256 = &quot;XMSSMT-SHA2_60/6_256&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_XMSSMT_SHAKE_20_2_256" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.XMSSMT_SHAKE_20_2_256">
+  XMSSMT_SHAKE_20_2_256
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L278"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XMSSMT_SHAKE_20_2_256 = &quot;XMSSMT-SHAKE_20/2_256&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_XMSSMT_SHAKE_20_4_256" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.XMSSMT_SHAKE_20_4_256">
+  XMSSMT_SHAKE_20_4_256
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L279"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XMSSMT_SHAKE_20_4_256 = &quot;XMSSMT-SHAKE_20/4_256&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_XMSSMT_SHAKE_40_2_256" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.XMSSMT_SHAKE_40_2_256">
+  XMSSMT_SHAKE_40_2_256
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L280"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XMSSMT_SHAKE_40_2_256 = &quot;XMSSMT-SHAKE_40/2_256&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_XMSSMT_SHAKE_40_4_256" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.XMSSMT_SHAKE_40_4_256">
+  XMSSMT_SHAKE_40_4_256
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XMSSMT_SHAKE_40_4_256 = &quot;XMSSMT-SHAKE_40/4_256&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_XMSSMT_SHAKE_40_8_256" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.XMSSMT_SHAKE_40_8_256">
+  XMSSMT_SHAKE_40_8_256
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L282"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XMSSMT_SHAKE_40_8_256 = &quot;XMSSMT-SHAKE_40/8_256&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_XMSSMT_SHAKE_60_12_256" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.XMSSMT_SHAKE_60_12_256">
+  XMSSMT_SHAKE_60_12_256
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L285"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XMSSMT_SHAKE_60_12_256 = &quot;XMSSMT-SHAKE_60/12_256&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_XMSSMT_SHAKE_60_3_256" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.XMSSMT_SHAKE_60_3_256">
+  XMSSMT_SHAKE_60_3_256
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L283"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XMSSMT_SHAKE_60_3_256 = &quot;XMSSMT-SHAKE_60/3_256&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_XMSSMT_SHAKE_60_6_256" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.XMSSMT_SHAKE_60_6_256">
+  XMSSMT_SHAKE_60_6_256
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L284"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XMSSMT_SHAKE_60_6_256 = &quot;XMSSMT-SHAKE_60/6_256&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_XMSS_SHA2_10_256" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.XMSS_SHA2_10_256">
+  XMSS_SHA2_10_256
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XMSS_SHA2_10_256 = &quot;XMSS-SHA2_10_256&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_XMSS_SHA2_16_256" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.XMSS_SHA2_16_256">
+  XMSS_SHA2_16_256
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XMSS_SHA2_16_256 = &quot;XMSS-SHA2_16_256&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_XMSS_SHA2_20_256" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.XMSS_SHA2_20_256">
+  XMSS_SHA2_20_256
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XMSS_SHA2_20_256 = &quot;XMSS-SHA2_20_256&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_XMSS_SHAKE_10_256" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.XMSS_SHAKE_10_256">
+  XMSS_SHAKE_10_256
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L265"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XMSS_SHAKE_10_256 = &quot;XMSS-SHAKE_10_256&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_XMSS_SHAKE_16_256" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.XMSS_SHAKE_16_256">
+  XMSS_SHAKE_16_256
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L266"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XMSS_SHAKE_16_256 = &quot;XMSS-SHAKE_16_256&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_StatefulSignatureAlgorithms_XMSS_SHAKE_20_256" data-uid="OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.XMSS_SHAKE_20_256">
+  XMSS_SHAKE_20_256
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L267"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XMSS_SHAKE_20_256 = &quot;XMSS-SHAKE_20_256&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/AlgorithmConstants.cs/#L254" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class OqsCore </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class OqsCore ">
+      
+      <meta name="description" content="Provides a managed C# wrapper for the liboqs native library, offering a safe and convenient interface for post-quantum cryptographic operations. This static class includes methods for initializing and cleaning up the library, managing memory securely, generating random data, and accessing CPU features.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/openforge-sh/liboqs-dotnet/new/main/apiSpec/new?filename=OpenForge_Cryptography_LibOqs_Core_OqsCore.md&amp;value=---%0Auid%3A%20OpenForge.Cryptography.LibOqs.Core.OqsCore%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore">
+
+
+
+  <h1 id="OpenForge_Cryptography_LibOqs_Core_OqsCore" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore" class="text-break">
+Class OqsCore  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/OqsCore.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OpenForge.html">OpenForge</a>.<a class="xref" href="OpenForge.Cryptography.html">Cryptography</a>.<a class="xref" href="OpenForge.Cryptography.LibOqs.html">LibOqs</a>.<a class="xref" href="OpenForge.Cryptography.LibOqs.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OpenForge.Cryptography.LibOqs.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides a managed C# wrapper for the liboqs native library, offering a safe and convenient interface
+for post-quantum cryptographic operations. This static class includes methods for initializing and cleaning up
+the library, managing memory securely, generating random data, and accessing CPU features.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class OqsCore</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">OqsCore</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OpenForge_Cryptography_LibOqs_Core_OqsCore_AllocateMemory_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.AllocateMemory*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_OqsCore_AllocateMemory_System_UIntPtr_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.AllocateMemory(System.UIntPtr)">
+  AllocateMemory(nuint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/OqsCore.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allocates memory using LibOQS's memory allocator.
+Memory allocated with this method should be freed with <a class="xref" href="OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_FreeMemory_System_IntPtr_System_UIntPtr_">FreeMemory(nint, nuint)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static nint AllocateMemory(nuint size)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>size</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+    <dd><p>The size in bytes to allocate.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>A pointer to the allocated memory.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if size is zero or exceeds the maximum allowed size (1GB).</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.outofmemoryexception">OutOfMemoryException</a></dt>
+    <dd><p>Thrown if allocation fails.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if LibOQS has not been initialized.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_Core_OqsCore_Calloc_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.Calloc*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_OqsCore_Calloc_System_UIntPtr_System_UIntPtr_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.Calloc(System.UIntPtr,System.UIntPtr)">
+  Calloc(nuint, nuint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/OqsCore.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allocates zero-initialized memory using the system's calloc function.
+Use this when you need memory initialized to zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static nint Calloc(nuint numElements, nuint elementSize)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>numElements</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+    <dd><p>The number of elements to allocate.</p>
+</dd>
+    <dt><code>elementSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+    <dd><p>The size of each element in bytes.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>A pointer to the allocated and zero-initialized memory.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if parameters are invalid.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.outofmemoryexception">OutOfMemoryException</a></dt>
+    <dd><p>Thrown if allocation fails.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_Core_OqsCore_CleanseMemory_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.CleanseMemory*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_OqsCore_CleanseMemory_System_IntPtr_System_UIntPtr_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.CleanseMemory(System.IntPtr,System.UIntPtr)">
+  CleanseMemory(nint, nuint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/OqsCore.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Securely clears memory by overwriting it with zeros.
+This operation cannot be optimized away by the compiler, making it suitable for clearing sensitive data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CleanseMemory(nint memPtr, nuint size)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>memPtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to the memory to cleanse. Safe to pass IntPtr.Zero.</p>
+</dd>
+    <dt><code>size</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+    <dd><p>The size in bytes of the memory to cleanse.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if LibOQS has not been initialized.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_Core_OqsCore_CreateSecureByteArray_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.CreateSecureByteArray*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_OqsCore_CreateSecureByteArray_System_Int32_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.CreateSecureByteArray(System.Int32)">
+  CreateSecureByteArray(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/OqsCore.cs/#L323"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a secure byte array that automatically clears its contents when disposed.
+This is ideal for storing sensitive cryptographic material.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SecureByteArray CreateSecureByteArray(int length)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>length</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The length of the array to create. Maximum 1MB.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OpenForge.Cryptography.LibOqs.Core.SecureByteArray.html">SecureByteArray</a></dt>
+    <dd><p>A SecureByteArray instance that will securely clear its contents on disposal.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if length is negative or exceeds 1MB.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_Core_OqsCore_CreateSecureByteArray_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.CreateSecureByteArray*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_OqsCore_CreateSecureByteArray_System_ReadOnlySpan_System_Byte__" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.CreateSecureByteArray(System.ReadOnlySpan{System.Byte})">
+  CreateSecureByteArray(ReadOnlySpan&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/OqsCore.cs/#L336"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a secure byte array from existing data, which will be securely cleared when disposed.
+The input data is defensively copied to prevent external modification.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SecureByteArray CreateSecureByteArray(ReadOnlySpan&lt;byte&gt; data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The data to copy into the secure array.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OpenForge.Cryptography.LibOqs.Core.SecureByteArray.html">SecureByteArray</a></dt>
+    <dd><p>A SecureByteArray instance containing a copy of the data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if data length exceeds 1MB.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_Core_OqsCore_FreeMemory_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.FreeMemory*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_OqsCore_FreeMemory_System_IntPtr_System_UIntPtr_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.FreeMemory(System.IntPtr,System.UIntPtr)">
+  FreeMemory(nint, nuint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/OqsCore.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Frees memory allocated by <a class="xref" href="OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_AllocateMemory_System_UIntPtr_">AllocateMemory(nuint)</a> using secure free (clears memory first).
+This is the recommended method for freeing memory in cryptographic applications.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void FreeMemory(nint memPtr, nuint size)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>memPtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to the memory to free. Safe to pass IntPtr.Zero.</p>
+</dd>
+    <dt><code>size</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+    <dd><p>The size in bytes of the memory block.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if LibOQS has not been initialized.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_Core_OqsCore_GenerateRandomBytes_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.GenerateRandomBytes*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_OqsCore_GenerateRandomBytes_System_Int32_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.GenerateRandomBytes(System.Int32)">
+  GenerateRandomBytes(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/OqsCore.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generates a new byte array filled with cryptographically secure random bytes.
+Includes basic entropy validation for buffers between 4 and 1024 bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] GenerateRandomBytes(int length)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>length</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of random bytes to generate. Maximum 1MB.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>A new byte array containing cryptographically secure random bytes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if length is negative or exceeds 1MB.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if LibOQS has not been initialized or if entropy validation fails.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_Core_OqsCore_GenerateRandomBytes_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.GenerateRandomBytes*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_OqsCore_GenerateRandomBytes_System_Span_System_Byte__" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.GenerateRandomBytes(System.Span{System.Byte})">
+  GenerateRandomBytes(Span&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/OqsCore.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fills the provided buffer with cryptographically secure random bytes using LibOQS's random number generator.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void GenerateRandomBytes(Span&lt;byte&gt; buffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The buffer to fill with random bytes. Empty buffers are safely ignored.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if LibOQS has not been initialized.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_Core_OqsCore_GetMemoryUsageInfo_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.GetMemoryUsageInfo*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_OqsCore_GetMemoryUsageInfo_System_String_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.GetMemoryUsageInfo(System.String)">
+  GetMemoryUsageInfo(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/OqsCore.cs/#L413"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets memory usage recommendations for the specified algorithm.
+This helps applications understand memory requirements and plan accordingly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MemoryUsageInfo? GetMemoryUsageInfo(string algorithmName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>algorithmName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The algorithm name to get memory information for.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.html">MemoryUsageInfo</a>?</dt>
+    <dd><p>A structure containing memory usage estimates, or null if the algorithm is unknown.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_Core_OqsCore_GetVersion_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.GetVersion*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_OqsCore_GetVersion" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.GetVersion">
+  GetVersion()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/OqsCore.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the version string of the liboqs library.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetVersion()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The version string of liboqs.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_Core_OqsCore_HasCpuExtension_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.HasCpuExtension*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_OqsCore_HasCpuExtension_OpenForge_Cryptography_LibOqs_Core_OqsCpUext_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.HasCpuExtension(OpenForge.Cryptography.LibOqs.Core.OqsCpUext)">
+  HasCpuExtension(OqsCpUext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/OqsCore.cs/#L208"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks whether the current CPU supports a specific extension that can accelerate cryptographic operations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasCpuExtension(OqsCpUext extension)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>extension</code> <a class="xref" href="OpenForge.Cryptography.LibOqs.Core.OqsCpUext.html">OqsCpUext</a></dt>
+    <dd><p>The CPU extension to check for.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the CPU extension is available, false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if LibOQS has not been initialized.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_Core_OqsCore_HintMemoryPressure_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.HintMemoryPressure*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_OqsCore_HintMemoryPressure_System_Int64_System_Boolean_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.HintMemoryPressure(System.Int64,System.Boolean)">
+  HintMemoryPressure(long, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/OqsCore.cs/#L365"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides a hint about memory pressure after completing large cryptographic operations.
+This can help optimize garbage collection and memory usage in memory-constrained scenarios.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void HintMemoryPressure(long bytesAllocated, bool forceGarbageCollection = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bytesAllocated</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The approximate number of bytes that were allocated for the operation.</p>
+</dd>
+    <dt><code>forceGarbageCollection</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to immediately trigger garbage collection. Use sparingly in performance-critical code.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="OpenForge_Cryptography_LibOqs_Core_OqsCore_HintMemoryPressure_System_Int64_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method is useful when:</p>
+<ul>
+<li>Working with large-key algorithms (Classic McEliece, some NTRU variants)</li>
+<li>Processing operations in batches</li>
+<li>Running in memory-constrained environments (containers, IoT devices)</li>
+<li>Experiencing memory pressure or frequent GC pauses</li>
+</ul>
+<p>Call this after completing cryptographic operations that allocated significant memory.</p>
+</div>
+
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_Core_OqsCore_Initialize_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.Initialize*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_OqsCore_Initialize" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.Initialize">
+  Initialize()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/OqsCore.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes the LibOQS library. This method is thread-safe and should be called before using any other LibOQS functionality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Initialize()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_Core_OqsCore_InsecureFreeMemory_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.InsecureFreeMemory*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_OqsCore_InsecureFreeMemory_System_IntPtr_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.InsecureFreeMemory(System.IntPtr)">
+  InsecureFreeMemory(nint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/OqsCore.cs/#L307"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Frees memory without secure clearing. Use only for non-sensitive data.
+For sensitive data, use <a class="xref" href="OpenForge.Cryptography.LibOqs.Core.OqsCore.html#OpenForge_Cryptography_LibOqs_Core_OqsCore_FreeMemory_System_IntPtr_System_UIntPtr_">FreeMemory(nint, nuint)</a> instead (which uses secure clearing).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void InsecureFreeMemory(nint memPtr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>memPtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to the memory to free. Safe to pass IntPtr.Zero.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if LibOQS has not been initialized.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_Core_OqsCore_Malloc_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.Malloc*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_OqsCore_Malloc_System_UIntPtr_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.Malloc(System.UIntPtr)">
+  Malloc(nuint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/OqsCore.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allocates memory using the system's malloc function.
+Use this for temporary allocations when you need standard malloc behavior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static nint Malloc(nuint size)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>size</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+    <dd><p>The size in bytes to allocate.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>A pointer to the allocated memory.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if size is zero or too large.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.outofmemoryexception">OutOfMemoryException</a></dt>
+    <dd><p>Thrown if allocation fails.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_Core_OqsCore_RemoveMemoryPressure_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.RemoveMemoryPressure*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_OqsCore_RemoveMemoryPressure_System_Int64_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.RemoveMemoryPressure(System.Int64)">
+  RemoveMemoryPressure(long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/OqsCore.cs/#L391"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes memory pressure hint after memory has been freed.
+Call this to inform the GC that previously allocated cryptographic memory has been released.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveMemoryPressure(long bytesFreed)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bytesFreed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The number of bytes that were freed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="OpenForge_Cryptography_LibOqs_Core_OqsCore_RemoveMemoryPressure_System_Int64__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This should typically be called automatically by disposal methods, but can be used
+manually when implementing custom memory management scenarios.</p>
+</div>
+
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_Core_OqsCore_SecureCompare_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.SecureCompare*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_OqsCore_SecureCompare_System_IntPtr_System_IntPtr_System_UIntPtr_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.SecureCompare(System.IntPtr,System.IntPtr,System.UIntPtr)">
+  SecureCompare(nint, nint, nuint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/OqsCore.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs a secure comparison of two memory blocks in constant time.
+This prevents timing attacks when comparing sensitive data like cryptographic secrets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int SecureCompare(nint a, nint b, nuint length)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to the first memory block.</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to the second memory block.</p>
+</dd>
+    <dt><code>length</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+    <dd><p>The length in bytes to compare.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>0 if the memory blocks are equal, non-zero otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_Core_OqsCore_SwitchRandomAlgorithm_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.SwitchRandomAlgorithm*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_OqsCore_SwitchRandomAlgorithm_System_String_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.SwitchRandomAlgorithm(System.String)">
+  SwitchRandomAlgorithm(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/OqsCore.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Switches the random number generator algorithm used by LibOQS.
+Common algorithms include &quot;OpenSSL&quot;, &quot;NIST-DRBG&quot;, and system-specific options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SwitchRandomAlgorithm(string algorithmName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>algorithmName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the random algorithm to switch to.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if the algorithm name is null, empty, whitespace, or not supported.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if LibOQS has not been initialized.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OpenForge_Cryptography_LibOqs_Core_OqsCore_ThreadStop_" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.ThreadStop*"></a>
+
+  <h3 id="OpenForge_Cryptography_LibOqs_Core_OqsCore_ThreadStop" data-uid="OpenForge.Cryptography.LibOqs.Core.OqsCore.ThreadStop">
+  ThreadStop()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/OqsCore.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops and cleans up resources for the current thread.
+This should be called when a thread that has used liboqs is about to terminate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ThreadStop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/Core/OqsCore.cs/#L12" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

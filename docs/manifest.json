@@ -1,0 +1,1042 @@
+{
+  "sitemap": {
+    "fileOptions": {
+      "api/*": {
+        "baseUrl": "https://your-domain.com/openforge-crypto/",
+        "changefreq": "weekly",
+        "priority": 0.3
+      }
+    },
+    "baseUrl": "https://your-domain.com/openforge-crypto/",
+    "changefreq": "weekly",
+    "priority": 0.5
+  },
+  "source_base_path": "/home/runner/work/liboqs-dotnet/liboqs-dotnet",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "LICENSE.md",
+      "output": {
+        ".html": {
+          "relative_path": "LICENSE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants",
+      "Summary": "<p sourcefile=\"api/OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants.yml\" sourcestartlinenumber=\"1\">Provides constants for all liboqs algorithm identifiers.\nThis eliminates the need to use magic strings when working with cryptographic algorithms.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.Core.CryptographyValidation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.Core.CryptographyValidation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.Core.CryptographyValidation",
+      "Summary": "<p sourcefile=\"api/OpenForge.Cryptography.LibOqs.Core.CryptographyValidation.yml\" sourcestartlinenumber=\"1\">Provides shared validation utilities for cryptographic operations.\nThis class consolidates common validation logic used across KEM and signature implementations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.Core.KemAlgorithms.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.Core.KemAlgorithms.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.Core.KemAlgorithms",
+      "Summary": "<p sourcefile=\"api/OpenForge.Cryptography.LibOqs.Core.KemAlgorithms.yml\" sourcestartlinenumber=\"1\">Key Encapsulation Mechanism (KEM) algorithm identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo",
+      "Summary": "<p sourcefile=\"api/OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo.yml\" sourcestartlinenumber=\"1\">Provides information about memory usage characteristics for cryptographic algorithms.\nThis helps applications make informed decisions about memory management and optimization.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.Core.NistSecurityLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.Core.NistSecurityLevel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.Core.NistSecurityLevel",
+      "Summary": "<p sourcefile=\"api/OpenForge.Cryptography.LibOqs.Core.NistSecurityLevel.yml\" sourcestartlinenumber=\"1\">Security levels as defined by NIST for post-quantum cryptography.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.Core.OqsCore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.Core.OqsCore.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.Core.OqsCore",
+      "Summary": "<p sourcefile=\"api/OpenForge.Cryptography.LibOqs.Core.OqsCore.yml\" sourcestartlinenumber=\"1\">Provides a managed C# wrapper for the liboqs native library, offering a safe and convenient interface\nfor post-quantum cryptographic operations. This static class includes methods for initializing and cleaning up\nthe library, managing memory securely, generating random data, and accessing CPU features.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.Core.OqsCpUext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.Core.OqsCpUext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.Core.OqsCpUext",
+      "Summary": "<p sourcefile=\"api/OpenForge.Cryptography.LibOqs.Core.OqsCpUext.yml\" sourcestartlinenumber=\"1\">Specifies CPU extensions that can be used to accelerate cryptographic operations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.Core.SecureByteArray.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.Core.SecureByteArray.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.Core.SecureByteArray",
+      "Summary": "<p sourcefile=\"api/OpenForge.Cryptography.LibOqs.Core.SecureByteArray.yml\" sourcestartlinenumber=\"1\">A byte array wrapper that provides automatic secure clearing when disposed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.Core.SecureMemory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.Core.SecureMemory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.Core.SecureMemory",
+      "Summary": "<p sourcefile=\"api/OpenForge.Cryptography.LibOqs.Core.SecureMemory.yml\" sourcestartlinenumber=\"1\">Provides cryptographically secure memory operations using LibOQS native functions.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.Core.SecurityUtilities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.Core.SecurityUtilities.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.Core.SecurityUtilities",
+      "Summary": "<p sourcefile=\"api/OpenForge.Cryptography.LibOqs.Core.SecurityUtilities.yml\" sourcestartlinenumber=\"1\">Provides security-focused utilities including constant-time operations, secure comparisons,\ninput validation, and entropy checks for cryptographic operations.\nAll timing-sensitive operations are designed to prevent side-channel attacks.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms",
+      "Summary": "<p sourcefile=\"api/OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms.yml\" sourcestartlinenumber=\"1\">Digital signature algorithm identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms",
+      "Summary": "<p sourcefile=\"api/OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms.yml\" sourcestartlinenumber=\"1\">Stateful signature algorithm identifiers.\nThese algorithms maintain state in the secret key and can only sign a limited number of times.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.Core.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.Core",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult",
+      "Summary": "<p sourcefile=\"api/OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult.yml\" sourcestartlinenumber=\"1\">Represents the result of a KEM encapsulation operation, containing both the ciphertext and shared secret.\nThe shared secret is securely cleared when the EncapsulationResult is disposed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.KEM.Kem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.KEM.Kem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.KEM.Kem",
+      "Summary": "<p sourcefile=\"api/OpenForge.Cryptography.LibOqs.KEM.Kem.yml\" sourcestartlinenumber=\"1\">High-level wrapper for LibOQS Key Encapsulation Mechanism (KEM) operations.\nThis class provides a user-friendly interface for post-quantum key exchange operations.\nKEM algorithms are used to securely establish shared secrets between parties.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.KEM.KemInstance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.KEM.KemInstance.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.KEM.KemInstance",
+      "Summary": "<p sourcefile=\"api/OpenForge.Cryptography.LibOqs.KEM.KemInstance.yml\" sourcestartlinenumber=\"1\">Represents a Key Encapsulation Mechanism (KEM) instance for performing cryptographic operations.\nThis class provides methods for key generation, encapsulation, and decapsulation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.KEM.KeyPair.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.KEM.KeyPair.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.KEM.KeyPair",
+      "Summary": "<p sourcefile=\"api/OpenForge.Cryptography.LibOqs.KEM.KeyPair.yml\" sourcestartlinenumber=\"1\">Represents a cryptographic key pair consisting of a public key and a secret key.\nThe secret key is securely cleared when the KeyPair is disposed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.KEM.OqsKem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.KEM.OqsKem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.KEM.OqsKem",
+      "Summary": "<p sourcefile=\"api/OpenForge.Cryptography.LibOqs.KEM.OqsKem.yml\" sourcestartlinenumber=\"1\">Native structure representing LibOQS KEM algorithm information and function pointers.\nThis structure mirrors the OQS_KEM struct from the LibOQS C library.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.KEM.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.KEM.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.KEM",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.SIG.OqsSig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.SIG.OqsSig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.SIG.OqsSig",
+      "Summary": "<p sourcefile=\"api/OpenForge.Cryptography.LibOqs.SIG.OqsSig.yml\" sourcestartlinenumber=\"1\">Native structure representing LibOQS digital signature algorithm information and function pointers.\nThis structure mirrors the OQS_SIG struct from the LibOQS C library.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.SIG.Sig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.SIG.Sig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.SIG.Sig",
+      "Summary": "<p sourcefile=\"api/OpenForge.Cryptography.LibOqs.SIG.Sig.yml\" sourcestartlinenumber=\"1\">High-level wrapper for LibOQS digital signature operations.\nThis class provides a user-friendly interface for post-quantum digital signature operations.\nDigital signatures provide authentication, integrity, and non-repudiation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.SIG.SigInstance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.SIG.SigInstance.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.SIG.SigInstance",
+      "Summary": "<p sourcefile=\"api/OpenForge.Cryptography.LibOqs.SIG.SigInstance.yml\" sourcestartlinenumber=\"1\">Represents a digital signature instance for performing cryptographic signing and verification operations.\nThis class provides methods for key generation, message signing, and signature verification.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.SIG.SigKeyPair.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.SIG.SigKeyPair.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.SIG.SigKeyPair",
+      "Summary": "<p sourcefile=\"api/OpenForge.Cryptography.LibOqs.SIG.SigKeyPair.yml\" sourcestartlinenumber=\"1\">Represents a digital signature key pair consisting of a public key and a secret key.\nThe secret key is securely cleared when the SigKeyPair is disposed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.SIG.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.SIG.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OpenForge.Cryptography.LibOqs.SIG",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenForge.Cryptography.LibOqs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenForge.Cryptography.LibOqs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": null,
+      "Summary": null
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "coverage.md",
+      "output": {
+        ".html": {
+          "relative_path": "coverage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/Cobertura.xml",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/Cobertura.xml"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/OpenForge.Cryptography.LibOqs.Core_AlgorithmConstants.html",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/OpenForge.Cryptography.LibOqs.Core_AlgorithmConstants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/OpenForge.Cryptography.LibOqs.Core_CryptographyValidation.html",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/OpenForge.Cryptography.LibOqs.Core_CryptographyValidation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/OpenForge.Cryptography.LibOqs.Core_KemAlgorithms.html",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/OpenForge.Cryptography.LibOqs.Core_KemAlgorithms.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/OpenForge.Cryptography.LibOqs.Core_MemoryUsageInfo.html",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/OpenForge.Cryptography.LibOqs.Core_MemoryUsageInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/OpenForge.Cryptography.LibOqs.Core_OqsCore.html",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/OpenForge.Cryptography.LibOqs.Core_OqsCore.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/OpenForge.Cryptography.LibOqs.Core_SecureByteArray.html",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/OpenForge.Cryptography.LibOqs.Core_SecureByteArray.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/OpenForge.Cryptography.LibOqs.Core_SecureMemory.html",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/OpenForge.Cryptography.LibOqs.Core_SecureMemory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/OpenForge.Cryptography.LibOqs.Core_SecurityUtilities.html",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/OpenForge.Cryptography.LibOqs.Core_SecurityUtilities.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/OpenForge.Cryptography.LibOqs.Core_SignatureAlgorithms.html",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/OpenForge.Cryptography.LibOqs.Core_SignatureAlgorithms.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/OpenForge.Cryptography.LibOqs.Core_StatefulSignatureAlgorithms.html",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/OpenForge.Cryptography.LibOqs.Core_StatefulSignatureAlgorithms.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/OpenForge.Cryptography.LibOqs.KEM_EncapsulationResult.html",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/OpenForge.Cryptography.LibOqs.KEM_EncapsulationResult.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/OpenForge.Cryptography.LibOqs.KEM_Kem.html",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/OpenForge.Cryptography.LibOqs.KEM_Kem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/OpenForge.Cryptography.LibOqs.KEM_KemInstance.html",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/OpenForge.Cryptography.LibOqs.KEM_KemInstance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/OpenForge.Cryptography.LibOqs.KEM_KemProvider.html",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/OpenForge.Cryptography.LibOqs.KEM_KemProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/OpenForge.Cryptography.LibOqs.KEM_KeyPair.html",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/OpenForge.Cryptography.LibOqs.KEM_KeyPair.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/OpenForge.Cryptography.LibOqs.KEM_OqsKem.html",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/OpenForge.Cryptography.LibOqs.KEM_OqsKem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/OpenForge.Cryptography.LibOqs.SIG_OqsSig.html",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/OpenForge.Cryptography.LibOqs.SIG_OqsSig.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/OpenForge.Cryptography.LibOqs.SIG_Sig.html",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/OpenForge.Cryptography.LibOqs.SIG_Sig.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/OpenForge.Cryptography.LibOqs.SIG_SigInstance.html",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/OpenForge.Cryptography.LibOqs.SIG_SigInstance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/OpenForge.Cryptography.LibOqs.SIG_SigKeyPair.html",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/OpenForge.Cryptography.LibOqs.SIG_SigKeyPair.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/OpenForge.Cryptography.LibOqs.SIG_SigProvider.html",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/OpenForge.Cryptography.LibOqs.SIG_SigProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/Summary.txt",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/Summary.txt"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/class.js",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/class.js"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_cog.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_cog.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_cog_dark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_cog_dark.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_cube.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_cube.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_cube_dark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_cube_dark.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_fork.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_fork.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_fork_dark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_fork_dark.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_info-circled.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_info-circled.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_info-circled_dark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_info-circled_dark.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_minus.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_minus.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_minus_dark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_minus_dark.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_plus.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_plus.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_plus_dark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_plus_dark.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_search-minus.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_search-minus.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_search-minus_dark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_search-minus_dark.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_search-plus.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_search-plus.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_search-plus_dark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_search-plus_dark.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_sponsor.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_sponsor.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_star.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_star.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_star_dark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_star_dark.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_up-dir.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_up-dir.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_up-dir_active.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_up-dir_active.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_up-down-dir.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_up-down-dir.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_up-down-dir_dark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_up-down-dir_dark.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_wrench.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_wrench.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/icon_wrench_dark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/icon_wrench_dark.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/index.htm",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/index.htm"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/index.html",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/main.js",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/main.js"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "coverage/report.css",
+      "output": {
+        "resource": {
+          "relative_path": "coverage/report.css"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "samples/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "samples/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "samples/advanced/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "samples/advanced/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "samples/basics/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "samples/basics/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "samples/common-scenarios/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "samples/common-scenarios/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "samples/testing/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "samples/testing/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "samples/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "samples/toc.json"
+        },
+        ".html": {
+          "relative_path": "samples/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
