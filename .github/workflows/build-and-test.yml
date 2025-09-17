@@ -491,6 +491,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: [prepare-libraries, test-linux-x64, test-linux-arm64, test-windows, test-macos]
     if: success()
+    permissions:
+      contents: write
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -585,7 +587,7 @@ jobs:
         git commit -m "Update documentation and coverage report - ${{ github.sha }}" || echo "No changes to commit"
         
         # Push to docs branch
-        git push origin docs --force
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git docs --force
         echo "Documentation deployed to docs branch"
 
   # Package and publish to NuGet
