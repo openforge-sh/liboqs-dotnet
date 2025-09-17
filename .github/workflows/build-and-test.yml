@@ -508,7 +508,7 @@ jobs:
       with:
         pattern: coverage-*
         path: ./coverage-artifacts
-        merge-multiple: true
+        merge-multiple: false
 
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
@@ -519,8 +519,17 @@ jobs:
 
     - name: List coverage files
       run: |
+        echo "Coverage artifacts directory structure:"
+        ls -la ./coverage-artifacts/
+        echo ""
         echo "Coverage files found:"
-        find ./coverage-artifacts -name "coverage.cobertura.xml" -type f || echo "No coverage files found"
+        find ./coverage-artifacts -name "coverage.cobertura.xml" -type f | while read file; do
+          echo "Found: $file"
+          echo "  Size: $(stat -c%s "$file") bytes"
+          echo "  Platform: $(basename "$(dirname "$file")")"
+        done || echo "No coverage files found"
+        echo ""
+        echo "Total coverage files: $(find ./coverage-artifacts -name "coverage.cobertura.xml" -type f | wc -l)"
 
     - name: Generate coverage report
       uses: danielpalme/ReportGenerator-GitHub-Action@5.4.13
@@ -528,9 +537,12 @@ jobs:
         reports: './coverage-artifacts/**/coverage.cobertura.xml'
         targetdir: './CoverageReport'
         reporttypes: 'Html;Cobertura;TextSummary'
-        assemblyfilters: '+OpenForge.Cryptography.LibOqs*;-*.Tests'
-        classfilters: '-*Native*;-*.Tests.*'
-        filefilters: '-**/tests/**;-**/obj/**'
+        sourcedirs: './src;./tests'
+        assemblyfilters: '+OpenForge.Cryptography.LibOqs*;-*.Tests;-*TestFramework*'
+        classfilters: '-*Native*;-*.Tests.*;-*Mock*;-*Stub*'
+        filefilters: '-**/tests/**;-**/obj/**;-**/bin/**'
+        riskhotspotassemblyfilters: '+OpenForge.Cryptography.LibOqs*'
+        riskhotspotclassfilters: '+*;-*.Tests.*;-*Native*'
         verbosity: 'Info'
         title: 'OpenForge Cryptography LibOqs Coverage Report'
         tag: '${{ github.run_number }}_${{ github.run_id }}'
@@ -551,7 +563,7 @@ jobs:
     - name: Build documentation
       run: |
         echo "Building documentation with DocFX..."
-        docfx build docfx.json
+        docfx metadata docfx.json && docfx build docfx.json
         echo "Documentation built successfully"
 
     - name: Deploy to docs branch

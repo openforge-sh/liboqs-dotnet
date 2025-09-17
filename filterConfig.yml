@@ -1,34 +1,5 @@
 apiRules:
-- exclude:
-    uidRegex: ^System
-- exclude:
-    uidRegex: ^Microsoft
-- exclude:
-    uidRegex: ^Windows
-
-- exclude:
-    hasAttribute:
-      uid: System.ComponentModel.EditorBrowsableAttribute
-      ctorArguments:
-      - System.ComponentModel.EditorBrowsableState.Never
-
-- exclude:
-    hasAttribute:
-      uid: System.Runtime.CompilerServices.CompilerGeneratedAttribute
-
-- exclude:
-    type: Class
-    modifiers: ["internal"]
-- exclude:
-    type: Struct
-    modifiers: ["internal"]
-- exclude:
-    type: Interface
-    modifiers: ["internal"]
-- exclude:
-    type: Enum
-    modifiers: ["internal"]
-
+# First include what we want
 - include:
     uidRegex: ^OpenForge\.Cryptography\.LibOqs
 - include:
@@ -48,3 +19,31 @@ apiRules:
 - include:
     type: Delegate
     modifiers: ["public"]
+
+# Then exclude what we don't want
+- exclude:
+    uidRegex: ^System
+- exclude:
+    uidRegex: ^Microsoft
+- exclude:
+    uidRegex: ^Windows
+- exclude:
+    hasAttribute:
+      uid: System.ComponentModel.EditorBrowsableAttribute
+      ctorArguments:
+      - System.ComponentModel.EditorBrowsableState.Never
+- exclude:
+    hasAttribute:
+      uid: System.Runtime.CompilerServices.CompilerGeneratedAttribute
+- exclude:
+    type: Class
+    modifiers: ["internal"]
+- exclude:
+    type: Struct
+    modifiers: ["internal"]
+- exclude:
+    type: Interface
+    modifiers: ["internal"]
+- exclude:
+    type: Enum
+    modifiers: ["internal"]
