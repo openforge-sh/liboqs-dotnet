@@ -579,7 +579,6 @@ jobs:
         
         # Move _site contents to root
         mv _site docs
-        rmdir _site
         
         # Add and commit
         git add .
