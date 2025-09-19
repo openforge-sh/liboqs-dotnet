@@ -37,9 +37,45 @@ internal sealed class SkipOnPlatformAttribute : FactAttribute
         {
             "WINDOWS" => RuntimeInformation.IsOSPlatform(OSPlatform.Windows),
             "LINUX" => RuntimeInformation.IsOSPlatform(OSPlatform.Linux),
+            "LINUX-GLIBC" => RuntimeInformation.IsOSPlatform(OSPlatform.Linux) && !IsRunningOnMusl(),
+            "LINUX-MUSL" => RuntimeInformation.IsOSPlatform(OSPlatform.Linux) && IsRunningOnMusl(),
             "OSX" or "MACOS" => RuntimeInformation.IsOSPlatform(OSPlatform.OSX),
             _ => false
         };
+    }
+
+    private static bool IsRunningOnMusl()
+    {
+        if (!RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+            return false;
+
+        try
+        {
+            // Check for Alpine Linux (primary musl distribution)
+            if (File.Exists("/etc/alpine-release"))
+                return true;
+
+            // Check if ldd uses musl
+            var lddInfo = new System.Diagnostics.ProcessStartInfo("ldd", "--version")
+            {
+                RedirectStandardOutput = true,
+                RedirectStandardError = true,
+                UseShellExecute = false
+            };
+
+            using var process = System.Diagnostics.Process.Start(lddInfo);
+            if (process != null)
+            {
+                var output = process.StandardOutput.ReadToEnd() + process.StandardError.ReadToEnd();
+                return output.Contains("musl", StringComparison.OrdinalIgnoreCase);
+            }
+        }
+        catch (Exception ex) when (ex is System.ComponentModel.Win32Exception or FileNotFoundException or UnauthorizedAccessException)
+        {
+            // If we can't determine, assume glibc for safety
+        }
+
+        return false;
     }
 }
 
@@ -82,9 +118,45 @@ internal sealed class PlatformSpecificFactAttribute : FactAttribute
         {
             "WINDOWS" => RuntimeInformation.IsOSPlatform(OSPlatform.Windows),
             "LINUX" => RuntimeInformation.IsOSPlatform(OSPlatform.Linux),
+            "LINUX-GLIBC" => RuntimeInformation.IsOSPlatform(OSPlatform.Linux) && !IsRunningOnMusl(),
+            "LINUX-MUSL" => RuntimeInformation.IsOSPlatform(OSPlatform.Linux) && IsRunningOnMusl(),
             "OSX" or "MACOS" => RuntimeInformation.IsOSPlatform(OSPlatform.OSX),
             _ => false
         };
+    }
+
+    private static bool IsRunningOnMusl()
+    {
+        if (!RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+            return false;
+
+        try
+        {
+            // Check for Alpine Linux (primary musl distribution)
+            if (File.Exists("/etc/alpine-release"))
+                return true;
+
+            // Check if ldd uses musl
+            var lddInfo = new System.Diagnostics.ProcessStartInfo("ldd", "--version")
+            {
+                RedirectStandardOutput = true,
+                RedirectStandardError = true,
+                UseShellExecute = false
+            };
+
+            using var process = System.Diagnostics.Process.Start(lddInfo);
+            if (process != null)
+            {
+                var output = process.StandardOutput.ReadToEnd() + process.StandardError.ReadToEnd();
+                return output.Contains("musl", StringComparison.OrdinalIgnoreCase);
+            }
+        }
+        catch (Exception ex) when (ex is System.ComponentModel.Win32Exception or FileNotFoundException or UnauthorizedAccessException)
+        {
+            // If we can't determine, assume glibc for safety
+        }
+
+        return false;
     }
 }
 
@@ -127,9 +199,45 @@ internal sealed class PlatformSpecificTheoryAttribute : TheoryAttribute
         {
             "WINDOWS" => RuntimeInformation.IsOSPlatform(OSPlatform.Windows),
             "LINUX" => RuntimeInformation.IsOSPlatform(OSPlatform.Linux),
+            "LINUX-GLIBC" => RuntimeInformation.IsOSPlatform(OSPlatform.Linux) && !IsRunningOnMusl(),
+            "LINUX-MUSL" => RuntimeInformation.IsOSPlatform(OSPlatform.Linux) && IsRunningOnMusl(),
             "OSX" or "MACOS" => RuntimeInformation.IsOSPlatform(OSPlatform.OSX),
             _ => false
         };
+    }
+
+    private static bool IsRunningOnMusl()
+    {
+        if (!RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+            return false;
+
+        try
+        {
+            // Check for Alpine Linux (primary musl distribution)
+            if (File.Exists("/etc/alpine-release"))
+                return true;
+
+            // Check if ldd uses musl
+            var lddInfo = new System.Diagnostics.ProcessStartInfo("ldd", "--version")
+            {
+                RedirectStandardOutput = true,
+                RedirectStandardError = true,
+                UseShellExecute = false
+            };
+
+            using var process = System.Diagnostics.Process.Start(lddInfo);
+            if (process != null)
+            {
+                var output = process.StandardOutput.ReadToEnd() + process.StandardError.ReadToEnd();
+                return output.Contains("musl", StringComparison.OrdinalIgnoreCase);
+            }
+        }
+        catch (Exception ex) when (ex is System.ComponentModel.Win32Exception or FileNotFoundException or UnauthorizedAccessException)
+        {
+            // If we can't determine, assume glibc for safety
+        }
+
+        return false;
     }
 }
 
@@ -231,7 +339,7 @@ internal sealed class RequiresElevatedPrivilegesAttribute : FactAttribute
         }
         else
         {
-            return Environment.GetEnvironmentVariable("USER") == "root" || 
+            return Environment.GetEnvironmentVariable("USER") == "root" ||
                    Environment.GetEnvironmentVariable("EUID") == "0";
         }
     }
