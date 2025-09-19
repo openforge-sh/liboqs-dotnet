@@ -537,6 +537,7 @@ public sealed class LibOqsNativeTests(LibOqsTestFixture fixture)
     [InlineData(OqsCpUext.OQS_CPU_EXT_ARM_SHA2)]
     [InlineData(OqsCpUext.OQS_CPU_EXT_ARM_SHA3)]
     [InlineData(OqsCpUext.OQS_CPU_EXT_ARM_NEON)]
+    [InlineData(OqsCpUext.OQS_CPU_EXT_COUNT)]
     public void OQS_CPU_has_extension_WithAllExtensions_ShouldReturnValidValue(OqsCpUext extension)
     {
         // Act
@@ -575,6 +576,7 @@ public sealed class LibOqsNativeTests(LibOqsTestFixture fixture)
         ((int)OqsCpUext.OQS_CPU_EXT_ARM_SHA2).Should().Be(15);
         ((int)OqsCpUext.OQS_CPU_EXT_ARM_SHA3).Should().Be(16);
         ((int)OqsCpUext.OQS_CPU_EXT_ARM_NEON).Should().Be(17);
+        ((int)OqsCpUext.OQS_CPU_EXT_COUNT).Should().Be(18);
     }
 
     [Fact]
@@ -583,8 +585,8 @@ public sealed class LibOqsNativeTests(LibOqsTestFixture fixture)
         // Arrange - Get all enum values
         var enumValues = Enum.GetValues<OqsCpUext>();
 
-        // Act & Assert - Values should be in sequential order from 0 to 17
-        enumValues.Should().HaveCount(18);
+        // Act & Assert - Values should be in sequential order from 0 to 18
+        enumValues.Should().HaveCount(19);
 
         for (int i = 0; i < enumValues.Length; i++)
         {

@@ -131,7 +131,11 @@ public sealed class OqsKemStructTests(LibOqsTestFixture fixture)
         UIntPtr? lengthSecretKey = null,
         UIntPtr? lengthCiphertext = null,
         UIntPtr? lengthSharedSecret = null,
+        UIntPtr? lengthKeypairSeed = null,
+        UIntPtr? lengthEncapsSeed = null,
+        IntPtr? keypairDerand = null,
         IntPtr? keypair = null,
+        IntPtr? encapsDerand = null,
         IntPtr? encaps = null,
         IntPtr? decaps = null)
     {
@@ -153,7 +157,11 @@ public sealed class OqsKemStructTests(LibOqsTestFixture fixture)
                 "length_secret_key" => lengthSecretKey ?? new UIntPtr(200),
                 "length_ciphertext" => lengthCiphertext ?? new UIntPtr(300),
                 "length_shared_secret" => lengthSharedSecret ?? new UIntPtr(32),
+                "length_keypair_seed" => lengthKeypairSeed ?? new UIntPtr(48),
+                "length_encaps_seed" => lengthEncapsSeed ?? new UIntPtr(48),
+                "keypair_derand" => keypairDerand ?? new IntPtr(161718),
                 "keypair" => keypair ?? new IntPtr(789),
+                "encaps_derand" => encapsDerand ?? new IntPtr(192021),
                 "encaps" => encaps ?? new IntPtr(101112),
                 "decaps" => decaps ?? new IntPtr(131415),
                 _ => null

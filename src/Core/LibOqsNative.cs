@@ -95,75 +95,79 @@ public enum OqsCpUext
     /// <summary>
     /// Marker for initialization.
     /// </summary>
-    OQS_CPU_EXT_INIT = 0,
+    OQS_CPU_EXT_INIT,
     /// <summary>
     /// Multi-Precision Add-Carry Instruction Extensions.
     /// </summary>
-    OQS_CPU_EXT_ADX = 1,
+    OQS_CPU_EXT_ADX,
     /// <summary>
     /// Advanced Encryption Standard New Instructions.
     /// </summary>
-    OQS_CPU_EXT_AES = 2,
+    OQS_CPU_EXT_AES,
     /// <summary>
     /// Advanced Vector Extensions.
     /// </summary>
-    OQS_CPU_EXT_AVX = 3,
+    OQS_CPU_EXT_AVX,
     /// <summary>
     /// Advanced Vector Extensions 2.
     /// </summary>
-    OQS_CPU_EXT_AVX2 = 4,
+    OQS_CPU_EXT_AVX2,
     /// <summary>
     /// Advanced Vector Extensions 512.
     /// </summary>
-    OQS_CPU_EXT_AVX512 = 5,
+    OQS_CPU_EXT_AVX512,
     /// <summary>
     /// Bit Manipulation Instruction Set 1.
     /// </summary>
-    OQS_CPU_EXT_BMI1 = 6,
+    OQS_CPU_EXT_BMI1,
     /// <summary>
     /// Bit Manipulation Instruction Set 2.
     /// </summary>
-    OQS_CPU_EXT_BMI2 = 7,
+    OQS_CPU_EXT_BMI2,
     /// <summary>
     /// Carry-Less Multiplication instruction.
     /// </summary>
-    OQS_CPU_EXT_PCLMULQDQ = 8,
+    OQS_CPU_EXT_PCLMULQDQ,
     /// <summary>
     /// Vector Carry-Less Multiplication instruction.
     /// </summary>
-    OQS_CPU_EXT_VPCLMULQDQ = 9,
+    OQS_CPU_EXT_VPCLMULQDQ,
     /// <summary>
     /// Population Count instruction.
     /// </summary>
-    OQS_CPU_EXT_POPCNT = 10,
+    OQS_CPU_EXT_POPCNT,
     /// <summary>
     /// Streaming SIMD Extensions.
     /// </summary>
-    OQS_CPU_EXT_SSE = 11,
+    OQS_CPU_EXT_SSE,
     /// <summary>
     /// Streaming SIMD Extensions 2.
     /// </summary>
-    OQS_CPU_EXT_SSE2 = 12,
+    OQS_CPU_EXT_SSE2,
     /// <summary>
     /// Streaming SIMD Extensions 3.
     /// </summary>
-    OQS_CPU_EXT_SSE3 = 13,
+    OQS_CPU_EXT_SSE3,
     /// <summary>
     /// ARM AES instructions.
     /// </summary>
-    OQS_CPU_EXT_ARM_AES = 14,
+    OQS_CPU_EXT_ARM_AES,
     /// <summary>
     /// ARM SHA2 instructions.
     /// </summary>
-    OQS_CPU_EXT_ARM_SHA2 = 15,
+    OQS_CPU_EXT_ARM_SHA2,
     /// <summary>
     /// ARM SHA3 instructions.
     /// </summary>
-    OQS_CPU_EXT_ARM_SHA3 = 16,
+    OQS_CPU_EXT_ARM_SHA3,
     /// <summary>
     /// ARM NEON advanced SIMD.
     /// </summary>
-    OQS_CPU_EXT_ARM_NEON = 17,
+    OQS_CPU_EXT_ARM_NEON,
+    /// <summary>
+    /// Marker for count of extensions.
+    /// </summary>
+    OQS_CPU_EXT_COUNT,
 }
 
 #pragma warning restore CA1707 // Identifiers should not contain underscores

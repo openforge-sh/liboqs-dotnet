@@ -94,8 +94,20 @@ public readonly struct OqsKem : IEquatable<OqsKem>
     /// <summary>Length of shared secrets in bytes for this algorithm.</summary>
     public readonly UIntPtr length_shared_secret;
     
+    /// <summary>Length of seeds for derandomized keypair generation in bytes for this algorithm.</summary>
+    public readonly UIntPtr length_keypair_seed;
+    
+    /// <summary>Length of seeds for derandomized encaps generation in bytes for this algorithm.</summary>
+    public readonly UIntPtr length_encaps_seed;
+    
+    /// <summary>Function pointer to the native derandomized key pair generation function.</summary>
+    public readonly IntPtr keypair_derand;
+    
     /// <summary>Function pointer to the native key pair generation function.</summary>
     public readonly IntPtr keypair;
+    
+    /// <summary>Function pointer to the native derandomized encapsulation function.</summary>
+    public readonly IntPtr encaps_derand;
     
     /// <summary>Function pointer to the native encapsulation function.</summary>
     public readonly IntPtr encaps;
@@ -118,7 +130,11 @@ public readonly struct OqsKem : IEquatable<OqsKem>
                length_secret_key == other.length_secret_key &&
                length_ciphertext == other.length_ciphertext &&
                length_shared_secret == other.length_shared_secret &&
+               length_keypair_seed == other.length_keypair_seed &&
+               length_encaps_seed == other.length_encaps_seed &&
+               keypair_derand == other.keypair_derand &&
                keypair == other.keypair &&
+               encaps_derand == other.encaps_derand &&
                encaps == other.encaps &&
                decaps == other.decaps;
     }
@@ -148,7 +164,11 @@ public readonly struct OqsKem : IEquatable<OqsKem>
         hash.Add(length_secret_key);
         hash.Add(length_ciphertext);
         hash.Add(length_shared_secret);
+        hash.Add(length_keypair_seed);
+        hash.Add(length_encaps_seed);
+        hash.Add(keypair_derand);
         hash.Add(keypair);
+        hash.Add(encaps_derand);
         hash.Add(encaps);
         hash.Add(decaps);
         return hash.ToHashCode();

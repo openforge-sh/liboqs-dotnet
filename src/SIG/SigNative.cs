@@ -87,6 +87,12 @@ public readonly struct OqsSig : IEquatable<OqsSig>
     /// <summary>Indicates whether the algorithm provides EUF-CMA security (0 = false, non-zero = true).</summary>
     public readonly byte euf_cma;
     
+    /// <summary>Indicates whether the algorithm provides SUF-CMA security (0 = false, non-zero = true).</summary>
+    public readonly byte suf_cma;
+    
+    /// <summary>Indicates whether the algorithm supports signing with a context string (0 = false, non-zero = true).</summary>
+    public readonly byte sig_with_ctx_support;
+    
     /// <summary>Length of public keys in bytes for this algorithm.</summary>
     public readonly UIntPtr length_public_key;
     
@@ -102,8 +108,14 @@ public readonly struct OqsSig : IEquatable<OqsSig>
     /// <summary>Function pointer to the native signing function.</summary>
     public readonly IntPtr sign;
     
+    /// <summary>Function pointer to the native signing with context function.</summary>
+    public readonly IntPtr sign_with_ctx_str;
+    
     /// <summary>Function pointer to the native verification function.</summary>
     public readonly IntPtr verify;
+    
+    /// <summary>Function pointer to the native verification with context function.</summary>
+    public readonly IntPtr verify_with_ctx_str;
     
     /// <summary>
     /// Determines whether the specified OqsSig is equal to the current OqsSig.
@@ -116,12 +128,16 @@ public readonly struct OqsSig : IEquatable<OqsSig>
                alg_version == other.alg_version &&
                claimed_nist_level == other.claimed_nist_level &&
                euf_cma == other.euf_cma &&
+               suf_cma == other.suf_cma &&
+               sig_with_ctx_support == other.sig_with_ctx_support &&
                length_public_key == other.length_public_key &&
                length_secret_key == other.length_secret_key &&
                length_signature == other.length_signature &&
                keypair == other.keypair &&
                sign == other.sign &&
-               verify == other.verify;
+               sign_with_ctx_str == other.sign_with_ctx_str &&
+               verify == other.verify &&
+               verify_with_ctx_str == other.verify_with_ctx_str;
     }
     
     /// <summary>
@@ -145,12 +161,16 @@ public readonly struct OqsSig : IEquatable<OqsSig>
         hash.Add(alg_version);
         hash.Add(claimed_nist_level);
         hash.Add(euf_cma);
+        hash.Add(suf_cma);
+        hash.Add(sig_with_ctx_support);
         hash.Add(length_public_key);
         hash.Add(length_secret_key);
         hash.Add(length_signature);
         hash.Add(keypair);
         hash.Add(sign);
+        hash.Add(sign_with_ctx_str);
         hash.Add(verify);
+        hash.Add(verify_with_ctx_str);
         return hash.ToHashCode();
     }
     

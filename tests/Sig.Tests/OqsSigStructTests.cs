@@ -125,12 +125,16 @@ public sealed class OqsSigStructTests(LibOqsTestFixture fixture)
         IntPtr? algVersion = null,
         byte claimedNistLevel = 3,
         byte eufCma = 1,
+        byte sufCma = 1,
+        byte sigWithCtxSupport = 1,
         UIntPtr? lengthPublicKey = null,
         UIntPtr? lengthSecretKey = null,
         UIntPtr? lengthSignature = null,
         IntPtr? keypair = null,
         IntPtr? sign = null,
-        IntPtr? verify = null)
+        IntPtr? signWithCtxStr = null,
+        IntPtr? verify = null,
+        IntPtr? verifyWithCtxStr = null)
     {
         // Use reflection to create OqsSig with custom values
         var type = typeof(OqsSig);
@@ -146,12 +150,16 @@ public sealed class OqsSigStructTests(LibOqsTestFixture fixture)
                 "alg_version" => algVersion ?? new IntPtr(456),
                 "claimed_nist_level" => claimedNistLevel,
                 "euf_cma" => eufCma,
+                "suf_cma" => sufCma,
+                "sig_with_ctx_support" => sigWithCtxSupport,
                 "length_public_key" => lengthPublicKey ?? new UIntPtr(100),
                 "length_secret_key" => lengthSecretKey ?? new UIntPtr(200),
                 "length_signature" => lengthSignature ?? new UIntPtr(300),
                 "keypair" => keypair ?? new IntPtr(789),
                 "sign" => sign ?? new IntPtr(101112),
+                "sign_with_ctx_str" => signWithCtxStr ?? new IntPtr(161718),
                 "verify" => verify ?? new IntPtr(131415),
+                "verify_with_ctx_str" => verifyWithCtxStr ?? new IntPtr(192021),
                 _ => null
             };
 

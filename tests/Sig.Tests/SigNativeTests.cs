@@ -352,12 +352,16 @@ public sealed class SigNativeTests(LibOqsTestFixture fixture)
         sigStruct.alg_version.Should().Be(IntPtr.Zero);
         sigStruct.claimed_nist_level.Should().Be(0);
         sigStruct.euf_cma.Should().Be(0);
+        sigStruct.suf_cma.Should().Be(0);
+        sigStruct.sig_with_ctx_support.Should().Be(0);
         sigStruct.length_public_key.Should().Be(UIntPtr.Zero);
         sigStruct.length_secret_key.Should().Be(UIntPtr.Zero);
         sigStruct.length_signature.Should().Be(UIntPtr.Zero);
         sigStruct.keypair.Should().Be(IntPtr.Zero);
         sigStruct.sign.Should().Be(IntPtr.Zero);
+        sigStruct.sign_with_ctx_str.Should().Be(IntPtr.Zero);
         sigStruct.verify.Should().Be(IntPtr.Zero);
+        sigStruct.verify_with_ctx_str.Should().Be(IntPtr.Zero);
     }
 
     [Fact]

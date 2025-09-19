@@ -302,7 +302,11 @@ public sealed class KemNativeTests(LibOqsTestFixture fixture)
         kemStruct.length_secret_key.Should().Be(UIntPtr.Zero);
         kemStruct.length_ciphertext.Should().Be(UIntPtr.Zero);
         kemStruct.length_shared_secret.Should().Be(UIntPtr.Zero);
+        kemStruct.length_keypair_seed.Should().Be(UIntPtr.Zero);
+        kemStruct.length_encaps_seed.Should().Be(UIntPtr.Zero);
+        kemStruct.keypair_derand.Should().Be(IntPtr.Zero);
         kemStruct.keypair.Should().Be(IntPtr.Zero);
+        kemStruct.encaps_derand.Should().Be(IntPtr.Zero);
         kemStruct.encaps.Should().Be(IntPtr.Zero);
         kemStruct.decaps.Should().Be(IntPtr.Zero);
     }
