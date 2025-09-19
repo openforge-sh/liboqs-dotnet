@@ -456,7 +456,7 @@ public sealed class KemInstanceTests(LibOqsTestFixture fixture)
         });
     }
 
-    [PlatformSpecificFact("LINUX")]
+    [PlatformSpecificFact("LINUX-GLIBC")]
     public void KemInstance_GenerateDeterministicKeyPair_WithValidSeed_ShouldSucceed()
     {
         TestExecutionHelpers.ExecuteWithLargeStack(() =>
@@ -498,7 +498,7 @@ public sealed class KemInstanceTests(LibOqsTestFixture fixture)
         });
     }
 
-    [PlatformSpecificFact("LINUX")]
+    [PlatformSpecificFact("LINUX-GLIBC")]
     public void KemInstance_GenerateDeterministicKeyPair_WithInvalidSeedLength_ShouldThrowArgumentException()
     {
         TestExecutionHelpers.ExecuteWithLargeStack(() =>
@@ -520,7 +520,7 @@ public sealed class KemInstanceTests(LibOqsTestFixture fixture)
         });
     }
 
-    [PlatformSpecificFact("LINUX")]
+    [PlatformSpecificFact("LINUX-GLIBC")]
     public void KemInstance_EncapsulateDeterministic_WithValidInputs_ShouldSucceed()
     {
         TestExecutionHelpers.ExecuteWithLargeStack(() =>
@@ -570,7 +570,7 @@ public sealed class KemInstanceTests(LibOqsTestFixture fixture)
         });
     }
 
-    [PlatformSpecificFact("LINUX")]
+    [PlatformSpecificFact("LINUX-GLIBC")]
     public void KemInstance_EncapsulateDeterministic_WithInvalidPublicKeyLength_ShouldThrowArgumentException()
     {
         TestExecutionHelpers.ExecuteWithLargeStack(() =>
@@ -594,7 +594,7 @@ public sealed class KemInstanceTests(LibOqsTestFixture fixture)
         });
     }
 
-    [PlatformSpecificFact("LINUX")]
+    [PlatformSpecificFact("LINUX-GLIBC")]
     public void KemInstance_EncapsulateDeterministic_WithInvalidSeedLength_ShouldThrowArgumentException()
     {
         TestExecutionHelpers.ExecuteWithLargeStack(() =>
