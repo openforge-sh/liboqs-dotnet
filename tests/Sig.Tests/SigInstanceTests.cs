@@ -449,177 +449,195 @@ public sealed class SigInstanceTests(LibOqsTestFixture fixture)
     [Fact]
     public void SigInstance_SupportsContextString_ShouldReturnCorrectValue()
     {
-        var algorithms = Sig.GetSupportedAlgorithms();
-        algorithms.Should().NotBeEmpty();
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
+        {
+            var algorithms = Sig.GetSupportedAlgorithms();
+            algorithms.Should().NotBeEmpty();
 
-        var algorithm = algorithms[0];
-        using var sig = new Sig(algorithm);
-        using var sigInstance = SigProvider.Create(algorithm);
+            var algorithm = algorithms[0];
+            using var sig = new Sig(algorithm);
+            using var sigInstance = SigProvider.Create(algorithm);
 
-        // Should return a boolean without throwing
-        var action = () => sigInstance.SupportsContextString();
-        action.Should().NotThrow();
+            // Should return a boolean without throwing
+            var action = () => sigInstance.SupportsContextString();
+            action.Should().NotThrow();
+        });
     }
 
     [Fact]
     public void SigInstance_SignWithContext_WhenSupported_ShouldProduceValidSignature()
     {
-        var algorithms = Sig.GetSupportedAlgorithms();
-        algorithms.Should().NotBeEmpty();
-
-        // Find an algorithm that supports context strings
-        for (int i = 0; i < algorithms.Length; i++)
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
         {
-            var algorithm = algorithms[i];
-            using var sigInstance = SigProvider.Create(algorithm);
+            var algorithms = Sig.GetSupportedAlgorithms();
+            algorithms.Should().NotBeEmpty();
 
-            if (sigInstance.SupportsContextString())
+            // Find an algorithm that supports context strings
+            for (int i = 0; i < algorithms.Length; i++)
             {
-                var keyPair = sigInstance.GenerateKeyPair();
-                var message = new byte[64];
-                RandomNumberGenerator.Fill(message);
-                var context = "TestContext"u8.ToArray();
+                var algorithm = algorithms[i];
+                using var sigInstance = SigProvider.Create(algorithm);
 
-                var signature = sigInstance.SignWithContext(message, context, keyPair.SecretKey);
-                signature.Should().NotBeNull();
-                signature.Length.Should().BeGreaterThan(0);
+                if (sigInstance.SupportsContextString())
+                {
+                    var keyPair = sigInstance.GenerateKeyPair();
+                    var message = new byte[64];
+                    RandomNumberGenerator.Fill(message);
+                    var context = "TestContext"u8.ToArray();
 
-                var isValid = sigInstance.VerifyWithContext(message, signature, context, keyPair.PublicKey);
-                isValid.Should().BeTrue();
+                    var signature = sigInstance.SignWithContext(message, context, keyPair.SecretKey);
+                    signature.Should().NotBeNull();
+                    signature.Length.Should().BeGreaterThan(0);
 
-                keyPair.Dispose();
-                return; // Exit after testing one algorithm that supports context
+                    var isValid = sigInstance.VerifyWithContext(message, signature, context, keyPair.PublicKey);
+                    isValid.Should().BeTrue();
+
+                    keyPair.Dispose();
+                    return; // Exit after testing one algorithm that supports context
+                }
             }
-        }
 
-        // If no algorithm supports context strings, the test should still pass
-        Assert.True(true, "No algorithms found that support context strings");
+            // If no algorithm supports context strings, the test should still pass
+            Assert.True(true, "No algorithms found that support context strings");
+        });
     }
 
     [Fact]
     public void SigInstance_SignWithContext_WhenNotSupported_ShouldThrowNotSupportedException()
     {
-        var algorithms = Sig.GetSupportedAlgorithms();
-        algorithms.Should().NotBeEmpty();
-
-        // Find an algorithm that doesn't support context strings
-        for (int i = 0; i < algorithms.Length; i++)
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
         {
-            var algorithm = algorithms[i];
-            using var sigInstance = SigProvider.Create(algorithm);
+            var algorithms = Sig.GetSupportedAlgorithms();
+            algorithms.Should().NotBeEmpty();
 
-            if (!sigInstance.SupportsContextString())
+            // Find an algorithm that doesn't support context strings
+            for (int i = 0; i < algorithms.Length; i++)
             {
-                var keyPair = sigInstance.GenerateKeyPair();
-                var message = new byte[64];
-                RandomNumberGenerator.Fill(message);
-                var context = "TestContext"u8.ToArray();
+                var algorithm = algorithms[i];
+                using var sigInstance = SigProvider.Create(algorithm);
 
-                var action = () => sigInstance.SignWithContext(message, context, keyPair.SecretKey);
-                action.Should().Throw<NotSupportedException>()
-                    .WithMessage($"*{algorithm}*does not support context strings*");
+                if (!sigInstance.SupportsContextString())
+                {
+                    var keyPair = sigInstance.GenerateKeyPair();
+                    var message = new byte[64];
+                    RandomNumberGenerator.Fill(message);
+                    var context = "TestContext"u8.ToArray();
 
-                keyPair.Dispose();
-                return; // Exit after testing one algorithm that doesn't support context
+                    var action = () => sigInstance.SignWithContext(message, context, keyPair.SecretKey);
+                    action.Should().Throw<NotSupportedException>()
+                        .WithMessage($"*{algorithm}*does not support context strings*");
+
+                    keyPair.Dispose();
+                    return; // Exit after testing one algorithm that doesn't support context
+                }
             }
-        }
 
-        // If all algorithms support context strings, that's fine too
-        Assert.True(true, "All algorithms support context strings");
+            // If all algorithms support context strings, that's fine too
+            Assert.True(true, "All algorithms support context strings");
+        });
     }
 
     [Fact]
     public void SigInstance_VerifyWithContext_WhenNotSupported_ShouldThrowNotSupportedException()
     {
-        var algorithms = Sig.GetSupportedAlgorithms();
-        algorithms.Should().NotBeEmpty();
-
-        // Find an algorithm that doesn't support context strings
-        for (int i = 0; i < algorithms.Length; i++)
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
         {
-            var algorithm = algorithms[i];
-            using var sigInstance = SigProvider.Create(algorithm);
+            var algorithms = Sig.GetSupportedAlgorithms();
+            algorithms.Should().NotBeEmpty();
 
-            if (!sigInstance.SupportsContextString())
+            // Find an algorithm that doesn't support context strings
+            for (int i = 0; i < algorithms.Length; i++)
             {
-                var keyPair = sigInstance.GenerateKeyPair();
-                var message = new byte[64];
-                RandomNumberGenerator.Fill(message);
-                var context = "TestContext"u8.ToArray();
-                var signature = new byte[64]; // Dummy signature
+                var algorithm = algorithms[i];
+                using var sigInstance = SigProvider.Create(algorithm);
 
-                var action = () => sigInstance.VerifyWithContext(message, signature, context, keyPair.PublicKey);
-                action.Should().Throw<NotSupportedException>()
-                    .WithMessage($"*{algorithm}*does not support context strings*");
+                if (!sigInstance.SupportsContextString())
+                {
+                    var keyPair = sigInstance.GenerateKeyPair();
+                    var message = new byte[64];
+                    RandomNumberGenerator.Fill(message);
+                    var context = "TestContext"u8.ToArray();
+                    var signature = new byte[64]; // Dummy signature
 
-                keyPair.Dispose();
-                return; // Exit after testing one algorithm that doesn't support context
+                    var action = () => sigInstance.VerifyWithContext(message, signature, context, keyPair.PublicKey);
+                    action.Should().Throw<NotSupportedException>()
+                        .WithMessage($"*{algorithm}*does not support context strings*");
+
+                    keyPair.Dispose();
+                    return; // Exit after testing one algorithm that doesn't support context
+                }
             }
-        }
 
-        // If all algorithms support context strings, that's fine too
-        Assert.True(true, "All algorithms support context strings");
+            // If all algorithms support context strings, that's fine too
+            Assert.True(true, "All algorithms support context strings");
+        });
     }
 
     [Fact]
     public void SigInstance_GetAlgorithmInfo_ShouldReturnValidInfo()
     {
-        var algorithms = Sig.GetSupportedAlgorithms();
-        algorithms.Should().NotBeEmpty();
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
+        {
+            var algorithms = Sig.GetSupportedAlgorithms();
+            algorithms.Should().NotBeEmpty();
 
-        var algorithm = algorithms[0];
-        using var sigInstance = SigProvider.Create(algorithm);
+            var algorithm = algorithms[0];
+            using var sigInstance = SigProvider.Create(algorithm);
 
-        var info = sigInstance.GetAlgorithmInfo();
-        
-        info.length_public_key.Should().BeGreaterThan(UIntPtr.Zero);
-        info.length_secret_key.Should().BeGreaterThan(UIntPtr.Zero);
-        info.length_signature.Should().BeGreaterThan(UIntPtr.Zero);
-        info.claimed_nist_level.Should().BeInRange(1, 5);
+            var info = sigInstance.GetAlgorithmInfo();
+            
+            info.length_public_key.Should().BeGreaterThan(UIntPtr.Zero);
+            info.length_secret_key.Should().BeGreaterThan(UIntPtr.Zero);
+            info.length_signature.Should().BeGreaterThan(UIntPtr.Zero);
+            info.claimed_nist_level.Should().BeInRange(1, 5);
+        });
     }
 
     [Fact]
     public void SigInstance_SignWithContext_WithDifferentContexts_ShouldProduceDifferentSignatures()
     {
-        var algorithms = Sig.GetSupportedAlgorithms();
-        algorithms.Should().NotBeEmpty();
-
-        // Find an algorithm that supports context strings
-        for (int i = 0; i < algorithms.Length; i++)
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
         {
-            var algorithm = algorithms[i];
-            using var sigInstance = SigProvider.Create(algorithm);
+            var algorithms = Sig.GetSupportedAlgorithms();
+            algorithms.Should().NotBeEmpty();
 
-            if (sigInstance.SupportsContextString())
+            // Find an algorithm that supports context strings
+            for (int i = 0; i < algorithms.Length; i++)
             {
-                var keyPair = sigInstance.GenerateKeyPair();
-                var message = new byte[64];
-                RandomNumberGenerator.Fill(message);
-                
-                var context1 = "Context1"u8.ToArray();
-                var context2 = "Context2"u8.ToArray();
+                var algorithm = algorithms[i];
+                using var sigInstance = SigProvider.Create(algorithm);
 
-                var signature1 = sigInstance.SignWithContext(message, context1, keyPair.SecretKey);
-                var signature2 = sigInstance.SignWithContext(message, context2, keyPair.SecretKey);
+                if (sigInstance.SupportsContextString())
+                {
+                    var keyPair = sigInstance.GenerateKeyPair();
+                    var message = new byte[64];
+                    RandomNumberGenerator.Fill(message);
 
-                // Signatures should be different for different contexts
-                signature1.Should().NotBeEquivalentTo(signature2);
+                    var context1 = "Context1"u8.ToArray();
+                    var context2 = "Context2"u8.ToArray();
 
-                // Each signature should verify with its own context
-                sigInstance.VerifyWithContext(message, signature1, context1, keyPair.PublicKey).Should().BeTrue();
-                sigInstance.VerifyWithContext(message, signature2, context2, keyPair.PublicKey).Should().BeTrue();
+                    var signature1 = sigInstance.SignWithContext(message, context1, keyPair.SecretKey);
+                    var signature2 = sigInstance.SignWithContext(message, context2, keyPair.SecretKey);
 
-                // Signatures should not verify with wrong context
-                sigInstance.VerifyWithContext(message, signature1, context2, keyPair.PublicKey).Should().BeFalse();
-                sigInstance.VerifyWithContext(message, signature2, context1, keyPair.PublicKey).Should().BeFalse();
+                    // Signatures should be different for different contexts
+                    signature1.Should().NotBeEquivalentTo(signature2);
 
-                keyPair.Dispose();
-                return; // Exit after testing one algorithm that supports context
+                    // Each signature should verify with its own context
+                    sigInstance.VerifyWithContext(message, signature1, context1, keyPair.PublicKey).Should().BeTrue();
+                    sigInstance.VerifyWithContext(message, signature2, context2, keyPair.PublicKey).Should().BeTrue();
+
+                    // Signatures should not verify with wrong context
+                    sigInstance.VerifyWithContext(message, signature1, context2, keyPair.PublicKey).Should().BeFalse();
+                    sigInstance.VerifyWithContext(message, signature2, context1, keyPair.PublicKey).Should().BeFalse();
+
+                    keyPair.Dispose();
+                    return; // Exit after testing one algorithm that supports context
+                }
             }
-        }
 
-        // If no algorithm supports context strings, the test should still pass
-        Assert.True(true, "No algorithms found that support context strings");
+            // If no algorithm supports context strings, the test should still pass
+            Assert.True(true, "No algorithms found that support context strings");
+        });
     }
 
     [Fact]

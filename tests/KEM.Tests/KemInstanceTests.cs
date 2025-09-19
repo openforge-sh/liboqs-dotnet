@@ -422,35 +422,38 @@ public sealed class KemInstanceTests(LibOqsTestFixture fixture)
     [Fact]
     public void Instance_LongRunningOperations_ShouldMaintainStability()
     {
-        var algorithms = Kem.GetSupportedAlgorithms();
-        algorithms.Should().NotBeEmpty();
-
-        var algorithm = algorithms[0];
-        using var kem = new Kem(algorithm);
-
-        const int operationCount = 500;
-        var (publicKey, secretKey) = kem.GenerateKeyPair();
-        var successCount = 0;
-
-        for (int i = 0; i < operationCount; i++)
+        TestExecutionHelpers.ExecuteWithLargeStack(() =>
         {
-            try
-            {
-                var (ciphertext, sharedSecret) = kem.Encapsulate(publicKey);
-                var recovered = kem.Decapsulate(ciphertext, secretKey);
+            var algorithms = Kem.GetSupportedAlgorithms();
+            algorithms.Should().NotBeEmpty();
 
-                if (recovered.SequenceEqual(sharedSecret))
+            var algorithm = algorithms[0];
+            using var kem = new Kem(algorithm);
+
+            const int operationCount = 500;
+            var (publicKey, secretKey) = kem.GenerateKeyPair();
+            var successCount = 0;
+
+            for (int i = 0; i < operationCount; i++)
+            {
+                try
                 {
-                    successCount++;
+                    var (ciphertext, sharedSecret) = kem.Encapsulate(publicKey);
+                    var recovered = kem.Decapsulate(ciphertext, secretKey);
+
+                    if (recovered.SequenceEqual(sharedSecret))
+                    {
+                        successCount++;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new InvalidOperationException($"Operation {i} failed: {ex.Message}", ex);
                 }
             }
-            catch (Exception ex)
-            {
-                throw new InvalidOperationException($"Operation {i} failed: {ex.Message}", ex);
-            }
-        }
 
-        successCount.Should().Be(operationCount, "All operations should succeed");
+            successCount.Should().Be(operationCount, "All operations should succeed");
+        });
     }
 
     [Fact]
