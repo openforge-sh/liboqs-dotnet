@@ -2,54 +2,10 @@ using OpenForge.Cryptography.LibOqs.Tests.Common;
 using FluentAssertions;
 using Xunit;
 
-[assembly: AssemblyFixture(typeof(LibOqsTestFixture))]
 namespace OpenForge.Cryptography.LibOqs.Core.Tests;
 
-public sealed class TestExecutionHelpersTests(LibOqsTestFixture fixture)
+public sealed class TestExecutionHelpersTests
 {
-    private readonly LibOqsTestFixture _fixture = fixture;
-
-    [Theory]
-    [InlineData("Classic-McEliece-348864", true)]
-    [InlineData("Classic-McEliece-6960119", true)]
-    [InlineData("HQC-128", true)]
-    [InlineData("HQC-192", true)]
-    [InlineData("HQC-256", true)]
-    [InlineData("SPHINCS-PLUS-SHA2-128s-simple", true)]
-    [InlineData("SPHINCS-PLUS-SHAKE-256f-simple", true)]
-    [InlineData("ML-KEM-512", false)]
-    [InlineData("ML-KEM-768", false)]
-    [InlineData("Kyber512", false)]
-    [InlineData("Dilithium2", false)]
-    [InlineData("Falcon-512", false)]
-    [InlineData("MAYO-1", false)]
-    public void RequiresLargeStack_ShouldIdentifyCorrectAlgorithms(string algorithm, bool expected)
-    {
-        var result = TestExecutionHelpers.RequiresLargeStack(algorithm);
-        result.Should().Be(expected);
-    }
-
-    [Fact]
-    public void RequiresLargeStack_ShouldBeCaseInsensitive()
-    {
-        TestExecutionHelpers.RequiresLargeStack("classic-mceliece-348864").Should().BeTrue();
-        TestExecutionHelpers.RequiresLargeStack("CLASSIC-MCELIECE-348864").Should().BeTrue();
-        TestExecutionHelpers.RequiresLargeStack("hqc-128").Should().BeTrue();
-        TestExecutionHelpers.RequiresLargeStack("sphincs-plus-sha2-128s-simple").Should().BeTrue();
-    }
-
-    [Fact]
-    public void RequiresLargeStack_ShouldThrowForNullOrEmpty()
-    {
-        var act1 = () => TestExecutionHelpers.RequiresLargeStack(null!);
-        var act2 = () => TestExecutionHelpers.RequiresLargeStack("");
-        var act3 = () => TestExecutionHelpers.RequiresLargeStack("   ");
-
-        act1.Should().Throw<ArgumentException>();
-        act2.Should().Throw<ArgumentException>();
-        act3.Should().Throw<ArgumentException>();
-    }
-
     [Fact]
     public void ExecuteWithLargeStack_ShouldExecuteAction()
     {

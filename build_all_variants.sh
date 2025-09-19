@@ -65,6 +65,7 @@ get_variant_flags() {
             echo "-DOQS_ENABLE_KEM_BIKE=OFF \
                   -DOQS_ENABLE_KEM_FRODOKEM=OFF \
                   -DOQS_ENABLE_KEM_NTRUPRIME=OFF \
+                  -DOQS_ENABLE_KEM_NTRU=OFF \
                   -DOQS_ENABLE_KEM_CLASSIC_MCELIECE=OFF \
                   -DOQS_ENABLE_KEM_HQC=OFF \
                   -DOQS_ENABLE_KEM_KYBER=OFF \
@@ -76,6 +77,7 @@ get_variant_flags() {
         #     echo "-DOQS_ENABLE_KEM_BIKE=OFF \
         #           -DOQS_ENABLE_KEM_FRODOKEM=OFF \
         #           -DOQS_ENABLE_KEM_NTRUPRIME=OFF \
+        #           -DOQS_ENABLE_KEM_NTRU=OFF \
         #           -DOQS_ENABLE_KEM_CLASSIC_MCELIECE=OFF \
         #           -DOQS_ENABLE_KEM_HQC=OFF \
         #           -DOQS_ENABLE_KEM_KYBER=OFF \
@@ -229,8 +231,8 @@ build_target() {
     fi
 
     # BIKE is disabled on Windows and macOS due to platform-specific compilation issues
-    if [[ "$platform" == win-* ]] || [[ "$platform" == osx-* ]]; then
-        variant_flags="$variant_flags -DOQS_ENABLE_KEM_BIKE=OFF -DOQS_ENABLE_SIG_SPHINCS=OFF"
+    if [[ "$platform" == win-* ]]; then
+        variant_flags="$variant_flags -DOQS_ENABLE_KEM_BIKE=OFF"
     fi
     
     cd "$build_dir"

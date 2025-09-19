@@ -125,26 +125,16 @@ public static class TestExecutionHelpers
     }
 
     /// <summary>
-    /// Determines if the current algorithm requires a larger stack size.
-    /// </summary>
-    public static bool RequiresLargeStack(string algorithm)
-    {
-        ArgumentException.ThrowIfNullOrWhiteSpace(algorithm);
-        // Algorithms known to require larger stack sizes
-        return algorithm.Contains("Classic-McEliece", StringComparison.OrdinalIgnoreCase) ||
-               algorithm.Contains("HQC", StringComparison.OrdinalIgnoreCase) ||
-               algorithm.Contains("SPHINCS", StringComparison.OrdinalIgnoreCase);
-    }
-
-    /// <summary>
-    /// Conditionally executes with larger stack only for algorithms that need it.
+    /// Conditionally executes with larger stack on platforms that require it (Windows, macOS, Alpine).
+    /// On these platforms, we always use a larger stack regardless of algorithm due to potential
+    /// memory layout and access violation issues.
     /// </summary>
     public static void ConditionallyExecuteWithLargeStack(string algorithm, Action action)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(algorithm);
         ArgumentNullException.ThrowIfNull(action);
 
-        if (RequiresLargeStack(algorithm) && RequiresLargeStackPlatform)
+        if (RequiresLargeStackPlatform)
         {
             ExecuteWithLargeStack(action);
         }
