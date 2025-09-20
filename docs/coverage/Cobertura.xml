@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.943609022556391" branch-rate="0.783068783068783" lines-covered="2259" lines-valid="2394" branches-covered="888" branches-valid="1134" complexity="1440" version="0" timestamp="1758119612">
+<coverage line-rate="0.9651924651924652" branch-rate="0.8671742808798646" lines-covered="2357" lines-valid="2442" branches-covered="1025" branches-valid="1182" complexity="1488" version="0" timestamp="1758376531">
   <sources />
   <packages>
-    <package name="OpenForge.Cryptography.LibOqs.Core" line-rate="0.923963133640553" branch-rate="0.8728813559322034" complexity="780">
+    <package name="OpenForge.Cryptography.LibOqs.Core" line-rate="0.9516129032258065" branch-rate="0.9096045197740112" complexity="780">
       <classes>
         <class name="OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants" filename="/actions-runner/_work/liboqs-dotnet/liboqs-dotnet/src/Core/AlgorithmConstants.cs" line-rate="1" branch-rate="1" complexity="11">
           <methods>
@@ -161,252 +161,156 @@
             <line number="379" hits="12" branch="false" />
           </lines>
         </class>
-        <class name="OpenForge.Cryptography.LibOqs.Core.CryptographyValidation" filename="/actions-runner/_work/liboqs-dotnet/liboqs-dotnet/src/Core/CryptographyValidation.cs" line-rate="0.5862068965517241" branch-rate="0.5" complexity="19">
+        <class name="OpenForge.Cryptography.LibOqs.Core.CryptographyValidation" filename="/actions-runner/_work/liboqs-dotnet/liboqs-dotnet/src/Core/CryptographyValidation.cs" line-rate="1" branch-rate="1" complexity="19">
           <methods>
             <method name="ValidateAlgorithmName" signature="(string)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="19" hits="24" branch="false" />
-                <line number="20" hits="24" branch="false" />
+                <line number="19" hits="32" branch="false" />
+                <line number="20" hits="32" branch="false" />
               </lines>
             </method>
             <method name="ValidateAlgorithmSupport" signature="(bool, string)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="31" hits="24" branch="true" condition-coverage="100% (2/2)" />
-                <line number="32" hits="16" branch="false" />
-                <line number="33" hits="24" branch="false" />
+                <line number="31" hits="32" branch="true" condition-coverage="100% (2/2)" />
+                <line number="32" hits="24" branch="false" />
+                <line number="33" hits="32" branch="false" />
               </lines>
             </method>
-            <method name="ValidateNativeHandle" signature="(native int, string)" line-rate="0.6666666666666666" branch-rate="0.5" complexity="2">
+            <method name="ValidateNativeHandle" signature="(native int, string)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="44" hits="24" branch="true" condition-coverage="50% (1/2)" />
-                <line number="45" hits="0" branch="false" />
-                <line number="46" hits="24" branch="false" />
+                <line number="44" hits="32" branch="true" condition-coverage="100% (2/2)" />
+                <line number="45" hits="8" branch="false" />
+                <line number="46" hits="32" branch="false" />
               </lines>
             </method>
-            <method name="ValidateOperationResult" signature="(int, string, string, string)" line-rate="0.8333333333333334" branch-rate="0.75" complexity="4">
+            <method name="ValidateOperationResult" signature="(int, string, string, string)" line-rate="1" branch-rate="1" complexity="4">
               <lines>
-                <line number="59" hits="24" branch="true" condition-coverage="100% (2/2)" />
-                <line number="61" hits="8" branch="false" />
-                <line number="62" hits="8" branch="true" condition-coverage="50% (1/2)" />
-                <line number="63" hits="0" branch="false" />
-                <line number="64" hits="8" branch="false" />
-                <line number="66" hits="24" branch="false" />
+                <line number="59" hits="32" branch="true" condition-coverage="100% (2/2)" />
+                <line number="61" hits="16" branch="false" />
+                <line number="62" hits="16" branch="true" condition-coverage="100% (2/2)" />
+                <line number="63" hits="8" branch="false" />
+                <line number="64" hits="16" branch="false" />
+                <line number="66" hits="32" branch="false" />
               </lines>
             </method>
-            <method name="ValidateOperationResult" signature="(uint, string, string, string)" line-rate="0" branch-rate="0" complexity="4">
+            <method name="ValidateOperationResult" signature="(uint, string, string, string)" line-rate="1" branch-rate="1" complexity="4">
               <lines>
-                <line number="79" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="81" hits="0" branch="false" />
-                <line number="82" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="83" hits="0" branch="false" />
-                <line number="84" hits="0" branch="false" />
-                <line number="86" hits="0" branch="false" />
+                <line number="79" hits="8" branch="true" condition-coverage="100% (2/2)" />
+                <line number="81" hits="8" branch="false" />
+                <line number="82" hits="8" branch="true" condition-coverage="100% (2/2)" />
+                <line number="83" hits="8" branch="false" />
+                <line number="84" hits="8" branch="false" />
+                <line number="86" hits="8" branch="false" />
               </lines>
             </method>
-            <method name="ValidateNonNegativeIndex" signature="(int, string)" line-rate="0" branch-rate="0" complexity="2">
+            <method name="ValidateNonNegativeIndex" signature="(int, string)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="97" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="98" hits="0" branch="false" />
-                <line number="99" hits="0" branch="false" />
+                <line number="97" hits="8" branch="true" condition-coverage="100% (2/2)" />
+                <line number="98" hits="8" branch="false" />
+                <line number="99" hits="8" branch="false" />
               </lines>
             </method>
-            <method name="ValidatePointer" signature="(native int, string)" line-rate="0.6666666666666666" branch-rate="0.5" complexity="2">
+            <method name="ValidatePointer" signature="(native int, string)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="110" hits="24" branch="true" condition-coverage="50% (1/2)" />
-                <line number="111" hits="0" branch="false" />
-                <line number="112" hits="24" branch="false" />
+                <line number="110" hits="32" branch="true" condition-coverage="100% (2/2)" />
+                <line number="111" hits="8" branch="false" />
+                <line number="112" hits="32" branch="false" />
               </lines>
             </method>
             <method name="ValidateContextStringSupport" signature="(bool, string)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="123" hits="8" branch="true" condition-coverage="100% (2/2)" />
-                <line number="124" hits="8" branch="false" />
-                <line number="125" hits="8" branch="false" />
+                <line number="123" hits="16" branch="true" condition-coverage="100% (2/2)" />
+                <line number="124" hits="16" branch="false" />
+                <line number="125" hits="16" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="19" hits="24" branch="false" />
-            <line number="20" hits="24" branch="false" />
-            <line number="31" hits="24" branch="true" condition-coverage="100% (2/2)" />
-            <line number="32" hits="16" branch="false" />
-            <line number="33" hits="24" branch="false" />
-            <line number="44" hits="24" branch="true" condition-coverage="50% (1/2)" />
-            <line number="45" hits="0" branch="false" />
-            <line number="46" hits="24" branch="false" />
-            <line number="59" hits="24" branch="true" condition-coverage="100% (2/2)" />
-            <line number="61" hits="8" branch="false" />
-            <line number="62" hits="8" branch="true" condition-coverage="50% (1/2)" />
-            <line number="63" hits="0" branch="false" />
-            <line number="64" hits="8" branch="false" />
-            <line number="66" hits="24" branch="false" />
-            <line number="79" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="81" hits="0" branch="false" />
-            <line number="82" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="83" hits="0" branch="false" />
-            <line number="84" hits="0" branch="false" />
-            <line number="86" hits="0" branch="false" />
-            <line number="97" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="98" hits="0" branch="false" />
-            <line number="99" hits="0" branch="false" />
-            <line number="110" hits="24" branch="true" condition-coverage="50% (1/2)" />
-            <line number="111" hits="0" branch="false" />
-            <line number="112" hits="24" branch="false" />
-            <line number="123" hits="8" branch="true" condition-coverage="100% (2/2)" />
-            <line number="124" hits="8" branch="false" />
-            <line number="125" hits="8" branch="false" />
+            <line number="19" hits="32" branch="false" />
+            <line number="20" hits="32" branch="false" />
+            <line number="31" hits="32" branch="true" condition-coverage="100% (2/2)" />
+            <line number="32" hits="24" branch="false" />
+            <line number="33" hits="32" branch="false" />
+            <line number="44" hits="32" branch="true" condition-coverage="100% (2/2)" />
+            <line number="45" hits="8" branch="false" />
+            <line number="46" hits="32" branch="false" />
+            <line number="59" hits="32" branch="true" condition-coverage="100% (2/2)" />
+            <line number="61" hits="16" branch="false" />
+            <line number="62" hits="16" branch="true" condition-coverage="100% (2/2)" />
+            <line number="63" hits="8" branch="false" />
+            <line number="64" hits="16" branch="false" />
+            <line number="66" hits="32" branch="false" />
+            <line number="79" hits="8" branch="true" condition-coverage="100% (2/2)" />
+            <line number="81" hits="8" branch="false" />
+            <line number="82" hits="8" branch="true" condition-coverage="100% (2/2)" />
+            <line number="83" hits="8" branch="false" />
+            <line number="84" hits="8" branch="false" />
+            <line number="86" hits="8" branch="false" />
+            <line number="97" hits="8" branch="true" condition-coverage="100% (2/2)" />
+            <line number="98" hits="8" branch="false" />
+            <line number="99" hits="8" branch="false" />
+            <line number="110" hits="32" branch="true" condition-coverage="100% (2/2)" />
+            <line number="111" hits="8" branch="false" />
+            <line number="112" hits="32" branch="false" />
+            <line number="123" hits="16" branch="true" condition-coverage="100% (2/2)" />
+            <line number="124" hits="16" branch="false" />
+            <line number="125" hits="16" branch="false" />
           </lines>
         </class>
-        <class name="OpenForge.Cryptography.LibOqs.Core.CryptographyValidation" filename="/Users/runner/work/liboqs-dotnet/liboqs-dotnet/src/Core/CryptographyValidation.cs" line-rate="0.5862068965517241" branch-rate="0.5" complexity="19">
+        <class name="OpenForge.Cryptography.LibOqs.Core.CryptographyValidation" filename="/Users/runner/work/liboqs-dotnet/liboqs-dotnet/src/Core/CryptographyValidation.cs" line-rate="1" branch-rate="1" complexity="19">
           <methods>
             <method name="ValidateAlgorithmName" signature="(string)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="19" hits="6" branch="false" />
-                <line number="20" hits="6" branch="false" />
+                <line number="19" hits="8" branch="false" />
+                <line number="20" hits="8" branch="false" />
               </lines>
             </method>
             <method name="ValidateAlgorithmSupport" signature="(bool, string)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="31" hits="6" branch="true" condition-coverage="100% (2/2)" />
-                <line number="32" hits="4" branch="false" />
-                <line number="33" hits="6" branch="false" />
+                <line number="31" hits="8" branch="true" condition-coverage="100% (2/2)" />
+                <line number="32" hits="6" branch="false" />
+                <line number="33" hits="8" branch="false" />
               </lines>
             </method>
-            <method name="ValidateNativeHandle" signature="(native int, string)" line-rate="0.6666666666666666" branch-rate="0.5" complexity="2">
+            <method name="ValidateNativeHandle" signature="(native int, string)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="44" hits="6" branch="true" condition-coverage="50% (1/2)" />
-                <line number="45" hits="0" branch="false" />
-                <line number="46" hits="6" branch="false" />
+                <line number="44" hits="8" branch="true" condition-coverage="100% (2/2)" />
+                <line number="45" hits="2" branch="false" />
+                <line number="46" hits="8" branch="false" />
               </lines>
             </method>
-            <method name="ValidateOperationResult" signature="(int, string, string, string)" line-rate="0.8333333333333334" branch-rate="0.75" complexity="4">
+            <method name="ValidateOperationResult" signature="(int, string, string, string)" line-rate="1" branch-rate="1" complexity="4">
               <lines>
-                <line number="59" hits="6" branch="true" condition-coverage="100% (2/2)" />
-                <line number="61" hits="2" branch="false" />
-                <line number="62" hits="2" branch="true" condition-coverage="50% (1/2)" />
-                <line number="63" hits="0" branch="false" />
-                <line number="64" hits="2" branch="false" />
-                <line number="66" hits="6" branch="false" />
-              </lines>
-            </method>
-            <method name="ValidateOperationResult" signature="(uint, string, string, string)" line-rate="0" branch-rate="0" complexity="4">
-              <lines>
-                <line number="79" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="81" hits="0" branch="false" />
-                <line number="82" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="83" hits="0" branch="false" />
-                <line number="84" hits="0" branch="false" />
-                <line number="86" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="ValidateNonNegativeIndex" signature="(int, string)" line-rate="0" branch-rate="0" complexity="2">
-              <lines>
-                <line number="97" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="98" hits="0" branch="false" />
-                <line number="99" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="ValidatePointer" signature="(native int, string)" line-rate="0.6666666666666666" branch-rate="0.5" complexity="2">
-              <lines>
-                <line number="110" hits="6" branch="true" condition-coverage="50% (1/2)" />
-                <line number="111" hits="0" branch="false" />
-                <line number="112" hits="6" branch="false" />
-              </lines>
-            </method>
-            <method name="ValidateContextStringSupport" signature="(bool, string)" line-rate="1" branch-rate="1" complexity="2">
-              <lines>
-                <line number="123" hits="2" branch="true" condition-coverage="100% (2/2)" />
-                <line number="124" hits="2" branch="false" />
-                <line number="125" hits="2" branch="false" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="19" hits="6" branch="false" />
-            <line number="20" hits="6" branch="false" />
-            <line number="31" hits="6" branch="true" condition-coverage="100% (2/2)" />
-            <line number="32" hits="4" branch="false" />
-            <line number="33" hits="6" branch="false" />
-            <line number="44" hits="6" branch="true" condition-coverage="50% (1/2)" />
-            <line number="45" hits="0" branch="false" />
-            <line number="46" hits="6" branch="false" />
-            <line number="59" hits="6" branch="true" condition-coverage="100% (2/2)" />
-            <line number="61" hits="2" branch="false" />
-            <line number="62" hits="2" branch="true" condition-coverage="50% (1/2)" />
-            <line number="63" hits="0" branch="false" />
-            <line number="64" hits="2" branch="false" />
-            <line number="66" hits="6" branch="false" />
-            <line number="79" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="81" hits="0" branch="false" />
-            <line number="82" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="83" hits="0" branch="false" />
-            <line number="84" hits="0" branch="false" />
-            <line number="86" hits="0" branch="false" />
-            <line number="97" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="98" hits="0" branch="false" />
-            <line number="99" hits="0" branch="false" />
-            <line number="110" hits="6" branch="true" condition-coverage="50% (1/2)" />
-            <line number="111" hits="0" branch="false" />
-            <line number="112" hits="6" branch="false" />
-            <line number="123" hits="2" branch="true" condition-coverage="100% (2/2)" />
-            <line number="124" hits="2" branch="false" />
-            <line number="125" hits="2" branch="false" />
-          </lines>
-        </class>
-        <class name="OpenForge.Cryptography.LibOqs.Core.CryptographyValidation" filename="C:\a\liboqs-dotnet\liboqs-dotnet\src\Core\CryptographyValidation.cs" line-rate="0.5862068965517241" branch-rate="0.5" complexity="19">
-          <methods>
-            <method name="ValidateAlgorithmName" signature="(string)" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="19" hits="12" branch="false" />
-                <line number="20" hits="12" branch="false" />
-              </lines>
-            </method>
-            <method name="ValidateAlgorithmSupport" signature="(bool, string)" line-rate="1" branch-rate="1" complexity="2">
-              <lines>
-                <line number="31" hits="12" branch="true" condition-coverage="100% (2/2)" />
-                <line number="32" hits="8" branch="false" />
-                <line number="33" hits="12" branch="false" />
-              </lines>
-            </method>
-            <method name="ValidateNativeHandle" signature="(native int, string)" line-rate="0.6666666666666666" branch-rate="0.5" complexity="2">
-              <lines>
-                <line number="44" hits="12" branch="true" condition-coverage="50% (1/2)" />
-                <line number="45" hits="0" branch="false" />
-                <line number="46" hits="12" branch="false" />
-              </lines>
-            </method>
-            <method name="ValidateOperationResult" signature="(int, string, string, string)" line-rate="0.8333333333333334" branch-rate="0.75" complexity="4">
-              <lines>
-                <line number="59" hits="12" branch="true" condition-coverage="100% (2/2)" />
+                <line number="59" hits="8" branch="true" condition-coverage="100% (2/2)" />
                 <line number="61" hits="4" branch="false" />
-                <line number="62" hits="4" branch="true" condition-coverage="50% (1/2)" />
-                <line number="63" hits="0" branch="false" />
+                <line number="62" hits="4" branch="true" condition-coverage="100% (2/2)" />
+                <line number="63" hits="2" branch="false" />
                 <line number="64" hits="4" branch="false" />
-                <line number="66" hits="12" branch="false" />
+                <line number="66" hits="8" branch="false" />
               </lines>
             </method>
-            <method name="ValidateOperationResult" signature="(uint, string, string, string)" line-rate="0" branch-rate="0" complexity="4">
+            <method name="ValidateOperationResult" signature="(uint, string, string, string)" line-rate="1" branch-rate="1" complexity="4">
               <lines>
-                <line number="79" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="81" hits="0" branch="false" />
-                <line number="82" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="83" hits="0" branch="false" />
-                <line number="84" hits="0" branch="false" />
-                <line number="86" hits="0" branch="false" />
+                <line number="79" hits="2" branch="true" condition-coverage="100% (2/2)" />
+                <line number="81" hits="2" branch="false" />
+                <line number="82" hits="2" branch="true" condition-coverage="100% (2/2)" />
+                <line number="83" hits="2" branch="false" />
+                <line number="84" hits="2" branch="false" />
+                <line number="86" hits="2" branch="false" />
               </lines>
             </method>
-            <method name="ValidateNonNegativeIndex" signature="(int, string)" line-rate="0" branch-rate="0" complexity="2">
+            <method name="ValidateNonNegativeIndex" signature="(int, string)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="97" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="98" hits="0" branch="false" />
-                <line number="99" hits="0" branch="false" />
+                <line number="97" hits="2" branch="true" condition-coverage="100% (2/2)" />
+                <line number="98" hits="2" branch="false" />
+                <line number="99" hits="2" branch="false" />
               </lines>
             </method>
-            <method name="ValidatePointer" signature="(native int, string)" line-rate="0.6666666666666666" branch-rate="0.5" complexity="2">
+            <method name="ValidatePointer" signature="(native int, string)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="110" hits="12" branch="true" condition-coverage="50% (1/2)" />
-                <line number="111" hits="0" branch="false" />
-                <line number="112" hits="12" branch="false" />
+                <line number="110" hits="8" branch="true" condition-coverage="100% (2/2)" />
+                <line number="111" hits="2" branch="false" />
+                <line number="112" hits="8" branch="false" />
               </lines>
             </method>
             <method name="ValidateContextStringSupport" signature="(bool, string)" line-rate="1" branch-rate="1" complexity="2">
@@ -418,35 +322,131 @@
             </method>
           </methods>
           <lines>
-            <line number="19" hits="12" branch="false" />
-            <line number="20" hits="12" branch="false" />
-            <line number="31" hits="12" branch="true" condition-coverage="100% (2/2)" />
-            <line number="32" hits="8" branch="false" />
-            <line number="33" hits="12" branch="false" />
-            <line number="44" hits="12" branch="true" condition-coverage="50% (1/2)" />
-            <line number="45" hits="0" branch="false" />
-            <line number="46" hits="12" branch="false" />
-            <line number="59" hits="12" branch="true" condition-coverage="100% (2/2)" />
+            <line number="19" hits="8" branch="false" />
+            <line number="20" hits="8" branch="false" />
+            <line number="31" hits="8" branch="true" condition-coverage="100% (2/2)" />
+            <line number="32" hits="6" branch="false" />
+            <line number="33" hits="8" branch="false" />
+            <line number="44" hits="8" branch="true" condition-coverage="100% (2/2)" />
+            <line number="45" hits="2" branch="false" />
+            <line number="46" hits="8" branch="false" />
+            <line number="59" hits="8" branch="true" condition-coverage="100% (2/2)" />
             <line number="61" hits="4" branch="false" />
-            <line number="62" hits="4" branch="true" condition-coverage="50% (1/2)" />
-            <line number="63" hits="0" branch="false" />
+            <line number="62" hits="4" branch="true" condition-coverage="100% (2/2)" />
+            <line number="63" hits="2" branch="false" />
             <line number="64" hits="4" branch="false" />
-            <line number="66" hits="12" branch="false" />
-            <line number="79" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="81" hits="0" branch="false" />
-            <line number="82" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="83" hits="0" branch="false" />
-            <line number="84" hits="0" branch="false" />
-            <line number="86" hits="0" branch="false" />
-            <line number="97" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="98" hits="0" branch="false" />
-            <line number="99" hits="0" branch="false" />
-            <line number="110" hits="12" branch="true" condition-coverage="50% (1/2)" />
-            <line number="111" hits="0" branch="false" />
-            <line number="112" hits="12" branch="false" />
+            <line number="66" hits="8" branch="false" />
+            <line number="79" hits="2" branch="true" condition-coverage="100% (2/2)" />
+            <line number="81" hits="2" branch="false" />
+            <line number="82" hits="2" branch="true" condition-coverage="100% (2/2)" />
+            <line number="83" hits="2" branch="false" />
+            <line number="84" hits="2" branch="false" />
+            <line number="86" hits="2" branch="false" />
+            <line number="97" hits="2" branch="true" condition-coverage="100% (2/2)" />
+            <line number="98" hits="2" branch="false" />
+            <line number="99" hits="2" branch="false" />
+            <line number="110" hits="8" branch="true" condition-coverage="100% (2/2)" />
+            <line number="111" hits="2" branch="false" />
+            <line number="112" hits="8" branch="false" />
             <line number="123" hits="4" branch="true" condition-coverage="100% (2/2)" />
             <line number="124" hits="4" branch="false" />
             <line number="125" hits="4" branch="false" />
+          </lines>
+        </class>
+        <class name="OpenForge.Cryptography.LibOqs.Core.CryptographyValidation" filename="C:\a\liboqs-dotnet\liboqs-dotnet\src\Core\CryptographyValidation.cs" line-rate="1" branch-rate="1" complexity="19">
+          <methods>
+            <method name="ValidateAlgorithmName" signature="(string)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="16" branch="false" />
+                <line number="20" hits="16" branch="false" />
+              </lines>
+            </method>
+            <method name="ValidateAlgorithmSupport" signature="(bool, string)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="31" hits="16" branch="true" condition-coverage="100% (2/2)" />
+                <line number="32" hits="12" branch="false" />
+                <line number="33" hits="16" branch="false" />
+              </lines>
+            </method>
+            <method name="ValidateNativeHandle" signature="(native int, string)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="44" hits="16" branch="true" condition-coverage="100% (2/2)" />
+                <line number="45" hits="4" branch="false" />
+                <line number="46" hits="16" branch="false" />
+              </lines>
+            </method>
+            <method name="ValidateOperationResult" signature="(int, string, string, string)" line-rate="1" branch-rate="1" complexity="4">
+              <lines>
+                <line number="59" hits="16" branch="true" condition-coverage="100% (2/2)" />
+                <line number="61" hits="8" branch="false" />
+                <line number="62" hits="8" branch="true" condition-coverage="100% (2/2)" />
+                <line number="63" hits="4" branch="false" />
+                <line number="64" hits="8" branch="false" />
+                <line number="66" hits="16" branch="false" />
+              </lines>
+            </method>
+            <method name="ValidateOperationResult" signature="(uint, string, string, string)" line-rate="1" branch-rate="1" complexity="4">
+              <lines>
+                <line number="79" hits="4" branch="true" condition-coverage="100% (2/2)" />
+                <line number="81" hits="4" branch="false" />
+                <line number="82" hits="4" branch="true" condition-coverage="100% (2/2)" />
+                <line number="83" hits="4" branch="false" />
+                <line number="84" hits="4" branch="false" />
+                <line number="86" hits="4" branch="false" />
+              </lines>
+            </method>
+            <method name="ValidateNonNegativeIndex" signature="(int, string)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="97" hits="4" branch="true" condition-coverage="100% (2/2)" />
+                <line number="98" hits="4" branch="false" />
+                <line number="99" hits="4" branch="false" />
+              </lines>
+            </method>
+            <method name="ValidatePointer" signature="(native int, string)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="110" hits="16" branch="true" condition-coverage="100% (2/2)" />
+                <line number="111" hits="4" branch="false" />
+                <line number="112" hits="16" branch="false" />
+              </lines>
+            </method>
+            <method name="ValidateContextStringSupport" signature="(bool, string)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="123" hits="8" branch="true" condition-coverage="100% (2/2)" />
+                <line number="124" hits="8" branch="false" />
+                <line number="125" hits="8" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="19" hits="16" branch="false" />
+            <line number="20" hits="16" branch="false" />
+            <line number="31" hits="16" branch="true" condition-coverage="100% (2/2)" />
+            <line number="32" hits="12" branch="false" />
+            <line number="33" hits="16" branch="false" />
+            <line number="44" hits="16" branch="true" condition-coverage="100% (2/2)" />
+            <line number="45" hits="4" branch="false" />
+            <line number="46" hits="16" branch="false" />
+            <line number="59" hits="16" branch="true" condition-coverage="100% (2/2)" />
+            <line number="61" hits="8" branch="false" />
+            <line number="62" hits="8" branch="true" condition-coverage="100% (2/2)" />
+            <line number="63" hits="4" branch="false" />
+            <line number="64" hits="8" branch="false" />
+            <line number="66" hits="16" branch="false" />
+            <line number="79" hits="4" branch="true" condition-coverage="100% (2/2)" />
+            <line number="81" hits="4" branch="false" />
+            <line number="82" hits="4" branch="true" condition-coverage="100% (2/2)" />
+            <line number="83" hits="4" branch="false" />
+            <line number="84" hits="4" branch="false" />
+            <line number="86" hits="4" branch="false" />
+            <line number="97" hits="4" branch="true" condition-coverage="100% (2/2)" />
+            <line number="98" hits="4" branch="false" />
+            <line number="99" hits="4" branch="false" />
+            <line number="110" hits="16" branch="true" condition-coverage="100% (2/2)" />
+            <line number="111" hits="4" branch="false" />
+            <line number="112" hits="16" branch="false" />
+            <line number="123" hits="8" branch="true" condition-coverage="100% (2/2)" />
+            <line number="124" hits="8" branch="false" />
+            <line number="125" hits="8" branch="false" />
           </lines>
         </class>
         <class name="OpenForge.Cryptography.LibOqs.Core.KemAlgorithms" filename="/actions-runner/_work/liboqs-dotnet/liboqs-dotnet/src/Core/AlgorithmConstants.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -2907,7 +2907,7 @@
             <line number="334" hits="8" branch="false" />
           </lines>
         </class>
-        <class name="OpenForge.Cryptography.LibOqs.Core.SecurityUtilities" filename="/Users/runner/work/liboqs-dotnet/liboqs-dotnet/src/Core/SecurityUtilities.cs" line-rate="0.967032967032967" branch-rate="0.9605263157894737" complexity="78">
+        <class name="OpenForge.Cryptography.LibOqs.Core.SecurityUtilities" filename="/Users/runner/work/liboqs-dotnet/liboqs-dotnet/src/Core/SecurityUtilities.cs" line-rate="0.967032967032967" branch-rate="0.9473684210526315" complexity="78">
           <methods>
             <method name="ConstantTimeEquals" signature="(System.ReadOnlySpan&lt;byte&gt;, System.ReadOnlySpan&lt;byte&gt;)" line-rate="1" branch-rate="1" complexity="4">
               <lines>
@@ -3011,12 +3011,12 @@
                 <line number="226" hits="2" branch="false" />
               </lines>
             </method>
-            <method name="IsRepeatingPattern" signature="(System.ReadOnlySpan&lt;byte&gt;, int)" line-rate="0.6666666666666666" branch-rate="0.6666666666666666" complexity="6">
+            <method name="IsRepeatingPattern" signature="(System.ReadOnlySpan&lt;byte&gt;, int)" line-rate="0.6666666666666666" branch-rate="0.5" complexity="6">
               <lines>
                 <line number="230" hits="2" branch="true" condition-coverage="50% (1/2)" />
                 <line number="231" hits="0" branch="false" />
                 <line number="234" hits="2" branch="true" condition-coverage="50% (1/2)" />
-                <line number="236" hits="2" branch="true" condition-coverage="100% (2/2)" />
+                <line number="236" hits="2" branch="true" condition-coverage="50% (1/2)" />
                 <line number="237" hits="2" branch="false" />
                 <line number="239" hits="0" branch="false" />
               </lines>
@@ -3135,7 +3135,7 @@
             <line number="230" hits="2" branch="true" condition-coverage="50% (1/2)" />
             <line number="231" hits="0" branch="false" />
             <line number="234" hits="2" branch="true" condition-coverage="50% (1/2)" />
-            <line number="236" hits="2" branch="true" condition-coverage="100% (2/2)" />
+            <line number="236" hits="2" branch="true" condition-coverage="50% (1/2)" />
             <line number="237" hits="2" branch="false" />
             <line number="239" hits="0" branch="false" />
             <line number="250" hits="2" branch="true" condition-coverage="100% (2/2)" />
@@ -3775,7 +3775,7 @@
         </class>
       </classes>
     </package>
-    <package name="OpenForge.Cryptography.LibOqs.KEM" line-rate="0.9775280898876404" branch-rate="0.6025641025641025" complexity="360">
+    <package name="OpenForge.Cryptography.LibOqs.KEM" line-rate="0.992831541218638" branch-rate="0.7674418604651163" complexity="384">
       <classes>
         <class name="OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult" filename="/actions-runner/_work/liboqs-dotnet/liboqs-dotnet/src/KEM/KemProvider.cs" line-rate="1" branch-rate="1" complexity="5">
           <methods>
@@ -4422,7 +4422,7 @@
             <line number="179" hits="8" branch="false" />
           </lines>
         </class>
-        <class name="OpenForge.Cryptography.LibOqs.KEM.KemInstance" filename="/actions-runner/_work/liboqs-dotnet/liboqs-dotnet/src/KEM/KemProvider.cs" line-rate="0.9466666666666667" branch-rate="0.55" complexity="46">
+        <class name="OpenForge.Cryptography.LibOqs.KEM.KemInstance" filename="/actions-runner/_work/liboqs-dotnet/liboqs-dotnet/src/KEM/KemProvider.cs" line-rate="1" branch-rate="0.55" complexity="46">
           <methods>
             <method name=".ctor" signature="(native int, string)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -4456,7 +4456,7 @@
                 <line number="161" hits="16" branch="false" />
               </lines>
             </method>
-            <method name="GenerateDeterministicKeyPair" signature="(System.ReadOnlySpan&lt;byte&gt;)" line-rate="0.9090909090909091" branch-rate="0.5" complexity="8">
+            <method name="GenerateDeterministicKeyPair" signature="(System.ReadOnlySpan&lt;byte&gt;)" line-rate="1" branch-rate="0.5" complexity="8">
               <lines>
                 <line number="175" hits="8" branch="false" />
                 <line number="177" hits="8" branch="false" />
@@ -4468,7 +4468,7 @@
                 <line number="185" hits="8" branch="false" />
                 <line number="187" hits="8" branch="false" />
                 <line number="188" hits="8" branch="false" />
-                <line number="190" hits="0" branch="false" />
+                <line number="190" hits="4" branch="false" />
               </lines>
             </method>
             <method name="Encapsulate" signature="(System.ReadOnlySpan&lt;byte&gt;)" line-rate="1" branch-rate="0.5" complexity="8">
@@ -4486,7 +4486,7 @@
                 <line number="220" hits="16" branch="false" />
               </lines>
             </method>
-            <method name="EncapsulateDeterministic" signature="(System.ReadOnlySpan&lt;byte&gt;, System.ReadOnlySpan&lt;byte&gt;)" line-rate="0.9230769230769231" branch-rate="0.5" complexity="8">
+            <method name="EncapsulateDeterministic" signature="(System.ReadOnlySpan&lt;byte&gt;, System.ReadOnlySpan&lt;byte&gt;)" line-rate="1" branch-rate="0.5" complexity="8">
               <lines>
                 <line number="235" hits="8" branch="false" />
                 <line number="237" hits="8" branch="false" />
@@ -4500,7 +4500,7 @@
                 <line number="247" hits="8" branch="false" />
                 <line number="249" hits="8" branch="false" />
                 <line number="250" hits="8" branch="false" />
-                <line number="252" hits="0" branch="false" />
+                <line number="252" hits="4" branch="false" />
               </lines>
             </method>
             <method name="Decapsulate" signature="(System.ReadOnlySpan&lt;byte&gt;, System.ReadOnlySpan&lt;byte&gt;)" line-rate="1" branch-rate="0.5" complexity="4">
@@ -4535,10 +4535,10 @@
                 <line number="310" hits="16" branch="false" />
               </lines>
             </method>
-            <method name="Finalize" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="Finalize" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="317" hits="0" branch="false" />
-                <line number="318" hits="0" branch="false" />
+                <line number="317" hits="8" branch="false" />
+                <line number="318" hits="8" branch="false" />
               </lines>
             </method>
             <method name="ThrowIfDisposed" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -4575,7 +4575,7 @@
             <line number="185" hits="8" branch="false" />
             <line number="187" hits="8" branch="false" />
             <line number="188" hits="8" branch="false" />
-            <line number="190" hits="0" branch="false" />
+            <line number="190" hits="4" branch="false" />
             <line number="205" hits="16" branch="false" />
             <line number="207" hits="16" branch="false" />
             <line number="208" hits="16" branch="false" />
@@ -4599,7 +4599,7 @@
             <line number="247" hits="8" branch="false" />
             <line number="249" hits="8" branch="false" />
             <line number="250" hits="8" branch="false" />
-            <line number="252" hits="0" branch="false" />
+            <line number="252" hits="4" branch="false" />
             <line number="268" hits="16" branch="false" />
             <line number="270" hits="16" branch="false" />
             <line number="271" hits="16" branch="false" />
@@ -4620,13 +4620,13 @@
             <line number="306" hits="16" branch="false" />
             <line number="308" hits="16" branch="false" />
             <line number="310" hits="16" branch="false" />
-            <line number="317" hits="0" branch="false" />
-            <line number="318" hits="0" branch="false" />
+            <line number="317" hits="8" branch="false" />
+            <line number="318" hits="8" branch="false" />
             <line number="322" hits="16" branch="false" />
             <line number="323" hits="16" branch="false" />
           </lines>
         </class>
-        <class name="OpenForge.Cryptography.LibOqs.KEM.KemInstance" filename="/Users/runner/work/liboqs-dotnet/liboqs-dotnet/src/KEM/KemProvider.cs" line-rate="0.9466666666666667" branch-rate="0.55" complexity="46">
+        <class name="OpenForge.Cryptography.LibOqs.KEM.KemInstance" filename="/Users/runner/work/liboqs-dotnet/liboqs-dotnet/src/KEM/KemProvider.cs" line-rate="0.9733333333333334" branch-rate="0.55" complexity="46">
           <methods>
             <method name=".ctor" signature="(native int, string)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -4739,10 +4739,10 @@
                 <line number="310" hits="4" branch="false" />
               </lines>
             </method>
-            <method name="Finalize" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="Finalize" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="317" hits="0" branch="false" />
-                <line number="318" hits="0" branch="false" />
+                <line number="317" hits="2" branch="false" />
+                <line number="318" hits="2" branch="false" />
               </lines>
             </method>
             <method name="ThrowIfDisposed" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -4824,13 +4824,13 @@
             <line number="306" hits="4" branch="false" />
             <line number="308" hits="4" branch="false" />
             <line number="310" hits="4" branch="false" />
-            <line number="317" hits="0" branch="false" />
-            <line number="318" hits="0" branch="false" />
+            <line number="317" hits="2" branch="false" />
+            <line number="318" hits="2" branch="false" />
             <line number="322" hits="4" branch="false" />
             <line number="323" hits="4" branch="false" />
           </lines>
         </class>
-        <class name="OpenForge.Cryptography.LibOqs.KEM.KemInstance" filename="C:\a\liboqs-dotnet\liboqs-dotnet\src\KEM\KemProvider.cs" line-rate="0.9466666666666667" branch-rate="0.55" complexity="46">
+        <class name="OpenForge.Cryptography.LibOqs.KEM.KemInstance" filename="C:\a\liboqs-dotnet\liboqs-dotnet\src\KEM\KemProvider.cs" line-rate="0.9733333333333334" branch-rate="0.55" complexity="46">
           <methods>
             <method name=".ctor" signature="(native int, string)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -4943,10 +4943,10 @@
                 <line number="310" hits="8" branch="false" />
               </lines>
             </method>
-            <method name="Finalize" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="Finalize" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="317" hits="0" branch="false" />
-                <line number="318" hits="0" branch="false" />
+                <line number="317" hits="4" branch="false" />
+                <line number="318" hits="4" branch="false" />
               </lines>
             </method>
             <method name="ThrowIfDisposed" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -5028,8 +5028,8 @@
             <line number="306" hits="8" branch="false" />
             <line number="308" hits="8" branch="false" />
             <line number="310" hits="8" branch="false" />
-            <line number="317" hits="0" branch="false" />
-            <line number="318" hits="0" branch="false" />
+            <line number="317" hits="4" branch="false" />
+            <line number="318" hits="4" branch="false" />
             <line number="322" hits="8" branch="false" />
             <line number="323" hits="8" branch="false" />
           </lines>
@@ -5397,476 +5397,572 @@
             <line number="342" hits="4" branch="false" />
           </lines>
         </class>
-        <class name="OpenForge.Cryptography.LibOqs.KEM.OqsKem" filename="/actions-runner/_work/liboqs-dotnet/liboqs-dotnet/src/KEM/KemNative.cs" line-rate="1" branch-rate="0.5" complexity="25">
+        <class name="OpenForge.Cryptography.LibOqs.KEM.OqsKem" filename="/actions-runner/_work/liboqs-dotnet/liboqs-dotnet/src/KEM/KemNative.cs" line-rate="1" branch-rate="1" complexity="33">
           <methods>
-            <method name="Equals" signature="(OpenForge.Cryptography.LibOqs.KEM.OqsKem)" line-rate="1" branch-rate="0.5" complexity="20">
+            <method name="Equals" signature="(OpenForge.Cryptography.LibOqs.KEM.OqsKem)" line-rate="1" branch-rate="1" complexity="28">
               <lines>
-                <line number="113" hits="8" branch="true" condition-coverage="50% (10/20)" />
-                <line number="114" hits="8" branch="false" />
-                <line number="115" hits="8" branch="false" />
-                <line number="116" hits="8" branch="false" />
-                <line number="117" hits="8" branch="false" />
-                <line number="118" hits="8" branch="false" />
-                <line number="119" hits="8" branch="false" />
-                <line number="120" hits="8" branch="false" />
-                <line number="121" hits="8" branch="false" />
-                <line number="122" hits="8" branch="false" />
-                <line number="123" hits="8" branch="false" />
+                <line number="125" hits="8" branch="true" condition-coverage="100% (28/28)" />
+                <line number="126" hits="8" branch="false" />
+                <line number="127" hits="8" branch="false" />
+                <line number="128" hits="8" branch="false" />
+                <line number="129" hits="8" branch="false" />
+                <line number="130" hits="8" branch="false" />
+                <line number="131" hits="8" branch="false" />
+                <line number="132" hits="8" branch="false" />
+                <line number="133" hits="8" branch="false" />
+                <line number="134" hits="8" branch="false" />
+                <line number="135" hits="8" branch="false" />
+                <line number="136" hits="8" branch="false" />
+                <line number="137" hits="8" branch="false" />
+                <line number="138" hits="8" branch="false" />
+                <line number="139" hits="8" branch="false" />
               </lines>
             </method>
-            <method name="Equals" signature="(object)" line-rate="1" branch-rate="0.5" complexity="2">
+            <method name="Equals" signature="(object)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="133" hits="8" branch="true" condition-coverage="50% (1/2)" />
+                <line number="149" hits="8" branch="true" condition-coverage="100% (2/2)" />
               </lines>
             </method>
             <method name="GetHashCode" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="142" hits="8" branch="false" />
-                <line number="143" hits="8" branch="false" />
-                <line number="144" hits="8" branch="false" />
-                <line number="145" hits="8" branch="false" />
-                <line number="146" hits="8" branch="false" />
-                <line number="147" hits="8" branch="false" />
-                <line number="148" hits="8" branch="false" />
-                <line number="149" hits="8" branch="false" />
-                <line number="150" hits="8" branch="false" />
-                <line number="151" hits="8" branch="false" />
-                <line number="152" hits="8" branch="false" />
-                <line number="153" hits="8" branch="false" />
-                <line number="154" hits="8" branch="false" />
-              </lines>
-            </method>
-            <method name="op_Equality" signature="(OpenForge.Cryptography.LibOqs.KEM.OqsKem, OpenForge.Cryptography.LibOqs.KEM.OqsKem)" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
+                <line number="158" hits="8" branch="false" />
+                <line number="159" hits="8" branch="false" />
+                <line number="160" hits="8" branch="false" />
+                <line number="161" hits="8" branch="false" />
+                <line number="162" hits="8" branch="false" />
+                <line number="163" hits="8" branch="false" />
+                <line number="164" hits="8" branch="false" />
                 <line number="165" hits="8" branch="false" />
+                <line number="166" hits="8" branch="false" />
+                <line number="167" hits="8" branch="false" />
+                <line number="168" hits="8" branch="false" />
+                <line number="169" hits="8" branch="false" />
+                <line number="170" hits="8" branch="false" />
+                <line number="171" hits="8" branch="false" />
+                <line number="172" hits="8" branch="false" />
+                <line number="173" hits="8" branch="false" />
+                <line number="174" hits="8" branch="false" />
+              </lines>
+            </method>
+            <method name="op_Equality" signature="(OpenForge.Cryptography.LibOqs.KEM.OqsKem, OpenForge.Cryptography.LibOqs.KEM.OqsKem)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="185" hits="8" branch="false" />
               </lines>
             </method>
             <method name="op_Inequality" signature="(OpenForge.Cryptography.LibOqs.KEM.OqsKem, OpenForge.Cryptography.LibOqs.KEM.OqsKem)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="176" hits="8" branch="false" />
+                <line number="196" hits="8" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="113" hits="8" branch="true" condition-coverage="50% (10/20)" />
-            <line number="114" hits="8" branch="false" />
-            <line number="115" hits="8" branch="false" />
-            <line number="116" hits="8" branch="false" />
-            <line number="117" hits="8" branch="false" />
-            <line number="118" hits="8" branch="false" />
-            <line number="119" hits="8" branch="false" />
-            <line number="120" hits="8" branch="false" />
-            <line number="121" hits="8" branch="false" />
-            <line number="122" hits="8" branch="false" />
-            <line number="123" hits="8" branch="false" />
-            <line number="133" hits="8" branch="true" condition-coverage="50% (1/2)" />
-            <line number="142" hits="8" branch="false" />
-            <line number="143" hits="8" branch="false" />
-            <line number="144" hits="8" branch="false" />
-            <line number="145" hits="8" branch="false" />
-            <line number="146" hits="8" branch="false" />
-            <line number="147" hits="8" branch="false" />
-            <line number="148" hits="8" branch="false" />
-            <line number="149" hits="8" branch="false" />
-            <line number="150" hits="8" branch="false" />
-            <line number="151" hits="8" branch="false" />
-            <line number="152" hits="8" branch="false" />
-            <line number="153" hits="8" branch="false" />
-            <line number="154" hits="8" branch="false" />
+            <line number="125" hits="8" branch="true" condition-coverage="100% (28/28)" />
+            <line number="126" hits="8" branch="false" />
+            <line number="127" hits="8" branch="false" />
+            <line number="128" hits="8" branch="false" />
+            <line number="129" hits="8" branch="false" />
+            <line number="130" hits="8" branch="false" />
+            <line number="131" hits="8" branch="false" />
+            <line number="132" hits="8" branch="false" />
+            <line number="133" hits="8" branch="false" />
+            <line number="134" hits="8" branch="false" />
+            <line number="135" hits="8" branch="false" />
+            <line number="136" hits="8" branch="false" />
+            <line number="137" hits="8" branch="false" />
+            <line number="138" hits="8" branch="false" />
+            <line number="139" hits="8" branch="false" />
+            <line number="149" hits="8" branch="true" condition-coverage="100% (2/2)" />
+            <line number="158" hits="8" branch="false" />
+            <line number="159" hits="8" branch="false" />
+            <line number="160" hits="8" branch="false" />
+            <line number="161" hits="8" branch="false" />
+            <line number="162" hits="8" branch="false" />
+            <line number="163" hits="8" branch="false" />
+            <line number="164" hits="8" branch="false" />
             <line number="165" hits="8" branch="false" />
-            <line number="176" hits="8" branch="false" />
+            <line number="166" hits="8" branch="false" />
+            <line number="167" hits="8" branch="false" />
+            <line number="168" hits="8" branch="false" />
+            <line number="169" hits="8" branch="false" />
+            <line number="170" hits="8" branch="false" />
+            <line number="171" hits="8" branch="false" />
+            <line number="172" hits="8" branch="false" />
+            <line number="173" hits="8" branch="false" />
+            <line number="174" hits="8" branch="false" />
+            <line number="185" hits="8" branch="false" />
+            <line number="196" hits="8" branch="false" />
           </lines>
         </class>
-        <class name="OpenForge.Cryptography.LibOqs.KEM.OqsKem" filename="/Users/runner/work/liboqs-dotnet/liboqs-dotnet/src/KEM/KemNative.cs" line-rate="1" branch-rate="0.5" complexity="25">
+        <class name="OpenForge.Cryptography.LibOqs.KEM.OqsKem" filename="/Users/runner/work/liboqs-dotnet/liboqs-dotnet/src/KEM/KemNative.cs" line-rate="1" branch-rate="1" complexity="33">
           <methods>
-            <method name="Equals" signature="(OpenForge.Cryptography.LibOqs.KEM.OqsKem)" line-rate="1" branch-rate="0.5" complexity="20">
+            <method name="Equals" signature="(OpenForge.Cryptography.LibOqs.KEM.OqsKem)" line-rate="1" branch-rate="1" complexity="28">
               <lines>
-                <line number="113" hits="2" branch="true" condition-coverage="50% (10/20)" />
-                <line number="114" hits="2" branch="false" />
-                <line number="115" hits="2" branch="false" />
-                <line number="116" hits="2" branch="false" />
-                <line number="117" hits="2" branch="false" />
-                <line number="118" hits="2" branch="false" />
-                <line number="119" hits="2" branch="false" />
-                <line number="120" hits="2" branch="false" />
-                <line number="121" hits="2" branch="false" />
-                <line number="122" hits="2" branch="false" />
-                <line number="123" hits="2" branch="false" />
+                <line number="125" hits="2" branch="true" condition-coverage="100% (28/28)" />
+                <line number="126" hits="2" branch="false" />
+                <line number="127" hits="2" branch="false" />
+                <line number="128" hits="2" branch="false" />
+                <line number="129" hits="2" branch="false" />
+                <line number="130" hits="2" branch="false" />
+                <line number="131" hits="2" branch="false" />
+                <line number="132" hits="2" branch="false" />
+                <line number="133" hits="2" branch="false" />
+                <line number="134" hits="2" branch="false" />
+                <line number="135" hits="2" branch="false" />
+                <line number="136" hits="2" branch="false" />
+                <line number="137" hits="2" branch="false" />
+                <line number="138" hits="2" branch="false" />
+                <line number="139" hits="2" branch="false" />
               </lines>
             </method>
-            <method name="Equals" signature="(object)" line-rate="1" branch-rate="0.5" complexity="2">
+            <method name="Equals" signature="(object)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="133" hits="2" branch="true" condition-coverage="50% (1/2)" />
+                <line number="149" hits="2" branch="true" condition-coverage="100% (2/2)" />
               </lines>
             </method>
             <method name="GetHashCode" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="142" hits="2" branch="false" />
-                <line number="143" hits="2" branch="false" />
-                <line number="144" hits="2" branch="false" />
-                <line number="145" hits="2" branch="false" />
-                <line number="146" hits="2" branch="false" />
-                <line number="147" hits="2" branch="false" />
-                <line number="148" hits="2" branch="false" />
-                <line number="149" hits="2" branch="false" />
-                <line number="150" hits="2" branch="false" />
-                <line number="151" hits="2" branch="false" />
-                <line number="152" hits="2" branch="false" />
-                <line number="153" hits="2" branch="false" />
-                <line number="154" hits="2" branch="false" />
-              </lines>
-            </method>
-            <method name="op_Equality" signature="(OpenForge.Cryptography.LibOqs.KEM.OqsKem, OpenForge.Cryptography.LibOqs.KEM.OqsKem)" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
+                <line number="158" hits="2" branch="false" />
+                <line number="159" hits="2" branch="false" />
+                <line number="160" hits="2" branch="false" />
+                <line number="161" hits="2" branch="false" />
+                <line number="162" hits="2" branch="false" />
+                <line number="163" hits="2" branch="false" />
+                <line number="164" hits="2" branch="false" />
                 <line number="165" hits="2" branch="false" />
-              </lines>
-            </method>
-            <method name="op_Inequality" signature="(OpenForge.Cryptography.LibOqs.KEM.OqsKem, OpenForge.Cryptography.LibOqs.KEM.OqsKem)" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="176" hits="2" branch="false" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="113" hits="2" branch="true" condition-coverage="50% (10/20)" />
-            <line number="114" hits="2" branch="false" />
-            <line number="115" hits="2" branch="false" />
-            <line number="116" hits="2" branch="false" />
-            <line number="117" hits="2" branch="false" />
-            <line number="118" hits="2" branch="false" />
-            <line number="119" hits="2" branch="false" />
-            <line number="120" hits="2" branch="false" />
-            <line number="121" hits="2" branch="false" />
-            <line number="122" hits="2" branch="false" />
-            <line number="123" hits="2" branch="false" />
-            <line number="133" hits="2" branch="true" condition-coverage="50% (1/2)" />
-            <line number="142" hits="2" branch="false" />
-            <line number="143" hits="2" branch="false" />
-            <line number="144" hits="2" branch="false" />
-            <line number="145" hits="2" branch="false" />
-            <line number="146" hits="2" branch="false" />
-            <line number="147" hits="2" branch="false" />
-            <line number="148" hits="2" branch="false" />
-            <line number="149" hits="2" branch="false" />
-            <line number="150" hits="2" branch="false" />
-            <line number="151" hits="2" branch="false" />
-            <line number="152" hits="2" branch="false" />
-            <line number="153" hits="2" branch="false" />
-            <line number="154" hits="2" branch="false" />
-            <line number="165" hits="2" branch="false" />
-            <line number="176" hits="2" branch="false" />
-          </lines>
-        </class>
-        <class name="OpenForge.Cryptography.LibOqs.KEM.OqsKem" filename="C:\a\liboqs-dotnet\liboqs-dotnet\src\KEM\KemNative.cs" line-rate="1" branch-rate="0.5" complexity="25">
-          <methods>
-            <method name="Equals" signature="(OpenForge.Cryptography.LibOqs.KEM.OqsKem)" line-rate="1" branch-rate="0.5" complexity="20">
-              <lines>
-                <line number="113" hits="4" branch="true" condition-coverage="50% (10/20)" />
-                <line number="114" hits="4" branch="false" />
-                <line number="115" hits="4" branch="false" />
-                <line number="116" hits="4" branch="false" />
-                <line number="117" hits="4" branch="false" />
-                <line number="118" hits="4" branch="false" />
-                <line number="119" hits="4" branch="false" />
-                <line number="120" hits="4" branch="false" />
-                <line number="121" hits="4" branch="false" />
-                <line number="122" hits="4" branch="false" />
-                <line number="123" hits="4" branch="false" />
-              </lines>
-            </method>
-            <method name="Equals" signature="(object)" line-rate="1" branch-rate="0.5" complexity="2">
-              <lines>
-                <line number="133" hits="4" branch="true" condition-coverage="50% (1/2)" />
-              </lines>
-            </method>
-            <method name="GetHashCode" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="142" hits="4" branch="false" />
-                <line number="143" hits="4" branch="false" />
-                <line number="144" hits="4" branch="false" />
-                <line number="145" hits="4" branch="false" />
-                <line number="146" hits="4" branch="false" />
-                <line number="147" hits="4" branch="false" />
-                <line number="148" hits="4" branch="false" />
-                <line number="149" hits="4" branch="false" />
-                <line number="150" hits="4" branch="false" />
-                <line number="151" hits="4" branch="false" />
-                <line number="152" hits="4" branch="false" />
-                <line number="153" hits="4" branch="false" />
-                <line number="154" hits="4" branch="false" />
+                <line number="166" hits="2" branch="false" />
+                <line number="167" hits="2" branch="false" />
+                <line number="168" hits="2" branch="false" />
+                <line number="169" hits="2" branch="false" />
+                <line number="170" hits="2" branch="false" />
+                <line number="171" hits="2" branch="false" />
+                <line number="172" hits="2" branch="false" />
+                <line number="173" hits="2" branch="false" />
+                <line number="174" hits="2" branch="false" />
               </lines>
             </method>
             <method name="op_Equality" signature="(OpenForge.Cryptography.LibOqs.KEM.OqsKem, OpenForge.Cryptography.LibOqs.KEM.OqsKem)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="165" hits="4" branch="false" />
+                <line number="185" hits="2" branch="false" />
               </lines>
             </method>
             <method name="op_Inequality" signature="(OpenForge.Cryptography.LibOqs.KEM.OqsKem, OpenForge.Cryptography.LibOqs.KEM.OqsKem)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="176" hits="4" branch="false" />
+                <line number="196" hits="2" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="113" hits="4" branch="true" condition-coverage="50% (10/20)" />
-            <line number="114" hits="4" branch="false" />
-            <line number="115" hits="4" branch="false" />
-            <line number="116" hits="4" branch="false" />
-            <line number="117" hits="4" branch="false" />
-            <line number="118" hits="4" branch="false" />
-            <line number="119" hits="4" branch="false" />
-            <line number="120" hits="4" branch="false" />
-            <line number="121" hits="4" branch="false" />
-            <line number="122" hits="4" branch="false" />
-            <line number="123" hits="4" branch="false" />
-            <line number="133" hits="4" branch="true" condition-coverage="50% (1/2)" />
-            <line number="142" hits="4" branch="false" />
-            <line number="143" hits="4" branch="false" />
-            <line number="144" hits="4" branch="false" />
-            <line number="145" hits="4" branch="false" />
-            <line number="146" hits="4" branch="false" />
-            <line number="147" hits="4" branch="false" />
-            <line number="148" hits="4" branch="false" />
-            <line number="149" hits="4" branch="false" />
-            <line number="150" hits="4" branch="false" />
-            <line number="151" hits="4" branch="false" />
-            <line number="152" hits="4" branch="false" />
-            <line number="153" hits="4" branch="false" />
-            <line number="154" hits="4" branch="false" />
+            <line number="125" hits="2" branch="true" condition-coverage="100% (28/28)" />
+            <line number="126" hits="2" branch="false" />
+            <line number="127" hits="2" branch="false" />
+            <line number="128" hits="2" branch="false" />
+            <line number="129" hits="2" branch="false" />
+            <line number="130" hits="2" branch="false" />
+            <line number="131" hits="2" branch="false" />
+            <line number="132" hits="2" branch="false" />
+            <line number="133" hits="2" branch="false" />
+            <line number="134" hits="2" branch="false" />
+            <line number="135" hits="2" branch="false" />
+            <line number="136" hits="2" branch="false" />
+            <line number="137" hits="2" branch="false" />
+            <line number="138" hits="2" branch="false" />
+            <line number="139" hits="2" branch="false" />
+            <line number="149" hits="2" branch="true" condition-coverage="100% (2/2)" />
+            <line number="158" hits="2" branch="false" />
+            <line number="159" hits="2" branch="false" />
+            <line number="160" hits="2" branch="false" />
+            <line number="161" hits="2" branch="false" />
+            <line number="162" hits="2" branch="false" />
+            <line number="163" hits="2" branch="false" />
+            <line number="164" hits="2" branch="false" />
+            <line number="165" hits="2" branch="false" />
+            <line number="166" hits="2" branch="false" />
+            <line number="167" hits="2" branch="false" />
+            <line number="168" hits="2" branch="false" />
+            <line number="169" hits="2" branch="false" />
+            <line number="170" hits="2" branch="false" />
+            <line number="171" hits="2" branch="false" />
+            <line number="172" hits="2" branch="false" />
+            <line number="173" hits="2" branch="false" />
+            <line number="174" hits="2" branch="false" />
+            <line number="185" hits="2" branch="false" />
+            <line number="196" hits="2" branch="false" />
+          </lines>
+        </class>
+        <class name="OpenForge.Cryptography.LibOqs.KEM.OqsKem" filename="C:\a\liboqs-dotnet\liboqs-dotnet\src\KEM\KemNative.cs" line-rate="1" branch-rate="1" complexity="33">
+          <methods>
+            <method name="Equals" signature="(OpenForge.Cryptography.LibOqs.KEM.OqsKem)" line-rate="1" branch-rate="1" complexity="28">
+              <lines>
+                <line number="125" hits="4" branch="true" condition-coverage="100% (28/28)" />
+                <line number="126" hits="4" branch="false" />
+                <line number="127" hits="4" branch="false" />
+                <line number="128" hits="4" branch="false" />
+                <line number="129" hits="4" branch="false" />
+                <line number="130" hits="4" branch="false" />
+                <line number="131" hits="4" branch="false" />
+                <line number="132" hits="4" branch="false" />
+                <line number="133" hits="4" branch="false" />
+                <line number="134" hits="4" branch="false" />
+                <line number="135" hits="4" branch="false" />
+                <line number="136" hits="4" branch="false" />
+                <line number="137" hits="4" branch="false" />
+                <line number="138" hits="4" branch="false" />
+                <line number="139" hits="4" branch="false" />
+              </lines>
+            </method>
+            <method name="Equals" signature="(object)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="149" hits="4" branch="true" condition-coverage="100% (2/2)" />
+              </lines>
+            </method>
+            <method name="GetHashCode" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="158" hits="4" branch="false" />
+                <line number="159" hits="4" branch="false" />
+                <line number="160" hits="4" branch="false" />
+                <line number="161" hits="4" branch="false" />
+                <line number="162" hits="4" branch="false" />
+                <line number="163" hits="4" branch="false" />
+                <line number="164" hits="4" branch="false" />
+                <line number="165" hits="4" branch="false" />
+                <line number="166" hits="4" branch="false" />
+                <line number="167" hits="4" branch="false" />
+                <line number="168" hits="4" branch="false" />
+                <line number="169" hits="4" branch="false" />
+                <line number="170" hits="4" branch="false" />
+                <line number="171" hits="4" branch="false" />
+                <line number="172" hits="4" branch="false" />
+                <line number="173" hits="4" branch="false" />
+                <line number="174" hits="4" branch="false" />
+              </lines>
+            </method>
+            <method name="op_Equality" signature="(OpenForge.Cryptography.LibOqs.KEM.OqsKem, OpenForge.Cryptography.LibOqs.KEM.OqsKem)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="185" hits="4" branch="false" />
+              </lines>
+            </method>
+            <method name="op_Inequality" signature="(OpenForge.Cryptography.LibOqs.KEM.OqsKem, OpenForge.Cryptography.LibOqs.KEM.OqsKem)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="196" hits="4" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="125" hits="4" branch="true" condition-coverage="100% (28/28)" />
+            <line number="126" hits="4" branch="false" />
+            <line number="127" hits="4" branch="false" />
+            <line number="128" hits="4" branch="false" />
+            <line number="129" hits="4" branch="false" />
+            <line number="130" hits="4" branch="false" />
+            <line number="131" hits="4" branch="false" />
+            <line number="132" hits="4" branch="false" />
+            <line number="133" hits="4" branch="false" />
+            <line number="134" hits="4" branch="false" />
+            <line number="135" hits="4" branch="false" />
+            <line number="136" hits="4" branch="false" />
+            <line number="137" hits="4" branch="false" />
+            <line number="138" hits="4" branch="false" />
+            <line number="139" hits="4" branch="false" />
+            <line number="149" hits="4" branch="true" condition-coverage="100% (2/2)" />
+            <line number="158" hits="4" branch="false" />
+            <line number="159" hits="4" branch="false" />
+            <line number="160" hits="4" branch="false" />
+            <line number="161" hits="4" branch="false" />
+            <line number="162" hits="4" branch="false" />
+            <line number="163" hits="4" branch="false" />
+            <line number="164" hits="4" branch="false" />
             <line number="165" hits="4" branch="false" />
-            <line number="176" hits="4" branch="false" />
+            <line number="166" hits="4" branch="false" />
+            <line number="167" hits="4" branch="false" />
+            <line number="168" hits="4" branch="false" />
+            <line number="169" hits="4" branch="false" />
+            <line number="170" hits="4" branch="false" />
+            <line number="171" hits="4" branch="false" />
+            <line number="172" hits="4" branch="false" />
+            <line number="173" hits="4" branch="false" />
+            <line number="174" hits="4" branch="false" />
+            <line number="185" hits="4" branch="false" />
+            <line number="196" hits="4" branch="false" />
           </lines>
         </class>
       </classes>
     </package>
-    <package name="OpenForge.Cryptography.LibOqs.SIG" line-rate="0.956989247311828" branch-rate="0.671875" complexity="300">
+    <package name="OpenForge.Cryptography.LibOqs.SIG" line-rate="0.9690721649484536" branch-rate="0.8472222222222222" complexity="324">
       <classes>
-        <class name="OpenForge.Cryptography.LibOqs.SIG.OqsSig" filename="/actions-runner/_work/liboqs-dotnet/liboqs-dotnet/src/SIG/SigNative.cs" line-rate="1" branch-rate="0.5" complexity="23">
+        <class name="OpenForge.Cryptography.LibOqs.SIG.OqsSig" filename="/actions-runner/_work/liboqs-dotnet/liboqs-dotnet/src/SIG/SigNative.cs" line-rate="1" branch-rate="1" complexity="31">
           <methods>
-            <method name="Equals" signature="(OpenForge.Cryptography.LibOqs.SIG.OqsSig)" line-rate="1" branch-rate="0.5" complexity="18">
+            <method name="Equals" signature="(OpenForge.Cryptography.LibOqs.SIG.OqsSig)" line-rate="1" branch-rate="1" complexity="26">
               <lines>
-                <line number="115" hits="8" branch="true" condition-coverage="50% (9/18)" />
-                <line number="116" hits="8" branch="false" />
-                <line number="117" hits="8" branch="false" />
-                <line number="118" hits="8" branch="false" />
-                <line number="119" hits="8" branch="false" />
-                <line number="120" hits="8" branch="false" />
-                <line number="121" hits="8" branch="false" />
-                <line number="122" hits="8" branch="false" />
-                <line number="123" hits="8" branch="false" />
-                <line number="124" hits="8" branch="false" />
+                <line number="127" hits="8" branch="true" condition-coverage="100% (26/26)" />
+                <line number="128" hits="8" branch="false" />
+                <line number="129" hits="8" branch="false" />
+                <line number="130" hits="8" branch="false" />
+                <line number="131" hits="8" branch="false" />
+                <line number="132" hits="8" branch="false" />
+                <line number="133" hits="8" branch="false" />
+                <line number="134" hits="8" branch="false" />
+                <line number="135" hits="8" branch="false" />
+                <line number="136" hits="8" branch="false" />
+                <line number="137" hits="8" branch="false" />
+                <line number="138" hits="8" branch="false" />
+                <line number="139" hits="8" branch="false" />
+                <line number="140" hits="8" branch="false" />
               </lines>
             </method>
-            <method name="Equals" signature="(object)" line-rate="1" branch-rate="0.5" complexity="2">
+            <method name="Equals" signature="(object)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="134" hits="8" branch="true" condition-coverage="50% (1/2)" />
+                <line number="150" hits="8" branch="true" condition-coverage="100% (2/2)" />
               </lines>
             </method>
             <method name="GetHashCode" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="143" hits="8" branch="false" />
-                <line number="144" hits="8" branch="false" />
-                <line number="145" hits="8" branch="false" />
-                <line number="146" hits="8" branch="false" />
-                <line number="147" hits="8" branch="false" />
-                <line number="148" hits="8" branch="false" />
-                <line number="149" hits="8" branch="false" />
-                <line number="150" hits="8" branch="false" />
-                <line number="151" hits="8" branch="false" />
-                <line number="152" hits="8" branch="false" />
-                <line number="153" hits="8" branch="false" />
-                <line number="154" hits="8" branch="false" />
-              </lines>
-            </method>
-            <method name="op_Equality" signature="(OpenForge.Cryptography.LibOqs.SIG.OqsSig, OpenForge.Cryptography.LibOqs.SIG.OqsSig)" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
+                <line number="159" hits="8" branch="false" />
+                <line number="160" hits="8" branch="false" />
+                <line number="161" hits="8" branch="false" />
+                <line number="162" hits="8" branch="false" />
+                <line number="163" hits="8" branch="false" />
+                <line number="164" hits="8" branch="false" />
                 <line number="165" hits="8" branch="false" />
+                <line number="166" hits="8" branch="false" />
+                <line number="167" hits="8" branch="false" />
+                <line number="168" hits="8" branch="false" />
+                <line number="169" hits="8" branch="false" />
+                <line number="170" hits="8" branch="false" />
+                <line number="171" hits="8" branch="false" />
+                <line number="172" hits="8" branch="false" />
+                <line number="173" hits="8" branch="false" />
+                <line number="174" hits="8" branch="false" />
+              </lines>
+            </method>
+            <method name="op_Equality" signature="(OpenForge.Cryptography.LibOqs.SIG.OqsSig, OpenForge.Cryptography.LibOqs.SIG.OqsSig)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="185" hits="8" branch="false" />
               </lines>
             </method>
             <method name="op_Inequality" signature="(OpenForge.Cryptography.LibOqs.SIG.OqsSig, OpenForge.Cryptography.LibOqs.SIG.OqsSig)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="176" hits="8" branch="false" />
+                <line number="196" hits="8" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="115" hits="8" branch="true" condition-coverage="50% (9/18)" />
-            <line number="116" hits="8" branch="false" />
-            <line number="117" hits="8" branch="false" />
-            <line number="118" hits="8" branch="false" />
-            <line number="119" hits="8" branch="false" />
-            <line number="120" hits="8" branch="false" />
-            <line number="121" hits="8" branch="false" />
-            <line number="122" hits="8" branch="false" />
-            <line number="123" hits="8" branch="false" />
-            <line number="124" hits="8" branch="false" />
-            <line number="134" hits="8" branch="true" condition-coverage="50% (1/2)" />
-            <line number="143" hits="8" branch="false" />
-            <line number="144" hits="8" branch="false" />
-            <line number="145" hits="8" branch="false" />
-            <line number="146" hits="8" branch="false" />
-            <line number="147" hits="8" branch="false" />
-            <line number="148" hits="8" branch="false" />
-            <line number="149" hits="8" branch="false" />
-            <line number="150" hits="8" branch="false" />
-            <line number="151" hits="8" branch="false" />
-            <line number="152" hits="8" branch="false" />
-            <line number="153" hits="8" branch="false" />
-            <line number="154" hits="8" branch="false" />
+            <line number="127" hits="8" branch="true" condition-coverage="100% (26/26)" />
+            <line number="128" hits="8" branch="false" />
+            <line number="129" hits="8" branch="false" />
+            <line number="130" hits="8" branch="false" />
+            <line number="131" hits="8" branch="false" />
+            <line number="132" hits="8" branch="false" />
+            <line number="133" hits="8" branch="false" />
+            <line number="134" hits="8" branch="false" />
+            <line number="135" hits="8" branch="false" />
+            <line number="136" hits="8" branch="false" />
+            <line number="137" hits="8" branch="false" />
+            <line number="138" hits="8" branch="false" />
+            <line number="139" hits="8" branch="false" />
+            <line number="140" hits="8" branch="false" />
+            <line number="150" hits="8" branch="true" condition-coverage="100% (2/2)" />
+            <line number="159" hits="8" branch="false" />
+            <line number="160" hits="8" branch="false" />
+            <line number="161" hits="8" branch="false" />
+            <line number="162" hits="8" branch="false" />
+            <line number="163" hits="8" branch="false" />
+            <line number="164" hits="8" branch="false" />
             <line number="165" hits="8" branch="false" />
-            <line number="176" hits="8" branch="false" />
+            <line number="166" hits="8" branch="false" />
+            <line number="167" hits="8" branch="false" />
+            <line number="168" hits="8" branch="false" />
+            <line number="169" hits="8" branch="false" />
+            <line number="170" hits="8" branch="false" />
+            <line number="171" hits="8" branch="false" />
+            <line number="172" hits="8" branch="false" />
+            <line number="173" hits="8" branch="false" />
+            <line number="174" hits="8" branch="false" />
+            <line number="185" hits="8" branch="false" />
+            <line number="196" hits="8" branch="false" />
           </lines>
         </class>
-        <class name="OpenForge.Cryptography.LibOqs.SIG.OqsSig" filename="/Users/runner/work/liboqs-dotnet/liboqs-dotnet/src/SIG/SigNative.cs" line-rate="1" branch-rate="0.5" complexity="23">
+        <class name="OpenForge.Cryptography.LibOqs.SIG.OqsSig" filename="/Users/runner/work/liboqs-dotnet/liboqs-dotnet/src/SIG/SigNative.cs" line-rate="1" branch-rate="1" complexity="31">
           <methods>
-            <method name="Equals" signature="(OpenForge.Cryptography.LibOqs.SIG.OqsSig)" line-rate="1" branch-rate="0.5" complexity="18">
+            <method name="Equals" signature="(OpenForge.Cryptography.LibOqs.SIG.OqsSig)" line-rate="1" branch-rate="1" complexity="26">
               <lines>
-                <line number="115" hits="2" branch="true" condition-coverage="50% (9/18)" />
-                <line number="116" hits="2" branch="false" />
-                <line number="117" hits="2" branch="false" />
-                <line number="118" hits="2" branch="false" />
-                <line number="119" hits="2" branch="false" />
-                <line number="120" hits="2" branch="false" />
-                <line number="121" hits="2" branch="false" />
-                <line number="122" hits="2" branch="false" />
-                <line number="123" hits="2" branch="false" />
-                <line number="124" hits="2" branch="false" />
+                <line number="127" hits="2" branch="true" condition-coverage="100% (26/26)" />
+                <line number="128" hits="2" branch="false" />
+                <line number="129" hits="2" branch="false" />
+                <line number="130" hits="2" branch="false" />
+                <line number="131" hits="2" branch="false" />
+                <line number="132" hits="2" branch="false" />
+                <line number="133" hits="2" branch="false" />
+                <line number="134" hits="2" branch="false" />
+                <line number="135" hits="2" branch="false" />
+                <line number="136" hits="2" branch="false" />
+                <line number="137" hits="2" branch="false" />
+                <line number="138" hits="2" branch="false" />
+                <line number="139" hits="2" branch="false" />
+                <line number="140" hits="2" branch="false" />
               </lines>
             </method>
-            <method name="Equals" signature="(object)" line-rate="1" branch-rate="0.5" complexity="2">
+            <method name="Equals" signature="(object)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="134" hits="2" branch="true" condition-coverage="50% (1/2)" />
+                <line number="150" hits="2" branch="true" condition-coverage="100% (2/2)" />
               </lines>
             </method>
             <method name="GetHashCode" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="143" hits="2" branch="false" />
-                <line number="144" hits="2" branch="false" />
-                <line number="145" hits="2" branch="false" />
-                <line number="146" hits="2" branch="false" />
-                <line number="147" hits="2" branch="false" />
-                <line number="148" hits="2" branch="false" />
-                <line number="149" hits="2" branch="false" />
-                <line number="150" hits="2" branch="false" />
-                <line number="151" hits="2" branch="false" />
-                <line number="152" hits="2" branch="false" />
-                <line number="153" hits="2" branch="false" />
-                <line number="154" hits="2" branch="false" />
-              </lines>
-            </method>
-            <method name="op_Equality" signature="(OpenForge.Cryptography.LibOqs.SIG.OqsSig, OpenForge.Cryptography.LibOqs.SIG.OqsSig)" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
+                <line number="159" hits="2" branch="false" />
+                <line number="160" hits="2" branch="false" />
+                <line number="161" hits="2" branch="false" />
+                <line number="162" hits="2" branch="false" />
+                <line number="163" hits="2" branch="false" />
+                <line number="164" hits="2" branch="false" />
                 <line number="165" hits="2" branch="false" />
-              </lines>
-            </method>
-            <method name="op_Inequality" signature="(OpenForge.Cryptography.LibOqs.SIG.OqsSig, OpenForge.Cryptography.LibOqs.SIG.OqsSig)" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="176" hits="2" branch="false" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="115" hits="2" branch="true" condition-coverage="50% (9/18)" />
-            <line number="116" hits="2" branch="false" />
-            <line number="117" hits="2" branch="false" />
-            <line number="118" hits="2" branch="false" />
-            <line number="119" hits="2" branch="false" />
-            <line number="120" hits="2" branch="false" />
-            <line number="121" hits="2" branch="false" />
-            <line number="122" hits="2" branch="false" />
-            <line number="123" hits="2" branch="false" />
-            <line number="124" hits="2" branch="false" />
-            <line number="134" hits="2" branch="true" condition-coverage="50% (1/2)" />
-            <line number="143" hits="2" branch="false" />
-            <line number="144" hits="2" branch="false" />
-            <line number="145" hits="2" branch="false" />
-            <line number="146" hits="2" branch="false" />
-            <line number="147" hits="2" branch="false" />
-            <line number="148" hits="2" branch="false" />
-            <line number="149" hits="2" branch="false" />
-            <line number="150" hits="2" branch="false" />
-            <line number="151" hits="2" branch="false" />
-            <line number="152" hits="2" branch="false" />
-            <line number="153" hits="2" branch="false" />
-            <line number="154" hits="2" branch="false" />
-            <line number="165" hits="2" branch="false" />
-            <line number="176" hits="2" branch="false" />
-          </lines>
-        </class>
-        <class name="OpenForge.Cryptography.LibOqs.SIG.OqsSig" filename="C:\a\liboqs-dotnet\liboqs-dotnet\src\SIG\SigNative.cs" line-rate="1" branch-rate="0.5" complexity="23">
-          <methods>
-            <method name="Equals" signature="(OpenForge.Cryptography.LibOqs.SIG.OqsSig)" line-rate="1" branch-rate="0.5" complexity="18">
-              <lines>
-                <line number="115" hits="4" branch="true" condition-coverage="50% (9/18)" />
-                <line number="116" hits="4" branch="false" />
-                <line number="117" hits="4" branch="false" />
-                <line number="118" hits="4" branch="false" />
-                <line number="119" hits="4" branch="false" />
-                <line number="120" hits="4" branch="false" />
-                <line number="121" hits="4" branch="false" />
-                <line number="122" hits="4" branch="false" />
-                <line number="123" hits="4" branch="false" />
-                <line number="124" hits="4" branch="false" />
-              </lines>
-            </method>
-            <method name="Equals" signature="(object)" line-rate="1" branch-rate="0.5" complexity="2">
-              <lines>
-                <line number="134" hits="4" branch="true" condition-coverage="50% (1/2)" />
-              </lines>
-            </method>
-            <method name="GetHashCode" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="143" hits="4" branch="false" />
-                <line number="144" hits="4" branch="false" />
-                <line number="145" hits="4" branch="false" />
-                <line number="146" hits="4" branch="false" />
-                <line number="147" hits="4" branch="false" />
-                <line number="148" hits="4" branch="false" />
-                <line number="149" hits="4" branch="false" />
-                <line number="150" hits="4" branch="false" />
-                <line number="151" hits="4" branch="false" />
-                <line number="152" hits="4" branch="false" />
-                <line number="153" hits="4" branch="false" />
-                <line number="154" hits="4" branch="false" />
+                <line number="166" hits="2" branch="false" />
+                <line number="167" hits="2" branch="false" />
+                <line number="168" hits="2" branch="false" />
+                <line number="169" hits="2" branch="false" />
+                <line number="170" hits="2" branch="false" />
+                <line number="171" hits="2" branch="false" />
+                <line number="172" hits="2" branch="false" />
+                <line number="173" hits="2" branch="false" />
+                <line number="174" hits="2" branch="false" />
               </lines>
             </method>
             <method name="op_Equality" signature="(OpenForge.Cryptography.LibOqs.SIG.OqsSig, OpenForge.Cryptography.LibOqs.SIG.OqsSig)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="165" hits="4" branch="false" />
+                <line number="185" hits="2" branch="false" />
               </lines>
             </method>
             <method name="op_Inequality" signature="(OpenForge.Cryptography.LibOqs.SIG.OqsSig, OpenForge.Cryptography.LibOqs.SIG.OqsSig)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="176" hits="4" branch="false" />
+                <line number="196" hits="2" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="115" hits="4" branch="true" condition-coverage="50% (9/18)" />
-            <line number="116" hits="4" branch="false" />
-            <line number="117" hits="4" branch="false" />
-            <line number="118" hits="4" branch="false" />
-            <line number="119" hits="4" branch="false" />
-            <line number="120" hits="4" branch="false" />
-            <line number="121" hits="4" branch="false" />
-            <line number="122" hits="4" branch="false" />
-            <line number="123" hits="4" branch="false" />
-            <line number="124" hits="4" branch="false" />
-            <line number="134" hits="4" branch="true" condition-coverage="50% (1/2)" />
-            <line number="143" hits="4" branch="false" />
-            <line number="144" hits="4" branch="false" />
-            <line number="145" hits="4" branch="false" />
-            <line number="146" hits="4" branch="false" />
-            <line number="147" hits="4" branch="false" />
-            <line number="148" hits="4" branch="false" />
-            <line number="149" hits="4" branch="false" />
-            <line number="150" hits="4" branch="false" />
-            <line number="151" hits="4" branch="false" />
-            <line number="152" hits="4" branch="false" />
-            <line number="153" hits="4" branch="false" />
-            <line number="154" hits="4" branch="false" />
+            <line number="127" hits="2" branch="true" condition-coverage="100% (26/26)" />
+            <line number="128" hits="2" branch="false" />
+            <line number="129" hits="2" branch="false" />
+            <line number="130" hits="2" branch="false" />
+            <line number="131" hits="2" branch="false" />
+            <line number="132" hits="2" branch="false" />
+            <line number="133" hits="2" branch="false" />
+            <line number="134" hits="2" branch="false" />
+            <line number="135" hits="2" branch="false" />
+            <line number="136" hits="2" branch="false" />
+            <line number="137" hits="2" branch="false" />
+            <line number="138" hits="2" branch="false" />
+            <line number="139" hits="2" branch="false" />
+            <line number="140" hits="2" branch="false" />
+            <line number="150" hits="2" branch="true" condition-coverage="100% (2/2)" />
+            <line number="159" hits="2" branch="false" />
+            <line number="160" hits="2" branch="false" />
+            <line number="161" hits="2" branch="false" />
+            <line number="162" hits="2" branch="false" />
+            <line number="163" hits="2" branch="false" />
+            <line number="164" hits="2" branch="false" />
+            <line number="165" hits="2" branch="false" />
+            <line number="166" hits="2" branch="false" />
+            <line number="167" hits="2" branch="false" />
+            <line number="168" hits="2" branch="false" />
+            <line number="169" hits="2" branch="false" />
+            <line number="170" hits="2" branch="false" />
+            <line number="171" hits="2" branch="false" />
+            <line number="172" hits="2" branch="false" />
+            <line number="173" hits="2" branch="false" />
+            <line number="174" hits="2" branch="false" />
+            <line number="185" hits="2" branch="false" />
+            <line number="196" hits="2" branch="false" />
+          </lines>
+        </class>
+        <class name="OpenForge.Cryptography.LibOqs.SIG.OqsSig" filename="C:\a\liboqs-dotnet\liboqs-dotnet\src\SIG\SigNative.cs" line-rate="1" branch-rate="1" complexity="31">
+          <methods>
+            <method name="Equals" signature="(OpenForge.Cryptography.LibOqs.SIG.OqsSig)" line-rate="1" branch-rate="1" complexity="26">
+              <lines>
+                <line number="127" hits="4" branch="true" condition-coverage="100% (26/26)" />
+                <line number="128" hits="4" branch="false" />
+                <line number="129" hits="4" branch="false" />
+                <line number="130" hits="4" branch="false" />
+                <line number="131" hits="4" branch="false" />
+                <line number="132" hits="4" branch="false" />
+                <line number="133" hits="4" branch="false" />
+                <line number="134" hits="4" branch="false" />
+                <line number="135" hits="4" branch="false" />
+                <line number="136" hits="4" branch="false" />
+                <line number="137" hits="4" branch="false" />
+                <line number="138" hits="4" branch="false" />
+                <line number="139" hits="4" branch="false" />
+                <line number="140" hits="4" branch="false" />
+              </lines>
+            </method>
+            <method name="Equals" signature="(object)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="150" hits="4" branch="true" condition-coverage="100% (2/2)" />
+              </lines>
+            </method>
+            <method name="GetHashCode" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="159" hits="4" branch="false" />
+                <line number="160" hits="4" branch="false" />
+                <line number="161" hits="4" branch="false" />
+                <line number="162" hits="4" branch="false" />
+                <line number="163" hits="4" branch="false" />
+                <line number="164" hits="4" branch="false" />
+                <line number="165" hits="4" branch="false" />
+                <line number="166" hits="4" branch="false" />
+                <line number="167" hits="4" branch="false" />
+                <line number="168" hits="4" branch="false" />
+                <line number="169" hits="4" branch="false" />
+                <line number="170" hits="4" branch="false" />
+                <line number="171" hits="4" branch="false" />
+                <line number="172" hits="4" branch="false" />
+                <line number="173" hits="4" branch="false" />
+                <line number="174" hits="4" branch="false" />
+              </lines>
+            </method>
+            <method name="op_Equality" signature="(OpenForge.Cryptography.LibOqs.SIG.OqsSig, OpenForge.Cryptography.LibOqs.SIG.OqsSig)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="185" hits="4" branch="false" />
+              </lines>
+            </method>
+            <method name="op_Inequality" signature="(OpenForge.Cryptography.LibOqs.SIG.OqsSig, OpenForge.Cryptography.LibOqs.SIG.OqsSig)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="196" hits="4" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="127" hits="4" branch="true" condition-coverage="100% (26/26)" />
+            <line number="128" hits="4" branch="false" />
+            <line number="129" hits="4" branch="false" />
+            <line number="130" hits="4" branch="false" />
+            <line number="131" hits="4" branch="false" />
+            <line number="132" hits="4" branch="false" />
+            <line number="133" hits="4" branch="false" />
+            <line number="134" hits="4" branch="false" />
+            <line number="135" hits="4" branch="false" />
+            <line number="136" hits="4" branch="false" />
+            <line number="137" hits="4" branch="false" />
+            <line number="138" hits="4" branch="false" />
+            <line number="139" hits="4" branch="false" />
+            <line number="140" hits="4" branch="false" />
+            <line number="150" hits="4" branch="true" condition-coverage="100% (2/2)" />
+            <line number="159" hits="4" branch="false" />
+            <line number="160" hits="4" branch="false" />
+            <line number="161" hits="4" branch="false" />
+            <line number="162" hits="4" branch="false" />
+            <line number="163" hits="4" branch="false" />
+            <line number="164" hits="4" branch="false" />
             <line number="165" hits="4" branch="false" />
-            <line number="176" hits="4" branch="false" />
+            <line number="166" hits="4" branch="false" />
+            <line number="167" hits="4" branch="false" />
+            <line number="168" hits="4" branch="false" />
+            <line number="169" hits="4" branch="false" />
+            <line number="170" hits="4" branch="false" />
+            <line number="171" hits="4" branch="false" />
+            <line number="172" hits="4" branch="false" />
+            <line number="173" hits="4" branch="false" />
+            <line number="174" hits="4" branch="false" />
+            <line number="185" hits="4" branch="false" />
+            <line number="196" hits="4" branch="false" />
           </lines>
         </class>
         <class name="OpenForge.Cryptography.LibOqs.SIG.Sig" filename="/actions-runner/_work/liboqs-dotnet/liboqs-dotnet/src/SIG/Sig.cs" line-rate="1" branch-rate="0.875" complexity="24">
@@ -6370,7 +6466,7 @@
             <line number="172" hits="8" branch="false" />
           </lines>
         </class>
-        <class name="OpenForge.Cryptography.LibOqs.SIG.SigInstance" filename="/actions-runner/_work/liboqs-dotnet/liboqs-dotnet/src/SIG/SigProvider.cs" line-rate="0.9111111111111111" branch-rate="0.6538461538461539" complexity="34">
+        <class name="OpenForge.Cryptography.LibOqs.SIG.SigInstance" filename="/actions-runner/_work/liboqs-dotnet/liboqs-dotnet/src/SIG/SigProvider.cs" line-rate="0.9333333333333333" branch-rate="0.6538461538461539" complexity="34">
           <methods>
             <method name=".ctor" signature="(native int, string)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -6502,10 +6598,10 @@
                 <line number="350" hits="16" branch="false" />
               </lines>
             </method>
-            <method name="Finalize" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="Finalize" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="357" hits="0" branch="false" />
-                <line number="358" hits="0" branch="false" />
+                <line number="357" hits="8" branch="false" />
+                <line number="358" hits="8" branch="false" />
               </lines>
             </method>
             <method name="ThrowIfDisposed" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -6602,13 +6698,13 @@
             <line number="346" hits="16" branch="false" />
             <line number="348" hits="16" branch="false" />
             <line number="350" hits="16" branch="false" />
-            <line number="357" hits="0" branch="false" />
-            <line number="358" hits="0" branch="false" />
+            <line number="357" hits="8" branch="false" />
+            <line number="358" hits="8" branch="false" />
             <line number="362" hits="16" branch="false" />
             <line number="363" hits="16" branch="false" />
           </lines>
         </class>
-        <class name="OpenForge.Cryptography.LibOqs.SIG.SigInstance" filename="/Users/runner/work/liboqs-dotnet/liboqs-dotnet/src/SIG/SigProvider.cs" line-rate="0.9111111111111111" branch-rate="0.6538461538461539" complexity="34">
+        <class name="OpenForge.Cryptography.LibOqs.SIG.SigInstance" filename="/Users/runner/work/liboqs-dotnet/liboqs-dotnet/src/SIG/SigProvider.cs" line-rate="0.9333333333333333" branch-rate="0.6538461538461539" complexity="34">
           <methods>
             <method name=".ctor" signature="(native int, string)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -6740,10 +6836,10 @@
                 <line number="350" hits="4" branch="false" />
               </lines>
             </method>
-            <method name="Finalize" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="Finalize" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="357" hits="0" branch="false" />
-                <line number="358" hits="0" branch="false" />
+                <line number="357" hits="2" branch="false" />
+                <line number="358" hits="2" branch="false" />
               </lines>
             </method>
             <method name="ThrowIfDisposed" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -6840,13 +6936,13 @@
             <line number="346" hits="4" branch="false" />
             <line number="348" hits="4" branch="false" />
             <line number="350" hits="4" branch="false" />
-            <line number="357" hits="0" branch="false" />
-            <line number="358" hits="0" branch="false" />
+            <line number="357" hits="2" branch="false" />
+            <line number="358" hits="2" branch="false" />
             <line number="362" hits="4" branch="false" />
             <line number="363" hits="4" branch="false" />
           </lines>
         </class>
-        <class name="OpenForge.Cryptography.LibOqs.SIG.SigInstance" filename="C:\a\liboqs-dotnet\liboqs-dotnet\src\SIG\SigProvider.cs" line-rate="0.9111111111111111" branch-rate="0.6538461538461539" complexity="34">
+        <class name="OpenForge.Cryptography.LibOqs.SIG.SigInstance" filename="C:\a\liboqs-dotnet\liboqs-dotnet\src\SIG\SigProvider.cs" line-rate="0.9333333333333333" branch-rate="0.6538461538461539" complexity="34">
           <methods>
             <method name=".ctor" signature="(native int, string)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -6978,10 +7074,10 @@
                 <line number="350" hits="8" branch="false" />
               </lines>
             </method>
-            <method name="Finalize" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="Finalize" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="357" hits="0" branch="false" />
-                <line number="358" hits="0" branch="false" />
+                <line number="357" hits="4" branch="false" />
+                <line number="358" hits="4" branch="false" />
               </lines>
             </method>
             <method name="ThrowIfDisposed" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -7078,8 +7174,8 @@
             <line number="346" hits="8" branch="false" />
             <line number="348" hits="8" branch="false" />
             <line number="350" hits="8" branch="false" />
-            <line number="357" hits="0" branch="false" />
-            <line number="358" hits="0" branch="false" />
+            <line number="357" hits="4" branch="false" />
+            <line number="358" hits="4" branch="false" />
             <line number="362" hits="8" branch="false" />
             <line number="363" hits="8" branch="false" />
           </lines>

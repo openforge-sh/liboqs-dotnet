@@ -220,7 +220,7 @@ This structure mirrors the OQS_SIG struct from the LibOQS C library.</p>
 
   <h3 id="OpenForge_Cryptography_LibOqs_SIG_OqsSig_keypair" data-uid="OpenForge.Cryptography.LibOqs.SIG.OqsSig.keypair">
   keypair
-  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L106"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Function pointer to the native key pair generation function.</p>
@@ -251,7 +251,7 @@ This structure mirrors the OQS_SIG struct from the LibOQS C library.</p>
 
   <h3 id="OpenForge_Cryptography_LibOqs_SIG_OqsSig_length_public_key" data-uid="OpenForge.Cryptography.LibOqs.SIG.OqsSig.length_public_key">
   length_public_key
-  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L97"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Length of public keys in bytes for this algorithm.</p>
@@ -282,7 +282,7 @@ This structure mirrors the OQS_SIG struct from the LibOQS C library.</p>
 
   <h3 id="OpenForge_Cryptography_LibOqs_SIG_OqsSig_length_secret_key" data-uid="OpenForge.Cryptography.LibOqs.SIG.OqsSig.length_secret_key">
   length_secret_key
-  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Length of secret keys in bytes for this algorithm.</p>
@@ -313,7 +313,7 @@ This structure mirrors the OQS_SIG struct from the LibOQS C library.</p>
 
   <h3 id="OpenForge_Cryptography_LibOqs_SIG_OqsSig_length_signature" data-uid="OpenForge.Cryptography.LibOqs.SIG.OqsSig.length_signature">
   length_signature
-  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Maximum length of signatures in bytes for this algorithm.</p>
@@ -373,9 +373,40 @@ This structure mirrors the OQS_SIG struct from the LibOQS C library.</p>
 
 
 
+  <h3 id="OpenForge_Cryptography_LibOqs_SIG_OqsSig_sig_with_ctx_support" data-uid="OpenForge.Cryptography.LibOqs.SIG.OqsSig.sig_with_ctx_support">
+  sig_with_ctx_support
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether the algorithm supports signing with a context string (0 = false, non-zero = true).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly byte sig_with_ctx_support</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <h3 id="OpenForge_Cryptography_LibOqs_SIG_OqsSig_sign" data-uid="OpenForge.Cryptography.LibOqs.SIG.OqsSig.sign">
   sign
-  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L109"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Function pointer to the native signing function.</p>
@@ -404,9 +435,71 @@ This structure mirrors the OQS_SIG struct from the LibOQS C library.</p>
 
 
 
+  <h3 id="OpenForge_Cryptography_LibOqs_SIG_OqsSig_sign_with_ctx_str" data-uid="OpenForge.Cryptography.LibOqs.SIG.OqsSig.sign_with_ctx_str">
+  sign_with_ctx_str
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Function pointer to the native signing with context function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly nint sign_with_ctx_str</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_SIG_OqsSig_suf_cma" data-uid="OpenForge.Cryptography.LibOqs.SIG.OqsSig.suf_cma">
+  suf_cma
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether the algorithm provides SUF-CMA security (0 = false, non-zero = true).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly byte suf_cma</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <h3 id="OpenForge_Cryptography_LibOqs_SIG_OqsSig_verify" data-uid="OpenForge.Cryptography.LibOqs.SIG.OqsSig.verify">
   verify
-  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L115"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Function pointer to the native verification function.</p>
@@ -434,6 +527,37 @@ This structure mirrors the OQS_SIG struct from the LibOQS C library.</p>
 
 
 
+
+  <h3 id="OpenForge_Cryptography_LibOqs_SIG_OqsSig_verify_with_ctx_str" data-uid="OpenForge.Cryptography.LibOqs.SIG.OqsSig.verify_with_ctx_str">
+  verify_with_ctx_str
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Function pointer to the native verification with context function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly nint verify_with_ctx_str</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -442,7 +566,7 @@ This structure mirrors the OQS_SIG struct from the LibOQS C library.</p>
 
   <h3 id="OpenForge_Cryptography_LibOqs_SIG_OqsSig_Equals_OpenForge_Cryptography_LibOqs_SIG_OqsSig_" data-uid="OpenForge.Cryptography.LibOqs.SIG.OqsSig.Equals(OpenForge.Cryptography.LibOqs.SIG.OqsSig)">
   Equals(OqsSig)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L125"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified OqsSig is equal to the current OqsSig.</p>
@@ -481,7 +605,7 @@ This structure mirrors the OQS_SIG struct from the LibOQS C library.</p>
 
   <h3 id="OpenForge_Cryptography_LibOqs_SIG_OqsSig_Equals_System_Object_" data-uid="OpenForge.Cryptography.LibOqs.SIG.OqsSig.Equals(System.Object)">
   Equals(object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L148"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified object is equal to the current OqsSig.</p>
@@ -520,7 +644,7 @@ This structure mirrors the OQS_SIG struct from the LibOQS C library.</p>
 
   <h3 id="OpenForge_Cryptography_LibOqs_SIG_OqsSig_GetHashCode" data-uid="OpenForge.Cryptography.LibOqs.SIG.OqsSig.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L157"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the hash code for this OqsSig.</p>
@@ -557,7 +681,7 @@ This structure mirrors the OQS_SIG struct from the LibOQS C library.</p>
 
   <h3 id="OpenForge_Cryptography_LibOqs_SIG_OqsSig_op_Equality_OpenForge_Cryptography_LibOqs_SIG_OqsSig_OpenForge_Cryptography_LibOqs_SIG_OqsSig_" data-uid="OpenForge.Cryptography.LibOqs.SIG.OqsSig.op_Equality(OpenForge.Cryptography.LibOqs.SIG.OqsSig,OpenForge.Cryptography.LibOqs.SIG.OqsSig)">
   operator ==(OqsSig, OqsSig)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L183"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether two specified OqsSig instances are equal.</p>
@@ -599,7 +723,7 @@ This structure mirrors the OQS_SIG struct from the LibOQS C library.</p>
 
   <h3 id="OpenForge_Cryptography_LibOqs_SIG_OqsSig_op_Inequality_OpenForge_Cryptography_LibOqs_SIG_OqsSig_OpenForge_Cryptography_LibOqs_SIG_OqsSig_" data-uid="OpenForge.Cryptography.LibOqs.SIG.OqsSig.op_Inequality(OpenForge.Cryptography.LibOqs.SIG.OqsSig,OpenForge.Cryptography.LibOqs.SIG.OqsSig)">
   operator !=(OqsSig, OqsSig)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/SIG/SigNative.cs/#L194"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether two specified OqsSig instances are not equal.</p>

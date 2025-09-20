@@ -189,7 +189,7 @@ This structure mirrors the OQS_KEM struct from the LibOQS C library.</p>
 
   <h3 id="OpenForge_Cryptography_LibOqs_KEM_OqsKem_decaps" data-uid="OpenForge.Cryptography.LibOqs.KEM.OqsKem.decaps">
   decaps
-  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/KEM/KemNative.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/KEM/KemNative.cs/#L116"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Function pointer to the native decapsulation function.</p>
@@ -220,7 +220,7 @@ This structure mirrors the OQS_KEM struct from the LibOQS C library.</p>
 
   <h3 id="OpenForge_Cryptography_LibOqs_KEM_OqsKem_encaps" data-uid="OpenForge.Cryptography.LibOqs.KEM.OqsKem.encaps">
   encaps
-  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/KEM/KemNative.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/KEM/KemNative.cs/#L113"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Function pointer to the native encapsulation function.</p>
@@ -229,6 +229,37 @@ This structure mirrors the OQS_KEM struct from the LibOQS C library.</p>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly nint encaps</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_KEM_OqsKem_encaps_derand" data-uid="OpenForge.Cryptography.LibOqs.KEM.OqsKem.encaps_derand">
+  encaps_derand
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/KEM/KemNative.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Function pointer to the native derandomized encapsulation function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly nint encaps_derand</code></pre>
   </div>
 
 
@@ -282,7 +313,7 @@ This structure mirrors the OQS_KEM struct from the LibOQS C library.</p>
 
   <h3 id="OpenForge_Cryptography_LibOqs_KEM_OqsKem_keypair" data-uid="OpenForge.Cryptography.LibOqs.KEM.OqsKem.keypair">
   keypair
-  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/KEM/KemNative.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/KEM/KemNative.cs/#L107"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Function pointer to the native key pair generation function.</p>
@@ -291,6 +322,37 @@ This structure mirrors the OQS_KEM struct from the LibOQS C library.</p>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly nint keypair</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_KEM_OqsKem_keypair_derand" data-uid="OpenForge.Cryptography.LibOqs.KEM.OqsKem.keypair_derand">
+  keypair_derand
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/KEM/KemNative.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Function pointer to the native derandomized key pair generation function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly nint keypair_derand</code></pre>
   </div>
 
 
@@ -322,6 +384,68 @@ This structure mirrors the OQS_KEM struct from the LibOQS C library.</p>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly nuint length_ciphertext</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_KEM_OqsKem_length_encaps_seed" data-uid="OpenForge.Cryptography.LibOqs.KEM.OqsKem.length_encaps_seed">
+  length_encaps_seed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/KEM/KemNative.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Length of seeds for derandomized encaps generation in bytes for this algorithm.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly nuint length_encaps_seed</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OpenForge_Cryptography_LibOqs_KEM_OqsKem_length_keypair_seed" data-uid="OpenForge.Cryptography.LibOqs.KEM.OqsKem.length_keypair_seed">
+  length_keypair_seed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/KEM/KemNative.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Length of seeds for derandomized keypair generation in bytes for this algorithm.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly nuint length_keypair_seed</code></pre>
   </div>
 
 
@@ -473,7 +597,7 @@ This structure mirrors the OQS_KEM struct from the LibOQS C library.</p>
 
   <h3 id="OpenForge_Cryptography_LibOqs_KEM_OqsKem_Equals_OpenForge_Cryptography_LibOqs_KEM_OqsKem_" data-uid="OpenForge.Cryptography.LibOqs.KEM.OqsKem.Equals(OpenForge.Cryptography.LibOqs.KEM.OqsKem)">
   Equals(OqsKem)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/KEM/KemNative.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/KEM/KemNative.cs/#L123"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified OqsKem is equal to the current OqsKem.</p>
@@ -512,7 +636,7 @@ This structure mirrors the OQS_KEM struct from the LibOQS C library.</p>
 
   <h3 id="OpenForge_Cryptography_LibOqs_KEM_OqsKem_Equals_System_Object_" data-uid="OpenForge.Cryptography.LibOqs.KEM.OqsKem.Equals(System.Object)">
   Equals(object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/KEM/KemNative.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/KEM/KemNative.cs/#L147"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified object is equal to the current OqsKem.</p>
@@ -551,7 +675,7 @@ This structure mirrors the OQS_KEM struct from the LibOQS C library.</p>
 
   <h3 id="OpenForge_Cryptography_LibOqs_KEM_OqsKem_GetHashCode" data-uid="OpenForge.Cryptography.LibOqs.KEM.OqsKem.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/KEM/KemNative.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/KEM/KemNative.cs/#L156"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the hash code for this OqsKem.</p>
@@ -588,7 +712,7 @@ This structure mirrors the OQS_KEM struct from the LibOQS C library.</p>
 
   <h3 id="OpenForge_Cryptography_LibOqs_KEM_OqsKem_op_Equality_OpenForge_Cryptography_LibOqs_KEM_OqsKem_OpenForge_Cryptography_LibOqs_KEM_OqsKem_" data-uid="OpenForge.Cryptography.LibOqs.KEM.OqsKem.op_Equality(OpenForge.Cryptography.LibOqs.KEM.OqsKem,OpenForge.Cryptography.LibOqs.KEM.OqsKem)">
   operator ==(OqsKem, OqsKem)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/KEM/KemNative.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/KEM/KemNative.cs/#L183"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether two specified OqsKem instances are equal.</p>
@@ -630,7 +754,7 @@ This structure mirrors the OQS_KEM struct from the LibOQS C library.</p>
 
   <h3 id="OpenForge_Cryptography_LibOqs_KEM_OqsKem_op_Inequality_OpenForge_Cryptography_LibOqs_KEM_OqsKem_OpenForge_Cryptography_LibOqs_KEM_OqsKem_" data-uid="OpenForge.Cryptography.LibOqs.KEM.OqsKem.op_Inequality(OpenForge.Cryptography.LibOqs.KEM.OqsKem,OpenForge.Cryptography.LibOqs.KEM.OqsKem)">
   operator !=(OqsKem, OqsKem)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/KEM/KemNative.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/openforge-sh/liboqs-dotnet/blob/main/src/KEM/KemNative.cs/#L194"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether two specified OqsKem instances are not equal.</p>

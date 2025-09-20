@@ -214,13 +214,13 @@ var assemblies = [
     "name": "OpenForge.Cryptography.LibOqs.Core",
     "classes": [
       { "name": "OpenForge.Cryptography.LibOqs.Core.AlgorithmConstants", "rp": "OpenForge.Cryptography.LibOqs.Core_AlgorithmConstants.html", "cl": 33, "ucl": 0, "cal": 33, "tl": 1149, "cb": 24, "tb": 24, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "OpenForge.Cryptography.LibOqs.Core.CryptographyValidation", "rp": "OpenForge.Cryptography.LibOqs.Core_CryptographyValidation.html", "cl": 51, "ucl": 36, "cal": 87, "tl": 378, "cb": 27, "tb": 54, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "OpenForge.Cryptography.LibOqs.Core.CryptographyValidation", "rp": "OpenForge.Cryptography.LibOqs.Core_CryptographyValidation.html", "cl": 87, "ucl": 0, "cal": 87, "tl": 378, "cb": 54, "tb": 54, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "OpenForge.Cryptography.LibOqs.Core.KemAlgorithms", "rp": "OpenForge.Cryptography.LibOqs.Core_KemAlgorithms.html", "cl": 72, "ucl": 0, "cal": 72, "tl": 1149, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "OpenForge.Cryptography.LibOqs.Core.MemoryUsageInfo", "rp": "OpenForge.Cryptography.LibOqs.Core_MemoryUsageInfo.html", "cl": 30, "ucl": 0, "cal": 30, "tl": 1542, "cb": 18, "tb": 18, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "OpenForge.Cryptography.LibOqs.Core.OqsCore", "rp": "OpenForge.Cryptography.LibOqs.Core_OqsCore.html", "cl": 462, "ucl": 48, "cal": 510, "tl": 1542, "cb": 204, "tb": 234, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "OpenForge.Cryptography.LibOqs.Core.SecureByteArray", "rp": "OpenForge.Cryptography.LibOqs.Core_SecureByteArray.html", "cl": 90, "ucl": 6, "cal": 96, "tl": 558, "cb": 84, "tb": 102, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "OpenForge.Cryptography.LibOqs.Core.SecureMemory", "rp": "OpenForge.Cryptography.LibOqs.Core_SecureMemory.html", "cl": 54, "ucl": 0, "cal": 54, "tl": 558, "cb": 42, "tb": 48, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "OpenForge.Cryptography.LibOqs.Core.SecurityUtilities", "rp": "OpenForge.Cryptography.LibOqs.Core_SecurityUtilities.html", "cl": 264, "ucl": 9, "cal": 273, "tl": 1005, "cb": 219, "tb": 228, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "OpenForge.Cryptography.LibOqs.Core.SecurityUtilities", "rp": "OpenForge.Cryptography.LibOqs.Core_SecurityUtilities.html", "cl": 264, "ucl": 9, "cal": 273, "tl": 1005, "cb": 218, "tb": 228, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "OpenForge.Cryptography.LibOqs.Core.SignatureAlgorithms", "rp": "OpenForge.Cryptography.LibOqs.Core_SignatureAlgorithms.html", "cl": 120, "ucl": 0, "cal": 120, "tl": 1149, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "OpenForge.Cryptography.LibOqs.Core.StatefulSignatureAlgorithms", "rp": "OpenForge.Cryptography.LibOqs.Core_StatefulSignatureAlgorithms.html", "cl": 27, "ucl": 0, "cal": 27, "tl": 1149, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
@@ -229,17 +229,17 @@ var assemblies = [
     "classes": [
       { "name": "OpenForge.Cryptography.LibOqs.KEM.EncapsulationResult", "rp": "OpenForge.Cryptography.LibOqs.KEM_EncapsulationResult.html", "cl": 9, "ucl": 0, "cal": 9, "tl": 1086, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "OpenForge.Cryptography.LibOqs.KEM.Kem", "rp": "OpenForge.Cryptography.LibOqs.KEM_Kem.html", "cl": 126, "ucl": 0, "cal": 126, "tl": 540, "cb": 15, "tb": 18, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "OpenForge.Cryptography.LibOqs.KEM.KemInstance", "rp": "OpenForge.Cryptography.LibOqs.KEM_KemInstance.html", "cl": 213, "ucl": 12, "cal": 225, "tl": 1086, "cb": 66, "tb": 120, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "OpenForge.Cryptography.LibOqs.KEM.KemInstance", "rp": "OpenForge.Cryptography.LibOqs.KEM_KemInstance.html", "cl": 221, "ucl": 4, "cal": 225, "tl": 1086, "cb": 66, "tb": 120, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "OpenForge.Cryptography.LibOqs.KEM.KemProvider", "rp": "OpenForge.Cryptography.LibOqs.KEM_KemProvider.html", "cl": 84, "ucl": 0, "cal": 84, "tl": 1086, "cb": 27, "tb": 30, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "OpenForge.Cryptography.LibOqs.KEM.KeyPair", "rp": "OpenForge.Cryptography.LibOqs.KEM_KeyPair.html", "cl": 9, "ucl": 0, "cal": 9, "tl": 1086, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "OpenForge.Cryptography.LibOqs.KEM.OqsKem", "rp": "OpenForge.Cryptography.LibOqs.KEM_OqsKem.html", "cl": 81, "ucl": 0, "cal": 81, "tl": 534, "cb": 33, "tb": 66, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "OpenForge.Cryptography.LibOqs.KEM.OqsKem", "rp": "OpenForge.Cryptography.LibOqs.KEM_OqsKem.html", "cl": 105, "ucl": 0, "cal": 105, "tl": 594, "cb": 90, "tb": 90, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "OpenForge.Cryptography.LibOqs.SIG",
     "classes": [
-      { "name": "OpenForge.Cryptography.LibOqs.SIG.OqsSig", "rp": "OpenForge.Cryptography.LibOqs.SIG_OqsSig.html", "cl": 75, "ucl": 0, "cal": 75, "tl": 534, "cb": 30, "tb": 60, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "OpenForge.Cryptography.LibOqs.SIG.OqsSig", "rp": "OpenForge.Cryptography.LibOqs.SIG_OqsSig.html", "cl": 99, "ucl": 0, "cal": 99, "tl": 594, "cb": 84, "tb": 84, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "OpenForge.Cryptography.LibOqs.SIG.Sig", "rp": "OpenForge.Cryptography.LibOqs.SIG_Sig.html", "cl": 120, "ucl": 0, "cal": 120, "tl": 519, "cb": 21, "tb": 24, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "OpenForge.Cryptography.LibOqs.SIG.SigInstance", "rp": "OpenForge.Cryptography.LibOqs.SIG_SigInstance.html", "cl": 246, "ucl": 24, "cal": 270, "tl": 1149, "cb": 51, "tb": 78, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "OpenForge.Cryptography.LibOqs.SIG.SigInstance", "rp": "OpenForge.Cryptography.LibOqs.SIG_SigInstance.html", "cl": 252, "ucl": 18, "cal": 270, "tl": 1149, "cb": 51, "tb": 78, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "OpenForge.Cryptography.LibOqs.SIG.SigKeyPair", "rp": "OpenForge.Cryptography.LibOqs.SIG_SigKeyPair.html", "cl": 9, "ucl": 0, "cal": 9, "tl": 1149, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "OpenForge.Cryptography.LibOqs.SIG.SigProvider", "rp": "OpenForge.Cryptography.LibOqs.SIG_SigProvider.html", "cl": 84, "ucl": 0, "cal": 84, "tl": 1149, "cb": 27, "tb": 30, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
@@ -255,6 +255,42 @@ var riskHotspotMetrics = [
 ];
 
 var riskHotspots = [
+  {
+    "assembly": "OpenForge.Cryptography.LibOqs.KEM", "class": "OpenForge.Cryptography.LibOqs.KEM.OqsKem", "reportPath": "OpenForge.Cryptography.LibOqs.KEM_OqsKem.html", "methodName": "Equals(OpenForge.Cryptography.LibOqs.KEM.OqsKem)", "methodShortName": "Equals(...)", "fileIndex": 0, "line": 125,
+    "metrics": [
+      { "value": 28, "exceeded": false },
+      { "value": 28, "exceeded": true },
+    ]},
+  {
+    "assembly": "OpenForge.Cryptography.LibOqs.KEM", "class": "OpenForge.Cryptography.LibOqs.KEM.OqsKem", "reportPath": "OpenForge.Cryptography.LibOqs.KEM_OqsKem.html", "methodName": "Equals(OpenForge.Cryptography.LibOqs.KEM.OqsKem)", "methodShortName": "Equals(...)", "fileIndex": 1, "line": 125,
+    "metrics": [
+      { "value": 28, "exceeded": false },
+      { "value": 28, "exceeded": true },
+    ]},
+  {
+    "assembly": "OpenForge.Cryptography.LibOqs.KEM", "class": "OpenForge.Cryptography.LibOqs.KEM.OqsKem", "reportPath": "OpenForge.Cryptography.LibOqs.KEM_OqsKem.html", "methodName": "Equals(OpenForge.Cryptography.LibOqs.KEM.OqsKem)", "methodShortName": "Equals(...)", "fileIndex": 2, "line": 125,
+    "metrics": [
+      { "value": 28, "exceeded": false },
+      { "value": 28, "exceeded": true },
+    ]},
+  {
+    "assembly": "OpenForge.Cryptography.LibOqs.SIG", "class": "OpenForge.Cryptography.LibOqs.SIG.OqsSig", "reportPath": "OpenForge.Cryptography.LibOqs.SIG_OqsSig.html", "methodName": "Equals(OpenForge.Cryptography.LibOqs.SIG.OqsSig)", "methodShortName": "Equals(...)", "fileIndex": 0, "line": 127,
+    "metrics": [
+      { "value": 26, "exceeded": false },
+      { "value": 26, "exceeded": true },
+    ]},
+  {
+    "assembly": "OpenForge.Cryptography.LibOqs.SIG", "class": "OpenForge.Cryptography.LibOqs.SIG.OqsSig", "reportPath": "OpenForge.Cryptography.LibOqs.SIG_OqsSig.html", "methodName": "Equals(OpenForge.Cryptography.LibOqs.SIG.OqsSig)", "methodShortName": "Equals(...)", "fileIndex": 1, "line": 127,
+    "metrics": [
+      { "value": 26, "exceeded": false },
+      { "value": 26, "exceeded": true },
+    ]},
+  {
+    "assembly": "OpenForge.Cryptography.LibOqs.SIG", "class": "OpenForge.Cryptography.LibOqs.SIG.OqsSig", "reportPath": "OpenForge.Cryptography.LibOqs.SIG_OqsSig.html", "methodName": "Equals(OpenForge.Cryptography.LibOqs.SIG.OqsSig)", "methodShortName": "Equals(...)", "fileIndex": 2, "line": 127,
+    "metrics": [
+      { "value": 26, "exceeded": false },
+      { "value": 26, "exceeded": true },
+    ]},
   {
     "assembly": "OpenForge.Cryptography.LibOqs.Core", "class": "OpenForge.Cryptography.LibOqs.Core.SecurityUtilities", "reportPath": "OpenForge.Cryptography.LibOqs.Core_SecurityUtilities.html", "methodName": "ValidateRandomBytesEntropy(System.ReadOnlySpan<byte>, string)", "methodShortName": "ValidateRandomBytesEntropy(...)", "fileIndex": 0, "line": 188,
     "metrics": [
@@ -274,24 +310,6 @@ var riskHotspots = [
       { "value": 20, "exceeded": true },
     ]},
   {
-    "assembly": "OpenForge.Cryptography.LibOqs.KEM", "class": "OpenForge.Cryptography.LibOqs.KEM.OqsKem", "reportPath": "OpenForge.Cryptography.LibOqs.KEM_OqsKem.html", "methodName": "Equals(OpenForge.Cryptography.LibOqs.KEM.OqsKem)", "methodShortName": "Equals(...)", "fileIndex": 0, "line": 113,
-    "metrics": [
-      { "value": 20, "exceeded": false },
-      { "value": 20, "exceeded": true },
-    ]},
-  {
-    "assembly": "OpenForge.Cryptography.LibOqs.KEM", "class": "OpenForge.Cryptography.LibOqs.KEM.OqsKem", "reportPath": "OpenForge.Cryptography.LibOqs.KEM_OqsKem.html", "methodName": "Equals(OpenForge.Cryptography.LibOqs.KEM.OqsKem)", "methodShortName": "Equals(...)", "fileIndex": 1, "line": 113,
-    "metrics": [
-      { "value": 20, "exceeded": false },
-      { "value": 20, "exceeded": true },
-    ]},
-  {
-    "assembly": "OpenForge.Cryptography.LibOqs.KEM", "class": "OpenForge.Cryptography.LibOqs.KEM.OqsKem", "reportPath": "OpenForge.Cryptography.LibOqs.KEM_OqsKem.html", "methodName": "Equals(OpenForge.Cryptography.LibOqs.KEM.OqsKem)", "methodShortName": "Equals(...)", "fileIndex": 2, "line": 113,
-    "metrics": [
-      { "value": 20, "exceeded": false },
-      { "value": 20, "exceeded": true },
-    ]},
-  {
     "assembly": "OpenForge.Cryptography.LibOqs.Core", "class": "OpenForge.Cryptography.LibOqs.Core.OqsCore", "reportPath": "OpenForge.Cryptography.LibOqs.Core_OqsCore.html", "methodName": "GetMemoryUsageInfo(string)", "methodShortName": "GetMemoryUsageInfo(...)", "fileIndex": 0, "line": 415,
     "metrics": [
       { "value": 18, "exceeded": false },
@@ -305,24 +323,6 @@ var riskHotspots = [
     ]},
   {
     "assembly": "OpenForge.Cryptography.LibOqs.Core", "class": "OpenForge.Cryptography.LibOqs.Core.OqsCore", "reportPath": "OpenForge.Cryptography.LibOqs.Core_OqsCore.html", "methodName": "GetMemoryUsageInfo(string)", "methodShortName": "GetMemoryUsageInfo(...)", "fileIndex": 2, "line": 415,
-    "metrics": [
-      { "value": 18, "exceeded": false },
-      { "value": 18, "exceeded": true },
-    ]},
-  {
-    "assembly": "OpenForge.Cryptography.LibOqs.SIG", "class": "OpenForge.Cryptography.LibOqs.SIG.OqsSig", "reportPath": "OpenForge.Cryptography.LibOqs.SIG_OqsSig.html", "methodName": "Equals(OpenForge.Cryptography.LibOqs.SIG.OqsSig)", "methodShortName": "Equals(...)", "fileIndex": 0, "line": 115,
-    "metrics": [
-      { "value": 18, "exceeded": false },
-      { "value": 18, "exceeded": true },
-    ]},
-  {
-    "assembly": "OpenForge.Cryptography.LibOqs.SIG", "class": "OpenForge.Cryptography.LibOqs.SIG.OqsSig", "reportPath": "OpenForge.Cryptography.LibOqs.SIG_OqsSig.html", "methodName": "Equals(OpenForge.Cryptography.LibOqs.SIG.OqsSig)", "methodShortName": "Equals(...)", "fileIndex": 1, "line": 115,
-    "metrics": [
-      { "value": 18, "exceeded": false },
-      { "value": 18, "exceeded": true },
-    ]},
-  {
-    "assembly": "OpenForge.Cryptography.LibOqs.SIG", "class": "OpenForge.Cryptography.LibOqs.SIG.OqsSig", "reportPath": "OpenForge.Cryptography.LibOqs.SIG_OqsSig.html", "methodName": "Equals(OpenForge.Cryptography.LibOqs.SIG.OqsSig)", "methodShortName": "Equals(...)", "fileIndex": 2, "line": 115,
     "metrics": [
       { "value": 18, "exceeded": false },
       { "value": 18, "exceeded": true },

@@ -948,6 +948,12 @@ references:
   commentId: F:OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_BMI2
   fullName: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_BMI2
   nameWithType: OqsCpUext.OQS_CPU_EXT_BMI2
+- uid: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_COUNT
+  name: OQS_CPU_EXT_COUNT
+  href: api/OpenForge.Cryptography.LibOqs.Core.OqsCpUext.html#OpenForge_Cryptography_LibOqs_Core_OqsCpUext_OQS_CPU_EXT_COUNT
+  commentId: F:OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_COUNT
+  fullName: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_COUNT
+  nameWithType: OqsCpUext.OQS_CPU_EXT_COUNT
 - uid: OpenForge.Cryptography.LibOqs.Core.OqsCpUext.OQS_CPU_EXT_INIT
   name: OQS_CPU_EXT_INIT
   href: api/OpenForge.Cryptography.LibOqs.Core.OqsCpUext.html#OpenForge_Cryptography_LibOqs_Core_OqsCpUext_OQS_CPU_EXT_INIT
@@ -2681,6 +2687,12 @@ references:
   commentId: F:OpenForge.Cryptography.LibOqs.KEM.OqsKem.encaps
   fullName: OpenForge.Cryptography.LibOqs.KEM.OqsKem.encaps
   nameWithType: OqsKem.encaps
+- uid: OpenForge.Cryptography.LibOqs.KEM.OqsKem.encaps_derand
+  name: encaps_derand
+  href: api/OpenForge.Cryptography.LibOqs.KEM.OqsKem.html#OpenForge_Cryptography_LibOqs_KEM_OqsKem_encaps_derand
+  commentId: F:OpenForge.Cryptography.LibOqs.KEM.OqsKem.encaps_derand
+  fullName: OpenForge.Cryptography.LibOqs.KEM.OqsKem.encaps_derand
+  nameWithType: OqsKem.encaps_derand
 - uid: OpenForge.Cryptography.LibOqs.KEM.OqsKem.ind_cca
   name: ind_cca
   href: api/OpenForge.Cryptography.LibOqs.KEM.OqsKem.html#OpenForge_Cryptography_LibOqs_KEM_OqsKem_ind_cca
@@ -2693,12 +2705,30 @@ references:
   commentId: F:OpenForge.Cryptography.LibOqs.KEM.OqsKem.keypair
   fullName: OpenForge.Cryptography.LibOqs.KEM.OqsKem.keypair
   nameWithType: OqsKem.keypair
+- uid: OpenForge.Cryptography.LibOqs.KEM.OqsKem.keypair_derand
+  name: keypair_derand
+  href: api/OpenForge.Cryptography.LibOqs.KEM.OqsKem.html#OpenForge_Cryptography_LibOqs_KEM_OqsKem_keypair_derand
+  commentId: F:OpenForge.Cryptography.LibOqs.KEM.OqsKem.keypair_derand
+  fullName: OpenForge.Cryptography.LibOqs.KEM.OqsKem.keypair_derand
+  nameWithType: OqsKem.keypair_derand
 - uid: OpenForge.Cryptography.LibOqs.KEM.OqsKem.length_ciphertext
   name: length_ciphertext
   href: api/OpenForge.Cryptography.LibOqs.KEM.OqsKem.html#OpenForge_Cryptography_LibOqs_KEM_OqsKem_length_ciphertext
   commentId: F:OpenForge.Cryptography.LibOqs.KEM.OqsKem.length_ciphertext
   fullName: OpenForge.Cryptography.LibOqs.KEM.OqsKem.length_ciphertext
   nameWithType: OqsKem.length_ciphertext
+- uid: OpenForge.Cryptography.LibOqs.KEM.OqsKem.length_encaps_seed
+  name: length_encaps_seed
+  href: api/OpenForge.Cryptography.LibOqs.KEM.OqsKem.html#OpenForge_Cryptography_LibOqs_KEM_OqsKem_length_encaps_seed
+  commentId: F:OpenForge.Cryptography.LibOqs.KEM.OqsKem.length_encaps_seed
+  fullName: OpenForge.Cryptography.LibOqs.KEM.OqsKem.length_encaps_seed
+  nameWithType: OqsKem.length_encaps_seed
+- uid: OpenForge.Cryptography.LibOqs.KEM.OqsKem.length_keypair_seed
+  name: length_keypair_seed
+  href: api/OpenForge.Cryptography.LibOqs.KEM.OqsKem.html#OpenForge_Cryptography_LibOqs_KEM_OqsKem_length_keypair_seed
+  commentId: F:OpenForge.Cryptography.LibOqs.KEM.OqsKem.length_keypair_seed
+  fullName: OpenForge.Cryptography.LibOqs.KEM.OqsKem.length_keypair_seed
+  nameWithType: OqsKem.length_keypair_seed
 - uid: OpenForge.Cryptography.LibOqs.KEM.OqsKem.length_public_key
   name: length_public_key
   href: api/OpenForge.Cryptography.LibOqs.KEM.OqsKem.html#OpenForge_Cryptography_LibOqs_KEM_OqsKem_length_public_key
@@ -2894,18 +2924,42 @@ references:
   fullName.vb: OpenForge.Cryptography.LibOqs.SIG.OqsSig.<>
   nameWithType: OqsSig.operator !=
   nameWithType.vb: OqsSig.<>
+- uid: OpenForge.Cryptography.LibOqs.SIG.OqsSig.sig_with_ctx_support
+  name: sig_with_ctx_support
+  href: api/OpenForge.Cryptography.LibOqs.SIG.OqsSig.html#OpenForge_Cryptography_LibOqs_SIG_OqsSig_sig_with_ctx_support
+  commentId: F:OpenForge.Cryptography.LibOqs.SIG.OqsSig.sig_with_ctx_support
+  fullName: OpenForge.Cryptography.LibOqs.SIG.OqsSig.sig_with_ctx_support
+  nameWithType: OqsSig.sig_with_ctx_support
 - uid: OpenForge.Cryptography.LibOqs.SIG.OqsSig.sign
   name: sign
   href: api/OpenForge.Cryptography.LibOqs.SIG.OqsSig.html#OpenForge_Cryptography_LibOqs_SIG_OqsSig_sign
   commentId: F:OpenForge.Cryptography.LibOqs.SIG.OqsSig.sign
   fullName: OpenForge.Cryptography.LibOqs.SIG.OqsSig.sign
   nameWithType: OqsSig.sign
+- uid: OpenForge.Cryptography.LibOqs.SIG.OqsSig.sign_with_ctx_str
+  name: sign_with_ctx_str
+  href: api/OpenForge.Cryptography.LibOqs.SIG.OqsSig.html#OpenForge_Cryptography_LibOqs_SIG_OqsSig_sign_with_ctx_str
+  commentId: F:OpenForge.Cryptography.LibOqs.SIG.OqsSig.sign_with_ctx_str
+  fullName: OpenForge.Cryptography.LibOqs.SIG.OqsSig.sign_with_ctx_str
+  nameWithType: OqsSig.sign_with_ctx_str
+- uid: OpenForge.Cryptography.LibOqs.SIG.OqsSig.suf_cma
+  name: suf_cma
+  href: api/OpenForge.Cryptography.LibOqs.SIG.OqsSig.html#OpenForge_Cryptography_LibOqs_SIG_OqsSig_suf_cma
+  commentId: F:OpenForge.Cryptography.LibOqs.SIG.OqsSig.suf_cma
+  fullName: OpenForge.Cryptography.LibOqs.SIG.OqsSig.suf_cma
+  nameWithType: OqsSig.suf_cma
 - uid: OpenForge.Cryptography.LibOqs.SIG.OqsSig.verify
   name: verify
   href: api/OpenForge.Cryptography.LibOqs.SIG.OqsSig.html#OpenForge_Cryptography_LibOqs_SIG_OqsSig_verify
   commentId: F:OpenForge.Cryptography.LibOqs.SIG.OqsSig.verify
   fullName: OpenForge.Cryptography.LibOqs.SIG.OqsSig.verify
   nameWithType: OqsSig.verify
+- uid: OpenForge.Cryptography.LibOqs.SIG.OqsSig.verify_with_ctx_str
+  name: verify_with_ctx_str
+  href: api/OpenForge.Cryptography.LibOqs.SIG.OqsSig.html#OpenForge_Cryptography_LibOqs_SIG_OqsSig_verify_with_ctx_str
+  commentId: F:OpenForge.Cryptography.LibOqs.SIG.OqsSig.verify_with_ctx_str
+  fullName: OpenForge.Cryptography.LibOqs.SIG.OqsSig.verify_with_ctx_str
+  nameWithType: OqsSig.verify_with_ctx_str
 - uid: OpenForge.Cryptography.LibOqs.SIG.Sig
   name: Sig
   href: api/OpenForge.Cryptography.LibOqs.SIG.Sig.html

@@ -29,7 +29,7 @@
 </tr>
 <tr>
 <th>Tag:</th>
-<td class="limit-width " title="45_17800229988">45_17800229988</td>
+<td class="limit-width " title="55_17879912434">55_17879912434</td>
 </tr>
 </table>
 </div>
@@ -70,12 +70,12 @@
 <div class="card">
 <div class="card-header">Branch coverage</div>
 <div class="card-body">
-<div class="large cardpercentagebar cardpercentagebar4">96%</div>
+<div class="large cardpercentagebar cardpercentagebar4">95%</div>
 <div class="table">
 <table>
 <tr>
 <th>Covered branches:</th>
-<td class="limit-width right" title="219">219</td>
+<td class="limit-width right" title="218">218</td>
 </tr>
 <tr>
 <th>Total branches:</th>
@@ -83,7 +83,7 @@
 </tr>
 <tr>
 <th>Branch coverage:</th>
-<td class="limit-width right" title="219 of 228">96%</td>
+<td class="limit-width right" title="218 of 228">95.6%</td>
 </tr>
 </table>
 </div>
@@ -138,7 +138,7 @@
 <tr><td title="ValidateParameterLengthRange(System.ReadOnlySpan&lt;byte&gt;, int, int, string)"><a href="#file1_line159" class="navigatetohash">File 2: ValidateParameterLengthRange(...)</a></td><td>100%</td><td>4</td><td>4</td><td>100%</td></tr>
 <tr><td title="ValidateSize(int, int, string)"><a href="#file1_line172" class="navigatetohash">File 2: ValidateSize(...)</a></td><td>100%</td><td>4</td><td>4</td><td>100%</td></tr>
 <tr><td title="ValidateRandomBytesEntropy(System.ReadOnlySpan&lt;byte&gt;, string)"><a href="#file1_line188" class="navigatetohash">File 2: ValidateRandomBytesEntropy(...)</a></td><td>95%</td><td>20</td><td>20</td><td>95%</td></tr>
-<tr><td title="IsRepeatingPattern(System.ReadOnlySpan&lt;byte&gt;, int)"><a href="#file1_line230" class="navigatetohash">File 2: IsRepeatingPattern(...)</a></td><td>66.67%</td><td>7</td><td>6</td><td>66.67%</td></tr>
+<tr><td title="IsRepeatingPattern(System.ReadOnlySpan&lt;byte&gt;, int)"><a href="#file1_line230" class="navigatetohash">File 2: IsRepeatingPattern(...)</a></td><td>50%</td><td>7</td><td>6</td><td>66.67%</td></tr>
 <tr><td title="CreateDefensiveCopy(byte[])"><a href="#file1_line250" class="navigatetohash">File 2: CreateDefensiveCopy(...)</a></td><td>100%</td><td>2</td><td>2</td><td>100%</td></tr>
 <tr><td title="CreateDefensiveCopy(System.ReadOnlySpan&lt;byte&gt;)"><a href="#file1_line260" class="navigatetohash">File 2: CreateDefensiveCopy(...)</a></td><td>100%</td><td>1</td><td>1</td><td>100%</td></tr>
 <tr><td title="ToHexString(System.ReadOnlySpan&lt;byte&gt;)"><a href="#file1_line272" class="navigatetohash">File 2: ToHexString(...)</a></td><td>100%</td><td>4</td><td>4</td><td>100%</td></tr>
@@ -749,7 +749,7 @@
 <tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file1_line233"></a><code>233</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Check&nbsp;if&nbsp;the&nbsp;entire&nbsp;sequence&nbsp;is&nbsp;a&nbsp;repeating&nbsp;pattern</code></td></tr>
 <tr class="coverableline" title="Partially covered (2 visits, 1 of 2 branches are covered)" data-coverage="{'AllTestMethods': {'VC': '2', 'LVS': 'orange'}}"><td class="orange">&nbsp;</td><td class="leftmargin rightmargin right">2</td><td class="rightmargin right"><a id="file1_line234"></a><code>234</code></td><td class="percentagebar percentagebar50"><i class="icon-fork"></i></td><td class="lightorange"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(int&nbsp;i&nbsp;=&nbsp;patternLength;&nbsp;i&nbsp;&lt;&nbsp;data.Length;&nbsp;i++)</code></td></tr>
 <tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file1_line235"></a><code>235</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>
-<tr class="coverableline" title="Covered (2 visits, 2 of 2 branches are covered)" data-coverage="{'AllTestMethods': {'VC': '2', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">2</td><td class="rightmargin right"><a id="file1_line236"></a><code>236</code></td><td class="percentagebar percentagebar100"><i class="icon-fork"></i></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(data[i]&nbsp;!=&nbsp;data[i&nbsp;%&nbsp;patternLength])</code></td></tr>
+<tr class="coverableline" title="Partially covered (2 visits, 1 of 2 branches are covered)" data-coverage="{'AllTestMethods': {'VC': '2', 'LVS': 'orange'}}"><td class="orange">&nbsp;</td><td class="leftmargin rightmargin right">2</td><td class="rightmargin right"><a id="file1_line236"></a><code>236</code></td><td class="percentagebar percentagebar50"><i class="icon-fork"></i></td><td class="lightorange"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(data[i]&nbsp;!=&nbsp;data[i&nbsp;%&nbsp;patternLength])</code></td></tr>
 <tr class="coverableline" title="Covered (2 visits)" data-coverage="{'AllTestMethods': {'VC': '2', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">2</td><td class="rightmargin right"><a id="file1_line237"></a><code>237</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;false;</code></td></tr>
 <tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file1_line238"></a><code>238</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>
 <tr class="coverableline" title="Not covered (0 visits)" data-coverage="{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}"><td class="red">&nbsp;</td><td class="leftmargin rightmargin right">0</td><td class="rightmargin right"><a id="file1_line239"></a><code>239</code></td><td></td><td class="lightred"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;true;</code></td></tr>
@@ -1195,7 +1195,7 @@
 </tbody>
 </table>
 </div>
-<div class="footer">Generated by: ReportGenerator 5.4.13.0<br />09/17/2025 - 14:33:31<br /><a href="https://github.com/danielpalme/ReportGenerator">GitHub</a> | <a href="https://reportgenerator.io">reportgenerator.io</a></div></div>
+<div class="footer">Generated by: ReportGenerator 5.4.13.0<br />09/20/2025 - 13:55:31<br /><a href="https://github.com/danielpalme/ReportGenerator">GitHub</a> | <a href="https://reportgenerator.io">reportgenerator.io</a></div></div>
 <div class="containerright">
 <div class="containerrightfixed">
 <h1>Methods/Properties</h1>
