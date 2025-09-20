@@ -24,7 +24,7 @@ public static class TimingUtils
         // CI environments get more lenient thresholds
         public double PerformanceMultiplier => Environment switch
         {
-            EnvironmentType.CI => 3.0,
+            EnvironmentType.CI => 4.0,
             EnvironmentType.LocalSlow => 2.0,
             EnvironmentType.LocalFast => 1.0,
             _ => 2.0
