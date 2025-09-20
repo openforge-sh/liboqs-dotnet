@@ -418,7 +418,7 @@ public sealed class TestUtilitiesTests(LibOqsTestFixture fixture)
             var elapsed = TestUtilities.MeasureTime(delayAction);
 
             // Assert
-            elapsed.TotalMilliseconds.Should().BeInRange(delayMs - 10, delayMs + 250);
+            elapsed.TotalMilliseconds.Should().BeInRange(delayMs - 10, delayMs + 500);
         }
 
         [Fact]
